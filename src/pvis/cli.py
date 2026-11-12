@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .regression import run_model_regressions, run_replay_regressions
 from .scenario import Scenario, analyze_scenarios
 
 
@@ -32,6 +33,19 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     analyze = subparsers.add_parser("analyze", help="分析一个固定输入的三情景案例")
     analyze.add_argument("case", type=Path, help="案例 JSON 路径")
+    regression = subparsers.add_parser("regression", help="运行冻结基线回归")
+    regression.add_argument(
+        "--models",
+        type=Path,
+        default=Path("examples/regression/v1_1_models.json"),
+        help="V1.1 模型回归夹具路径",
+    )
+    regression.add_argument(
+        "--replay",
+        type=Path,
+        default=Path("examples/regression/historical_replay_v1_0.json"),
+        help="历史复演 V1.0 回归夹具路径",
+    )
     return parser
 
 
@@ -46,5 +60,12 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
         return 0
+    if args.command == "regression":
+        result = {
+            "models": run_model_regressions(args.models),
+            "historical_replay": run_replay_regressions(args.replay),
+        }
+        result["passed"] = all(item["passed"] for item in result.values())
+        print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
+        return 0 if result["passed"] else 1
     raise AssertionError("未知命令")
-

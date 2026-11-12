@@ -1,0 +1,78 @@
+{
+  "suite": "Notion 会话与本地 V1.1 工作簿冻结模型回归",
+  "fixture_role": "仅用于验证公式兼容性，不是当前估值或买卖结论",
+  "reference_as_of": "2026-08-28",
+  "notion_source": "https://app.notion.com/p/3cd536ce953c8109a5adc1108ad732a9",
+  "cases": [
+    {
+      "name": "贵州茅台 V1.1 基准情景",
+      "route": "owner_earnings_dcf",
+      "inputs": {
+        "starting_cash_flow": 63.0,
+        "initial_growth": 0.04,
+        "discount_rate": 0.09,
+        "perpetual_growth": 0.025,
+        "entry_price": 1297.4
+      },
+      "expected": {
+        "intrinsic_value": 1081.6558558683628,
+        "five_year_irr": 0.04678180959257583,
+        "target_entry_price": 853.0088662554501
+      }
+    },
+    {
+      "name": "腾讯控股 V1.1 基准情景",
+      "route": "dcf_sotp",
+      "inputs": {
+        "starting_cash_flow": 20.0,
+        "initial_growth": 0.10,
+        "discount_rate": 0.095,
+        "perpetual_growth": 0.03,
+        "non_operating_value": 81.04666666666668,
+        "entry_price": 390.4112526266135,
+        "output_fx": 1.16595
+      },
+      "expected": {
+        "intrinsic_value": 641.3682856825893,
+        "five_year_irr": 0.1659922208464395,
+        "target_entry_price": 484.7309427820188
+      }
+    },
+    {
+      "name": "比亚迪 V1.1 基准情景",
+      "route": "value_driver_fcff",
+      "inputs": {
+        "starting_nopat": 38.0,
+        "shares": 9.117197565,
+        "initial_growth": 0.10,
+        "initial_ronic": 0.13,
+        "discount_rate": 0.095,
+        "perpetual_growth": 0.03,
+        "net_debt": 0.0,
+        "entry_price": 92.32
+      },
+      "expected": {
+        "intrinsic_value": 53.10901262585897,
+        "five_year_irr": -0.023129811488676877,
+        "target_entry_price": 41.968282435550485
+      }
+    },
+    {
+      "name": "招商银行 V1.1 基准情景",
+      "route": "residual_income",
+      "inputs": {
+        "beginning_book_value_per_share": 45.4,
+        "payout_ratio": 0.35,
+        "initial_roe": 0.13,
+        "year_five_roe": 0.12,
+        "cost_of_equity": 0.10,
+        "entry_price": 39.35
+      },
+      "expected": {
+        "intrinsic_value": 51.89715398445987,
+        "five_year_irr": 0.16790297832848,
+        "target_entry_price": 42.24640326527865
+      }
+    }
+  ]
+}

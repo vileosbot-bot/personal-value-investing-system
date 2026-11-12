@@ -1,0 +1,78 @@
+{
+  "suite": "历史时点估值回测 V1.0 冻结复演回归",
+  "fixture_role": "复现历史工作簿口径，不证明策略有效",
+  "decision_at": "2021-08-30",
+  "outcome_at": "2026-08-28",
+  "years": 5.0,
+  "notion_source": "https://app.notion.com/p/3cd536ce953c8109a5adc1108ad732a9",
+  "cases": [
+    {
+      "name": "贵州茅台",
+      "start_price": 1586.0,
+      "end_price": 1297.4,
+      "predicted_annualized_return": 0.0456,
+      "benchmark_annualized_return": 0.0246,
+      "expected_actual_annualized_return": -0.01100164070499099,
+      "events": [
+        {"distribution_per_share": 21.675, "reinvestment_price": 2045.0},
+        {"distribution_per_share": 21.91, "reinvestment_price": 1742.06},
+        {"distribution_per_share": 25.911, "reinvestment_price": 1691.0},
+        {"distribution_per_share": 19.106, "reinvestment_price": 1649.79},
+        {"distribution_per_share": 30.876, "reinvestment_price": 1501.0},
+        {"distribution_per_share": 23.882, "reinvestment_price": 1522.0},
+        {"distribution_per_share": 27.673, "reinvestment_price": 1420.0},
+        {"distribution_per_share": 23.957, "reinvestment_price": 1410.0},
+        {"distribution_per_share": 28.02423, "reinvestment_price": 1168.63}
+      ]
+    },
+    {
+      "name": "腾讯控股",
+      "start_price": 465.8,
+      "end_price": 455.2,
+      "predicted_annualized_return": 0.104,
+      "benchmark_annualized_return": 0.0341,
+      "expected_actual_annualized_return": 0.019953276118132024,
+      "events": [
+        {"distribution_per_share": 13.4, "reinvestment_price": 442.4},
+        {"distribution_per_share": 1.6, "reinvestment_price": 352.0},
+        {"distribution_per_share": 18.13, "reinvestment_price": 342.87},
+        {"distribution_per_share": 2.4, "reinvestment_price": 335.0},
+        {"distribution_per_share": 3.4, "reinvestment_price": 397.0},
+        {"distribution_per_share": 4.5, "reinvestment_price": 510.0},
+        {"distribution_per_share": 5.3, "reinvestment_price": 460.2}
+      ]
+    },
+    {
+      "name": "比亚迪",
+      "start_price": 281.97,
+      "end_price": 92.32,
+      "predicted_annualized_return": -0.2127,
+      "benchmark_annualized_return": 0.0246,
+      "expected_actual_annualized_return": 0.002900198584654401,
+      "events": [
+        {"distribution_per_share": 0.105, "reinvestment_price": 329.0},
+        {"distribution_per_share": 1.142, "reinvestment_price": 259.0},
+        {"distribution_per_share": 3.0977722, "reinvestment_price": 243.0},
+        {"distribution_per_share": 3.974, "reinvestment_price": 350.0},
+        {"distribution_per_share": 0.0, "reinvestment_price": 0.0, "share_multiplier": 3.0},
+        {"distribution_per_share": 0.358, "reinvestment_price": 95.77}
+      ]
+    },
+    {
+      "name": "招商银行",
+      "start_price": 48.45,
+      "end_price": 39.35,
+      "predicted_annualized_return": 0.0578,
+      "benchmark_annualized_return": 0.0246,
+      "expected_actual_annualized_return": 0.006238116109759551,
+      "events": [
+        {"distribution_per_share": 1.522, "reinvestment_price": 36.48},
+        {"distribution_per_share": 1.738, "reinvestment_price": 33.2},
+        {"distribution_per_share": 1.972, "reinvestment_price": 34.68},
+        {"distribution_per_share": 2.0, "reinvestment_price": 48.24},
+        {"distribution_per_share": 1.013, "reinvestment_price": 40.11},
+        {"distribution_per_share": 1.003, "reinvestment_price": 37.55}
+      ]
+    }
+  ]
+}

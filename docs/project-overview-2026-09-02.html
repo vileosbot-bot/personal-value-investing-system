@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="个人价值投资系统项目介绍：说明长期投资研究与决策流程、七层架构、阶段 1 已完成成果、阶段 2 至 4 规划、风险边界与下一步。">
+  <link rel="icon" href="data:,">
+  <title>个人价值投资系统｜项目介绍与当前进展</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #173042;
+      --muted: #5f7280;
+      --line: #d9e5e9;
+      --paper: #ffffff;
+      --wash: #f4f9fa;
+      --blue: #2f6f8f;
+      --blue-dark: #245a74;
+      --cyan: #2f8f91;
+      --cyan-soft: #e8f5f4;
+      --blue-soft: #eaf3f8;
+      --warm: #a66a2d;
+      --warm-soft: #fff5e8;
+      --shadow: 0 14px 36px rgba(28, 70, 88, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--wash);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      background:
+        linear-gradient(180deg, #eef7f8 0, #ffffff 430px),
+        var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid rgba(47, 111, 143, 0.16);
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -110px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(47, 143, 145, 0.15), rgba(47, 111, 143, 0.04));
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      line-height: 1.4;
+    }
+
+    .hero-summary {
+      max-width: 810px;
+      margin-bottom: 28px;
+      color: #395766;
+      font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+    }
+
+    .status-card {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfdfd;
+    }
+
+    .status-card strong,
+    .status-card span {
+      display: block;
+    }
+
+    .status-card strong {
+      margin-bottom: 4px;
+      color: var(--blue-dark);
+      font-size: 1.04rem;
+    }
+
+    .status-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .status-card.next {
+      border-color: #b9dcd9;
+      background: var(--cyan-soft);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .meta-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .meta-row span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+    }
+
+    main section {
+      padding-top: 66px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .section-head p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .flow li {
+      position: relative;
+      min-width: 0;
+      padding: 18px 12px;
+      border: 1px solid #cfe0e6;
+      border-radius: 13px;
+      background: var(--paper);
+      color: var(--blue-dark);
+      font-size: 0.91rem;
+      font-weight: 750;
+      line-height: 1.45;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(34, 83, 103, 0.05);
+    }
+
+    .flow li:not(:last-child)::after {
+      content: "›";
+      position: absolute;
+      z-index: 2;
+      right: -8px;
+      top: 50%;
+      width: 16px;
+      color: var(--cyan);
+      font-size: 1.35rem;
+      line-height: 1;
+      transform: translateY(-52%);
+    }
+
+    .layer-grid,
+    .carrier-grid,
+    .section-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .layer-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .layer-card,
+    .carrier-card,
+    .panel,
+    .stage-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .layer-card {
+      padding: 22px;
+    }
+
+    .layer-card .number {
+      display: inline-grid;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 14px;
+      place-items: center;
+      border-radius: 9px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .layer-card p,
+    .carrier-card p,
+    .stage-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .carrier-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .carrier-card {
+      padding: 22px;
+      border-top: 4px solid var(--cyan);
+    }
+
+    .carrier-card code {
+      color: var(--blue-dark);
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 0.85em;
+    }
+
+    .section-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: clamp(22px, 4vw, 32px);
+    }
+
+    .panel.complete {
+      background: linear-gradient(145deg, #ffffff, #f2f9fa);
+    }
+
+    .panel.pending {
+      background: linear-gradient(145deg, #ffffff, #fbfcfc);
+    }
+
+    .panel.risk {
+      border-color: #edd8bd;
+      background: var(--warm-soft);
+    }
+
+    .panel.next-step {
+      border-color: #badbd9;
+      background: var(--cyan-soft);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .risk .tag {
+      background: #f5e3cb;
+      color: #855324;
+    }
+
+    .next-step .tag {
+      background: #d5ecea;
+      color: #216c6e;
+    }
+
+    ul.clean {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.clean li {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 19px;
+    }
+
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      background: var(--cyan);
+      transform: translateY(-50%);
+    }
+
+    .risk ul.clean li::before {
+      background: var(--warm);
+    }
+
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stage-card {
+      position: relative;
+      padding: 22px;
+    }
+
+    .stage-card .stage-status {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      color: var(--blue-dark);
+      background: var(--blue-soft);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .stage-card.done {
+      border-color: #bcdcdf;
+      background: #f4fbfb;
+    }
+
+    .stage-card.done .stage-status {
+      color: #236a6c;
+      background: #dcefed;
+    }
+
+    .stage-card.next {
+      border: 2px solid var(--cyan);
+    }
+
+    .stage-card.next .stage-status {
+      color: #ffffff;
+      background: var(--cyan);
+    }
+
+    .boundary-note {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--warm);
+      border-radius: 0 12px 12px 0;
+      background: var(--warm-soft);
+      color: #694821;
+    }
+
+    .boundary-note strong {
+      color: #754c1f;
+    }
+
+    .scope-banner {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .scope-banner > div {
+      padding: 26px;
+      border-radius: var(--radius);
+    }
+
+    .scope-main {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue-dark), var(--cyan));
+    }
+
+    .scope-main p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .scope-detail {
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .scope-detail p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 70px;
+      padding: 28px 0 8px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer h2 {
+      color: var(--ink);
+      font-size: 1.08rem;
+      letter-spacing: 0;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .status-grid,
+      .layer-grid,
+      .carrier-grid,
+      .stages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flow li:not(:last-child)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 24px, 1120px);
+        padding-top: 12px;
+      }
+
+      .hero {
+        padding: 25px 20px;
+        border-radius: 18px;
+      }
+
+      .status-grid,
+      .layer-grid,
+      .carrier-grid,
+      .section-grid,
+      .stages,
+      .scope-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow li {
+        text-align: left;
+      }
+
+      main section {
+        padding-top: 48px;
+      }
+
+      .panel,
+      .scope-banner > div {
+        padding: 21px;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 14mm;
+      }
+
+      html,
+      body {
+        background: #ffffff;
+      }
+
+      body {
+        color: #111111;
+        font-size: 10.5pt;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero,
+      .layer-card,
+      .carrier-card,
+      .panel,
+      .stage-card,
+      .scope-banner > div {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .hero {
+        border-radius: 0;
+      }
+
+      main section {
+        padding-top: 28px;
+      }
+
+      .flow {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .layer-grid,
+      .carrier-grid,
+      .stages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .scope-main {
+        color: #111111;
+        background: #eef6f6;
+        border: 1px solid var(--line);
+      }
+
+      .scope-main p {
+        color: #333333;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <p class="eyebrow">Personal Value Investing System</p>
+      <h1>个人长期投资研究与决策系统</h1>
+      <p class="hero-summary">它把证据、公司研究、模型选择、情景估值、五年预期收益、冻结决策与持续复盘串成一条可解释、可质疑、可重放的链路。当前已完成阶段 1 工程底座；阶段 2 尚未启动，是明确的下一步。</p>
+
+      <div class="status-grid" aria-label="项目核心状态">
+        <div class="status-card">
+          <strong>定位</strong>
+          <span>服务个人长期投资学习、研究、记录与复盘，不是自动交易系统。</span>
+        </div>
+        <div class="status-card">
+          <strong>阶段 1｜已完成</strong>
+          <span>重建底座、治理文档、模板、确定性计算内核与交付闭环已建立。</span>
+        </div>
+        <div class="status-card next">
+          <strong>阶段 2｜尚未启动</strong>
+          <span>下一步建设普通非金融企业研究闭环；阶段 3、4 仍为后续规划。</span>
+        </div>
+      </div>
+
+      <div class="meta-row">
+        <span>信息核验日期：2026-09-02（亚洲/上海）</span>
+        <span>状态权威：Plan.md</span>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="flow-title">
+        <div class="section-head">
+          <p class="section-kicker">Core Flow</p>
+          <h2 id="flow-title">一条从证据到复盘的主流程</h2>
+          <p>先区分事实、计算、推断、个人偏好与待确认项，再让研究结论进入可冻结、可替代、可回放的决策记录。</p>
+        </div>
+        <ol class="flow">
+          <li>证据</li>
+          <li>本人临时判断</li>
+          <li>公司与模型路由</li>
+          <li>三情景估值</li>
+          <li>五年预期收益</li>
+          <li>冻结决策卡</li>
+          <li>事件／季度复盘</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="architecture-title">
+        <div class="section-head">
+          <p class="section-kicker">Architecture</p>
+          <h2 id="architecture-title">七层架构：先闭环，再扩展基础设施</h2>
+          <p>系统以显式输入和确定性计算为基础。缺失数据必须标记，当前事实与历史时点事实隔离，冻结记录不得原地覆盖。</p>
+        </div>
+        <div class="layer-grid">
+          <article class="layer-card">
+            <span class="number">01</span>
+            <h3>证据层</h3>
+            <p>记录来源、资料截止日、公开可用日、口径与原始哈希。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">02</span>
+            <h3>研究层</h3>
+            <p>分析商业模式、护城河、管理层、资本配置、财务质量与行业空间。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">03</span>
+            <h3>模型路由层</h3>
+            <p>按公司经济特征选择主模型及交叉检查模型，而不是机械套用。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">04</span>
+            <h3>计算层</h3>
+            <p>处理情景、现金流、估值、市场隐含预期、五年预期收益与敏感性。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">05</span>
+            <h3>决策层</h3>
+            <p>承载用户判断、反方论证、冻结决策卡及新旧卡替代关系。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">06</span>
+            <h3>验证层</h3>
+            <p>约束历史时点、股东总回报、最大回撤、基准比较与结果归因。</p>
+          </article>
+          <article class="layer-card">
+            <span class="number">07</span>
+            <h3>报告层</h3>
+            <p>提供初学者简版与可审计详版，并共享同一输入和结果哈希。</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="carrier-title">
+        <div class="section-head">
+          <p class="section-kicker">Current Form</p>
+          <h2 id="carrier-title">当前载体：轻量、透明、可验证</h2>
+          <p>现阶段不急于引入数据库或自动数据平台，先验证流程、字段、公式和边界是否可靠。</p>
+        </div>
+        <div class="carrier-grid">
+          <article class="carrier-card">
+            <h3>Markdown</h3>
+            <p>承载需求、架构、研究模板、临时判断、冻结决策与复盘记录。</p>
+          </article>
+          <article class="carrier-card">
+            <h3>JSON</h3>
+            <p>承载可验证的虚构示例，以及未来模型所需的显式结构化输入。</p>
+          </article>
+          <article class="carrier-card">
+            <h3>Python 标准库</h3>
+            <p>提供无外部运行依赖的确定性计算内核，避免隐藏的数据补全和环境差异。</p>
+          </article>
+          <article class="carrier-card">
+            <h3>自动化测试</h3>
+            <p>保护公式、概率约束、时点资格与边界行为，并提供持续集成入口。</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="progress-title">
+        <div class="section-head">
+          <p class="section-kicker">Progress</p>
+          <h2 id="progress-title">当前进展：阶段 1 完成，阶段 2 待启动</h2>
+          <p>Windows 应用登记只是一个尚未完成的入口操作；系统本身还有阶段 2 至 4 的实质建设工作，不能概括为“只差这一项”。</p>
+        </div>
+
+        <div class="stages">
+          <article class="stage-card done">
+            <span class="stage-status">已完成</span>
+            <h3>阶段 1｜重建底座与 GitHub 切换</h3>
+            <p>从干净历史重建项目，建立治理、需求、架构、模板、最小计算内核及交付恢复入口。</p>
+          </article>
+          <article class="stage-card next">
+            <span class="stage-status">下一步 · 尚未启动</span>
+            <h3>阶段 2｜普通非金融企业研究闭环</h3>
+            <p>将建设官方证据人工导入、财务标准化、三阶段企业自由现金流估值、反向估值、敏感性分析与冻结决策卡。</p>
+          </article>
+          <article class="stage-card">
+            <span class="stage-status">后续规划</span>
+            <h3>阶段 3｜模型路由扩展</h3>
+            <p>计划扩展银行、稳定分红企业、多业务集团、重资本成长、资源周期、地产与保险等专用模型。</p>
+          </article>
+          <article class="stage-card">
+            <span class="stage-status">后续规划</span>
+            <h3>阶段 4｜历史时点验证</h3>
+            <p>计划完成总回报与最大回撤、决策区与结果区隔离、多历史截面和样本外验证。</p>
+          </article>
+        </div>
+
+        <div class="boundary-note">
+          <strong>状态解读：</strong>阶段 2、阶段 3、阶段 4 均不得视为已实施。阶段 2 是紧接阶段 1 的下一步；阶段 3、4 是更后续的路线规划。
+        </div>
+      </section>
+
+      <section aria-labelledby="status-detail-title">
+        <div class="section-head">
+          <p class="section-kicker">Status Details</p>
+          <h2 id="status-detail-title">已完成、尚未完成、风险与下一步</h2>
+        </div>
+        <div class="section-grid">
+          <article class="panel complete">
+            <span class="tag">已完成</span>
+            <h3>阶段 1 的可运行工程底座</h3>
+            <ul class="clean">
+              <li>完成来源结构化迁移、产品需求、七层架构、模型路由与历史时点验证契约。</li>
+              <li>建立公司研究、本人临时判断、冻结决策卡与复盘模板。</li>
+              <li>建立标准库确定性计算内核，可处理现金流内部收益率、目标价格、情景结果、最大回撤与时点资格。</li>
+              <li>按 Plan.md 记录，本地十项测试通过，虚构示例运行成功；GitHub 新主线、归档恢复入口与持续集成完成核对。</li>
+              <li>按 Plan.md 记录，GBrain 项目关系及飞书项目群创建、绑定、置顶与回读已完成。</li>
+            </ul>
+          </article>
+
+          <article class="panel pending">
+            <span class="tag">尚未完成</span>
+            <h3>研究闭环、扩展模型与历史验证仍待建设</h3>
+            <ul class="clean">
+              <li>阶段 2 尚未启动：官方证据人工导入格式、财务标准化、普通非金融企业估值闭环均未实施。</li>
+              <li>阶段 3 尚未实施：银行、保险、资源、地产、多业务集团等模型仍是后续规划。</li>
+              <li>阶段 4 尚未实施：严格历史时点隔离、多截面与样本外验证仍是后续规划。</li>
+              <li>自动数据来源、授权、刷新频率和未来前端形态尚未确认。</li>
+              <li>Windows Codex 原生“打开文件夹”项目登记尚未完成。</li>
+            </ul>
+          </article>
+
+          <article class="panel risk">
+            <span class="tag">风险与边界</span>
+            <h3>当前结果必须在明确边界内理解</h3>
+            <ul class="clean">
+              <li>当前不联网抓取数据，不使用数据库，不连接券商，也不自动执行交易。</li>
+              <li>历史聊天中的行情、财务、估值和回测结果没有在本轮重新核验，不能作为当前结论。</li>
+              <li>缺失数据必须显式标记，不能为了表格完整制造数字；官方披露与时点可得性优先。</li>
+              <li>历史验证必须隔离决策时点信息与后续结果；已知部分后续结果时只能称为“历史信息集约束复演”。</li>
+              <li>本页不包含真实持仓、账户、资金、交易流水、聊天或消息标识、密钥、历史行情、公司估值或旧回测数字。</li>
+            </ul>
+          </article>
+
+          <article class="panel next-step">
+            <span class="tag">下一步</span>
+            <h3>先建立普通非金融企业的可验证闭环</h3>
+            <ul class="clean">
+              <li>定义官方证据清单与人工导入格式，并明确资料截止日、公开可用日和口径。</li>
+              <li>实现财务标准化与一次性因素调整。</li>
+              <li>实现三阶段企业自由现金流估值、反向估值和敏感性分析。</li>
+              <li>生成可冻结、不可原地改写、可由新卡替代的决策卡。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="scope-title">
+        <div class="section-head">
+          <p class="section-kicker">Scope &amp; Meaning</p>
+          <h2 id="scope-title">首期范围与“15%”的正确含义</h2>
+        </div>
+        <div class="scope-banner">
+          <div class="scope-main">
+            <h3>首期覆盖 A 股与港股</h3>
+            <p>系统首先面向这两个市场建立统一研究语言与证据规则。其他市场不在当前已确认的首期范围内。</p>
+          </div>
+          <div class="scope-detail">
+            <h3>五年预期年化 15% 是研究门槛之一</h3>
+            <p>这一数字用于筛查“是否值得继续研究”，必须与公司质量、估值不确定性、安全边际、关键假设和证伪条件一起判断。</p>
+            <p><strong>它不等于指令式买卖建议，不会单独触发行动，也不是任何形式的收益承诺。</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h2>来源范围与边界说明</h2>
+      <p>本页依据项目内已允许读取的文档编制：AGENTS.md、README.md、Plan.md、STATUS.md、PRD.md、docs/architecture.md、docs/model-routing.md、docs/backtest-contract.md、docs/decisions/ADR-0001-rebuild-from-clean-history.md。</p>
+      <p>当前阶段、待办、阻塞、证据和下一步只以 Plan.md 为唯一权威。本页是便于阅读的项目介绍，不建立新的状态源；如内容与后续更新后的 Plan.md 不一致，应以 Plan.md 为准。</p>
+      <p>本页为离线单文件 HTML，无外部字体、图片、脚本、链接或跟踪代码，不联网获取任何数据。</p>
+    </footer>
+  </div>
+</body>
+</html>
