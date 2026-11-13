@@ -1,9 +1,10 @@
 # V1.1 四模型输入规则化与知识隔离协议
+> 第二轮校正：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；原修订起点 `d3a0c3cc`；本次接续时分支 HEAD `2d17ea2621d893424fe6fcab12080b18c829f466`。本轮仅校正文档，不修改模型代码，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
 
 > 第二轮修订：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；修订起点 `d3a0c3cc`。本轮仅修订文档，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
 
 - Request ID：`pvis-phase0-revise-20261113-01`（修订自 `pvis-phase0-design-20261113-01`）
-- 版本：Phase 0 / v0.3（规则补丁设计稿，待独立复核与正式冻结）
+- 版本：Phase 0 / v0.3.1（第二轮校正稿；待独立复核与正式冻结）
 - 基线模型：V1.1；设计依据为 `src/pvis/valuation.py` 与 `examples/regression/v1_1_models.json`。
 - 状态：DESIGN；未生成任何历史输入、估值或回测结果。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；本文件只规定形成日输入的机械生成规则。数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -255,7 +256,7 @@ RONIC_3y,t = Σ(j=t−2…t) ΔNOPAT_j / Σ(j=t−2…t) ΔIC_j
 
 主输入使用未截尾 RONIC_3y 原值。辅助稳健性敏感性另报告 RONIC_3y_clipped = min(100%, max(−50%, RONIC_3y))，截尾区间固定为 [−50%, 100%]；截尾值不得替代主值，也不得用于挽救近零／负分母。若原始主 RONIC_3y ≤0，冻结模型要求 RONIC>0，相关模型输入记 NA，不得用截尾值抬成正值。
 
-对最近五个可得年度结束点生成滚动三年窗口；至少需要三个有效窗口，三情景分别取有效原始 RONIC_3y 的 Q25／中位数／Q75。若悲观分位数不为正，因冻结模型要求 RONIC>0，悲观情景记不可计算；不抬高到人为正值。
+**窗口数量与观测要求：**使用最近六个连续完整财年年末水平值（六个 NOPAT 水平值和六个 IC 水平值），形成三个连续滚动三年窗口：第 1–4 个年末值形成第一个窗口，第 2–5 个形成第二个窗口，第 3–6 个形成第三个窗口。至少需要三个有效窗口；三情景分别取有效原始 RONIC_3y 的 Q25／中位数／Q75。不得写成“五个年度结束点生成三个窗口”，因为五个水平值最多只能生成两个三年窗口。若三个窗口中任一有效性条件不满足，按实际有效窗口数检查；不足三个有效窗口时该公司—队列记 NA。若悲观分位数不为正，因冻结模型要求 RONIC>0，悲观情景记不可计算；不抬高到人为正值。
 
 ### 6.4 WACC、净债务与股数
 
@@ -293,8 +294,8 @@ ROE_y = NetProfitCommon_y / ((OrdinaryEquity_(y−1) + OrdinaryEquity_y) / 2)
 - 分母为期初与期末**平均普通股权益**；该分母本来就是普通股权益，不改为总权益、平均总权益或包含非控股权益的权益。
 - initial_roe：最近三个完整财年的 ROE 中位数。
 - year_five_roe：最近五个完整财年的 ROE 中位数；该值是模型第 5 年的目标 ROE，不直接设为 Ke。
-- 冻结模型代码依据：src/pvis/valuation.py 第 272–345 行的 residual_income_model()。第 1–5 年按函数既有公式从 initial_roe 线性过渡到 year_five_roe；第 6–10 年从 year_five_roe 线性收敛至 cost_of_equity；第 10 年 ROE=Ke。不得把第 5 年直接改成 Ke，不得另加收敛速度参数。
-- 第 10 年 ROE=Ke 意味着第 10 年剩余收益 (ROE−Ke)×期初 BVPS 为零；冻结函数只汇总其定义范围内第 1–10 年剩余收益，没有第 10 年之后的终值项。第五年退出值按冻结函数将第 5 年账面价值与第 6–10 年剩余收益折现项组合，不存在“第 10 年 ROE=Ke 与额外十年后终值冲突”。
+- 冻结模型代码依据：src/pvis/valuation.py 第 272–345 行的 residual_income_model()。第 1–5 年公式为 ROE_k = initial_roe + (year_five_roe − initial_roe) × (k−1)/4，k=1…5；因此第 2、3、4 年分别完成 25%、50%、75% 的线性过渡，并非缺失或跳过。第 6–10 年公式为 ROE_(5+j) = year_five_roe + (Ke − year_five_roe) × j/5，j=1…5；第 10 年 ROE=Ke。不得把第 5 年直接改成 Ke，不得另加收敛速度参数。
+- 第 10 年 ROE=Ke 意味着第 10 年剩余收益 (ROE−Ke)×期初 BVPS 为零。冻结函数只汇总其定义范围内第 1–10 年剩余收益；没有第 10 年之后的终值项。第五年退出值按冻结函数将第 5 年期末账面价值与第 6–10 年剩余收益折现项组合，不存在“第 10 年 ROE=Ke 与额外十年后终值冲突”。
 - 只使用形成日之前已公开的完整财年；正负 ROE 均保留，不能删除亏损年。
 - 普通股权益为零／负数、普通股净利润归属口径不一致或五年序列不足时记 NA。
 
