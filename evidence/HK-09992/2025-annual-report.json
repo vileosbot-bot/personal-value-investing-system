@@ -1,0 +1,1404 @@
+{
+  "format_version": "0.2",
+  "import_id": "HK-09992-2025-AR-001",
+  "company": {
+    "name": "泡泡玛特国际集团有限公司（POP MART INTERNATIONAL GROUP LIMITED）",
+    "code": "09992",
+    "market": "港股（香港联合交易所主板；年报列示股份代号9992，证据目录采用五位零填充代码09992）"
+  },
+  "period": {
+    "type": "年报",
+    "fiscal_year": 2025,
+    "period_end": "2025-12-31"
+  },
+  "source": {
+    "type": "交易所公告",
+    "publisher": "香港联合交易所有限公司（HKEXnews 披露易）",
+    "document_title": "POP MART INTERNATIONAL GROUP LIMITED Annual Report 2025",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100394.pdf",
+    "file": "2025-annual-report.pdf",
+    "file_sha256": "47095a39c6425b11e5aaa091f456e178498d20a77d4ff6a969e351e4f5dfaaf7",
+    "pages": 370,
+    "bytes": 5521216,
+    "published_at": "2026-04-21",
+    "available_at": "2026-04-21"
+  },
+  "decision_at": "2026-11-13",
+  "items": [
+    {
+      "field": "营业收入",
+      "value": 37120052,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Revenue。"
+    },
+    {
+      "field": "营业收入同比增长率",
+      "value": 184.7,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "MD&A—Sales Revenue",
+      "page": 19,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页19；管理层披露同比增长率；2024比较基数13,037,749 RMB'000。"
+    },
+    {
+      "field": "销售成本",
+      "value": -10355136,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Cost of sales。"
+    },
+    {
+      "field": "毛利",
+      "value": 26764916,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Gross profit。"
+    },
+    {
+      "field": "毛利率",
+      "value": 72.1,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "Financial Summary",
+      "page": 6,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页6；管理层披露；2024比较值66.8%。"
+    },
+    {
+      "field": "经销及销售开支",
+      "value": -8082433,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Distribution and selling expenses。"
+    },
+    {
+      "field": "一般及行政开支",
+      "value": -1770114,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 General and administrative expenses。"
+    },
+    {
+      "field": "金融资产减值亏损拨备",
+      "value": -11805,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Provision for impairment losses on financial assets。"
+    },
+    {
+      "field": "其他收入",
+      "value": 149921,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Other income。"
+    },
+    {
+      "field": "其他净亏损",
+      "value": -160011,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Other losses – net。"
+    },
+    {
+      "field": "经营利润",
+      "value": 16890474,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Operating profit；FCFF起始经营利润输入。"
+    },
+    {
+      "field": "财务收入",
+      "value": 158966,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Finance income。"
+    },
+    {
+      "field": "财务开支",
+      "value": -82471,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Finance expenses。"
+    },
+    {
+      "field": "财务收入净额",
+      "value": 76495,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Finance income – net。"
+    },
+    {
+      "field": "应占权益法入账投资利润",
+      "value": 69653,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Share of profit of investments accounted for using the equity method。"
+    },
+    {
+      "field": "税前利润",
+      "value": 17036622,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Profit before income tax。"
+    },
+    {
+      "field": "即期所得税",
+      "value": 5631102,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注11—Income tax expense",
+      "page": 286,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页286；原文 Current income tax。"
+    },
+    {
+      "field": "递延所得税",
+      "value": -1606522,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注11—Income tax expense",
+      "page": 286,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页286；原文 Deferred income tax；为递延所得税抵免。"
+    },
+    {
+      "field": "所得税开支",
+      "value": -4024580,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Income tax expense；绝对值/税前利润用于集团有效税率代理。"
+    },
+    {
+      "field": "年内利润",
+      "value": 13012042,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Profit for the year。"
+    },
+    {
+      "field": "归属本公司拥有人利润",
+      "value": 12775689,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Profit attributable to owners of the Company。"
+    },
+    {
+      "field": "归属非控股权益利润",
+      "value": 236353,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；原文 Profit attributable to non-controlling interests。"
+    },
+    {
+      "field": "每股基本盈利",
+      "value": 9.61,
+      "unit": "RMB/share",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表—Earnings per share",
+      "page": 219,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页219；原文 Basic earnings per share。"
+    },
+    {
+      "field": "每股摊薄盈利",
+      "value": 9.58,
+      "unit": "RMB/share",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表—Earnings per share",
+      "page": 219,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页219；原文 Diluted earnings per share。"
+    },
+    {
+      "field": "非IFRS经调整净利润",
+      "value": 13083646,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Non-IFRS Accounting Standards adjusted net profit",
+      "page": 32,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页32；管理层非IFRS指标；不是IFRS损益表项目。"
+    },
+    {
+      "field": "股份支付调整",
+      "value": 71604,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Non-IFRS Accounting Standards adjusted net profit reconciliation",
+      "page": 32,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页32；从IFRS年内利润加回的股份支付费用。"
+    },
+    {
+      "field": "非IFRS经调整净利润率",
+      "value": 35.2,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "Financial Summary",
+      "page": 6,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页6；管理层披露；非IFRS指标。"
+    },
+    {
+      "field": "净利润率",
+      "value": 35.1,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "Financial Summary",
+      "page": 6,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页6；管理层披露。"
+    },
+    {
+      "field": "经营利润率",
+      "value": 45.5,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "按年报经营利润/营业收入计算",
+      "page": 218,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页218；计算值：16,890,474 ÷ 37,120,052；非管理层单独披露值。"
+    },
+    {
+      "field": "物业、厂房及设备",
+      "value": 1417556,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Property, plant and equipment。"
+    },
+    {
+      "field": "无形资产",
+      "value": 208665,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Intangible assets。"
+    },
+    {
+      "field": "使用权资产",
+      "value": 2791171,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Right-of-use assets。"
+    },
+    {
+      "field": "受限制现金（非流动）",
+      "value": 256265,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Restricted cash；非流动资产。"
+    },
+    {
+      "field": "权益法入账投资",
+      "value": 128124,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Investments accounted for using the equity method。"
+    },
+    {
+      "field": "非流动按公允价值计入损益金融资产",
+      "value": 356906,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Financial assets at fair value through profit or loss；非流动。"
+    },
+    {
+      "field": "非流动预付款项及其他应收款",
+      "value": 274473,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Prepayments and other receivables；非流动。"
+    },
+    {
+      "field": "递延所得税资产",
+      "value": 1753551,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Deferred income tax assets。"
+    },
+    {
+      "field": "非流动资产总额",
+      "value": 7186711,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Total non-current assets。"
+    },
+    {
+      "field": "流动贸易应收款项",
+      "value": 921240,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Trade receivables。"
+    },
+    {
+      "field": "存货",
+      "value": 5472839,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Inventories；全部为制成品。"
+    },
+    {
+      "field": "流动预付款项及其他应收款",
+      "value": 1283154,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Prepayments and other receivables。"
+    },
+    {
+      "field": "流动按公允价值计入损益金融资产",
+      "value": 9743,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Financial assets at fair value through profit or loss。"
+    },
+    {
+      "field": "受限制现金（流动）",
+      "value": 2658,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Restricted cash。"
+    },
+    {
+      "field": "初始期限超过三个月且一年以内定期存款",
+      "value": 3449922,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Term deposits with initial term over three months and within one year；不包含于附注34(c)净现金口径。"
+    },
+    {
+      "field": "现金及现金等价物",
+      "value": 13775087,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Cash and cash equivalents。"
+    },
+    {
+      "field": "流动资产总额",
+      "value": 24914643,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Total current assets。"
+    },
+    {
+      "field": "总资产",
+      "value": 32101354,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 220,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页220；原文 Total assets。"
+    },
+    {
+      "field": "股本",
+      "value": 882,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Share capital。"
+    },
+    {
+      "field": "股份奖励计划持有的股份（权益抵减）",
+      "value": -7,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Shares held for share award scheme；权益抵减项。"
+    },
+    {
+      "field": "其他储备",
+      "value": 3123058,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Other reserves。"
+    },
+    {
+      "field": "保留盈利",
+      "value": 19153802,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Retained earnings。"
+    },
+    {
+      "field": "本公司拥有人应占权益",
+      "value": 22277735,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Equity attributable to owners of the Company。"
+    },
+    {
+      "field": "非控股权益",
+      "value": 374632,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Non-controlling interests in equity。"
+    },
+    {
+      "field": "总权益",
+      "value": 22652367,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Total equity。"
+    },
+    {
+      "field": "非流动应付授权费",
+      "value": 5525,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Non-current license fees payable。"
+    },
+    {
+      "field": "非流动租赁负债",
+      "value": 2275301,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Non-current lease liabilities。"
+    },
+    {
+      "field": "非流动负债总额",
+      "value": 2280826,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Total non-current liabilities。"
+    },
+    {
+      "field": "贸易应付款项",
+      "value": 1858216,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Trade payables。"
+    },
+    {
+      "field": "流动应付授权费",
+      "value": 437247,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Current license fees payable。"
+    },
+    {
+      "field": "其他应付款项",
+      "value": 1777317,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Other payables。"
+    },
+    {
+      "field": "合约负债",
+      "value": 393119,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Contract liabilities。"
+    },
+    {
+      "field": "流动租赁负债",
+      "value": 586274,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Current lease liabilities。"
+    },
+    {
+      "field": "即期所得税负债",
+      "value": 2115988,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Current income tax liabilities。"
+    },
+    {
+      "field": "流动负债总额",
+      "value": 7168161,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Total current liabilities。"
+    },
+    {
+      "field": "总负债",
+      "value": 9448987,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 221,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页221；原文 Total liabilities。"
+    },
+    {
+      "field": "经营所得现金",
+      "value": 14704780,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(a)—Reconciliation of profit before income tax to net cash flows generated from operations",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；原文 Cash generated from operations；与现金流量表经营活动净现金不同。"
+    },
+    {
+      "field": "已收利息",
+      "value": 237628,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Interest received。"
+    },
+    {
+      "field": "已付所得税",
+      "value": -4077256,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Income tax paid。"
+    },
+    {
+      "field": "经营活动所得现金净额",
+      "value": 10865152,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Net cash generated from operating activities。"
+    },
+    {
+      "field": "购置物业、厂房及设备现金支出",
+      "value": -985250,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Purchases of property, plant and equipment。"
+    },
+    {
+      "field": "购置无形资产现金支出",
+      "value": -186287,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Purchases of intangible assets。"
+    },
+    {
+      "field": "投资活动所用现金净额",
+      "value": -988896,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 225,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页225；原文 Net cash used in investing activities。"
+    },
+    {
+      "field": "租赁负债付款",
+      "value": -608288,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Payments of lease liabilities。"
+    },
+    {
+      "field": "已付股息",
+      "value": -1083288,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Dividends paid。"
+    },
+    {
+      "field": "融资活动所用现金净额",
+      "value": -1767352,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Net cash used in financing activities。"
+    },
+    {
+      "field": "现金及现金等价物净增加额",
+      "value": 8108904,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Net increase in cash and cash equivalents。"
+    },
+    {
+      "field": "年初现金及现金等价物",
+      "value": 6109017,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Cash and cash equivalents at beginning of the year。"
+    },
+    {
+      "field": "现金及现金等价物汇兑亏损",
+      "value": -442834,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Exchange losses on cash and cash equivalents。"
+    },
+    {
+      "field": "年末现金及现金等价物",
+      "value": 13775087,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 226,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页226；原文 Cash and cash equivalents at end of the year。"
+    },
+    {
+      "field": "资本开支—购置物业、厂房及设备",
+      "value": 985250,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 34,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页34；管理层资本开支定义中的物业、厂房及设备购置款。"
+    },
+    {
+      "field": "资本开支—购置无形资产",
+      "value": 186287,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 34,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页34；管理层资本开支定义中的无形资产购置款。"
+    },
+    {
+      "field": "资本开支合计",
+      "value": 1171537,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 34,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页34；管理层定义：购置物业、厂房及设备与购置无形资产之和。"
+    },
+    {
+      "field": "净现金（附注34(c)口径）",
+      "value": 10923255,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；现金及现金等价物13,775,087 + 流动性投资9,743 − 一年内到期租赁负债586,274 − 一年后到期租赁负债2,275,301。"
+    },
+    {
+      "field": "净现金对账—现金及现金等价物",
+      "value": 13775087,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；净现金计算组成项。"
+    },
+    {
+      "field": "净现金对账—流动性投资",
+      "value": 9743,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；净现金计算组成项；为按公平值计入损益的上市股票。"
+    },
+    {
+      "field": "净现金对账—一年内到期租赁负债",
+      "value": -586274,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；净现金计算组成项。"
+    },
+    {
+      "field": "净现金对账—一年后到期租赁负债",
+      "value": -2275301,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 343,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页343；净现金计算组成项。"
+    },
+    {
+      "field": "年末已发行及缴足普通股数",
+      "value": 1342943150,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 330,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页330；2024及2025年末均为1,342,943,150股；与模型延续2024工作底稿的股数口径。"
+    },
+    {
+      "field": "年末库存股数",
+      "value": 0,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 330,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页330；年报列示年末无库存股。"
+    },
+    {
+      "field": "年末股份奖励计划信托持股数",
+      "value": 10979746,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注26—Shares held for share award scheme",
+      "page": 331,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页331；由股份奖励信托持有；已发行股数与EPS加权平均股数口径不同。"
+    },
+    {
+      "field": "基本每股盈利加权平均普通股数",
+      "value": 1330007,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(a)—Basic earnings per share",
+      "page": 290,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页290；年报定义为已发行普通股加权平均数减股份奖励计划所持股份及本公司购回以注销的股份。"
+    },
+    {
+      "field": "摊薄计算新增受限制股份数",
+      "value": 3138,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(b)—Diluted earnings per share",
+      "page": 291,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页291；原文 Restricted Shares granted and assumed vested。"
+    },
+    {
+      "field": "摊薄每股盈利加权平均股份数",
+      "value": 1333145,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(b)—Diluted earnings per share",
+      "page": 291,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页291；原文 Weighted average number of shares for diluted earnings per share。"
+    },
+    {
+      "field": "中国（含香港、澳门、台湾）地区收入",
+      "value": 20851717,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by regions",
+      "page": 19,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页19；2025报告的PRC分部定义与2024年报旧地域划分不同；本报告中国地区收入。"
+    },
+    {
+      "field": "亚太地区收入",
+      "value": 8011027,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by regions",
+      "page": 19,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页19；原文 Asia Pacific。"
+    },
+    {
+      "field": "美洲地区收入",
+      "value": 6806189,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by regions",
+      "page": 19,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页19；原文 Americas。"
+    },
+    {
+      "field": "欧洲及其他地区收入",
+      "value": 1451119,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by regions",
+      "page": 19,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页19；原文 Europe and other regions。"
+    },
+    {
+      "field": "中国业务零售店销售收入",
+      "value": 10075432,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Retail stores；中国业务口径。"
+    },
+    {
+      "field": "中国业务机器人商店销售收入",
+      "value": 1345930,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Roboshops。"
+    },
+    {
+      "field": "中国业务线上销售收入",
+      "value": 8522321,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Online channels。"
+    },
+    {
+      "field": "中国业务批发及其他收入",
+      "value": 908034,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Wholesales and others。"
+    },
+    {
+      "field": "中国业务泡泡玛特抽盒机线上收入",
+      "value": 3423456,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Pop Draw。"
+    },
+    {
+      "field": "中国业务天猫旗舰店线上收入",
+      "value": 1785332,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 Tmall flagship store。"
+    },
+    {
+      "field": "中国业务抖音平台线上收入",
+      "value": 1589842,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by channels",
+      "page": 20,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页20；原文 DouYin platform。"
+    },
+    {
+      "field": "海外业务零售店销售收入",
+      "value": 7178894,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；原文 Revenue from retail store sales。"
+    },
+    {
+      "field": "海外业务线上销售收入",
+      "value": 7911508,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；原文 Revenue from online sales。"
+    },
+    {
+      "field": "海外业务机器人商店销售收入",
+      "value": 343516,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；原文 Revenue from roboshop sales。"
+    },
+    {
+      "field": "海外业务批发及其他收入",
+      "value": 834417,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；原文 Revenue from wholesales and others。"
+    },
+    {
+      "field": "中国业务分部收入",
+      "value": 20851717,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；新分部口径；中国业务包括中国内地、香港、澳门及台湾。"
+    },
+    {
+      "field": "海外业务分部收入",
+      "value": 16268335,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；新分部口径；海外业务指中国内地、香港、澳门及台湾以外地区。"
+    },
+    {
+      "field": "中国业务分部业绩",
+      "value": 10449429,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；分部经营利润，不包括其他收益/亏损及未分配项目。"
+    },
+    {
+      "field": "海外业务分部业绩",
+      "value": 8000050,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；分部经营利润，不包括其他收益/亏损及未分配项目。"
+    },
+    {
+      "field": "未分配费用及项目",
+      "value": -1398994,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；主要为若干企业职能中心和后台职能费用。"
+    },
+    {
+      "field": "分部业绩合计",
+      "value": 17050485,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；分部业绩加未分配项目；再扣其他净亏损160,011后与集团经营利润对接。"
+    },
+    {
+      "field": "中国业务物业厂房设备折旧",
+      "value": 291899,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "海外业务物业厂房设备折旧",
+      "value": 93792,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "未分配物业厂房设备折旧",
+      "value": 12511,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "物业厂房设备折旧合计",
+      "value": 398202,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "使用权资产折旧合计",
+      "value": 592713,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "无形资产摊销合计",
+      "value": 127050,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 282,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页282；重大非现金开支。"
+    },
+    {
+      "field": "中国业务非流动资产（地理位置口径）",
+      "value": 2147156,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；按资产所在地披露，不等同于完整分部资产。"
+    },
+    {
+      "field": "海外业务非流动资产（地理位置口径）",
+      "value": 2672833,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 283,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页283；按资产所在地披露，不等同于完整分部资产。"
+    },
+    {
+      "field": "自主产品收入",
+      "value": 36788244,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入99.1%。"
+    },
+    {
+      "field": "艺术家IP收入",
+      "value": 33406250,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入90.0%。"
+    },
+    {
+      "field": "THE MONSTERS IP收入",
+      "value": 14161064,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入38.1%。"
+    },
+    {
+      "field": "SKULLPANDA IP收入",
+      "value": 3539542,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入9.5%。"
+    },
+    {
+      "field": "CRYBABY IP收入",
+      "value": 2929006,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入7.9%。"
+    },
+    {
+      "field": "MOLLY IP收入",
+      "value": 2897084,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入7.8%。"
+    },
+    {
+      "field": "DIMOO IP收入",
+      "value": 2776695,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入7.5%。"
+    },
+    {
+      "field": "Twinkle Twinkle IP收入",
+      "value": 2055580,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入5.5%。"
+    },
+    {
+      "field": "HIRONO IP收入",
+      "value": 1735235,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入4.7%。"
+    },
+    {
+      "field": "HACIPUPU IP收入",
+      "value": 848021,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入2.3%。"
+    },
+    {
+      "field": "其他艺术家IP收入",
+      "value": 2464023,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入6.7%。"
+    },
+    {
+      "field": "授权IP收入",
+      "value": 3381994,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入9.1%。"
+    },
+    {
+      "field": "外采及其他收入",
+      "value": 331808,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页27；占总收入0.9%。"
+    },
+    {
+      "field": "毛绒产品收入",
+      "value": 18708074,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页28；占总收入50.4%。"
+    },
+    {
+      "field": "手办产品收入",
+      "value": 12022569,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页28；占总收入32.4%。"
+    },
+    {
+      "field": "MEGA产品收入",
+      "value": 1916082,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页28；占总收入5.2%。"
+    },
+    {
+      "field": "衍生品及其他产品收入",
+      "value": 4473327,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页28；占总收入12.0%。"
+    },
+    {
+      "field": "存货周转天数",
+      "value": 123,
+      "unit": "days",
+      "currency": "N/A",
+      "statement": "MD&A—Inventories",
+      "page": 33,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页33；管理层披露；2024年为102天。"
+    },
+    {
+      "field": "全球零售门店净增加数",
+      "value": 109,
+      "unit": "stores",
+      "currency": "N/A",
+      "statement": "MD&A—Inventories",
+      "page": 33,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页33；管理层解释存货增加因素之一：2025年全球门店净增109家。"
+    },
+    {
+      "field": "中国零售店数量",
+      "value": 445,
+      "unit": "stores",
+      "currency": "N/A",
+      "statement": "MD&A—Revenue by channels",
+      "page": 21,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页21；截至2025-12-31。"
+    },
+    {
+      "field": "中国机器人商店数量",
+      "value": 2396,
+      "unit": "stores",
+      "currency": "N/A",
+      "statement": "MD&A—Revenue by channels",
+      "page": 21,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页21；截至2025-12-31。"
+    },
+    {
+      "field": "集团实际税率（管理层披露，四舍五入）",
+      "value": 23.6,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "MD&A—Income Tax Expense",
+      "page": 31,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页31；管理层披露；本模型以所得税开支4,024,580/税前利润17,036,622计算精确代理值23.6231103%。"
+    },
+    {
+      "field": "银行借款",
+      "value": 0,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Bank borrowings",
+      "page": 33,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页33；管理层明确披露截至2025-12-31本集团无银行借款。"
+    },
+    {
+      "field": "现金流量表经营所得现金调节—股份支付",
+      "value": 76629,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(a)—Reconciliation of profit before income tax to net cash flows generated from operations",
+      "page": 342,
+      "note": "2025年度/截至2025-12-31合并口径；HKEXnews官方《Annual Report 2025》年报页342；现金流量表附注的非现金调节数；与非IFRS经调整净利润对账中股份支付71,604的定义/范围不同，不得混用。"
+    }
+  ],
+  "adjustments": [
+    {
+      "field": "非IFRS经调整净利润",
+      "reason": "管理层从IFRS年内利润中剔除股份支付费用，定义为非IFRS经调整净利润；这不是IFRS损益表更正，也不是FCFF模型调整。",
+      "amount": 71604,
+      "basis": "MD&A—Non-IFRS Accounting Standards adjusted net profit reconciliation，年报页32，单位RMB'000；年内利润13,012,042 + 股份支付调整71,604 = 经调整净利润13,083,646。"
+    },
+    {
+      "field": "2024比较分部及地区收入重新列示",
+      "reason": "2025年度组织架构升级后，向主要经营决策者分别汇报中国业务与海外业务表现；2025年报明确说明可报告分部组成发生变化，2024比较分部及收入资料已重新列示。2025报告的中国业务包括中国内地、香港、澳门及台湾；海外业务不含上述地区。2025年报重列的2024中国/海外收入分别为8,886,483/4,151,266，而2024年报原披露的中国内地/港澳台及海外收入分别为7,972,074/5,065,675。2024分部业绩比较数亦按新口径重列。保留两份报告各自原始披露，不将差额当作经营变化或模型输入。",
+      "amount": null,
+      "basis": "2025年报附注5，年报页281-282；2024年报附注5，2024证据JSON项目93-98。"
+    },
+    {
+      "field": "净现金（附注34(c)口径）",
+      "reason": "模型继续沿用2024底稿的附注34(c)净现金定义：现金及现金等价物 + 流动性投资 − 一年内及一年后到期租赁负债。该口径不等于资产负债表全部现金类项目；不把初始期限超过三个月的定期存款或受限制现金自行加入。",
+      "amount": null,
+      "basis": "2025年报附注34(c)，年报页343-344；现金13,775,087 + 流动性投资9,743 − 租赁负债586,274 − 2,275,301 = 净现金10,923,255，单位RMB'000。"
+    },
+    {
+      "field": "股数分母与股份奖励计划信托股份",
+      "reason": "为保持2024冻结工作底稿口径，三情景估值仍采用年末已发行及缴足普通股1,342,943,150股，不改用EPS加权平均股数。年末另有10,979,746股由股份奖励信托持有；基本EPS加权平均股数1,330,007千股明确扣除了股份奖励计划持股及为注销而购回的股份。该分母定义差异保留为口径提示，不静默替换。",
+      "amount": null,
+      "basis": "2025年报附注25，年报页330-331；附注26，年报页331；附注13，年报页290-291。"
+    },
+    {
+      "field": "收入分类维度",
+      "reason": "年报分别按地域、业务线/渠道、IP及产品类别披露收入；这些为不同交叉分类维度，不可跨维度相加。总收入以合并损益表37,120,052 RMB'000为准。",
+      "amount": null,
+      "basis": "2025年报MD&A年报页19-28；附注5-6年报页281-284。"
+    }
+  ],
+  "missing": [
+    {
+      "field": "完整分部资产及分部负债",
+      "reason": "附注5说明主要经营决策者不使用分部资产及分部负债资料进行资源分配或表现评估，因此没有单独向主要经营决策者提供；年报按地理位置披露的部分非流动资产不等于完整分部资产负债。",
+      "basis": "2025年报附注5，年报页281-283。"
+    },
+    {
+      "field": "分部资本开支",
+      "reason": "年报披露集团资本开支1,171,537 RMB'000，但没有按中国业务与海外业务拆分；不按收入比例分配。",
+      "basis": "2025年报MD&A—Capital Expenditures，年报页35；附注5，年报页281-283。"
+    },
+    {
+      "field": "研发费用独立金额及总部/IP/IT/共享服务职能费用逐项金额",
+      "reason": "年报未单独披露研发费用及各企业职能中心/后台职能费用的完整金额；附注5只说明未分配项目主要包括企业职能中心和后台职能费用，不自行估算。",
+      "basis": "2025年报附注5，年报页281-282；按性质划分开支附注7，年报页284-285。"
+    },
+    {
+      "field": "自由现金流（FCF）",
+      "reason": "年报未直接列示自由现金流。本次记录经营现金流及资本开支原始项目，不自行把CFO减CapEx拼成FCFF；冻结模型按NOPAT、增长、RONIC推导未来FCFF。",
+      "basis": "2025年报合并现金流量表，年报页225-226；MD&A—Capital Expenditures，年报页35。"
+    },
+    {
+      "field": "按报告分部拆分的利息收入及利息费用",
+      "reason": "附注5未披露分部利息收入或利息费用；集团层面的财务收入及费用不替代分部口径。",
+      "basis": "2025年报附注5，年报页281-282；附注10，年报页285-286。"
+    }
+  ],
+  "imported_by": "人工摘录（ChatGPT辅助；以HKEXnews官方PDF逐项核对）",
+  "imported_at": "2026-11-13"
+}

@@ -1,5 +1,0 @@
-url=https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100394.pdf
-pages=370
-bytes=5521216
-sha256=47095a39c6425b11e5aaa091f456e178498d20a77d4ff6a969e351e4f5dfaaf7
-retrieved_at_utc=2026-11-13T14:21:37Z
