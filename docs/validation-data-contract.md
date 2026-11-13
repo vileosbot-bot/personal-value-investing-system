@@ -66,8 +66,8 @@
 
 | 来源 | 可用方向 | 限制／本项目定位 |
 |---|---|---|
-| BaoStock | 免费 A 股日线、部分财务指标、公告日期字段、复权因子 | 不覆盖腾讯港股；财务接口的公告日期不等于原件精确时刻；历史重述与版本留存能力待核实。仅作 A 股行情和字段交叉核对，不替代原件 |
-| AKShare | A 股、港股、指数、财务和公司行动的多源 Python 接口 | 多数接口聚合公开网页，接口稳定性、字段来源、历史修订和许可条款依端点而异；逐端点登记来源，不默认具备 PIT 能力 |
+| BaoStock | 免费 A 股日线、部分财务指标、公告日期字段、复权因子 | 官方 API 文档示例可返回未复权日线（adjustflag=3）及财报 pubDate；pubDate 是日期字段，不是公告精确时分秒。无腾讯港股覆盖；历史重述版本与许可边界待核实。仅作 A 股行情和字段交叉核对，不替代原件 |
+| AKShare | A 股、港股、指数、财务和公司行动的多源 Python 接口 | 官方说明其数据来自多个第三方站点，部分接口可能变更或移除，并声明数据仅供学术研究／参考；接口稳定性、字段来源、历史修订和底层站点条款依端点而异。逐端点登记来源，不默认具备 PIT 能力或商业再分发权 |
 | Tushare Pro | A 股行情、财务报表、分红、交易日历；字段含 \`ann_date\`、\`f_ann_date\` 等 | 采用积分权限；财报披露日期与部分因子接口有权限门槛。只在账户授权和许可核对后使用；不把当前返回值直接当历史原始版本 |
 | yfinance | 腾讯 .HK 行情、分红、拆股等辅助核对 | Yahoo 数据可能修订，\`auto_adjust\` 是供应商调整结果；不是原始公告源，不具备可证明的历史 PIT 财报版本。只作交叉核对 |
 | Financial Modeling Prep 免费层 | 通用财务数据接口评估 | 免费层对国际市场覆盖、历史年限与字段可用性限制明显；目前不作为 A/H 主源。FMP 的 \`filingDate\`／报告日期语义需逐字段验证，不能用 report date 替代公告日 |
@@ -228,7 +228,10 @@
 
 - 中证指数有限公司《沪深 300 指数编制方案》：全收益、净收益、现金红利再投资与 10% 净收益税率说明：https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300_Index_Methodology_cn.pdf
 - 恒生指数公司 Total Return Index Series：股价与股息、Gross/Net 区分及再投资规则：https://www.hsi.com.hk/index-resources/total-return-index-series/
-- 恒生指数公司《Index Calculation Formula》：Gross/Net TRI 使用税前／税后现金股息：https://www.hsi.com.hk/static/uploads/contents/en/dl_centre/methodologies/index_methodology_guide_e.pdf
+- 恒生指数公司《Index Calculation Formula》：Gross/Net TRI 使用税前／税后现金股息，并假定除息日再投资：https://www.hsi.com.hk/static/uploads/contents/en/dl_centre/methodologies/index_methodology_guide_e.pdf
+- 香港税务局股票印花税历史税率表：2021-08-01 至 2023-11-16 为每边 0.13%，2023-11-17 起每边 0.1%：https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf
+- 香港税务局 2021 年税率调整公告：https://www.ird.gov.hk/eng/ppr/archives/21061101.htm
+- 香港税务局 2023 年税率下调生效公告：https://www.ird.gov.hk/eng/ppr/archives/23111501.htm
 - 国家税务总局财税〔2016〕127 号：https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203646/content.html
 - 财政部、税务总局 2023 年第 39 号公告：https://www.mof.gov.cn/jrttts/202308/t20230828_3904235.htm
 - 香港政府股票印花税税率：https://www.gov.hk/en/residents/taxes/stamp/stamp_duty_rates.htm
