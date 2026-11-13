@@ -322,6 +322,8 @@ French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time 
 - [腾讯 2022-03-25 京东股份分派付款公告](https://static.www.tencent.com/uploads/2022/03/25/74608e2aecdd9669e1174e9c4d5fad50.pdf)
 - [腾讯 2022-11-16 美团股份实物分派原始公告](https://static.www.tencent.com/uploads/2022/11/16/b92d6f78a14cbcc512c2b48f0942dd9f.pdf)
 - [腾讯 2023-03-24 美团股份分派付款公告](https://static.www.tencent.com/uploads/2023/03/24/a902bc1d78ebee80a4c239c4a7e290f2.pdf)
+- [上海证券交易所官方网站：年度交易日历及节假日休市安排公告](https://www.sse.com.cn/)
+- [深圳证券交易所官方网站：年度交易日历及节假日休市安排公告](https://www.szse.cn/)
 - [香港交易所沪港通及深港通交易时间、交易和结算日历](https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-cn)
 - [香港交易所 Severe Weather Trading 安排](https://www.hkex.com.hk/services/trading-hours-and-severe-weather-arrangements/severe-weather-arrangements/overview?sc_lang=en)
 - [香港天文台热带气旋警告信号历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb1.shtml)
