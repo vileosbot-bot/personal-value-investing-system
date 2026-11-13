@@ -211,8 +211,8 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 
 ## 附表 B：公开方法与数据来源入口
 
-- 中证指数有限公司：沪深 300 全收益指数，指数代码 H00300；不得误用价格指数 000300 代替全收益基准。
-- 恒生指数／香港交易所 OMD-C：恒生指数 Gross Total Return Index 代码 1006800；Net Total Return Index 代码 2006800。主基准为 Gross TRI，Net TRI 只作税后敏感性。
+- 中证指数有限公司：沪深 300 全收益指数代码 H00300、净收益指数代码 N00300；不得误用价格指数 000300 代替全收益基准。官方事实表：https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf
+- 恒生指数／香港交易所 OMD-C：恒生指数 Gross Total Return Index 代码 1006800；Net Total Return Index 代码 2006800。主基准为 Gross TRI，Net TRI 只作税后敏感性。官方 OMD-C 接口规范 v1.39a：https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf
 - A 股 FF5+MOM：北京大学新金融与创业投资研究中心公开因子库，使用月度文件 factors_monthly_2023.xlsx 的 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM；当前已核实公开版本覆盖至 2023-12，后续月份未有新版本时记 NA。
 - 港股没有已核实的香港本地 FF5+MOM 国家因子序列。Kenneth R. French Data Library 的 Asia Pacific ex Japan Fama/French 5 Factors（月度）与 Asia Pacific ex Japan Momentum Factor（月度）只能作为**区域代理敏感性**，不能称为 Hong Kong factor、香港本地 alpha 或香港本地确认性因子。该序列以 USD 计价，MKT 使用美国 1 个月国库券收益率；港股个股月度 HKD 总回报按 Federal Reserve H.10 / FRED DEXHKUS 月末汇率转换为 USD。
 - 指数与因子历史均按 ex-post 发布版本处理，不声称 point-in-time；只用于结果基准和事后诊断，不作为模型输入。每次下载保存 data_vintage、retrieved_at、原始文件和 SHA-256。
