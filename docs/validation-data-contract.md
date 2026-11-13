@@ -1,43 +1,47 @@
 # 验证轨数据契约
 
+> 第二轮修订：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；修订起点 `d3a0c3cc`。本轮仅修订文档，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
+
 - Request ID：`pvis-phase0-revise-20261113-01`（修订自 `pvis-phase0-design-20261113-01`）
-- 版本：Phase 0 / v0.2（数据契约修订稿，待独立复核；未采集、未验证）
+- 版本：Phase 0 / v0.3（数据契约修订稿，待独立复核；未采集、未验证）
 - 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；形成截面 2016–2021，前瞻保留 2027。
 - 状态原则：本文件定义字段、来源优先级、时点和缺失规则；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。
 
 ## 1. 数据对象与强制字段
 
-每一条财务、行情、公司行动、宏观、汇率或因子记录必须保存：
+每一条财务、行情、公司行动、宏观、汇率或因子记录必须保存原始值和标准化值；标准化不能覆盖原始字段。每项转换保存公式、输入字段、单位、解析器版本和可复核出处。
 
 | 字段 | 定义 |
 |---|---|
-| `entity_id` | 公司及证券唯一标识；A/H 股分开记录证券代码 |
-| `field` | 标准化字段名，如 revenue、operating_profit、cash_from_operations、capex |
-| `value` / `unit` | 原始数值与原始单位；不得先四舍五入再入库 |
-| `period_start` / `period_end` | 财务期间或行情期间 |
-| `published_at` | 发行人／交易所公告的原始发布时间 |
-| `available_at` | 本系统认定该记录可供决策使用的时间，含时区 |
-| `decision_at` | 所属形成截面的信息截止时间 |
-| `source_name` / `source_url` | 原始发布方与可复核链接 |
-| `source_document_id` | 公告编号、文件编号或交易所文件 ID |
-| `version_type` | original、corrected、restated、vendor_current 等 |
-| `retrieved_at` | 实际抓取时间 |
-| `raw_sha256` | 原始 PDF／HTML／CSV／响应体哈希 |
-| `parser_version` | 解析器版本及代码 commit |
-| `quality_status` | raw、parsed、cross_checked、blocked；不得自行标 VERIFIED |
+| entity_id / security_id | 公司及证券唯一标识；A/H 股分别记录，分派衍生证券另设 security_id |
+| share_class / exchange / currency | 普通股类别、上市交易所和报价币种 |
+| field / value / unit | 标准化字段名、原始数值与原始单位；不得先四舍五入再入库 |
+| period_start / period_end | 财务期间或行情期间 |
+| published_at / available_at / decision_at | 原始发布时间、系统认定可供决策使用时间、所属形成截面的信息截止时间，均含时区 |
+| source_name / source_url / source_document_id | 原始发布方、可复核链接、公告编号或交易所文件 ID |
+| version_type / data_vintage / point_in_time_status | original、corrected、restated、vendor_current 等版本；数据版本；PIT 或 ex-post 状态 |
+| retrieved_at / raw_sha256 | 实际抓取时间和原始 PDF／HTML／CSV／响应体 SHA-256 |
+| parser_version / quality_status | 解析器版本及代码 commit；raw、parsed、cross_checked、blocked，不得自行标 VERIFIED |
+| ex_date / record_date / pay_date / settlement_date | 公司行动除权日、登记日、支付日和证券交收／入账日 |
+| corporate_action_type / distribution_ratio | 现金股息、送转、拆并股、实物分派等公司行动类型及分派比例 |
+| gross_dividend / net_dividend / cash_in_lieu | 税前股息、税后股息和零碎股现金替代款，分开保存 |
+| price_open / price_high / price_low / price_close / total_return | 未复权 OHLC、总回报和对应币种；保留原始价格及复权因子 |
+| net_share_issuance / other_equity_adjustment | 普通股发行／回购净额及其他直接计入权益的调整，供净盈余桥接 |
 
-所有财务数字同时保留原始披露值和标准化值。标准化不能覆盖原始字段；每项转换须保存公式、输入字段和单位。
+会计准则切换另保存：accounting_standard_code、accounting_standard_effective_date、transition_year_flag、comparative_restatement_available、comparative_restatement_used、opening_retained_earnings_adjustment、opening_oci_adjustment、clean_surplus_bridge_amount、lease_accounting_basis、lease_liabilities_in_ic、bridge_reconciliation_status。不得把这些字段折叠成一个未说明的“可比”标记。
 
 ### 1.1 固定证券类别（不可跨类别替换）
 
-| 公司 | 本研究固定证券 | 证券类别 | 明确排除的另一类别 |
+| 公司／用途 | 固定证券 | 证券类别 | 规则 |
 |---|---|---|---|
-| 贵州茅台 | 600519.SH | A 股 | 无 |
-| 腾讯控股 | 00700.HK | H 股／港股 | 无 |
-| 比亚迪 | 002594.SZ | A 股 | 01211.HK（H 股）不入模 |
-| 招商银行 | 600036.SH | A 股 | 03968.HK（H 股）不入模 |
+| 贵州茅台 | 600519.SH | A 股 | 唯一入模证券 |
+| 腾讯控股 | 00700.HK | H 股／港股 | 唯一入模母证券 |
+| 比亚迪 | 002594.SZ | A 股 | 01211.HK 不入模 |
+| 招商银行 | 600036.SH | A 股 | 03968.HK 不入模 |
+| 腾讯分派衍生证券 | 09618.HK | 京东集团 Class A 普通股 | 仅作为腾讯实物分派后的持有资产，不替代腾讯母证券 |
+| 腾讯分派衍生证券 | 03690.HK | 美团 Class B 普通股 | 仅作为腾讯实物分派后的持有资产，不替代腾讯母证券 |
 
-比亚迪与招商银行虽同时有 A+H 股，本研究始终使用上表指定的 A 股证券，不得按流动性、回报或数据完整性在 A/H 之间切换；腾讯固定使用 00700.HK。所有价格、股数、股息、公司行动、成本及回报均按该证券类别构造。
+比亚迪与招商银行虽同时有 A+H 股，本研究始终使用上表指定 A 股证券；腾讯固定使用 00700.HK。京东与美团只在腾讯实物分派后进入腾讯股东总回报的衍生资产账簿。
 
 ## 2. 时点与公告规则
 
@@ -120,13 +124,14 @@
 
 ## 5. 原始版、point-in-time 版本与跨会计准则处理
 
-每个 decision_at 时点必须明确记录当时可得的版本，不得用今天的供应商最新版替代历史信息集：
+每个 decision_at 时点必须明确记录当时可得的版本，不得用今天的供应商最新版替代历史信息集。本轮选择补齐四项准则桥接规则，不预先整批排除某个年份队列。
 
-1. **历史 A 区固定使用原始公告版（original）。** 对每个历史形成截面，只使用当时正式发布的原始年报／公告版本及其原始字段；不得用今天的 restated、vendor_current 或数据库重述值回填历史 A 区。若历史原始公告版无法取得，记 NA，不以重述版替代。
-2. **point-in-time 最新可得版的定义：** 指截至该队列 decision_at 已公开、可被当时决策者取得的版本；不是今天数据库显示的最新版。对本研究历史队列，A 区使用当时原始公告版；后来才发布的更正、重述和供应商修订均不得回填。每个版本保留 published_at、available_at、version_type、原件哈希和修订链。
-3. **版本链完整保存：** original、corrected、restated、vendor_current 分开存储；后续版本只用于事后误差归因或另行标注的敏感性分析，不覆盖原始值，不改变历史 A 区。
-4. **跨会计准则年份：** 每个财年先按该年原始公告实际采用的会计准则和列报口径保存，不将后来准则下的重述数追溯回填早期年份。若准则变更导致字段定义、合并范围或确认计量不可比，只能使用在相应 decision_at 前已经公开、且原始公告明确提供的完整对账／桥接表；桥接表作为独立字段和版本保存，不覆盖原始报表值。若无完整、可审计桥接，受影响的增长率、利润率、RONIC 或 ROE 记 NA，不自行拼接、不按比例调整。
-5. **同一 decision_at 的版本选择日志：** 每个输入字段记录被选版本、被排除版本及排除原因；当时尚未发布的更正／重述明确标记为未来信息，不能使用。
+1. **比较期重述数据：主输入不采用后来重述的比较期数。** 历史 A 区只使用该形成日当时可得的原始公告版及其原始字段；即使后续年报提供重述后的比较期数据，也保存为单独的 restated 版本和敏感性记录，不覆盖、不替代主输入。不得将未来发布的重述回填至过去 decision_at。若原始版无法取得，记 NA。
+2. **期初调整直接计入留存收益／OCI：** 该调整不得并入当期普通股净利润或 NOPAT。保存 opening_retained_earnings_adjustment、opening_oci_adjustment、net_share_issuance、other_equity_adjustment 和 clean_surplus_bridge_amount。若准则切换调整发生在期初，后调整的已报告普通股权益作为该期 opening ordinary equity／BVPS 基数，桥接额单独列示；若调整发生在期间内，仍使用报表披露的期初／期末普通股权益计算平均普通股权益，但不得把直接计入留存收益或 OCI 的金额塞入净利润。净盈余桥接按“期末普通股权益 − 期初普通股权益 − 普通股净利润 + 普通股现金分红 − 普通股发行／回购净额”计算并与披露的 OCI、直接权益调整和其他项目逐项对账。若重大调整无法量化或桥接无法完成，受影响的 ROE、RI 或 RONIC 输入记 NA，不得自行平滑或改用总权益。
+3. **新租赁准则下租赁负债计入 IC：** 是。凡资产负债表已确认的租赁负债，均纳入 IC 的有息／融资性负债项；同一租赁负债在净债务与 IC 中口径一致。准则实施前未确认的经营租赁负债不追溯估算；如过渡披露给出可审计的期初租赁负债桥接，单独保存并按本节规则处理。
+4. **切换年份标记：** 每个财年必须填 transition_year_flag、accounting_standard_code、accounting_standard_effective_date、comparative_restatement_available、comparative_restatement_used=false、opening_retained_earnings_adjustment、opening_oci_adjustment、net_share_issuance、other_equity_adjustment、clean_surplus_bridge_amount、lease_accounting_basis、lease_liabilities_in_ic 和 bridge_reconciliation_status。没有准则切换也要显式标记 false／not_applicable，不留空。
+
+版本链完整保存：original、corrected、restated、vendor_current 分开存储；后续版本只用于事后误差归因或另行标注的敏感性分析，不覆盖原始值，不改变历史 A 区。若桥接不完整，相关字段按 NA 规则传导，不把“不可评估”写成“不通过”。
 
 ## 6. 价格、公司行动与股东总回报
 
@@ -151,14 +156,20 @@
 
 ### 6.5 腾讯实物分派：京东与美团股份
 
-腾讯向股东实物分派京东股份（2021-12 宣布）及美团股份（2022-11 宣布、2023-03 实施）必须纳入总回报，不得仅用腾讯股价或公告日市值代替。每项事件必须从腾讯／被分派公司及 HKEX 原始公告核实公告日、登记日、除权日、分派生效日、股份入账日、分派比例、证券类别、首个独立可交易日和零碎股处理；本设计不预填未经原件核实的具体日期。
+**主投资者身份固定为：香港本地、非美国人士，经香港券商／CCASS 持有腾讯 00700.HK 的投资者。** 该身份用于主回报重建：符合发行人公告资格时，接收并持有实物分派股份；不把该主情景冒充为所有国家／地区投资者均可收取。美国人士或被发行人列为 Non-Qualifying Shareholder 的账户可能改收现金替代款，必须单独识别。
 
-固定处理方式为**接收并持有分派股份，不在分派日自动卖出**：
-- 分派数量按登记日符合资格的腾讯持股数量乘以官方分派比例计算；零碎股按发行人实际现金替代金额入账，无法核实现金替代金额时该事件回报记 NA。
-- 分派股份的首次估值日为该证券实际可独立交易后的首个港交所正常交易日，使用该日未复权收盘价，仅作数量／价值核对；不使用宣布日股价，也不在该日卖出。
-- 分派股份继续持有至该腾讯队列五年结果日；终值按结果日可交易的港股普通股收盘价计入组合财富。结果日若停牌／休市，按第 6.6 节成交与停牌规则顺延。
-- 在结果日对分派股份与腾讯原持仓一并按模拟退出价格卖出，逐笔扣除港股卖出佣金、印花税、交易所／监管／结算费用及滑点；不得对实物分派股份免除退出交易成本。
-- 京东与美团分别使用港交所上市普通股计价（京东 09618.HK、美团 03690.HK），不混用美国 ADR 价格。若证券类别、派发比例或首个可交易日无法由原始公告和交易所行情核实，相关腾讯队列记 NA，不用供应商回填。
+| 分派 | 原始公告与比例 | 登记／除权 | 实施／交收日期 | 证券 |
+|---|---|---|---|---|
+| 京东 | 腾讯 2021-12-23 公告；每持有 21 股腾讯分派 1 股京东 Class A 普通股，零碎股以现金替代 | Record Date 2022-01-25；除权交易日 2022-01-20 | 腾讯 2022-03-25 付款公告确认股份证明已寄发，CCASS 参与者按公告通过券商／托管人或 CCASS 投资者账户接收 | 09618.HK |
+| 美团 | 腾讯 2022-11-16 公告；每持有 10 股腾讯分派 1 股美团 Class B 普通股，零碎股以现金替代 | Record Date 2023-01-10；除权交易日 2023-01-05 | 腾讯 2023-03-24 付款公告确认股份证明已寄发，CCASS 参与者通过券商／托管人或 CCASS 投资者账户接收 | 03690.HK |
+
+**港股通专项核验：**
+- 美团：腾讯原始公告明确写明，港股通投资者可通过中国结算持有分派的美团股份；相关股份经 CCASS 派发至中国结算，中国结算代表投资者持有；根据沪／深港通规则，投资者或相关中国结算参与人只能通过港股通卖出该等美团股份。不能通过港股通买入更多该等股份。
+- 京东：腾讯原始公告明确写明，港股通投资者如不打算持有，可通过港股通卖出所获京东股份，但不得通过港股通买入京东股份；该公告没有像美团公告那样完整写明中国结算账户入账路径，需由实际券商／中国结算参与人确认操作细节。因此主情景仍采用香港本地非美国 CCASS 投资者；若另做内地港股通京东持有情景，入账路径未核实前记 NA，不标 VERIFIED。
+- 中国结算《港股通存管结算业务指南》规定港股通证券登记在投资者沪市人民币普通股票账户，中国结算作为名义持有人存管于香港结算，投资者不能要求存入或提取纸面证券；该指南还涉及非港股通标的红股冻结等一般公司行为处理。具体到腾讯京东／美团实物分派，资格、入账与只能卖出等限制以各次腾讯原始公告为准，不能仅凭一般指南推定。
+- 香港本地 CCASS 持有人接收并持有两项分派；零碎股及 Non-Qualifying Shareholders 的现金替代款单独入账，不虚构为完整股份。美国人士／美国地址等不合资格情形按发行人公告处理，不以香港本地情景替代。
+
+**必须纳入数据契约的价格与分红：**对 09618.HK 京东 Class A 和 03690.HK 美团 Class B，均须保存自实际分派入账日起的未复权日 OHLC、收盘价、交易状态、总回报、现金股息金额／币种／除净日／登记日／派息日，以及送转、拆并股、配股、供股和其他公司行动。腾讯母证券 00700.HK 同样保存上述价格和分红。将分派股份作为腾讯股东持有的衍生资产纳入总回报，不假设自动卖出；如价格或分红数据缺失，腾讯相应队列的总回报记 NA，不把京东／美团股份价值折成任意现金填补。
 
 ### 6.6 开盘成交、集合竞价与停牌处理
 
@@ -179,9 +190,17 @@
 
 ### 7.1 共同交易日、交易日历与港股通
 
-本研究的“共同交易日”固定定义为：上交所与深交所均开放 A 股交易、港交所开放正常证券交易，且腾讯适用的沪／深港通南向交易至少有一个可用通道开放。若 A 股或港交所开放但所有适用南向港股通通道关闭，该日不算共同交易日。该规则明确**包含港股通额外不开放日**，不得仅以 A 股与港交所各自开市作为共同交易日。
+本研究的“共同交易日”固定定义为：上交所与深交所按各自官方日历开放 A 股交易、港交所按官方日历开放证券交易，且腾讯适用的沪／深港通南向交易至少有一个可用通道开放。若 A 股或港交所开放但所有适用南向港股通通道关闭，该日不算共同交易日。必须使用香港交易所发布的沪港通及深港通交易日历 PDF／CSV，并同时核对上交所、深交所当年官方交易日历及节假日休市公告；不得只看一般公众假期表或第三方日历。
 
-形成日、入场日、结果日及分红再投资日必须逐日核对官方交易日历，至少覆盖：内地法定节假日、上交所／深交所各自交易日、港交所假期、香港台风及黑色暴雨导致的全日或部分时段休市、沪港通／深港通南向额外不开放日、临时停市及恢复交易公告。每个日期保存各市场／通道的 open/closed 状态、官方来源和核验时间；第三方日历只能作交叉核对。
+**台风与黑色暴雨：**香港天文台热带气旋警告信号历史数据库用于核验 T1/T3/T8/T10 等信号的发出和取消时间；香港天文台暴雨警告历史数据库用于核验黄色／红色／黑色暴雨警告的发出和取消时间。两者是天气事件时间来源，不直接决定市场是否开市。香港交易所 Severe Weather Trading 自 2024-09-23 起实施；实施后香港证券及衍生品市场（包括港股通交易）按预定交易日历在恶劣天气下继续交易，不得再把 T8 或黑雨自动判为休市。2024-09-23 之前按当时有效的历史交易安排及具体 HKEX 通告逐日判断。
+
+**来源优先级与冲突处理：**
+1. 判断某日香港市场是否实际开市，以该日香港交易所针对市场运行的具体公告／临时通告优先于年度通用日历；香港天文台记录只用于确认警告时间。
+2. 判断南向港股通是否可用，以香港交易所当年沪／深港通交易日历及针对南向通道的具体通告为准，并与上交所／深交所官方交易日历及中国结算交收安排交叉核对；任一相关环节关闭，该通道即不可用。
+3. 判断 A 股是否开放，以对应交易所（上交所／深交所）的具体休市／恢复交易公告优先于通用日历。
+4. 若具体公告与通用日历仍冲突，采用更具体、日期更晚且明确说明实际市场运行状态的交易所公告；若无法消解，calendar_status 记 NA，该日不纳入共同交易日，不自行推断。
+
+每个日期保存 SSE_open、SZSE_open、HKEX_open、Southbound_SH_open、Southbound_SZ_open、CSDC_settlement_available、weather_signal、source_url、notice_id、retrieved_at 和最终 calendar_status。
 
 ## 8. 复权、币种与汇率
 
@@ -243,48 +262,75 @@
 
 ## 11. 基准与因子数据
 
-- CSI 300 全收益与净收益的计算方法不同：全收益使用税前现金红利再投资；净收益采用指数规则中的 10% 税率。主基准选择全收益指数。
-- 恒生指数公司分别发布 Gross TRI 与 Net TRI；Gross 使用税前股息，Net 使用税后股息；主基准选择 Gross TRI。
-- A 股 FF5+MOM：优先北京大学公开中国 A 股因子序列，字段 MKT、SMB、HML、RMW、CMA、MOM。公开说明到 2023-12；2024–2026 覆盖未核实。缺失月份不外推。
-- 腾讯因子：优先寻找香港本地 FF5+MOM；若未找到，可将 Kenneth French Asia Pacific ex Japan 因子作为明确标注的区域代理敏感性，统一转换到同一回报币种后估计；不得称为香港本地因子。
-- Open Source Asset Pricing 的 CRSP/WRDS 数据是美国市场，不用于填充 A/H 因子。
-- FF5+MOM alpha 按 A 股与港股分市场报告。没有同一可比因子序列时，不汇总一个“整体 A/H alpha”。
+### 11.1 指数基准（主基准不变）
+
+- A 股主基准：中证指数有限公司“沪深 300 全收益指数”，指数代码 **H00300**；使用税前现金红利再投资的 Gross TRI。不得误用价格指数 000300 代替；净收益指数仅作敏感性。
+- 港股主基准：恒生指数 Gross Total Return Index，HKEX OMD-C 指数代码 **1006800**；使用税前股息总回报。Net TRI 仅作敏感性。
+- 两个指数历史值均标记为 ex-post 官方历史序列，不声称具备逐日 point-in-time vintage。每次下载保存供应商、指数代码、币种、下载时间、文件版本和 SHA-256；主基准定义本轮不变。
+
+### 11.2 A 股 FF5 + 动量因子
+
+A 股月度因子主来源为北京大学新金融与创业投资研究中心公开因子库，使用其月度因子文件 factors_monthly_2023.xlsx，字段为 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM。当前已核实公开版本覆盖至 2023-12；该文件未覆盖的月份记 NA，不外推、不用其他地区因子填充。因子为 ex-post 研究数据，不是历史形成日可得的 point-in-time 因子；只用于事后因子诊断，不作为模型输入。后续若官方发布新版本，保留旧版并新增 data_vintage，不覆盖。
+
+### 11.3 港股 FF5 + 动量因子
+
+港股月度因子主来源为 Kenneth R. French Data Library：
+- Developed Markets Fama/French 5 Factors（月度），选取国家序列 Hong Kong；
+- Developed Markets Momentum Factors（月度），选取国家序列 Hong Kong。
+
+这两套因子以 USD 计价；市场超额收益 MKT 使用美国 1 个月国库券收益率作为无风险基准，因子回报包含股息和资本利得。腾讯、京东、美团的港币月度总回报在回归前须用 Federal Reserve H.10 / FRED DEXHKUS 日度汇率转换为 USD；x_t 表示每美元兑换的港币数，取月末当日或之前最近一个有效交易日的观测，则 USD 回报 = (1 + HKD 回报) × (x_(t−1) / x_t) − 1。不得把港币个股收益直接与 USD 因子回归，也不得把港币估值模型中的 10 年期 Rf 与因子库的美国 1 个月 Rf 混用。
+
+French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time vintage；只用于港股事后因子诊断。若下载版本缺少 Hong Kong 国家序列或月份，相关 alpha 记 NA；不得用 Asia Pacific ex Japan 代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
+
+### 11.4 统一版本与使用边界
+
+指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。数据授权、商业使用、缓存、存储和再分发条款未确认前，不批量抓取、不提交受限原始文件到 GitHub。
 
 ## 12. 缺失值、异常值和停止规则
 
-- 缺数写 `NA`，并填写缺失原因、来源查询记录、尝试日期和责任人；不使用均值、行业均值、分析师预测或供应商当前值补齐。
-- 原始公告无法获取、公告时间无法确定、重述版本无法拆分、关键公司行动缺失、币种无法统一或基准序列不完整时，该队列相应指标停止计算。
-- 不删除异常值。若确认录入错误，保留原始值并追加修正记录；若确为经济异常，原样保留并报告稳健性。
-- 任何数据供应商的接口条款、商业使用、缓存、存储、再分发限制未确认前，不批量抓取、不将受限原始数据提交到 GitHub。
-- 不提交 API Token、Cookie、账户凭据或个人身份资料。需要付费积分、商业订阅或额外授权时，先停下并单独取得用户授权。
+缺数写 NA，并填写缺失原因、来源查询记录、尝试日期和责任人；不使用均值、行业均值、分析师预测或供应商当前值补齐。原始公告无法获取、公告时间无法确定、关键公司行动／股息／价格缺失、币种无法统一或基准序列不完整时，相应指标停止计算。
+
+**队列级 NA 传导：**四家公司是固定组合成员。任一公司在某队列的关键模型输入或实现回报为 NA，该队列的前两家主策略和四家等权基线同步作废为 NA；不以剩余三家重新排序，不补位、不替换、不重新归一四家基线权重。不得只从四家等权中剔除缺失公司后把余下公司重新加权。
+
+**诊断指标的剩余样本：**Rank IC 与横截面校准斜率可对剩余有效公司—结果配对作描述性计算，但 n_valid 必须至少为 3，且逐队列报告 n_valid/4、覆盖率和缺失公司；n_valid <3 时记 NA。任何不完整队列均不得进入主检验，也不得进入确认性 ICIR／Fama–MacBeth 汇总。逐公司 FF5+MOM alpha 可对有足够月度数据的剩余公司独立报告，不能代替缺失公司，也不能拼接为完整横截面。
+
+不删除异常值。若确认录入错误，保留原始值并追加修正记录；若确为经济异常，原样保留并报告稳健性。任何数据供应商接口条款、商业使用、缓存、存储、再分发限制未确认前，不批量抓取、不将受限原始数据提交到 GitHub。不提交 API Token、Cookie、账户凭据或个人身份资料。需要付费积分、商业订阅或额外授权时，先停下并单独取得用户授权。
 
 ## 13. 验收清单（Phase 0 之后的实际数据阶段）
 
-- [ ] 四家证券代码、币种、交易所与历史证券状态核对。
+- [ ] 四家主证券代码、币种、交易所与历史证券状态核对；腾讯分派衍生证券 09618.HK、03690.HK 单独建账。
 - [ ] 比亚迪固定使用 002594.SZ A 股；招商银行固定使用 600036.SH A 股；不得切换 H 股。
-- [ ] 腾讯京东／美团实物分派的原始公告、比例、登记／除权／入账日期、首个交易日及退出成本核对。
-- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对。
+- [ ] 京东／美团分派的原始公告、比例、除权日、登记日、实际分派日期、CCASS／中国结算入账与可交易限制核对。
+- [ ] 腾讯、京东、美团三只证券的日价格、现金股息、拆并股、送转及其他公司行动数据齐全。
+- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对；HK 因子 USD 转换另使用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率。
 - [ ] A 股开盘集合竞价、涨跌停无法成交、港股开市前竞价、停牌与最多五个共同交易日重试规则核对。
-- [ ] 共同交易日包含沪／深港通南向额外不开放日；香港台风／黑雨休市逐日核对。
+- [ ] 共同交易日包含沪／深港通南向额外不开放日；台风／黑雨信号取香港天文台历史库，实际市场开闭以 HKEX 通告和 Severe Weather Trading 规则核对。
 - [ ] 中报／半年报／季度报告不入模，只用完整财年数据。
-- [ ] 跨会计准则年份的原始口径、可比桥接表与 NA 规则核对。
+- [ ] 比较期重述主输入不采用；留存收益／OCI 期初调整、租赁负债 IC、切换年份字段按 §5 核对。
 - [ ] 每个形成日的交易日历、决策时区、下一日执行价核对。
 - [ ] 每家公司每个形成日的原始财报版本、公告时间、公告编号和 SHA-256 核对。
 - [ ] 财务字段原始值、标准化值、单位转换与重述链核对。
-- [ ] 日频价格、股息、送转、拆并股、配股、停牌及其他公司行动核对。
-- [ ] CSI300 Gross TRI 与 HSI Gross TRI 历史数据授权、连续性和缺失率核对。
+- [ ] CSI 300 Gross TRI H00300 与 HSI Gross TRI 1006800 历史数据授权、连续性和缺失率核对。
+- [ ] A 股 PKU FF5+MOM、港股 French Hong Kong FF5+MOM、各自币种、ex-post vintage、覆盖和哈希核对。
 - [ ] 税、佣金、交易所费用、滑点和股息再投资成本核对。
-- [ ] A/H 因子序列、FX、Rf、ERP 的历史 vintage 和覆盖核对。
 - [ ] A 区冻结哈希先于 B 区解封；未满足时不得使用“盲测”标签。
 
 ## 14. 参考依据
 
-- 中证指数有限公司《沪深 300 指数编制方案》：全收益、净收益、现金红利再投资与 10% 净收益税率说明：https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300_Index_Methodology_cn.pdf
-- 恒生指数公司 Total Return Index Series：股价与股息、Gross/Net 区分及再投资规则：https://www.hsi.com.hk/index-resources/total-return-index-series/
-- 恒生指数公司《Index Calculation Formula》：Gross/Net TRI 使用税前／税后现金股息，并假定除息日再投资：https://www.hsi.com.hk/static/uploads/contents/en/dl_centre/methodologies/index_methodology_guide_e.pdf
-- 香港税务局股票印花税历史税率表：2021-08-01 至 2023-11-16 为每边 0.13%，2023-11-17 起每边 0.1%：https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf
-- 香港税务局 2021 年税率调整公告：https://www.ird.gov.hk/eng/ppr/archives/21061101.htm
-- 香港税务局 2023 年税率下调生效公告：https://www.ird.gov.hk/eng/ppr/archives/23111501.htm
-- 国家税务总局财税〔2016〕127 号：https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203646/content.html
-- 财政部、税务总局 2023 年第 39 号公告：https://www.mof.gov.cn/jrttts/202308/t20230828_3904235.htm
-- 香港政府股票印花税税率：https://www.gov.hk/en/residents/taxes/stamp/stamp_duty_rates.htm
+- [中国证券登记结算有限责任公司上海分公司《港股通存管结算业务指南》（2025 年 6 月）](https://edu.chinaclear.cn/zdjs/ssh/202506/1bf74cd672c84ccbba89d7165ac47517/files/%E4%B8%AD%E5%9B%BD%E8%AF%81%E5%88%B8%E7%99%BB%E8%AE%B0%E7%BB%93%E7%AE%97%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8%E4%B8%8A%E6%B5%B7%E5%88%86%E5%85%AC%E5%8F%B8%E6%B8%AF%E8%82%A1%E9%80%9A%E5%AD%98%E7%AE%A1%E7%BB%93%E7%AE%97%E4%B8%9A%E5%8A%A1%E6%8C%87%E5%8D%97.pdf)
+- [腾讯 2021-12-23 京东股份实物分派原始公告](https://static.www.tencent.com/uploads/2021/12/23/0a56695c42cb7f085ad7e3d640125e7a.pdf)
+- [腾讯 2022-03-25 京东股份分派付款公告](https://static.www.tencent.com/uploads/2022/03/25/74608e2aecdd9669e1174e9c4d5fad50.pdf)
+- [腾讯 2022-11-16 美团股份实物分派原始公告](https://static.www.tencent.com/uploads/2022/11/16/b92d6f78a14cbcc512c2b48f0942dd9f.pdf)
+- [腾讯 2023-03-24 美团股份分派付款公告](https://static.www.tencent.com/uploads/2023/03/24/a902bc1d78ebee80a4c239c4a7e290f2.pdf)
+- [香港交易所沪港通及深港通交易时间、交易和结算日历](https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-cn)
+- [香港交易所 Severe Weather Trading 安排](https://www.hkex.com.hk/services/trading-hours-and-severe-weather-arrangements/severe-weather-arrangements/overview?sc_lang=en)
+- [香港天文台热带气旋警告信号历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb1.shtml)
+- [香港天文台暴雨警告历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb3.shtml)
+- [北京大学新金融与创业投资研究中心公开因子库](https://www.gsm.pku.edu.cn/finvc/info/1027/1147.htm)
+- [Kenneth R. French Data Library：Developed Markets Fama/French 5 Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5developed.html)
+- [Kenneth R. French Data Library：Developed Markets Momentum Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_developed_mom.html)
+- [中证指数有限公司：沪深 300 全收益指数资料](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
+- [恒生指数有限公司：恒生指数系列](https://www.hsi.com.hk/eng/indexes/all-indexes/hsi)
+- [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
+
+以上资料仅作为规则来源入口；未完成逐文件下载、哈希、许可和历史覆盖核验前，不标 VERIFIED。
