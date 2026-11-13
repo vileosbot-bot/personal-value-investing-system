@@ -135,3 +135,18 @@
 - 状态：Open，未合并；目标 main；源分支 valuation/HK-09992-2024-fcff。
 - PR 创建时 head commit：ff254b690fed810fc1026d4299526e24dcadb814。
 - 仅补记 PR 外部交付链接；此前 Plan.md 内容及本次估值交付记录均保持原样。
+
+
+## 2026-11-13 泡泡玛特（09992.HK）2025 年报复核外部交付
+
+- Request ID：pvis-popmart-rereview-20261113-01。
+- 基线：vileosbot-bot/personal-value-investing-system main 6d6b7474771329c05d697c7051686110313ec091；新分支 valuation/HK-09992-2025-rereview。
+- 官方原件：HKEXnews《POP MART INTERNATIONAL GROUP LIMITED Annual Report 2025》，2026-04-21 16:33 HKT 发布，370 页，5,521,216 bytes；SHA-256 47095a39c6425b11e5aaa091f456e178498d20a77d4ff6a969e351e4f5dfaaf7。2026-03-25 年度业绩公告仅作交叉核对，不作为年报原件。
+- 证据：evidence/HK-09992/2025-annual-report.json（146 项摘录、5 项 adjustments、5 项 missing）；原件 PDF 与下载指纹记录同在证据目录。available_at=2026-04-21，decision_at=2026-11-13。
+- 模型：严格沿用冻结 V1.1 value_driver_fcff()，源码与模型参数口径未修改；三情景每股价值悲观/基准/乐观分别为 RMB 101.36 / 166.24 / 290.35；按 2026-11-13 HKD/CNY 0.8505 折算 HKD 119.18 / 195.46 / 341.39。
+- 反向估值：2026-11-13 报价 HKD 142.10，最新已发行股份 1,331,779,203；财务锚使用 2025 年末 NOPAT RMB 12,900.419m 与附注34(c)净现金 RMB 10,923.255m。WACC 10%、永续增长3%、RONIC 30%-60%时隐含初始 NOPAT 增长约 2.61%-3.35%。
+- 风险与未决：CFO/利润转化率下降、存货周转天数增加、THE MONSTERS 与毛绒品类集中、税率代理口径、三情景股数分母与股份奖励信托持股差异、2026 当前净现金未知；5 项缺失保持未填补。
+- 决策卡：pvis-popmart-fcff-20261113-02，supersedes 2024 草稿卡 pvis-popmart-fcff-20261113-01；状态“待总管验收”，未冻结，用户本人临时判断摘要留空。
+- PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；状态 Open，未合并；目标 main；源分支 valuation/HK-09992-2025-rereview。
+- 当前 PR CI：GitHub Actions `ci` 成功；main 未修改。
+- 日期：2026-11-13。
