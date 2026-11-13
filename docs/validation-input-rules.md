@@ -1,8 +1,8 @@
 # V1.1 四模型输入规则化与知识隔离协议
 
-- Request ID：\`pvis-phase0-design-20261113-01\`
+- Request ID：`pvis-phase0-design-20261113-01`
 - 版本：Phase 0 / v0.1（设计稿，待验收与冻结）
-- 基线模型：V1.1；设计依据为 \`src/pvis/valuation.py\` 与 \`examples/regression/v1_1_models.json\`。
+- 基线模型：V1.1；设计依据为 `src/pvis/valuation.py` 与 `examples/regression/v1_1_models.json`。
 - 状态：DESIGN；未生成任何历史输入、估值或回测结果。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；本文件只规定形成日输入的机械生成规则。数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
 
@@ -10,10 +10,10 @@
 
 ### 1.1 形成日信息集
 
-每个年度队列独立构造输入。取形成日截止前已公开的最新完整年度报告及其之前连续五个完整财年；每份报告必须有原始公告版本、公告时间、来源文件和哈希。财务报表只允许使用 \`docs/validation-data-contract.md\` 认可的原始披露版。
+每个年度队列独立构造输入。取形成日截止前已公开的最新完整年度报告及其之前连续五个完整财年；每份报告必须有原始公告版本、公告时间、来源文件和哈希。财务报表只允许使用 `docs/validation-data-contract.md` 认可的原始披露版。
 
-- \`decision_at\`：预注册文件定义的形成日 23:59:59，Asia/Shanghai（UTC+8）。
-- \`available_at\`：公告实际可供公众获取的时间；只允许 \`available_at <= decision_at\`。
+- `decision_at`：预注册文件定义的形成日 23:59:59，Asia/Shanghai（UTC+8）。
+- `available_at`：公告实际可供公众获取的时间；只允许 `available_at <= decision_at`。
 - 形成日价格：该证券形成参考日未复权收盘价。
 - 模拟执行价格：下一共同交易日开盘价；用于实现收益，不反向替代信号形成日价格。
 - 统一使用截至决策时点已公开的报告；不能用后续重述值改写原始报告。
@@ -61,27 +61,27 @@ StartingCashFlow_s=Revenue_{latest}\times Margin_s
 
 | 标准字段 | 原始披露语义 | 统一处理 |
 |---|---|---|
-| \`revenue\` | 营业收入／收入 | 合并损益表持续经营口径；保留原币、原单位 |
-| \`operating_profit\` | 营业利润／经营利润／EBIT | 采用报表披露值；不以 EBITDA 替代 |
-| \`net_profit_common\` | 归属于母公司普通股股东的净利润 | 扣除优先股／永续资本等非普通股权益影响；如披露不可拆分则标 NA |
-| \`income_tax_expense\` | 所得税费用 | 使用报表当期所得税与递延所得税合计；不得与现金缴税混用 |
-| \`profit_before_tax\` | 税前利润 | 与所得税费用同一合并范围 |
-| \`depreciation_amortization\` | 折旧与摊销 | 现金流量表补充资料或附注；不把减值当折旧 |
-| \`organic_capex\` | 购建固定资产、无形资产及其他长期经营资产支付的现金 | 包含建设中工程及正常生产性资产；排除企业并购、金融投资及收购子公司现金对价 |
-| \`operating_nwc\` | 经营性净营运资本 | 经营性流动资产（剔除现金、受限现金、金融资产）减经营性无息流动负债（剔除有息借款） |
-| \`cash_equivalents\` | 现金及现金等价物 | 排除受限资金；原币金额 |
-| \`interest_bearing_debt\` | 短期借款、长期借款、债券及其他计息借款 | 不含贸易应付款；租赁负债单列并按规则纳入 |
-| \`lease_liabilities\` | IFRS 16／租赁准则下租赁负债 | 仅在模型净债务和资本结构权重中按一致口径计入 |
-| \`ordinary_equity\` | 归属于普通股股东的权益 | 排除非普通股优先资本及非控股权益 |
-| \`diluted_shares\` | 稀释加权平均普通股数 | 使用最新完整年度报告披露值；未披露则退回期末普通股数并标记口径降级 |
-| \`period_end_shares\` | 期末已发行普通股数（扣库存股） | 用于每股净资产，不以加权平均股数替代 |
-| \`dividends_declared\` | 对应财年的普通股现金股息总额 | 仅计在决策时点前已公告的中期／末期股息；未公告的年度不假设 |
-| \`market_price\` | 形成参考日未复权收盘价 | 交易所原始收盘价 |
-| \`market_total_return\` | 市场总回报指数 | A 股使用 CSI 300 Gross TRI；腾讯使用 HSI Gross TRI；税前股息再投资 |
-| \`risk_free_yield\` | 当地 10 年期主权债券收益率 | CNY 用中国国债；HKD 用香港政府／外汇基金 10 年期债券可比收益率 |
-| \`nominal_gdp\` | 名义 GDP | 公司主要经营／计价经济体的官方名义 GDP，按可得 vintage |
-| \`minority_interest\` | 非控股权益 | SOTP 中如经营现金流为合并口径则扣除 |
-| \`non_operating_investments\` | 非经营性金融资产及权益投资 | 与经营现金流排重，逐项登记计量基础 |
+| `revenue` | 营业收入／收入 | 合并损益表持续经营口径；保留原币、原单位 |
+| `operating_profit` | 营业利润／经营利润／EBIT | 采用报表披露值；不以 EBITDA 替代 |
+| `net_profit_common` | 归属于母公司普通股股东的净利润 | 扣除优先股／永续资本等非普通股权益影响；如披露不可拆分则标 NA |
+| `income_tax_expense` | 所得税费用 | 使用报表当期所得税与递延所得税合计；不得与现金缴税混用 |
+| `profit_before_tax` | 税前利润 | 与所得税费用同一合并范围 |
+| `depreciation_amortization` | 折旧与摊销 | 现金流量表补充资料或附注；不把减值当折旧 |
+| `organic_capex` | 购建固定资产、无形资产及其他长期经营资产支付的现金 | 包含建设中工程及正常生产性资产；排除企业并购、金融投资及收购子公司现金对价 |
+| `operating_nwc` | 经营性净营运资本 | 经营性流动资产（剔除现金、受限现金、金融资产）减经营性无息流动负债（剔除有息借款） |
+| `cash_equivalents` | 现金及现金等价物 | 排除受限资金；原币金额 |
+| `interest_bearing_debt` | 短期借款、长期借款、债券及其他计息借款 | 不含贸易应付款；租赁负债单列并按规则纳入 |
+| `lease_liabilities` | IFRS 16／租赁准则下租赁负债 | 仅在模型净债务和资本结构权重中按一致口径计入 |
+| `ordinary_equity` | 归属于普通股股东的权益 | 排除非普通股优先资本及非控股权益 |
+| `diluted_shares` | 稀释加权平均普通股数 | 使用最新完整年度报告披露值；未披露则退回期末普通股数并标记口径降级 |
+| `period_end_shares` | 期末已发行普通股数（扣库存股） | 用于每股净资产，不以加权平均股数替代 |
+| `dividends_declared` | 对应财年的普通股现金股息总额 | 仅计在决策时点前已公告的中期／末期股息；未公告的年度不假设 |
+| `market_price` | 形成参考日未复权收盘价 | 交易所原始收盘价 |
+| `market_total_return` | 市场总回报指数 | A 股使用 CSI 300 Gross TRI；腾讯使用 HSI Gross TRI；税前股息再投资 |
+| `risk_free_yield` | 当地 10 年期主权债券收益率 | CNY 用中国国债；HKD 用香港政府／外汇基金 10 年期债券可比收益率 |
+| `nominal_gdp` | 名义 GDP | 公司主要经营／计价经济体的官方名义 GDP，按可得 vintage |
+| `minority_interest` | 非控股权益 | SOTP 中如经营现金流为合并口径则扣除 |
+| `non_operating_investments` | 非经营性金融资产及权益投资 | 与经营现金流排重，逐项登记计量基础 |
 
 若同一报表行同时含经营与非经营项目，必须先有公告附注可验证的拆分；不能自行按比例分摊。原始字段映射表及每个字段对应的公告页码／附注号必须随 A 区载荷保存。
 
@@ -138,7 +138,7 @@ g_\infty=\min(3.0\%,\ nominalGDP_{10yCAGR},\ discountRate-1.0\%)
 
 ### 4.1 冻结函数输入
 
-V1.1 对应 \`growth_dcf(starting_cash_flow, initial_growth, discount_rate, perpetual_growth)\`。输入现金流为人民币／股，折现率为股权资本成本 \(K_e\)，因为 Owner Earnings 是普通股股东可得的权益现金流近似。不得把 FCFF 与 WACC 混搭。
+V1.1 对应 `growth_dcf(starting_cash_flow, initial_growth, discount_rate, perpetual_growth)`。输入现金流为人民币／股，折现率为股权资本成本 \(K_e\)，因为 Owner Earnings 是普通股股东可得的权益现金流近似。不得把 FCFF 与 WACC 混搭。
 
 ### 4.2 Owner Earnings 可审计代理
 
@@ -171,7 +171,7 @@ OE proxy 或其利润率／增长序列不满足五年有效数据要求时，�
 
 ### 5.1 冻结函数输入与单位
 
-V1.1 对应 \`growth_dcf(..., non_operating_value=...)\`。输入现金流、非经营性价值与输出均以 HKD／股计价。经营现金流使用 FCFF 口径并以 WACC 折现；非经营性净资产在 SOTP 加总时按每股金额加入。不得把已扣债务的 FCFE 再按 WACC 折现，也不得把债务重复扣减。
+V1.1 对应 `growth_dcf(..., non_operating_value=...)`。输入现金流、非经营性价值与输出均以 HKD／股计价。经营现金流使用 FCFF 口径并以 WACC 折现；非经营性净资产在 SOTP 加总时按每股金额加入。不得把已扣债务的 FCFE 再按 WACC 折现，也不得把债务重复扣减。
 
 ### 5.2 核心经营 FCFF
 
@@ -217,7 +217,7 @@ NonOperatingValue/share=
 
 V1.1 对应：
 
-\`value_driver_fcff(starting_nopat, shares, initial_growth, initial_ronic, discount_rate, perpetual_growth, net_debt)\`
+`value_driver_fcff(starting_nopat, shares, initial_growth, initial_ronic, discount_rate, perpetual_growth, net_debt)`
 
 单位：NOPAT、净债务用人民币百万元／亿元的一致单位；shares 用百万／亿股的对应单位；输出为人民币／股。所有单位必须在载荷中明确，严禁将亿元与百万元混用。
 
@@ -265,7 +265,7 @@ RONIC_y=\frac{NOPAT_y-NOPAT_{y-1}}{IC_y-IC_{y-1}}
 
 V1.1 对应：
 
-\`residual_income_model(beginning_book_value_per_share, payout_ratio, initial_roe, year_five_roe, cost_of_equity)\`
+`residual_income_model(beginning_book_value_per_share, payout_ratio, initial_roe, year_five_roe, cost_of_equity)`
 
 不向银行模型强行增加 DCF 的永续增长参数。冻结结构把前五年 ROE 从初始水平线性走向第五年 ROE，再把后五年线性收敛至股权资本成本。
 
@@ -286,8 +286,8 @@ BVPS=\frac{OrdinaryEquity_{period\ end}}{OrdinaryShares_{period\ end}}
 ROE_y=\frac{NetProfitCommon_y}{(OrdinaryEquity_{y-1}+OrdinaryEquity_y)/2}
 \]
 
-- \`initial_roe\`：最近三个完整财年的 ROE 中位数。
-- \`year_five_roe\`：最近五个完整财年的 ROE 中位数。
+- `initial_roe`：最近三个完整财年的 ROE 中位数。
+- `year_five_roe`：最近五个完整财年的 ROE 中位数。
 - 只使用形成日之前已公开的完整财年；正负 ROE 均保留，不能删除亏损年。
 - 普通股权益为零／负数、净利润归属口径不一致或五年序列不足时记 NA。
 
@@ -300,7 +300,7 @@ PayoutRatio=\operatorname{median}_{5y}\left(\frac{DividendsDeclared_y}{NetProfit
 - DividendsDeclared：对应财年普通股现金股息总额，包括在形成日前已公告的中期与末期股息；尚未公告的股息不预测。
 - NetProfitCommon：对应财年普通股股东净利润。
 - 至少三个有效财年；中位数须在 0–1，否则记 NA，不截断至 0 或 1。
-- \`cost_of_equity\`：按第 3.1–3.2 节 CNY \(K_e\) 计算。
+- `cost_of_equity`：按第 3.1–3.2 节 CNY \(K_e\) 计算。
 - 不用净息差、信用成本、拨备覆盖率等经营指标直接改写冻结模型的 ROE 输入；这些指标可作为风险诊断，不作为本模型额外参数。
 
 ## 8. 人工不可规则化输入与盲化隔离协议
@@ -356,17 +356,17 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 
 | 项目 | 规则化内容 | 对冻结模型的影响 |
 |---|---|---|
-| 增长率 | 最近五个年度同比增长的 Q25／中位数／Q75 | 只填 \`initial_growth\`，不改函数 |
-| 现金流／NOPAT 利润率 | 最近五年比率分位数 × 最新收入 | 只生成 \`starting_cash_flow\` 或 \`starting_nopat\` |
+| 增长率 | 最近五个年度同比增长的 Q25／中位数／Q75 | 只填 `initial_growth`，不改函数 |
+| 现金流／NOPAT 利润率 | 最近五年比率分位数 × 最新收入 | 只生成 `starting_cash_flow` 或 `starting_nopat` |
 | WACC／Ke | 本币 Rf + 本地 Beta × 本地历史 ERP；BYD 再按资本结构加权 | 只填折现率 |
 | 永续增长率 | 10 年名义 GDP CAGR、3% 上限、折现率减 1pp 三者取最小 | 只填 DCF／FCFF 永续增长参数 |
-| RONIC | 最近五年有效年度 \(\Delta NOPAT/\Delta IC\) 的分位数 | 只填 BYD 的 \`initial_ronic\` |
-| ROE | 最近 3 年中位数、最近 5 年中位数 | 只填银行 \`initial_roe\` 与 \`year_five_roe\` |
-| 分红率 | 最近五年已公告股息／普通股净利润中位数 | 只填银行 \`payout_ratio\` |
-| 非经营性价值 | 最新可得披露资产及形成日上市持仓市价，减债务／少数股东权益 | 只填腾讯 \`non_operating_value\` |
+| RONIC | 最近五年有效年度 \(\Delta NOPAT/\Delta IC\) 的分位数 | 只填 BYD 的 `initial_ronic` |
+| ROE | 最近 3 年中位数、最近 5 年中位数 | 只填银行 `initial_roe` 与 `year_five_roe` |
+| 分红率 | 最近五年已公告股息／普通股净利润中位数 | 只填银行 `payout_ratio` |
+| 非经营性价值 | 最新可得披露资产及形成日上市持仓市价，减债务／少数股东权益 | 只填腾讯 `non_operating_value` |
 | 公司行动／股数 | 交易所公告及报告披露值 | 只提供模型输入和回报重建数据 |
 
-本规则不能改变 \`growth_dcf\`、\`value_driver_fcff\`、\`residual_income_model\`、\`five_year_return_profile\` 的代码、默认十年预测结构或数值校验。若机械输入不能满足冻结函数的正数／区间约束，记录模型无法估值，不得绕过约束。
+本规则不能改变 `growth_dcf`、`value_driver_fcff`、`residual_income_model`、`five_year_return_profile` 的代码、默认十年预测结构或数值校验。若机械输入不能满足冻结函数的正数／区间约束，记录模型无法估值，不得绕过约束。
 
 ## 10. 规则冻结前待核实项
 
