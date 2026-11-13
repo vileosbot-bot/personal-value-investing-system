@@ -148,5 +148,4 @@
 - 风险与未决：CFO/利润转化率下降、存货周转天数增加、THE MONSTERS 与毛绒品类集中、税率代理口径、三情景股数分母与股份奖励信托持股差异、2026 当前净现金未知；5 项缺失保持未填补。
 - 决策卡：pvis-popmart-fcff-20261113-02，supersedes 2024 草稿卡 pvis-popmart-fcff-20261113-01；状态“待总管验收”，未冻结，用户本人临时判断摘要留空。
 - PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；状态 Open，未合并；目标 main；源分支 valuation/HK-09992-2025-rereview。
-- 当前 PR CI：GitHub Actions `ci` 成功；main 未修改。
 - 日期：2026-11-13。
