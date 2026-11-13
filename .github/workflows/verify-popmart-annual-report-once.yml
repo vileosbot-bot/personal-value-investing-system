@@ -1,0 +1,66 @@
+name: One-time POP MART 2024 annual report verification
+
+on:
+  push:
+    branches:
+      - evidence/HK-09992-2024-ar
+    paths:
+      - .github/workflows/verify-popmart-annual-report-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-commit:
+    if: github.ref == 'refs/heads/evidence/HK-09992-2024-ar'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target evidence branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Download official HKEXnews PDF and verify exact bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0423/2025042300687.pdf'
+          expected_sha='9B89A4686FFB5FE838ABD5AE8DF9E7683B1DE2019480E112420E49154FCFDE19'
+          expected_bytes='8320604'
+          tmp_pdf="$(mktemp)"
+          trap 'rm -f "$tmp_pdf"' EXIT
+
+          curl --fail --location --retry 3 --retry-all-errors \
+            --connect-timeout 20 --max-time 180 \
+            --user-agent 'Mozilla/5.0 (compatible; POPMART-Annual-Report-Evidence-Import/1.0)' \
+            --output "$tmp_pdf" "$url"
+
+          actual_bytes="$(wc -c < "$tmp_pdf" | tr -d '[:space:]')"
+          actual_sha="$(sha256sum "$tmp_pdf" | awk '{print toupper($1)}')"
+          echo "Downloaded bytes: $actual_bytes"
+          echo "Downloaded SHA-256: $actual_sha"
+
+          if [[ "$actual_bytes" != "$expected_bytes" ]]; then
+            echo "::error::Byte count mismatch; expected $expected_bytes, got $actual_bytes"
+            exit 1
+          fi
+          if [[ "$actual_sha" != "$expected_sha" ]]; then
+            echo "::error::SHA-256 mismatch; expected $expected_sha, got $actual_sha"
+            exit 1
+          fi
+
+          install -D "$tmp_pdf" evidence/HK-09992/2024-annual-report.pdf
+          echo "Official PDF downloaded and both integrity checks passed."
+
+      - name: Commit verified PDF and delete this one-time workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'vileosbot-bot'
+          git config user.email 'vileosbot@gmail.com'
+          git add evidence/HK-09992/2024-annual-report.pdf
+          git rm .github/workflows/verify-popmart-annual-report-once.yml
+          git commit -m 'evidence: add verified POP MART 2024 annual report PDF'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
