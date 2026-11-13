@@ -127,3 +127,11 @@
 - PR：创建后仅以追加方式补记 PR 链接；不合并。
 - 边界：本次不修改冻结模型、证据文件、模板、README、STATUS 或其他文件；不修改 main。
 - 日期：2026-11-13。
+
+
+## 2026-11-13 泡泡玛特估值 PR 关联记录
+
+- PR #5：https://github.com/vileosbot-bot/personal-value-investing-system/pull/5
+- 状态：Open，未合并；目标 main；源分支 valuation/HK-09992-2024-fcff。
+- PR 创建时 head commit：ff254b690fed810fc1026d4299526e24dcadb814。
+- 仅补记 PR 外部交付链接；此前 Plan.md 内容及本次估值交付记录均保持原样。
