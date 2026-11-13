@@ -1,0 +1,46 @@
+name: Temporary POP MART 2025 annual report importer
+on:
+  push:
+    branches:
+      - valuation/HK-09992-2025-rereview
+permissions:
+  contents: write
+jobs:
+  import-official-pdf:
+    if: contains(github.event.head_commit.message, '[fetch-pdf]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          persist-credentials: true
+      - name: Download original from HKEX and calculate fingerprint
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100394.pdf'
+          mkdir -p evidence/HK-09992
+          curl --fail --location --retry 3 --retry-delay 2 --user-agent 'Mozilla/5.0' "$url" -o evidence/HK-09992/2025-annual-report.pdf
+          if ! command -v pdfinfo >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          pages="$(pdfinfo evidence/HK-09992/2025-annual-report.pdf | awk '$1 == "Pages:" {print $2}')"
+          test "$pages" = "370"
+          bytes="$(wc -c < evidence/HK-09992/2025-annual-report.pdf | tr -d ' ')"
+          sha="$(sha256sum evidence/HK-09992/2025-annual-report.pdf | awk '{print $1}')"
+          head -c 5 evidence/HK-09992/2025-annual-report.pdf | grep -q '%PDF-'
+          {
+            printf 'url=%s\n' "$url"
+            printf 'pages=%s\n' "$pages"
+            printf 'bytes=%s\n' "$bytes"
+            printf 'sha256=%s\n' "$sha"
+            printf 'retrieved_at_utc=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > evidence/HK-09992/.download-meta.txt
+          cat evidence/HK-09992/.download-meta.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/tmp-popmart-2025-pdf.yml
+          git add evidence/HK-09992/2025-annual-report.pdf evidence/HK-09992/.download-meta.txt
+          git commit -m 'chore: download official POP MART 2025 annual report [pdf-imported]'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
