@@ -1,9 +1,10 @@
 # 验证轨数据契约
+> 第二轮校正：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；原修订起点 `d3a0c3cc`；本次接续时分支 HEAD `2d17ea2621d893424fe6fcab12080b18c829f466`。本轮仅校正文档，不修改模型代码，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
 
 > 第二轮修订：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；修订起点 `d3a0c3cc`。本轮仅修订文档，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
 
 - Request ID：`pvis-phase0-revise-20261113-01`（修订自 `pvis-phase0-design-20261113-01`）
-- 版本：Phase 0 / v0.3（数据契约修订稿，待独立复核；未采集、未验证）
+- 版本：Phase 0 / v0.3.1（第二轮校正稿；待独立复核；未采集、未验证）
 - 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；形成截面 2016–2021，前瞻保留 2027。
 - 状态原则：本文件定义字段、来源优先级、时点和缺失规则；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。
 
@@ -156,20 +157,21 @@
 
 ### 6.5 腾讯实物分派：京东与美团股份
 
-**腾讯实物分派的主处理情景固定为：香港本地、非美国人士，经香港券商／CCASS 持有腾讯 00700.HK 的投资者。** 这只定义腾讯实物分派衍生资产的资格和接收处理，不改变整体组合原有的 RMB 报告货币、A 股／H 股证券类别、交易成本或其他税务假设；若要将香港税务居民身份用于全组合税务计算，须另行批准。该情景下符合发行人公告资格时，接收并持有实物分派股份；不把该情景冒充为所有国家／地区投资者均可收取。美国人士或被发行人列为 Non-Qualifying Shareholder 的账户可能改收现金替代款，必须单独识别。
+**主投资者情景固定为：内地个人投资者通过沪港通或深港通南向持有腾讯 00700.HK，且非美国人士。** 这与组合以 RMB 计价、适用港股通股息税情景一致。是否符合某次分派的 Qualifying Shareholder 条件、券商／托管账户实际接收方式，仍须按发行人公告和实际中介确认；不能把所有港股投资者视为同一身份。
 
-| 分派 | 原始公告与比例 | 登记／除权 | 实施／交收日期 | 证券 |
+| 分派 | 原始公告与比例 | 除权日／登记日 | 股份证明寄发／分派日期 | 证券 |
 |---|---|---|---|---|
-| 京东 | 腾讯 2021-12-23 公告；每持有 21 股腾讯分派 1 股京东 Class A 普通股，零碎股以现金替代 | Record Date 2022-01-25；除权交易日 2022-01-20 | 腾讯 2022-03-25 付款公告确认股份证明已寄发，CCASS 参与者按公告通过券商／托管人或 CCASS 投资者账户接收 | 09618.HK |
-| 美团 | 腾讯 2022-11-16 公告；每持有 10 股腾讯分派 1 股美团 Class B 普通股，零碎股以现金替代 | Record Date 2023-01-10；除权交易日 2023-01-05 | 腾讯 2023-03-24 付款公告确认股份证明已寄发，CCASS 参与者通过券商／托管人或 CCASS 投资者账户接收 | 03690.HK |
+| 京东 | 腾讯 2021-12-23 公告；每持有 21 股腾讯分派 1 股京东 Class A 普通股；不派发零碎股，零碎权益现金替代 | 除权交易日 2022-01-20；Record Date 2022-01-25 | 2022-03-25（发行人付款公告确认股份证明寄发／CCASS 结算安排） | 09618.HK |
+| 美团 | 腾讯 2022-11-16 公告；每持有 10 股腾讯分派 1 股美团 Class B 普通股；不派发零碎股，零碎权益现金替代 | 除权交易日 2023-01-05；Record Date 2023-01-10 | 2023-03-24（发行人付款公告确认股份证明寄发及 CCASS／中国结算结算） | 03690.HK |
 
-**港股通专项核验：**
-- 美团：腾讯原始公告明确写明，港股通投资者可通过中国结算持有分派的美团股份；相关股份经 CCASS 派发至中国结算，中国结算代表投资者持有；根据沪／深港通规则，投资者或相关中国结算参与人只能通过港股通卖出该等美团股份。不能通过港股通买入更多该等股份。
-- 京东：腾讯原始公告明确写明，港股通投资者如不打算持有，可通过港股通卖出所获京东股份，但不得通过港股通买入京东股份；该公告没有像美团公告那样完整写明中国结算账户入账路径，需由实际券商／中国结算参与人确认操作细节。因此主情景仍采用香港本地非美国 CCASS 投资者；若另做内地港股通京东持有情景，入账路径未核实前记 NA，不标 VERIFIED。
-- 中国结算《港股通存管结算业务指南》规定港股通证券登记在投资者沪市人民币普通股票账户，中国结算作为名义持有人存管于香港结算，投资者不能要求存入或提取纸面证券；该指南还涉及非港股通标的红股冻结等一般公司行为处理。具体到腾讯京东／美团实物分派，资格、入账与只能卖出等限制以各次腾讯原始公告为准，不能仅凭一般指南推定。
-- 香港本地 CCASS 持有人接收并持有两项分派；零碎股及 Non-Qualifying Shareholders 的现金替代款单独入账，不虚构为完整股份。美国人士／美国地址等不合资格情形按发行人公告处理，不以香港本地情景替代。
+**港股通接收与持有规则：**
+- **京东：**腾讯公告明确：京东股份不属于港股通南向可买入标的；港股通投资者如不打算持有，可通过港股通卖出所获京东股份，但不得通过港股通买入京东股份。公告没有像美团公告那样明确写出中国结算账户的具体入账路径；因此“可以选择持有”与“具体如何入账”必须分开。主情景只有在实际券商／托管人／中国结算参与人确认该账户已接收并可持有时，才把京东股份计入腾讯总回报；未确认时该腾讯队列记 NA，不得假设已到账，也不得用现金替代填补。
+- **美团：**腾讯公告明确：港股通投资者可通过中国结算持有分派的美团股份；对应股份经 CCASS 派发至中国结算，中国结算代表投资者持有。相关中国结算账户获记入美团股份后，投资者或相关中国结算参与人只能通过港股通卖出，不能通过港股通买入更多美团股份。
+- 两次公告均将中国内地列入经法律顾问核实可扩展实物分派的地区；美国地址／美国人士等不合资格情形按各次公告处理。京东公告另有 2022-03-25 至 2022-05-03 的美国 Regulation S 分派合规期限制；本研究主情景为非美国人士，不据此推断其他身份。
+- 中国结算《港股通存管结算业务指南》仅作为一般存管结算背景；具体到两次分派，资格、入账、只能卖出等限制以腾讯原始公告为准。不能用一般指南替代发行人针对该项分派的明确安排。
+- 零碎股及 Non-Qualifying Shareholders 的现金替代款单独记录；不得把未收取股份、现金替代款或股份实际到账日混为一项。若某个投资者身份被发行人排除，按该次公告处理，不将其视为已收取完整股份。
 
-**必须纳入数据契约的价格与分红：**对 09618.HK 京东 Class A 和 03690.HK 美团 Class B，均须保存自实际分派入账日起的未复权日 OHLC、收盘价、交易状态、总回报、现金股息金额／币种／除净日／登记日／派息日，以及送转、拆并股、配股、供股和其他公司行动。腾讯母证券 00700.HK 同样保存上述价格和分红。将分派股份作为腾讯股东持有的衍生资产纳入总回报，不假设自动卖出；如价格或分红数据缺失，腾讯相应队列的总回报记 NA，不把京东／美团股份价值折成任意现金填补。
+**价格、分红与税务数据契约：**对腾讯 00700.HK、京东 09618.HK 和美团 03690.HK，均须保存相应持有期间的未复权日 OHLC、收盘价、交易状态、总回报、现金股息金额／币种／除净日／登记日／派息日，以及送转、拆并股、配股、供股和其他公司行动。京东／美团从实际到账日开始进入腾讯股东持有的衍生资产账簿，不假设自动卖出；若价格、现金股息或公司行动缺失，腾讯相应队列总回报记 NA。两次分派公告均提示投资者另行咨询税务顾问；实物分派接收、持有和出售的税务后果单独记录，不自动套用普通 H 股现金股息的 20% 代扣规则。
 
 ### 6.6 开盘成交、集合竞价与停牌处理
 
@@ -190,13 +192,19 @@
 
 ### 7.1 共同交易日、交易日历与港股通
 
-本研究的“共同交易日”固定定义为：上交所与深交所按各自官方日历开放 A 股交易、港交所按官方日历开放证券交易，且腾讯适用的沪／深港通南向交易至少有一个可用通道开放。若 A 股或港交所开放但所有适用南向港股通通道关闭，该日不算共同交易日。必须使用香港交易所发布的沪港通及深港通交易日历 PDF／CSV，并同时核对上交所、深交所当年官方交易日历及节假日休市公告；不得只看一般公众假期表或第三方日历。
+本研究的“共同交易日”固定定义为：上交所与深交所按各自官方日历开放 A 股交易、港交所按官方日历开放证券交易，且腾讯适用的沪／深港通南向交易至少有一个可用通道开放。若 A 股或港交所开放但所有适用南向港股通通道关闭，该日不算共同交易日。逐日核验必须使用：
+- 上交所年度休市安排与具体休市／恢复交易公告；
+- 深交所年度休市安排与具体休市／恢复交易公告；
+- 香港交易所沪港通及深港通 Trading Calendar PDF／CSV，分别识别 Hong Kong、Shanghai & Shenzhen、Southbound Trading 的开放状态；
+- 必要时补充中国结算交收安排及 HKEX 针对南向通道的临时通告。
+
+不得只看一般公众假期表、第三方交易日历或 A 股／港股各自开市日；港股通南向额外不开放日必须纳入。
 
 **台风与黑色暴雨：**香港天文台热带气旋警告信号历史数据库用于核验 T1/T3/T8/T10 等信号的发出和取消时间；香港天文台暴雨警告历史数据库用于核验黄色／红色／黑色暴雨警告的发出和取消时间。两者是天气事件时间来源，不直接决定市场是否开市。香港交易所 Severe Weather Trading 自 2024-09-23 起实施；实施后香港证券及衍生品市场（包括港股通交易）按预定交易日历在恶劣天气下继续交易，不得再把 T8 或黑雨自动判为休市。2024-09-23 之前按当时有效的历史交易安排及具体 HKEX 通告逐日判断。
 
 **来源优先级与冲突处理：**
-1. 判断某日香港市场是否实际开市，以该日香港交易所针对市场运行的具体公告／临时通告优先于年度通用日历；香港天文台记录只用于确认警告时间。
-2. 判断南向港股通是否可用，以香港交易所当年沪／深港通交易日历及针对南向通道的具体通告为准，并与上交所／深交所官方交易日历及中国结算交收安排交叉核对；任一相关环节关闭，该通道即不可用。
+1. 判断某日香港市场是否实际开市，以该日 HKEX 针对市场运行的具体公告／临时通告优先于年度通用日历；香港天文台记录只用于确认警告时间。
+2. 判断南向港股通是否可用，以 HKEX 当年沪／深港通 Trading Calendar 及针对南向通道的具体通告为准，并与上交所／深交所官方交易日历及中国结算交收安排交叉核对；任一相关环节关闭，该通道即不可用。
 3. 判断 A 股是否开放，以对应交易所（上交所／深交所）的具体休市／恢复交易公告优先于通用日历。
 4. 若具体公告与通用日历仍冲突，采用更具体、日期更晚且明确说明实际市场运行状态的交易所公告；若无法消解，calendar_status 记 NA，该日不纳入共同交易日，不自行推断。
 
@@ -274,13 +282,11 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 ### 11.3 港股 FF5 + 动量因子
 
-港股月度因子主来源为 Kenneth R. French Data Library：
-- Developed Markets Fama/French 5 Factors（月度），选取国家序列 Hong Kong；
-- Developed Markets Momentum Factors（月度），选取国家序列 Hong Kong。
+目前没有已核实的香港本地 FF5+MOM 国家因子序列。港股诊断可使用 Kenneth R. French Data Library 的 **Asia Pacific ex Japan Fama/French 5 Factors（月度）**与 **Asia Pacific ex Japan Momentum Factor（月度）**作为明确标注的区域代理敏感性；不得将其称为 Hong Kong factor、香港本地 alpha 或香港本地确认性因子。
 
-这两套因子以 USD 计价；市场超额收益 MKT 使用美国 1 个月国库券收益率作为无风险基准，因子回报包含股息和资本利得。腾讯、京东、美团的港币月度总回报在回归前须用 Federal Reserve H.10 / FRED DEXHKUS 日度汇率转换为 USD；x_t 表示每美元兑换的港币数，取月末当日或之前最近一个有效交易日的观测，则 USD 回报 = (1 + HKD 回报) × (x_(t−1) / x_t) − 1。不得把港币个股收益直接与 USD 因子回归，也不得把港币估值模型中的 10 年期 Rf 与因子库的美国 1 个月 Rf 混用。
+这两套区域因子以 USD 计价；MKT 使用美国 1 个月国库券收益率作为无风险基准。腾讯、京东、美团的港币月度总回报在回归前须用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率转换为 USD；x_t 表示每美元兑换的港币数，取月末当日或之前最近一个有效交易日的观测，则 USD 回报 = (1 + HKD 回报) × (x_(t−1) / x_t) − 1。不得把港币个股收益直接与 USD 因子回归，也不得把港币估值模型中的 10 年期 Rf 与因子库的美国 1 个月 Rf 混用。
 
-French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time vintage；只用于港股事后因子诊断。若下载版本缺少 Hong Kong 国家序列或月份，相关 alpha 记 NA；不得用 Asia Pacific ex Japan 代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
+区域代理只作事后敏感性诊断，不作为香港本地确认性门槛。若下载版本缺少 Asia Pacific ex Japan 因子或月份，相关敏感性 alpha 记 NA；不得用 Developed Markets 整体因子或其他区域代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
 
 ### 11.4 统一版本与使用边界
 
@@ -300,9 +306,10 @@ French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time 
 
 - [ ] 四家主证券代码、币种、交易所与历史证券状态核对；腾讯分派衍生证券 09618.HK、03690.HK 单独建账。
 - [ ] 比亚迪固定使用 002594.SZ A 股；招商银行固定使用 600036.SH A 股；不得切换 H 股。
-- [ ] 京东／美团分派的原始公告、比例、除权日、登记日、实际分派日期、CCASS／中国结算入账与可交易限制核对。
+- [ ] 京东／美团分派的原始公告、比例、除权日、登记日、股份证明寄发日期、港股通资格、ChinaClear／CCASS 入账与可交易限制核对。
+- [ ] 主投资者情景固定为内地非美国个人经南向港股通持有腾讯；京东入账路径需券商／托管人／中国结算参与人确认，未确认时队列 NA。
 - [ ] 腾讯、京东、美团三只证券的日价格、现金股息、拆并股、送转及其他公司行动数据齐全。
-- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对；HK 因子 USD 转换另使用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率。
+- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对；HK 区域因子 USD 转换另使用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率。
 - [ ] A 股开盘集合竞价、涨跌停无法成交、港股开市前竞价、停牌与最多五个共同交易日重试规则核对。
 - [ ] 共同交易日包含沪／深港通南向额外不开放日；台风／黑雨信号取香港天文台历史库，实际市场开闭以 HKEX 通告和 Severe Weather Trading 规则核对。
 - [ ] 中报／半年报／季度报告不入模，只用完整财年数据。
@@ -311,8 +318,8 @@ French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time 
 - [ ] 每家公司每个形成日的原始财报版本、公告时间、公告编号和 SHA-256 核对。
 - [ ] 财务字段原始值、标准化值、单位转换与重述链核对。
 - [ ] CSI 300 Gross TRI H00300 与 HSI Gross TRI 1006800 历史数据授权、连续性和缺失率核对。
-- [ ] A 股 PKU FF5+MOM、港股 French Hong Kong FF5+MOM、各自币种、ex-post vintage、覆盖和哈希核对。
-- [ ] 税、佣金、交易所费用、滑点和股息再投资成本核对。
+- [ ] A 股 PKU FF5+MOM、港股 Asia Pacific ex Japan 区域代理、各自币种、ex-post vintage、覆盖和哈希核对。
+- [ ] 实物分派税务单独记录，不自动套用 H 股现金股息 20% 代扣；交易税、佣金、交易所费用、滑点和股息再投资成本核对。
 - [ ] A 区冻结哈希先于 B 区解封；未满足时不得使用“盲测”标签。
 
 ## 14. 参考依据
@@ -322,17 +329,16 @@ French Data Library 当前序列是 ex-post 历史因子，不是 point-in-time 
 - [腾讯 2022-03-25 京东股份分派付款公告](https://static.www.tencent.com/uploads/2022/03/25/74608e2aecdd9669e1174e9c4d5fad50.pdf)
 - [腾讯 2022-11-16 美团股份实物分派原始公告](https://static.www.tencent.com/uploads/2022/11/16/b92d6f78a14cbcc512c2b48f0942dd9f.pdf)
 - [腾讯 2023-03-24 美团股份分派付款公告](https://static.www.tencent.com/uploads/2023/03/24/a902bc1d78ebee80a4c239c4a7e290f2.pdf)
-- [上海证券交易所官方网站：年度交易日历及节假日休市安排公告](https://www.sse.com.cn/)
-- [深圳证券交易所官方网站：年度交易日历及节假日休市安排公告](https://www.szse.cn/)
-- [香港交易所沪港通及深港通交易时间、交易和结算日历](https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-cn)
-- [香港交易所 Severe Weather Trading 安排](https://www.hkex.com.hk/services/trading-hours-and-severe-weather-arrangements/severe-weather-arrangements/overview?sc_lang=en)
+- [上交所年度休市安排及公告列表](https://www.sse.com.cn/disclosure/dealinstruc/closed/list/)
+- [深交所通知公告及年度休市安排](https://www.szse.cn/www/disclosure/notice/general/)
+- [香港交易所沪港通及深港通 Trading Calendar（PDF／CSV）](https://www.hkex.com.hk/mutual-market/stock-connect/reference-materials/trading-hour%2C-trading-and-settlement-calendar?sc_lang=en)
+- [香港交易所 Severe Weather Trading 安排](https://www.hkex.com.hk/News/Market-Communications/2024/240618news?sc_lang=en)
 - [香港天文台热带气旋警告信号历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb1.shtml)
 - [香港天文台暴雨警告历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb3.shtml)
 - [北京大学新金融与创业投资研究中心公开因子库](https://www.gsm.pku.edu.cn/finvc/info/1027/1147.htm)
-- [Kenneth R. French Data Library：Developed Markets Fama/French 5 Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5developed.html)
-- [Kenneth R. French Data Library：Developed Markets Momentum Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_developed_mom.html)
-- [中证指数有限公司：沪深 300 全收益指数资料](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
-- [恒生指数有限公司：恒生指数系列](https://www.hsi.com.hk/eng/indexes/all-indexes/hsi)
+- [Kenneth R. French Data Library（含 Asia Pacific ex Japan FF5 与 Momentum 月度序列）](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+- [中证指数有限公司沪深 300 指数系列（H00300 全收益指数代码待逐项核对）](https://www.csindex.com.cn/)
+- [香港交易所 OMD-C 接口规范（1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.37.pdf)
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
 
 以上资料仅作为规则来源入口；未完成逐文件下载、哈希、许可和历史覆盖核验前，不标 VERIFIED。
