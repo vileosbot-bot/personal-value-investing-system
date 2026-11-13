@@ -104,7 +104,7 @@ CAGR=(期末总财富/期初总财富)^{1/5}-1
 | DSR | Deflated Sharpe Ratio，使用实际试验次数、偏度、峰度和样本长度修正 Sharpe 的选择偏差 | DSR 概率 ≥ 0.95 | 未记录试验次数或样本长度不足时 NA |
 | 15% 拉伸目标 | 样本外、扣成本、RMB、五年几何 CAGR | 点估计 ≥ 15%；确认还须单侧 95% 下界 ≥ 15% | 不能达到统计功效时结论为“证据不足”，不放宽门槛 |
 
-CPCV、DSR、PBO 是三个不同工具，不互相替代：CPCV（组合纯化交叉验证）是按时间块构造训练／测试路径并处理重叠信息的验证设计；DSR（Deflated Sharpe Ratio）修正 Sharpe 的非正态与多重试验偏差；PBO（Probability of Backtest Overfitting）用 CSCV 评估样本内选出的最优策略在样本外落到中位数以下的概率。不得把 CPCV 的折数或通过率直接写成 PBO。
+CPCV、DSR、PBO 是三个不同工具，不互相替代：CPCV（组合式净化交叉验证）是按时间块构造训练／测试路径并处理重叠信息的验证设计；DSR（Deflated Sharpe Ratio）修正 Sharpe 的非正态与多重试验偏差；PBO（Probability of Backtest Overfitting）用 CSCV 评估样本内选出的最优策略在样本外落到中位数以下的概率。不得把 CPCV 的折数或通过率直接写成 PBO。
 
 ### 7. 重叠队列与统计功效
 
