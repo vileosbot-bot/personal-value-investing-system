@@ -354,19 +354,19 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 
 ## 9. V1.1 五年隐含 IRR 与年度现金流映射
 
-本节严格复现仓库 \`src/pvis/regression.py\` 当前的四条路由调用，不另造分红预测、不替换年度现金流，也不修改 \`five_year_return_profile()\`。
+本节严格复现仓库 `src/pvis/regression.py` 当前的四条路由调用，不另造分红预测、不替换年度现金流，也不修改 `five_year_return_profile()`。
 
 | 模型路线 | 五年 IRR 的年度现金流（前五年） | 第五年退出值 |
 |---|---|---|
-| 茅台 Owner Earnings + DCF | \`tuple(projection.cash_flows[:5])\` | \`projection.year_five_exit_value\` |
-| 腾讯 DCF + SOTP | \`tuple(projection.cash_flows[:5])\` | \`projection.year_five_exit_value\` |
-| 比亚迪价值驱动 FCFF | \`tuple(projection.fcff_per_share[:5])\` | \`projection.year_five_exit_value_per_share\` |
-| 招商银行 Residual Income | \`tuple(projection.dividends_per_share[:5])\` | \`projection.year_five_exit_value_per_share\` |
+| 茅台 Owner Earnings + DCF | `tuple(projection.cash_flows[:5])` | `projection.year_five_exit_value` |
+| 腾讯 DCF + SOTP | `tuple(projection.cash_flows[:5])` | `projection.year_five_exit_value` |
+| 比亚迪价值驱动 FCFF | `tuple(projection.fcff_per_share[:5])` | `projection.year_five_exit_value_per_share` |
+| 招商银行 Residual Income | `tuple(projection.dividends_per_share[:5])` | `projection.year_five_exit_value_per_share` |
 
-- \`entry_price\` 固定为形成参考日收盘价 P，与 V/P 和 MOS 使用同一价格；下一共同交易日开盘价只用于实际模拟成交和实现回报。
-- 茅台与腾讯的 \`five_year_return_profile()\` 年度现金流来自冻结 DCF 的模型预测现金流；比亚迪来自 FCFF／股；招行来自 Residual Income 模型生成的预测每股股息。这些现金流是 V1.1 的模型定义，不代表公司承诺派发的实际现金股息。
-- \`five_year_irr\` 是冻结模型现金流和形成日收盘价推导的**模型隐含毛 IRR**。当前冻结函数不接收佣金、印花税、滑点、股息税或执行价格，因此该信号本身不扣交易成本。实际样本外组合收益必须另按数据契约，在下一交易日开盘成交、持有期公司行动、股息再投资和退出交易中扣除成本。
-- \`target_entry_price\` 使用冻结函数默认 \`target_rate=0.15\`，只表示在模型预测现金流不变时达到 15% 毛 IRR 的数学价格；它是研究诊断值，不是买入指令，也不代表扣成本后的 15%。
+- `entry_price` 固定为形成参考日收盘价 P，与 V/P 和 MOS 使用同一价格；下一共同交易日开盘价只用于实际模拟成交和实现回报。
+- 茅台与腾讯的 `five_year_return_profile()` 年度现金流来自冻结 DCF 的模型预测现金流；比亚迪来自 FCFF／股；招行来自 Residual Income 模型生成的预测每股股息。这些现金流是 V1.1 的模型定义，不代表公司承诺派发的实际现金股息。
+- `five_year_irr` 是冻结模型现金流和形成日收盘价推导的**模型隐含毛 IRR**。当前冻结函数不接收佣金、印花税、滑点、股息税或执行价格，因此该信号本身不扣交易成本。实际样本外组合收益必须另按数据契约，在下一交易日开盘成交、持有期公司行动、股息再投资和退出交易中扣除成本。
+- `target_entry_price` 使用冻结函数默认 `target_rate=0.15`，只表示在模型预测现金流不变时达到 15% 毛 IRR 的数学价格；它是研究诊断值，不是买入指令，也不代表扣成本后的 15%。
 - 不得把茅台／腾讯／比亚迪的模型现金流改成实际历史股息，也不得为了让隐含 IRR 与实现回报更接近而调整现金流定义。实际股东总回报与模型隐含 IRR 的差异正是待检验对象之一。
 
 ## 10. Phase 0 规则与 V1.1 冻结模型的关系
