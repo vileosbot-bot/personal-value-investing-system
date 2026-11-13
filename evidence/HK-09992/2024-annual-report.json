@@ -1,0 +1,1237 @@
+{
+  "import_id": "HK-09992-2024-AR-001",
+  "company": {
+    "name": "泡泡玛特国际集团有限公司（POP MART INTERNATIONAL GROUP LIMITED）",
+    "code": "09992",
+    "market": "港股（香港联合交易所主板；年报列示股份代号9992，证据目录采用五位零填充代码09992）"
+  },
+  "period": {
+    "type": "年报",
+    "fiscal_year": 2024,
+    "period_end": "2024-12-31"
+  },
+  "source": {
+    "type": "交易所公告",
+    "publisher": "香港联合交易所有限公司（HKEXnews 披露易）",
+    "document_title": "POP MART INTERNATIONAL GROUP LIMITED Annual Report 2024",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0423/2025042300687.pdf",
+    "file": "2024-annual-report.pdf",
+    "file_sha256": "9b89a4686ffb5fe838abd5ae8df9e7683b1de2019480e112420e49154fcfde19",
+    "published_at": "2025-04-23",
+    "available_at": "2025-04-23"
+  },
+  "decision_at": "2026-11-13",
+  "items": [
+    {
+      "field": "营业收入",
+      "value": 13037749,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。原文Revenue。"
+    },
+    {
+      "field": "营业收入同比增长率",
+      "value": 106.9,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "MD&A—Financial Review / Sales Revenue",
+      "page": 21,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页21，年报印刷页20。管理层披露同比增长率。"
+    },
+    {
+      "field": "销售成本",
+      "value": -4329984,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "毛利",
+      "value": 8707765,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "毛利率",
+      "value": 66.8,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "MD&A—Revenue by channels",
+      "page": 21,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页21，年报印刷页20。总计行披露毛利率。"
+    },
+    {
+      "field": "经销及销售开支",
+      "value": -3650464,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "一般及行政开支",
+      "value": -947093,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "金融资产减值亏损拨备",
+      "value": -3446,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "其他收入",
+      "value": 84288,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "其他净亏损",
+      "value": -36778,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。原文Other (losses)/gains – net。"
+    },
+    {
+      "field": "经营利润",
+      "value": 4154272,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "财务收入",
+      "value": 212335,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "财务开支",
+      "value": -48983,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "财务收入净额",
+      "value": 163352,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "应占权益法入账投资利润",
+      "value": 48188,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "税前利润",
+      "value": 4365812,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "所得税开支",
+      "value": -1057467,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "年内利润",
+      "value": 3308345,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "归属本公司拥有人利润",
+      "value": 3125473,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "归属非控股权益利润",
+      "value": 182872,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表",
+      "page": 189,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页189，年报印刷页188。"
+    },
+    {
+      "field": "每股基本盈利",
+      "value": 2.36,
+      "unit": "RMB/share",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表—Earnings per share",
+      "page": 190,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页190，年报印刷页189。"
+    },
+    {
+      "field": "每股摊薄盈利",
+      "value": 2.35,
+      "unit": "RMB/share",
+      "currency": "CNY",
+      "statement": "合并损益及其他全面收益表—Earnings per share",
+      "page": 190,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页190，年报印刷页189。"
+    },
+    {
+      "field": "非IFRS经调整净利润",
+      "value": 3403162,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Non-IFRS Financial Indicators",
+      "page": 32,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页32，年报印刷页31。管理层披露的非IFRS指标，不是IFRS损益表项目。"
+    },
+    {
+      "field": "非IFRS经调整净利润率",
+      "value": 26.1,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "MD&A—Non-IFRS Financial Indicators",
+      "page": 32,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页32，年报印刷页31。"
+    },
+    {
+      "field": "净利润率",
+      "value": 25.4,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "Financial Summary",
+      "page": 7,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页7，年报印刷页6。"
+    },
+    {
+      "field": "非流动资产总额",
+      "value": 2634591,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "物业、厂房及设备",
+      "value": 739378,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "无形资产",
+      "value": 135400,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "使用权资产",
+      "value": 927558,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "权益法入账投资",
+      "value": 136783,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "非流动按公允价值计入损益金融资产",
+      "value": 411880,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "非流动预付款项及其他应收款",
+      "value": 136563,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "递延所得税资产",
+      "value": 147029,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "流动贸易应收款项",
+      "value": 477723,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "存货",
+      "value": 1524521,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "流动预付款项及其他应收款",
+      "value": 576594,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "流动按公允价值计入损益金融资产",
+      "value": 11434,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "受限制现金",
+      "value": 25649,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。附注24说明为信用证抵押款。"
+    },
+    {
+      "field": "初始期限超过三个月且一年以内定期存款",
+      "value": 3511143,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "现金及现金等价物",
+      "value": 6109017,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "流动资产总额",
+      "value": 12236081,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "总资产",
+      "value": 14870672,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 191,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页191，年报印刷页190。"
+    },
+    {
+      "field": "股本",
+      "value": 882,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "股份奖励计划持有的股份（权益抵减）",
+      "value": -9,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "其他储备",
+      "value": 4280527,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "保留盈利",
+      "value": 6402105,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "本公司拥有人应占权益",
+      "value": 10683505,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "非控股权益",
+      "value": 201134,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "总权益",
+      "value": 10884639,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "非流动应付授权费",
+      "value": 14536,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "非流动租赁负债",
+      "value": 601469,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "非流动负债总额",
+      "value": 616005,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "贸易应付款项",
+      "value": 1010109,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "流动应付授权费",
+      "value": 341835,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "其他应付款项",
+      "value": 904274,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "合约负债",
+      "value": 188577,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "流动租赁负债",
+      "value": 363092,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "即期所得税负债",
+      "value": 562141,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "流动负债总额",
+      "value": 3370028,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "总负债",
+      "value": 3986033,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。"
+    },
+    {
+      "field": "银行借款",
+      "value": 0,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并资产负债表及MD&A—Bank borrowings",
+      "page": 192,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页192，年报印刷页191。资产负债表借款项目列示横线；MD&A印刷页33明确截至2024-12-31无银行借款。"
+    },
+    {
+      "field": "经营所得现金",
+      "value": 5415453,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(a)—Reconciliation of profit before income tax to net cash flows generated from operations",
+      "page": 313,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页313，年报印刷页312。"
+    },
+    {
+      "field": "已收利息",
+      "value": 227247,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "已付所得税",
+      "value": -688480,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "经营活动所得现金净额",
+      "value": 4954220,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "购置物业、厂房及设备现金支出",
+      "value": -372668,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "购置无形资产现金支出",
+      "value": -144022,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "投资活动产生现金净额",
+      "value": 8957,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 196,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页196，年报印刷页195。"
+    },
+    {
+      "field": "租赁负债付款",
+      "value": -505104,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "偿还借款",
+      "value": -15058,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。2023年末短期借款于2024年偿清。"
+    },
+    {
+      "field": "已付股息",
+      "value": -378015,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "回购自身股份付款",
+      "value": -78031,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "融资活动所用现金净额",
+      "value": -958503,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "现金及现金等价物净增加额",
+      "value": 4004674,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "年初现金及现金等价物",
+      "value": 2077927,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "现金及现金等价物汇兑收益",
+      "value": 26416,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "年末现金及现金等价物",
+      "value": 6109017,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 197,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页197，年报印刷页196。"
+    },
+    {
+      "field": "资本开支合计",
+      "value": 516690,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 35,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页35，年报印刷页34。管理层定义为购置物业、厂房及设备与购置无形资产款项之和。"
+    },
+    {
+      "field": "资本开支—购置物业、厂房及设备",
+      "value": 372668,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 35,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页35，年报印刷页34。"
+    },
+    {
+      "field": "资本开支—购置无形资产",
+      "value": 144022,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Capital Expenditures",
+      "page": 35,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页35，年报印刷页34。"
+    },
+    {
+      "field": "净现金（附注34(c)口径）",
+      "value": 5155890,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注34(c)—Net cash reconciliation",
+      "page": 314,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页314，年报印刷页313。现金及现金等价物加流动性投资并扣除租赁负债及借款；不是资产负债表单独列示科目。"
+    },
+    {
+      "field": "法定普通股数",
+      "value": 5000000000,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 299,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页299，年报印刷页298。每股面值USD0.0001；2023-01-01、2023-12-31及2024-12-31授权股数相同。"
+    },
+    {
+      "field": "年末已发行及缴足普通股数",
+      "value": 1342943150,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 299,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页299，年报印刷页298。截至2024-12-31；每股面值USD0.0001。"
+    },
+    {
+      "field": "年末库存股数",
+      "value": 0,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 299,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页299，年报印刷页298。截至2024-12-31，库存股栏列示横线。"
+    },
+    {
+      "field": "2024年回购普通股数",
+      "value": 4700000,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 299,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页299，年报印刷页298。公开市场回购；总对价HKD85,826,000，约RMB78,031,000。"
+    },
+    {
+      "field": "2024年注销回购股份数",
+      "value": 5300000,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注25—Share capital and treasury shares",
+      "page": 299,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页299，年报印刷页298。"
+    },
+    {
+      "field": "基本每股盈利加权平均普通股数",
+      "value": 1326541,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(a)—Basic earnings per share",
+      "page": 263,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页263，年报印刷页262。已扣除股份奖励计划持股及本公司购回待注销股份。"
+    },
+    {
+      "field": "摊薄每股盈利加权平均股份数",
+      "value": 1332080,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(b)—Diluted earnings per share",
+      "page": 264,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页264，年报印刷页263。"
+    },
+    {
+      "field": "摊薄计算新增受限制股份数",
+      "value": 5539,
+      "unit": "thousand shares",
+      "currency": "N/A",
+      "statement": "附注13(b)—Diluted earnings per share",
+      "page": 264,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页264，年报印刷页263。"
+    },
+    {
+      "field": "2024年派付股息",
+      "value": 373025,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注12—Dividends",
+      "page": 263,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页263，年报印刷页262。附注披露每股RMB28.21 cents；该数为附注口径。"
+    },
+    {
+      "field": "建议派付末期股息每股",
+      "value": 81.46,
+      "unit": "RMB cents/share",
+      "currency": "CNY",
+      "statement": "附注12—Dividends",
+      "page": 263,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页263，年报印刷页262。董事会建议；并非2024-12-31已确认的应付股息。"
+    },
+    {
+      "field": "建议末期股息总额",
+      "value": 1093916,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注12—Dividends",
+      "page": 263,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页263，年报印刷页262。按财务报表批准日已发行股本计算；未在2024年末资产负债表确认为应付股息。"
+    },
+    {
+      "field": "中国内地可报告分部收入",
+      "value": 7972074,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。分部收入为来自外部客户的收入。"
+    },
+    {
+      "field": "港澳台及海外可报告分部收入",
+      "value": 5065675,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。分部收入为来自外部客户的收入。"
+    },
+    {
+      "field": "中国内地分部业绩",
+      "value": 2637353,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。分部业绩为分部经营利润，不代表分部净利润。"
+    },
+    {
+      "field": "港澳台及海外分部业绩",
+      "value": 1814090,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。分部业绩为分部经营利润，不代表分部净利润。"
+    },
+    {
+      "field": "分部业绩合计",
+      "value": 4451443,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。"
+    },
+    {
+      "field": "未分配费用及其他收益/亏损",
+      "value": -297171,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。用于由分部业绩合计调节至集团经营利润。"
+    },
+    {
+      "field": "中国内地分部物业、厂房及设备折旧",
+      "value": 249838,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "港澳台及海外分部物业、厂房及设备折旧",
+      "value": 36643,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "中国内地分部使用权资产折旧",
+      "value": 345305,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "港澳台及海外分部使用权资产折旧",
+      "value": 107013,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "中国内地分部无形资产摊销",
+      "value": 101205,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "港澳台及海外分部无形资产摊销",
+      "value": 22819,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 254,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页254，年报印刷页253。重大非现金开支。"
+    },
+    {
+      "field": "中国内地非流动资产（不含FVPL金融资产及递延税项资产）",
+      "value": 1478586,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。按资产地理位置列示，并非分部资产总额。"
+    },
+    {
+      "field": "港澳台及海外非流动资产（不含FVPL金融资产及递延税项资产）",
+      "value": 597096,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注5—Segment information",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。按资产地理位置列示，并非分部资产总额。"
+    },
+    {
+      "field": "中国内地零售店销售收入",
+      "value": 3827861,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "中国内地线上销售收入",
+      "value": 2697619,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "中国内地机器人商店销售收入",
+      "value": 698416,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "中国内地批发及其他收入",
+      "value": 748178,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "港澳台及海外零售店销售收入",
+      "value": 2937910,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "港澳台及海外线上销售收入",
+      "value": 1455162,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "港澳台及海外机器人商店销售收入",
+      "value": 133061,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "港澳台及海外批发及其他收入",
+      "value": 539542,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注6—Revenue by business lines",
+      "page": 255,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页255，年报印刷页254。"
+    },
+    {
+      "field": "手办产品收入",
+      "value": 6936087,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页28，年报印刷页27。"
+    },
+    {
+      "field": "毛绒产品收入",
+      "value": 2832078,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页28，年报印刷页27。"
+    },
+    {
+      "field": "MEGA产品收入",
+      "value": 1683780,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页28，年报印刷页27。"
+    },
+    {
+      "field": "衍生品及其他产品收入",
+      "value": 1585804,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by Product Category",
+      "page": 28,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页28，年报印刷页27。"
+    },
+    {
+      "field": "自主产品收入",
+      "value": 12721506,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。占总收入97.6%。"
+    },
+    {
+      "field": "艺术家IP收入",
+      "value": 11120848,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "授权IP收入",
+      "value": 1600658,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "THE MONSTERS IP收入",
+      "value": 3040664,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "MOLLY IP收入",
+      "value": 2093172,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "SKULLPANDA IP收入",
+      "value": 1308262,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "CRYBABY IP收入",
+      "value": 1164885,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue by IPs",
+      "page": 27,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页27，年报印刷页26。"
+    },
+    {
+      "field": "东南亚地区收入",
+      "value": 2402732,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue from Hong Kong, Macao, Taiwan and Overseas by regions",
+      "page": 26,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页26，年报印刷页25。"
+    },
+    {
+      "field": "东亚及港澳台地区收入",
+      "value": 1385666,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue from Hong Kong, Macao, Taiwan and Overseas by regions",
+      "page": 26,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页26，年报印刷页25。"
+    },
+    {
+      "field": "北美地区收入",
+      "value": 723025,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue from Hong Kong, Macao, Taiwan and Overseas by regions",
+      "page": 26,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页26，年报印刷页25。"
+    },
+    {
+      "field": "欧洲、澳洲及其他地区收入",
+      "value": 554252,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "MD&A—Revenue from Hong Kong, Macao, Taiwan and Overseas by regions",
+      "page": 26,
+      "note": "2024年度/截至2024-12-31合并口径；PDF物理页26，年报印刷页25。"
+    }
+  ],
+  "adjustments": [
+    {
+      "field": "非IFRS经调整净利润",
+      "reason": "管理层从IFRS年内利润中加回以股份为基础的付款报酬，理由为该费用属于非现金项目且管理层认为不直接反映业务经营；这是管理层非IFRS指标口径，不是对IFRS利润表的更正。",
+      "amount": 94817,
+      "basis": "MD&A—Non-IFRS Financial Indicators对账表，PDF第32页（年报印刷第31页），单位RMB'000；年内利润3,308,345 + 股份支付调整94,817 = 经调整净利润3,403,162。"
+    },
+    {
+      "field": "分部业绩至集团经营利润的调节",
+      "reason": "两个可报告分部业绩合计4,451,443，附注5列示未分配费用及其他收益/亏损为-297,171，调节后为集团经营利润4,154,272；未分配项主要涉及总部、IP、研发、IT及共享服务中心开支。",
+      "amount": -297171,
+      "basis": "附注5—Segment information，PDF第254页（年报印刷第253页），单位RMB'000。"
+    },
+    {
+      "field": "股息支付与宣派金额的跨表调节",
+      "reason": "现金流量表列示股息支付378,015，权益变动/股息附注列示宣派或附注口径股息373,025；现金净额调节表列示股息外汇调整-4,990，保留各表原始金额，不自行改写。",
+      "amount": 4990,
+      "basis": "现金流量表PDF第197页（印刷第196页）；附注12 PDF第263页（印刷第262页）；附注34(c) PDF第315页（印刷第314页），单位RMB'000。"
+    },
+    {
+      "field": "收入披露分类口径",
+      "reason": "年报同时提供按两个可报告分部、渠道/业务线、产品类别及IP类别的收入视角；这些是不同分类维度，不能跨维度重复相加。",
+      "amount": null,
+      "basis": "附注5 PDF第253–255页（印刷第252–254页）；MD&A收入渠道、IP及产品类别PDF第21、26–28页（印刷第20、25–27页）。"
+    }
+  ],
+  "missing": [
+    {
+      "field": "分部资产及分部负债",
+      "reason": "附注5明确说明主要经营决策者不使用分部资产及分部负债资料分配资源或评估表现，因此未单独提供；不以集团资产负债替代分部数据。出处：PDF第253页（印刷第252页）。"
+    },
+    {
+      "field": "分部资本开支",
+      "reason": "年报披露集团层面的资本开支，但附注5未按中国内地与港澳台及海外两个可报告分部拆分资本开支；不按收入比例分摊。出处：PDF第253–255页（印刷第252–254页）及PDF第35页（印刷第34页）。"
+    },
+    {
+      "field": "研发费用独立金额及总部/IP/IT/共享服务中心费用逐项金额",
+      "reason": "综合损益表没有单列研发费用；附注5仅说明研发部及相关总部职能费用属于未分配项目，未逐项披露金额。不估算或按分部拆分。出处：PDF第189页（印刷第188页）及PDF第253–254页（印刷第252–253页）。"
+    },
+    {
+      "field": "自由现金流（FCF）",
+      "reason": "年报未直接列示自由现金流。本次仅记录现金流量表和管理层披露的资本开支，不自行计算FCF或将不同口径拼接。"
+    },
+    {
+      "field": "按报告分部拆分的利息收入及利息费用",
+      "reason": "附注5未向主要经营决策者提供按报告分部划分的利息收入/费用；集团层面的财务收入与财务开支不替代分部口径。出处：PDF第253–255页（印刷第252–254页）。"
+    }
+  ],
+  "imported_by": "人工摘录（ChatGPT辅助，逐项以HKEXnews官方PDF原件核对）",
+  "imported_at": "2026-11-13"
+}

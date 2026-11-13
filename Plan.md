@@ -105,3 +105,11 @@
 - FCFF 阻断：冻结函数 `value_driver_fcff()` 要求起始 NOPAT 为正；2025 年报披露经营亏损为 RMB'000 -3,786,750，当前证据无法提供满足正数门槛的起始 NOPAT，因此未估值、未修改冻结模型。
 - PR：https://github.com/vileosbot-bot/personal-value-investing-system/pull/3
 - 日期：2026-11-13。
+
+## 2026-11-13 泡泡玛特（09992.HK）2024 年报证据导入
+
+- 交付文件：`evidence/HK-09992/2024-annual-report.json`（129 项摘录、4 项调整、5 项缺失）及 `evidence/HK-09992/2024-annual-report.pdf`（HKEXnews 官方原件，8,320,604 bytes）。
+- 原件来源时点：HKEXnews 披露易发布记录为 2025-04-23 16:42；`published_at` 与 `available_at` 均为 `2025-04-23`。2025-03-26 为年度业绩公告日期，不作为年报原件发布日期。
+- 原件 SHA-256：`9B89A4686FFB5FE838ABD5AE8DF9E7683B1DE2019480E112420E49154FCFDE19`。
+- PR：https://github.com/vileosbot-bot/personal-value-investing-system/pull/4
+- 日期：2026-11-13。
