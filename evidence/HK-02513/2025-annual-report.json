@@ -1,0 +1,661 @@
+{
+  "import_id": "HK-02513-2025-AR-001",
+  "company": {
+    "name": "北京智谱华章科技股份有限公司",
+    "code": "02513",
+    "market": "港股（香港联合交易所主板）"
+  },
+  "period": {
+    "type": "年报",
+    "fiscal_year": 2025,
+    "period_end": "2025-12-31"
+  },
+  "source": {
+    "type": "交易所公告",
+    "publisher": "香港联合交易所有限公司（HKEXnews 披露易）",
+    "document_title": "Knowledge Atlas Technology Joint Stock Company Limited 2025 Annual Report",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0419/2026041900085.pdf",
+    "file": "2025-annual-report.pdf",
+    "file_sha256": "f27ac3b56c3f444a27f830558a4d48594517fda7b82b3e13c2b70cf626249368",
+    "published_at": "2026-04-19",
+    "available_at": "2026-04-19"
+  },
+  "decision_at": "2026-11-13",
+  "items": [
+    {
+      "field": "营业收入",
+      "value": 724334,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。收入按IFRS 15在客户取得控制权时确认；具体政策见附注2(w)，印刷页97–98；收入分解见附注4(a)，印刷页101–102。"
+    },
+    {
+      "field": "营业收入同比增长率",
+      "value": 131.9,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "管理层讨论与分析—Business Overview",
+      "page": 15,
+      "note": "年报印刷页14；管理层披露的2025年度同比增长率。"
+    },
+    {
+      "field": "营业成本",
+      "value": -427678,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；报表列示为Cost of revenue。"
+    },
+    {
+      "field": "毛利",
+      "value": 296656,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "毛利率",
+      "value": 41,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "管理层讨论与分析—Gross Profit and Gross Profit Margin",
+      "page": 21,
+      "note": "年报印刷页20；管理层披露的2025年度毛利率，按原文保留一位小数。"
+    },
+    {
+      "field": "研发费用",
+      "value": -3180443,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；附注4(b)说明研发费用未分配至单独报告分部。"
+    },
+    {
+      "field": "研发费用同比增长率",
+      "value": 44.9,
+      "unit": "%",
+      "currency": "N/A",
+      "statement": "管理层讨论与分析—Research and Development Expenses",
+      "page": 22,
+      "note": "年报印刷页21；管理层披露的2025年度研发费用同比增长率。"
+    },
+    {
+      "field": "销售及营销费用",
+      "value": -390869,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "一般及行政费用",
+      "value": -505357,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "其他收入",
+      "value": 14839,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "金融资产减值损失",
+      "value": -21576,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "财务费用",
+      "value": -74315,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "应占联营公司利润（扣除亏损）",
+      "value": 54982,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；原文项目为Share of profits less losses of associates。"
+    },
+    {
+      "field": "以公允价值计入损益的金融工具公允价值变动收益",
+      "value": 25278,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；原文项目为Changes in fair value of financial instruments measured at FVPL。"
+    },
+    {
+      "field": "向投资者发行金融工具账面金额变动损失",
+      "value": -937362,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；该项为损益表费用，非现金调整另见现金流量表及附注26。"
+    },
+    {
+      "field": "经营亏损",
+      "value": -3786750,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "税前亏损",
+      "value": -4718167,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76。"
+    },
+    {
+      "field": "年内亏损",
+      "value": -4718167,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表",
+      "page": 77,
+      "note": "2025年度合并口径；年报印刷页76；与税前亏损相同，所得税项目在报表中列示为横线。"
+    },
+    {
+      "field": "经调整年内净亏损（非IFRS指标）",
+      "value": -3181972,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Non-IFRS Measure",
+      "page": 24,
+      "note": "年报印刷页23；管理层披露的非IFRS指标，不是IFRS损益表单独列报项目。以年内亏损为起点，加回三项调整，详见adjustments。"
+    },
+    {
+      "field": "本地部署可报告分部收入",
+      "value": 533955,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(b)—Segment reporting",
+      "page": 105,
+      "note": "年报印刷页104；2025年度对外客户收入；属于两个IFRS可报告分部之一。"
+    },
+    {
+      "field": "云端部署可报告分部收入",
+      "value": 190379,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(b)—Segment reporting",
+      "page": 105,
+      "note": "年报印刷页104；2025年度对外客户收入；属于两个IFRS可报告分部之一。"
+    },
+    {
+      "field": "本地部署分部毛利",
+      "value": 260656,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(b)—Segment results",
+      "page": 105,
+      "note": "年报印刷页104；分部业绩衡量指标为毛利，不代表分部净利润。"
+    },
+    {
+      "field": "云端部署分部毛利",
+      "value": 36000,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(b)—Segment results",
+      "page": 105,
+      "note": "年报印刷页104；分部业绩衡量指标为毛利，不代表分部净利润。"
+    },
+    {
+      "field": "时点确认收入",
+      "value": 667977,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(a)—Disaggregation of revenue by timing",
+      "page": 103,
+      "note": "年报印刷页102；2025年度按时点确认的客户合同收入。"
+    },
+    {
+      "field": "时段确认收入",
+      "value": 56357,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注4(a)—Disaggregation of revenue by timing",
+      "page": 103,
+      "note": "年报印刷页102；2025年度按时段确认的客户合同收入。"
+    },
+    {
+      "field": "开放平台及API收入（管理层业务形态分类）",
+      "value": 190379,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Revenue by business form and core product lines",
+      "page": 20,
+      "note": "年报印刷页19；管理层新增业务形态分类，不等同于附注4(b)的两个IFRS可报告分部。"
+    },
+    {
+      "field": "企业级智能体收入（管理层业务形态分类）",
+      "value": 165687,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Revenue by business form and core product lines",
+      "page": 20,
+      "note": "年报印刷页19；管理层新增业务形态分类，不等同于附注4(b)的两个IFRS可报告分部。"
+    },
+    {
+      "field": "企业级通用大模型收入（管理层业务形态分类）",
+      "value": 365724,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Revenue by business form and core product lines",
+      "page": 20,
+      "note": "年报印刷页19；管理层新增业务形态分类，不等同于附注4(b)的两个IFRS可报告分部。"
+    },
+    {
+      "field": "技术服务及其他收入（管理层业务形态分类）",
+      "value": 2544,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Revenue by business form and core product lines",
+      "page": 20,
+      "note": "年报印刷页19；管理层新增业务形态分类，不等同于附注4(b)的两个IFRS可报告分部。"
+    },
+    {
+      "field": "经营活动现金流量净额",
+      "value": -2246123,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表—Operating activities",
+      "page": 83,
+      "note": "2025年度合并口径；年报印刷页82；原文为Net cash used in operating activities。"
+    },
+    {
+      "field": "投资活动现金流量净额",
+      "value": -375947,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表—Investing activities",
+      "page": 83,
+      "note": "2025年度合并口径；年报印刷页82；原文为Net cash used in investing activities。"
+    },
+    {
+      "field": "融资活动现金流量净额",
+      "value": 2614130,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表—Financing activities",
+      "page": 84,
+      "note": "2025年度合并口径；年报印刷页83；原文为Net cash generated from financing activities。"
+    },
+    {
+      "field": "现金及现金等价物净减少额",
+      "value": -7940,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 84,
+      "note": "2025年度合并口径；年报印刷页83；现金流量表口径。"
+    },
+    {
+      "field": "年末现金及现金等价物",
+      "value": 2254920,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表",
+      "page": 84,
+      "note": "截至2025-12-31；年报印刷页83；与附注21(a)调节后金额一致。"
+    },
+    {
+      "field": "现金及银行结余",
+      "value": 2259147,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注21(a)—Cash at bank and on hand",
+      "page": 124,
+      "note": "截至2025-12-31；年报印刷页123；此金额尚未扣除受限制存款。"
+    },
+    {
+      "field": "受限制存款",
+      "value": 4227,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注21(a)—Cash at bank and on hand",
+      "page": 124,
+      "note": "截至2025-12-31；年报印刷页123；主要为投标及履约保证金存款。"
+    },
+    {
+      "field": "定期存款",
+      "value": 108593,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注21(b)—Time deposits",
+      "page": 124,
+      "note": "截至2025-12-31；年报印刷页123；原始到期日超过一年，故不计入现金流量表现金及现金等价物。"
+    },
+    {
+      "field": "资本开支（管理层披露近似值）",
+      "value": 74.7,
+      "unit": "RMB million（原文approximately）",
+      "currency": "CNY",
+      "statement": "管理层讨论与分析—Capital Expenditure",
+      "page": 22,
+      "note": "年报印刷页21；原文披露为approximately RMB74.7 million，保留原报告近似性质，不视为精确审计数。"
+    },
+    {
+      "field": "购置物业及设备的现金支出",
+      "value": -11491,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表—Investing activities",
+      "page": 83,
+      "note": "2025年度合并口径；年报印刷页82；现金流量表列示的现金购置支出。"
+    },
+    {
+      "field": "购置无形资产的现金支出",
+      "value": -11597,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并现金流量表—Investing activities",
+      "page": 83,
+      "note": "2025年度合并口径；年报印刷页82；现金流量表列示的现金购置支出。"
+    },
+    {
+      "field": "总资产",
+      "value": 4853861,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "Financial Summary",
+      "page": 14,
+      "note": "截至2025-12-31；年报印刷页13；合并口径。"
+    },
+    {
+      "field": "总负债",
+      "value": 12964843,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "Financial Summary",
+      "page": 14,
+      "note": "截至2025-12-31；年报印刷页13；合并口径。"
+    },
+    {
+      "field": "总权益（赤字）",
+      "value": -8110982,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "Financial Summary",
+      "page": 14,
+      "note": "截至2025-12-31；年报印刷页13；合并口径。"
+    },
+    {
+      "field": "流动负债净额",
+      "value": -8834843,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并财务状况表",
+      "page": 79,
+      "note": "截至2025-12-31；年报印刷页78；原文为Net current liabilities。"
+    },
+    {
+      "field": "净负债",
+      "value": -8110982,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "合并财务状况表",
+      "page": 80,
+      "note": "截至2025-12-31；年报印刷页79；原文为NET LIABILITIES。"
+    },
+    {
+      "field": "银行借款账面额",
+      "value": 689452,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注21(c)—Reconciliation of liabilities arising from financing activities",
+      "page": 126,
+      "note": "截至2025-12-31；年报印刷页125；银行借款账面金额，包含流动及非流动部分。"
+    },
+    {
+      "field": "租赁负债账面额",
+      "value": 545143,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注21(c)—Reconciliation of liabilities arising from financing activities",
+      "page": 126,
+      "note": "截至2025-12-31；年报印刷页125；租赁负债账面金额，包含流动及非流动部分。"
+    },
+    {
+      "field": "向投资者发行的金融工具负债",
+      "value": 10072827,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注26—Financial instruments issued to investors",
+      "page": 130,
+      "note": "截至2025-12-31；年报印刷页129；因投资者在特定触发条件下拥有赎回权，年末作为金融负债列示；上市后赎回权终止并转为权益。"
+    },
+    {
+      "field": "股本（2025-12-31）",
+      "value": 40281,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注30(b)—Share capital/paid-in capital",
+      "page": 137,
+      "note": "截至2025-12-31；年报印刷页136；股份拆细前股本金额。"
+    },
+    {
+      "field": "年末普通股数（股份拆细前）",
+      "value": 40281000,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注30(b)—Share capital",
+      "page": 137,
+      "note": "截至2025-12-31；年报印刷页136；附注表列示40,281千股，面值RMB1.00/股。"
+    },
+    {
+      "field": "股份拆细后普通股数",
+      "value": 402810000,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注30(b)—Share capital",
+      "page": 137,
+      "note": "年报印刷页136；每股面值由RMB1.00拆细为RMB0.10，10拆1；于2026-01-08上市完成前生效。"
+    },
+    {
+      "field": "上市发行普通股数（含超额配股权）",
+      "value": 43032400,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注30(b)—Share capital",
+      "page": 137,
+      "note": "年报印刷页136；2026-01-08上市时发行，包含首次发售及超额配股权。"
+    },
+    {
+      "field": "上市发行价",
+      "value": 116.2,
+      "unit": "HKD/share",
+      "currency": "HKD",
+      "statement": "附注30(b)—Share capital",
+      "page": 137,
+      "note": "年报印刷页136；2026-01-08上市发行价，不代表本次研究时点的市场价格。"
+    },
+    {
+      "field": "截至最后实际可行日期的已发行股份总数",
+      "value": 445843090,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "董事会报告—董事及最高行政人员权益披露附注",
+      "page": 36,
+      "note": "年报印刷页35；Latest Practicable Date为2026-04-10；包括221,314,605股H股及224,528,485股非上市股份，不是2025年末股数。"
+    },
+    {
+      "field": "截至最后实际可行日期的H股数",
+      "value": 221314605,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "董事会报告—董事及最高行政人员权益披露附注",
+      "page": 36,
+      "note": "年报印刷页35；截至Latest Practicable Date 2026-04-10。"
+    },
+    {
+      "field": "截至最后实际可行日期的非上市股份数",
+      "value": 224528485,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "董事会报告—董事及最高行政人员权益披露附注",
+      "page": 36,
+      "note": "年报印刷页35；截至Latest Practicable Date 2026-04-10。"
+    },
+    {
+      "field": "普通股股东应占年内亏损",
+      "value": -1918476,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注10—Loss per share",
+      "page": 112,
+      "note": "年报印刷页111；该数与集团年内亏损不同，附注将部分亏损分配至向投资者发行的金融工具。"
+    },
+    {
+      "field": "加权平均普通股数",
+      "value": 159522220,
+      "unit": "shares",
+      "currency": "N/A",
+      "statement": "附注10(b)—Weighted average number of ordinary shares",
+      "page": 113,
+      "note": "年报印刷页112；已按股份拆细追溯调整，并按附注所述方式计算。"
+    },
+    {
+      "field": "每股基本及摊薄亏损",
+      "value": -12.03,
+      "unit": "RMB/share",
+      "currency": "CNY",
+      "statement": "合并损益及其他综合收益表—Loss per share；附注10",
+      "page": 78,
+      "note": "年报印刷页77；基本及摊薄每股亏损均为RMB12.03；金融工具纳入摊薄计算会产生反摊薄影响。"
+    },
+    {
+      "field": "投资者赎回权最高可能结算年利率",
+      "value": 12,
+      "unit": "% per annum",
+      "currency": "N/A",
+      "statement": "附注26—Financial instruments issued to investors",
+      "page": 130,
+      "note": "年报印刷页129；集团评估赎回权最高可能结算金额为原始本金加按年利率12%累计的利息。"
+    },
+    {
+      "field": "上市所得款项总额",
+      "value": 5000365,
+      "unit": "HKD'000（约）",
+      "currency": "HKD",
+      "statement": "附注2(b)—Basis of preparation of the financial statements",
+      "page": 86,
+      "note": "年报印刷页85；2026-01-08上市所得款项总额，原文approximately HKD5,000,365,000。"
+    },
+    {
+      "field": "上市所得款项人民币折合",
+      "value": 4516430,
+      "unit": "RMB'000（约）",
+      "currency": "CNY",
+      "statement": "附注2(b)—Basis of preparation of the financial statements",
+      "page": 86,
+      "note": "年报印刷页85；上市所得款项折合人民币，原文approximately RMB4,516,430,000。"
+    },
+    {
+      "field": "未动用银行融资额度",
+      "value": 5235909,
+      "unit": "RMB'000",
+      "currency": "CNY",
+      "statement": "附注2(b)—Basis of preparation of the financial statements",
+      "page": 86,
+      "note": "截至2025-12-31；年报印刷页85；持续经营评估中披露的可用未动用银行融资额度。"
+    }
+  ],
+  "adjustments": [
+    {
+      "field": "经调整年内净亏损（非IFRS）",
+      "reason": "加回股权结算股份支付费用；这是管理层非IFRS调节项，不是对IFRS损益表的更正。",
+      "amount": 558265,
+      "basis": "MD&A—Non-IFRS Measure，PDF第24页（年报印刷第23页），单位RMB'000。"
+    },
+    {
+      "field": "经调整年内净亏损（非IFRS）",
+      "reason": "加回向投资者发行金融工具账面金额变动；该变动在IFRS损益表中列作费用。",
+      "amount": 937362,
+      "basis": "MD&A—Non-IFRS Measure，PDF第24页（年报印刷第23页），单位RMB'000。"
+    },
+    {
+      "field": "经调整年内净亏损（非IFRS）",
+      "reason": "加回上市费用。",
+      "amount": 40568,
+      "basis": "MD&A—Non-IFRS Measure，PDF第24页（年报印刷第23页），单位RMB'000。"
+    },
+    {
+      "field": "收入披露分类口径",
+      "reason": "公司说明本年度优化收入分类披露，新增按业务形态及核心产品线分类；该视角与按部署方式披露的两个IFRS可报告分部不同，不能把两套分类相加。",
+      "amount": null,
+      "basis": "MD&A—Revenue by business form and core product lines，PDF第20页（年报印刷第19页）。"
+    },
+    {
+      "field": "现金及现金等价物口径调节",
+      "reason": "现金及银行结余2,259,147减受限制存款4,227，等于现金流量表现金及现金等价物2,254,920；这是报表定义调节，不是数值冲突。",
+      "amount": 4227,
+      "basis": "附注21(a)，PDF第124页（年报印刷第123页），单位RMB'000。"
+    }
+  ],
+  "missing": [
+    {
+      "field": "分部研发费用及其他期间费用",
+      "reason": "附注4(b)明确说明研发费用、销售及营销费用、一般及行政费用、金融资产减值、财务费用等不按单独分部计量；不估算分部费用或分部净利润。"
+    },
+    {
+      "field": "分部资产、负债、资本开支及利息收入/费用",
+      "reason": "附注4(b)明确说明未提供分部资产负债、资本开支、利息收入及利息费用信息。"
+    },
+    {
+      "field": "剩余履约义务对应的未来收入金额",
+      "reason": "附注4(a)(ii)未披露剩余履约义务交易价格，理由是原始合同预期期限均为一年或以内，采用IFRS 15第121(a)段实务简便方法。"
+    },
+    {
+      "field": "自由现金流（FCF）",
+      "reason": "年报未直接列示自由现金流；资本开支披露为约数，且与现金流量表购置物业设备及无形资产现金支出未提供勾稽，不在本次导入中自行计算。"
+    },
+    {
+      "field": "资本开支与现金购置支出的调节",
+      "reason": "MD&A披露资本开支约RMB74.7百万元；现金流量表列示购置物业设备RMB11.491百万元、无形资产RMB11.597百万元，年报未给出两种口径之间的直接调节。"
+    },
+    {
+      "field": "研发费用资本化金额",
+      "reason": "年报披露研发费用总额，但未在本次引用的研发费用披露中单独给出研发支出资本化金额；不推算。"
+    },
+    {
+      "field": "最大单一客户收入占比的精确数值",
+      "reason": "附注4(a)只披露2025年没有单一客户贡献超过总收入10%，未披露最大客户的精确占比。"
+    },
+    {
+      "field": "上市后股份数量的跨页勾稽",
+      "reason": "附注30(b)披露股份拆细后402,810,000股及上市发行43,032,400股，合计445,842,400股；董事会报告第35页披露截至2026-04-10总发行股份445,843,090股，相差690股。年报未在上述披露中解释该差额，保留原始披露，不自行调平。"
+    }
+  ],
+  "imported_by": "人工摘录（ChatGPT辅助，逐项以PDF原件核对）",
+  "imported_at": "2026-11-13"
+}
