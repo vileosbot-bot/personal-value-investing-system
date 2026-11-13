@@ -113,3 +113,25 @@
 - 原件 SHA-256：`9B89A4686FFB5FE838ABD5AE8DF9E7683B1DE2019480E112420E49154FCFDE19`。
 - PR：https://github.com/vileosbot-bot/personal-value-investing-system/pull/4
 - 日期：2026-11-13。
+
+
+## 2026-11-13 泡泡玛特（09992.HK）2024 年报 FCFF 估值外部交付
+
+- Request ID：pvis-popmart-fcff-20261113-01。
+- 基线：vileosbot-bot/personal-value-investing-system main 90d19e786b80909d3b2a94ab0cfac13af46f8f44。
+- 证据：HK-09992-2024-AR-001；2024 年报 JSON 129 项摘录、4 项调整、5 项缺失；官方 PDF 8,320,604 bytes。5 项缺失均保留未知。
+- 模型：按 docs/model-routing.md 使用冻结 value_driver_fcff()；冻结源码未修改；起始 NOPAT 校验通过。
+- 估值结果：2024 财务基准下悲观/基准/乐观每股价值分别为 RMB 26.77 / 42.42 / 73.25；当前市场反向估值另列，不将历史情景价值作为当前目标价。
+- 交付文件：valuations/HK-09992/2024-fcff-workpaper.md；valuations/HK-09992/2024-fcff-decision-card.md（草稿；本人临时判断摘要留空）。
+- 分支：valuation/HK-09992-2024-fcff（基于 main 90d19e786b80909d3b2a94ab0cfac13af46f8f44）。
+- PR：创建后仅以追加方式补记 PR 链接；不合并。
+- 边界：本次不修改冻结模型、证据文件、模板、README、STATUS 或其他文件；不修改 main。
+- 日期：2026-11-13。
+
+
+## 2026-11-13 泡泡玛特估值 PR 关联记录
+
+- PR #5：https://github.com/vileosbot-bot/personal-value-investing-system/pull/5
+- 状态：Open，未合并；目标 main；源分支 valuation/HK-09992-2024-fcff。
+- PR 创建时 head commit：ff254b690fed810fc1026d4299526e24dcadb814。
+- 仅补记 PR 外部交付链接；此前 Plan.md 内容及本次估值交付记录均保持原样。
