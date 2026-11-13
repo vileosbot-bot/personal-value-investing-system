@@ -202,3 +202,4 @@
 - `docs/validation-data-contract.md`：数据源评估、时点、5 月 1 日规则、原始／重述版本、幸存者、复权、股息税、币种、成本、基准与因子。
 - `docs/validation-input-rules.md`：V1.1 四模型输入公式、场景生成、折现率／终值规则、缺数规则与人工隔离协议。
 - `Plan.md`：本节为验证轨唯一状态记录；此前所有非验证轨章节未修改。
+- **PR #6：** https://github.com/vileosbot-bot/personal-value-investing-system/pull/6；源分支 `validation/phase0-design`，目标 `main`；状态 Open、未合并。PR 创建时 head 为 `90e9725518201b18fd3adfef97498d09e6ea1f1d`；本条记录追加后 PR head 会随分支更新。
