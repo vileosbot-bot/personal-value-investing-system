@@ -272,8 +272,8 @@
 
 ### 11.1 指数基准（主基准不变）
 
-- A 股主基准：中证指数有限公司“沪深 300 全收益指数”，指数代码 **H00300**；使用税前现金红利再投资的 Gross TRI。不得误用价格指数 000300 代替；净收益指数仅作敏感性。
-- 港股主基准：恒生指数 Gross Total Return Index，HKEX OMD-C 指数代码 **1006800**；使用税前股息总回报。Net TRI 仅作敏感性。
+- A 股主基准：中证指数有限公司“沪深 300 全收益指数”，指数代码 **H00300**；使用税前现金红利再投资的 Gross TRI。对应净收益指数代码为 **N00300**，仅作税后敏感性。不得误用价格指数 000300 代替全收益基准。
+- 港股主基准：恒生指数 Gross Total Return Index，HKEX OMD-C 指数代码 **1006800**；Net Total Return Index 代码 **2006800**。主基准使用 Gross TRI，Net TRI 仅作税后敏感性。
 - 两个指数历史值均标记为 ex-post 官方历史序列，不声称具备逐日 point-in-time vintage。每次下载保存供应商、指数代码、币种、下载时间、文件版本和 SHA-256；主基准定义本轮不变。
 
 ### 11.2 A 股 FF5 + 动量因子
@@ -337,8 +337,8 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [香港天文台暴雨警告历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb3.shtml)
 - [北京大学新金融与创业投资研究中心公开因子库](https://www.gsm.pku.edu.cn/finvc/info/1027/1147.htm)
 - [Kenneth R. French Data Library（含 Asia Pacific ex Japan FF5 与 Momentum 月度序列）](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
-- [中证指数有限公司沪深 300 指数系列（H00300 全收益指数代码待逐项核对）](https://www.csindex.com.cn/)
-- [香港交易所 OMD-C 接口规范（1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.37.pdf)
+- [中证指数有限公司《沪深300指数》事实表（列明全收益 H00300、净收益 N00300）](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
+- [香港交易所 OMD-C 接口规范 v1.39a（列明 1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf)
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
 
 以上资料仅作为规则来源入口；未完成逐文件下载、哈希、许可和历史覆盖核验前，不标 VERIFIED。
