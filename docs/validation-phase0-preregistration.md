@@ -383,7 +383,7 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 |---|---|---|---|
 | v0.4.2 | `66a0832eef7ed4bfc6626486bbeb7a4a16549f73` | 2026-11-14 13:37:47 CST（05:37:47Z） | PR #6 已合并至 main；OTS 第三方时间锚点已完成；phase0-freeze-2026-12-15 指向该提交。 |
 | v0.4.3 | `29eb7dd4fc17c50e29f61ef10cb39c3e065756c8` | 2026-11-14 22:49:48 CST（14:49:48Z） | PR #8 已合并至 main；CI run 43606896139（workflow ci）success；phase0-freeze-v043-2026-12-15 指向该提交。 |
-| v0.4.4 | 本轮文档层修订提交（完整 SHA 以本轮 Git commit 记录为准） | —（本节写作时未合并） | 文档层修订提交已创建于 validation/phase0-refreeze-v044；PR 状态以创建后的 GitHub PR 元数据为准。 |
+| v0.4.4 | `0756f70ecc2478358c3bc791b3c026a840599d92`（本轮首个文档层修订提交） | —（PR #9 创建时未合并） | PR #9 已创建，state=open、merged=false；源分支 validation/phase0-refreeze-v044。PR 最新 HEAD 以 GitHub PR 元数据为准。 |
 
 ## 附表 B：公开方法与数据来源入口
 
