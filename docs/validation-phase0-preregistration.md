@@ -182,8 +182,8 @@ SE_HH(4) = √Var_HH(\bar{Δ}_N)。
 | 重大失败阈值 | **U_N < −3.0 个百分点** | 经济阈值固定，不因 Phase 1 实测 σ 调整 |
 | 15% 绝对目标停止规则 | **不另设** | 15% 只作描述性监测；不设独立停止阈值 |
 | 单队列触发 | **禁止** | 单个年度队列极端差值不能独立判定方法失败 |
-| 触发后处理 | 方法判定失败；停止后续监测；冻结触发时规则、结论、已成熟数据快照和 SHA-256 manifest | 保留可审计终点 |
-| 触发后归档 | 仅归档触发时已成熟队列的描述性结果、NA 状态、停止计算和哈希清单；格式见下文 | 不继续收集或发布后续队列更新 |
+| 触发后处理 | 方法判定失败；停止后续监测；冻结触发时规则、结论、数据快照和 SHA-256 manifest | 保留可审计终点 |
+| 触发后归档 | 仅归档触发时已成熟且可评估队列的描述性结果、停止计算和哈希清单；NA／缺失队列不纳入归档结果 | 不继续收集、评估后续新成熟队列或发布滚动更新 |
 | 触发后调参 | 不允许在本项目内重新调参、改阈值或失败后重测 | 防止事后适配 |
 
 **阈值的经济解释与两组差值换算**
@@ -217,16 +217,16 @@ P(触发 | μ_Δ) = F_t3((−3−μ_Δ)/10 − 3.182446)。
 
 **触发后的“仅归档”字段与格式**
 
-触发后停止新队列数据收集和后续监测，只归档触发时已成熟队列。归档包固定包括：
+触发后立即停止新队列数据收集和后续监测，只归档触发时已成熟且可评估队列的描述性结果；NA／缺失队列不纳入归档结果。停止规则触发时的 NA_rate 和 NA 队列数只在 trigger.json 中作汇总披露，不保存 NA／缺失队列的逐公司结果行。不得继续收集、评估后续新成熟队列或发布滚动监测更新。归档包固定包括：
 
-1. trigger.json（UTF-8 JSON）：request_id、rule_version、triggered_at、evaluation_id、N、k、α_k、N_eff、ν_N、临界值、阈值、\bar{Δ}_N、SE_HH、Var_HH、U_N、NA_rate、判定结果。
-2. queue_summary.csv（UTF-8 CSV，一行一个已成熟计划队列）：queue_id、formation_year、maturity_date、queue_status、有效状态、top2_security_ids、CAGR_top2、CAGR_equal4、Δ_i、NA_reason、event_code、source_manifest_id。
-3. company_queue.csv（UTF-8 CSV，一行一个公司—队列）：queue_id、company_id、security_id、原始信号值、rank、tie_flag、top2_selected、entry_date、exit_date、净 RMB CAGR、交易成本、税费、FX、公司行动状态、event_code、NA_reason、原始来源与 SHA-256。
-4. calculation.json（UTF-8 JSON）：有效队列 ID、日历年份、残差 u_i、lag 0–4 协方差求和项、HH 方差、SE、N_eff、自由度、α_k、临界值、上界、公式版本及可复算参数。
+1. trigger.json（UTF-8 JSON）：request_id、rule_version、triggered_at、evaluation_id、N、k、α_k、N_eff、ν_N、临界值、阈值、\bar{Δ}_N、SE_HH、Var_HH、U_N、NA_rate、NA_queue_count、判定结果。NA_rate／NA_queue_count 仅作汇总，不附 NA 队列逐行明细。
+2. queue_summary.csv（UTF-8 CSV，一行一个触发时已成熟且可评估队列）：queue_id、formation_year、maturity_date、top2_security_ids、CAGR_top2、CAGR_equal4、Δ_i、source_manifest_id。NA／缺失队列不写入该文件。
+3. company_queue.csv（UTF-8 CSV，一行一个已成熟且可评估队列中的公司—队列记录）：queue_id、company_id、security_id、原始信号值、rank、tie_flag、top2_selected、entry_date、exit_date、净 RMB CAGR、交易成本、税费、FX、公司行动状态、原始来源与 SHA-256。NA／缺失队列不写入该文件。
+4. calculation.json（UTF-8 JSON）：纳入停止统计的有效成熟队列 ID、日历年份、残差 u_i、lag 0–4 协方差求和项、HH 方差、SE、N_eff、自由度、α_k、临界值、上界、公式版本及可复算参数；不列 NA／缺失队列。
 5. data_manifest.csv（UTF-8 CSV）及 manifest.sha256（纯文本）：每个数据文件的路径、来源、data_vintage、available_at、retrieved_at、文件 SHA-256 和 manifest SHA-256。
 6. README.md（UTF-8 Markdown）：字段字典、NA 与事件口径、计算步骤、冻结版本、Git commit、独立复核人和归档边界。
 
-归档只覆盖触发时已经成熟的队列；不纳入未来队列、不追加新结局、不事后补位。所有文件哈希必须与冻结包和审计日志一致。
+归档结果只覆盖触发时已经成熟且可评估的队列；NA／缺失队列不纳入结果文件，但 trigger.json 保留 NA 数量和比例汇总。不纳入未来队列、不追加新结局、不事后补位。所有归档文件哈希必须与冻结包和审计日志一致。
 
 **缺口、Phase 1 与修订治理**
 
