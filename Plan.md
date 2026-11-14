@@ -382,4 +382,4 @@
 - **v0.4.2 冻结状态：**OSF／AsPredicted 未注册（已豁免）、签名标签未创建、OTS 锚点已完成、v0.4.2 已冻结于 main@66a0832e；v0.4.3 当前通过本分支 PR 等待合并，最终 OTS 清单由总管另行更新。
 - **PR #8：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/8；源分支 `validation/phase0-refreeze-v043`，目标 `main`；状态 Open、merged=false、mergeable=true。只开 PR，不合并。
 - **分支保护（M-4）尝试结果：**GitHub 连接器仅暴露 `create_branch`／`search_branches` 等分支操作，没有 branch protection 或 ruleset 写入动作；`GET /rulesets` 返回空数组；冻结分支与本次分支的 classic branch-protection GET 均返回 403（Resource not accessible by integration）。因此无法配置或读回保护状态；未改任何设置，未绕过权限。
-- **CI 验证：**GitHub Actions run `43603918665`（workflow `ci`）完成且 conclusion=success；Python 3.10、3.11、3.12、3.13 四个 job 均成功执行 `PYTHONPATH=src python -m unittest discover -s tests -v`。该 workflow 没有独立 typecheck job。
+- **CI 验证：**GitHub Actions run `43604946124`（workflow `ci`，2026-11-14 14:27:24Z）完成且 conclusion=success；Python 3.10、3.11、3.12、3.13 四个 job 均成功执行 `PYTHONPATH=src python -m unittest discover -s tests -v`。该 workflow 没有独立 typecheck job。
