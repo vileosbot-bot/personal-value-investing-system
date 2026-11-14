@@ -120,7 +120,7 @@
 | 港股区域因子币种转换 | DEXHKUS（Hong Kong Dollars to One U.S. Dollar；HKD per USD） | 美国联邦储备委员会（Federal Reserve Board），H.10 Foreign Exchange Rates；由 FRED 分发 | 日频；按 §11.3 月末当日或之前最近有效观测 | 汇率，不适用 Gross／Net |
 | A 股指数 | 沪深 300 全收益 H00300；净收益 N00300 | 中证指数有限公司 | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | H00300 为 Gross TRI；N00300 为 Net TRI；价格指数 000300 不得替代 |
 | 港股指数 | 恒生指数 Gross Total Return Index 1006800；Net Total Return Index 2006800 | 恒生指数公司／香港交易所 OMD-C | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | 1006800 为 Gross TRI；2006800 为 Net TRI |
-| A 股因子 | `factors_monthly_2023.xlsx`：MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM（月度） | 北京大学新金融与创业投资研究中心；对应 Li、Liu、Liu、Wei（2023）A 股异象因子研究 | 公开版本覆盖 2000-01 至 2023-12；后续月份无新官方版本时记 NA | 这是源定义的因子收益序列，不是 Gross／Net 总回报指数的双版本；公开文件未提供可据以标记为税后 Net 的独立序列。原样使用，不自行重标 |
+| A 股因子 | `factors_monthly_2023.xlsx`：MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM（月度） | 北京大学新金融与创业投资研究中心公开因子库 | 公开版本覆盖 2000-01 至 2023-12；后续月份无新官方版本时记 NA | 这是源定义的因子收益序列，不是 Gross／Net 总回报指数的双版本；公开文件未提供可据以标记为税后 Net 的独立序列。原样使用，不自行重标 |
 | 港股区域代理因子 | “Asia Pacific ex Japan Fama/French 5 Factors [Monthly]”：Mkt-RF、SMB、HML、RMW、CMA、RF；“Asia Pacific ex Japan Momentum Factor (Mom) [Monthly]”：Mom | Kenneth R. French Data Library（Dartmouth／Tuck） | 月频、USD；仅作腾讯的区域代理敏感性，不是香港本地因子 | 源定义因子组合收益，不提供香港本地 Gross／Net TRI 双版本；不得称为香港本地净因子或香港本地 alpha。RF 为美国 1 个月国库券收益率，不替代 HKD 模型 Rf |
 
 以上序列是数据源规格，不表示数据已下载或获授权。指数与因子属于事后（ex-post）序列；HKD/CNY 与 DEXHKUS 按各自发布时点使用。所有源数据须保存原始字段、单位、币种、发布日期、观测日期、data_vintage、retrieved_at、source_url 和 SHA-256。
@@ -381,7 +381,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [中证指数有限公司《沪深300指数》事实表（列明全收益 H00300、净收益 N00300）](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
 - [香港交易所 OMD-C 接口规范 v1.39a（列明 1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf)
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
-- [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-cbrc-web/cbrc/more)
+- [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-pbc-web/pbc/more?locale=cn_zh)
 - [香港金融管理局：Economic & Financial Data for Hong Kong（Government bond yield - 10-year）](https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/)
 - [CFETS：CNY Central Parity Rate（含 HKD/CNY 中间价）](https://www.chinamoney.org.cn/english/bmkcpr/)
 
