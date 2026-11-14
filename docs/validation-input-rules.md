@@ -326,7 +326,7 @@ PayoutRatio=\operatorname{median}_{5y}\left(\frac{DividendsDeclared_y}{NetProfit
 ### 8.2 谁执行、谁复核、谁保管结局
 
 - **输入执行人**：运行冻结脚本、采集形成日前原始公告、按字段映射表生成输入；不得访问 B 区结果库、后续行情或已揭示的队列结果。
-- **独立复核人**：复核公告时间、单位换算、字段映射、公式和输入哈希；同样不得接触 B 区。
+- **独立复核人**：A 区冻结前复核公告时间、单位换算、字段映射、公式和 A 区输入哈希，不得接触 B 区；A/B 数据快照哈希均生成并封存、B 区由结果保管人正式解封后，独立复核人可在首次评估前复核 B 区结果数据、实现回报、NA 事件、HH 方差与临界值复算。独立复核人不得参与输入生成，也不得在 B 区解封前读取 B 区。
 - **结果保管人**：独立保存未来财务、行情、公司行动和基准数据；在 A 区封存前不得向输入执行人或复核人披露。
 - 若无法找到独立执行人与结果保管人，或执行人已读过该队列结果，队列只能标记为“历史信息集约束复演”，不得标记真正盲测。
 
@@ -351,7 +351,7 @@ PayoutRatio=\operatorname{median}_{5y}\left(\frac{DividendsDeclared_y}{NetProfit
 - source_document_id、published_at、available_at、timezone、source_url、raw_sha256；
 - 标准化原始字段、单位、公式版本和字段映射版本；
 - 五年指标序列、分位数、三情景输入、Ke／WACC、ERP、Beta、Rf、永续增长；
-- V、V/P、MOS、隐含 IRR、排名和队列组合名单；
+- V、V/P、MOS、未四舍五入隐含 IRR、排名、tie_flag、tie_break_key 和队列组合名单；
 - 成本版本、汇率版本、基准版本；
 - executor_id、reviewer_id、blind_status；
 - canonical JSON SHA-256、Git commit、冻结时间。
