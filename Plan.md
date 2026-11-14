@@ -383,3 +383,17 @@
 - **PR #8：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/8；源分支 `validation/phase0-refreeze-v043`，目标 `main`；状态 Open、merged=false、mergeable=true。只开 PR，不合并。
 - **分支保护（M-4）尝试结果：**GitHub 连接器仅暴露 `create_branch`／`search_branches` 等分支操作，没有 branch protection 或 ruleset 写入动作；`GET /rulesets` 返回空数组；冻结分支与本次分支的 classic branch-protection GET 均返回 403（Resource not accessible by integration）。因此无法配置或读回保护状态；未改任何设置，未绕过权限。
 - **CI 验证：**GitHub Actions run `43604946124`（workflow `ci`，2026-11-14 14:27:24Z）完成且 conclusion=success；Python 3.10、3.11、3.12、3.13 四个 job 均成功执行 `PYTHONPATH=src python -m unittest discover -s tests -v`。该 workflow 没有独立 typecheck job。
+
+## 2026-11-14 验证轨 Phase 0 v0.4.4 文档层重新冻结（pvis-phase0-refreeze-v044-20261114-01）
+
+- **项目与仓库：**个人价值投资系统；bot 仓库 vileosbot-bot/personal-value-investing-system；不操作 ViLeo06 原仓库。
+- **版本、基线与分支：**Phase 0 / v0.4.4；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
+- **请求与复核：**本次 request-id pvis-phase0-refreeze-v044-20261114-01；独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人于 2026-11-14 23:21 CST 放行。
+- **修订性质：**只修订四份文档的措辞、状态和澄清；不改参数值、误差表数字、模型代码、校准脚本或其他文件。
+- **S-1：**明确区分文档层冻结（2026-12-15 23:59:59 Asia/Shanghai 截止）与数据层冻结（A/B 数据采集完成后、B 区解封前）；数据层条目不纳入文档层截止条件。逾期判定按 OTS 区块头 nTime，按 UTC 转换为 Asia/Shanghai，并披露 nTime 可能与真实时间偏差数小时。
+- **M-1／M-2：**记录 v0.4.2、v0.4.3、v0.4.4 冻结分支目标及带时点的版本事实表；冻结分支仅作查找，OTS 清单中的完整 commit SHA 才是时间锚点。
+- **M-4：**将 m=3 规则改为两个明确触发条件；非首次评估仅因 HH 方差非正、滞后无配对或 c_N≤0 而不可评估时不计入 m=3，不递增 k、不消耗 α；首次评估直接进入永久终止的基线概率约 0.61%。
+- **M-7：**补齐 H00300／N00300、1006800／2006800 的主序列声明与税务敏感性口径；补齐 PKU 因子文件、字段和覆盖期；按 HKMA 官方资料确认 10 年期港元基准为 HKGB，并附官方来源。
+- **L-1／L-2／L-5／L-6：**负责人 2026-11-14 13:36 CST、2026-11-14 13:46 CST、2026-11-14 13:50 CST、2026-11-14 14:01 CST 作出的决定时间均为 CST；以 OTS nTime 换算 Asia/Shanghai 判定截止并说明偏差限制；5.17%／5.14%仅为未校正 HH 对照值，不是另一检验水平；首次评估前独立复核单列为流程要求，不混入冻结包。
+- **参数与执行边界：**NA 20%、m=3、N=20、U_N < −3.0pp、α_k 表和误差表数字保持不变；本次不改模型代码、校准脚本，不做数据采集、外部注册、标签创建或 PR 合并。
+- **v0.4.3 基线 CI：**合并提交 29eb7dd4fc17c50e29f61ef10cb39c3e065756c8 对应 GitHub Actions run 43606896139（workflow ci，2026-11-14T14:49:50Z，conclusion=success）。
