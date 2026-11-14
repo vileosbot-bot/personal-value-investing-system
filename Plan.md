@@ -380,4 +380,6 @@
 - **A 区治理：**A 区数据采集开始后禁止修改参数；每次重新冻结须声明尚未查看 A 区数据。
 - **Plan.md PR #6 逐行处理：**以下均属于带日期轮次中的历史状态或历史执行边界，保留原文，不改写为当前状态：第 249 行（2026-11-13 设计记录中的 Open／未合并）；第 262 行（第二轮修订校正时的 Open／未合并）；第 302 行（该轮“不合并 PR #6”的历史执行边界）；第 328 行（monitor-fix 轮次开始时的分支／main／PR 状态）；第 340 行（该轮“不合并 PR #6”的历史边界）；第 342 行（monitor-fix 轮次的 PR #6 状态及不合并要求）；第 350 行（monitor-fix2 轮次开始时的 PR #6 状态）；第 366 行（monitor-fix2 轮次“不合并 PR #6”的历史边界）。这些历史行均不修改；本节记录当前事实：PR #6 已 Closed 且 merged=true，合并提交为 66a0832eef7ed4bfc6626486bbeb7a4a16549f73，main HEAD 为同一提交。
 - **v0.4.2 冻结状态：**OSF／AsPredicted 未注册（已豁免）、签名标签未创建、OTS 锚点已完成、v0.4.2 已冻结于 main@66a0832e；v0.4.3 当前通过本分支 PR 等待合并，最终 OTS 清单由总管另行更新。
-- **新 PR：**本分支提交完成后向 main 创建 PR，不合并；PR 编号与链接在创建后补记。
+- **PR #8：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/8；源分支 `validation/phase0-refreeze-v043`，目标 `main`；状态 Open、merged=false、mergeable=true。只开 PR，不合并。
+- **分支保护（M-4）尝试结果：**GitHub 连接器仅暴露 `create_branch`／`search_branches` 等分支操作，没有 branch protection 或 ruleset 写入动作；`GET /rulesets` 返回空数组；冻结分支与本次分支的 classic branch-protection GET 均返回 403（Resource not accessible by integration）。因此无法配置或读回保护状态；未改任何设置，未绕过权限。
+- **CI 验证：**GitHub Actions run `43603918665`（workflow `ci`）完成且 conclusion=success；Python 3.10、3.11、3.12、3.13 四个 job 均成功执行 `PYTHONPATH=src python -m unittest discover -s tests -v`。该 workflow 没有独立 typecheck job。
