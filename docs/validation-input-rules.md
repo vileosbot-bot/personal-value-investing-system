@@ -369,7 +369,7 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 | 比亚迪价值驱动 FCFF | `tuple(projection.fcff_per_share[:5])` | `projection.year_five_exit_value_per_share` |
 | 招商银行 Residual Income | `tuple(projection.dividends_per_share[:5])` | `projection.year_five_exit_value_per_share` |
 
-**排序与精确并列裁决：**组合排序使用冻结模型输出的未四舍五入 five_year_irr 原始精度值，由高到低排列；若原始存储精度下完全相等，按固定 security_id 升序裁决并列。不得使用展示值四舍五入后的数值、V/P、MOS、公司名称或后续实现回报进行二次排序。该规则只确定监测队列的排序，不改变 V1.1 模型输入、函数或参数；并列标记须写入 A 区载荷。
+**排序与精确并列裁决：**组合排序使用冻结模型输出的未四舍五入 five_year_irr 原始精度值，由高到低排列；若原始存储精度下完全相等，按 security_id 的 ASCII 字符串升序（002594.SZ、00700.HK、600036.SH、600519.SH）裁决并列。不得使用展示值四舍五入后的数值、V/P、MOS、公司名称或后续实现回报进行二次排序。该规则只确定监测队列的排序，不改变 V1.1 模型输入、函数或参数；并列标记须写入 A 区载荷。
 
 - `entry_price` 固定为形成参考日收盘价 P，与 V/P 和 MOS 使用同一价格；下一共同交易日开盘价只用于实际模拟成交和实现回报。
 - 茅台与腾讯的 `five_year_return_profile()` 年度现金流来自冻结 DCF 的模型预测现金流；比亚迪来自 FCFF／股；招行来自 Residual Income 模型生成的预测每股股息。这些现金流是 V1.1 的模型定义，不代表公司承诺派发的实际现金股息。
