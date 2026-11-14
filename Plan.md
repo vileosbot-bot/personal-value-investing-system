@@ -365,3 +365,21 @@
 - **文件落点：**预注册 `docs/validation-phase0-preregistration.md`（§6.1、§6.2、§7.1、附表 A2/A5）；数据契约 `docs/validation-data-contract.md`（§1、§12.1–§12.3、§13）；输入规则 `docs/validation-input-rules.md`（§8.2、§8.5、§10.1）；本节为 Plan.md 本轮记录。
 - **执行边界：**不扩大四家公司范围，不改变年度队列样本单位，不改成确认性验证，不删除 500 队列分析，不改 main，不合并 PR #6，不碰 ViLeo06 仓库，不新开分支，不执行任何冻结。
 - **Verdict：proceed to independent review only。**本 verdict 仅表示文档与模拟校准脚本可进入独立复核；不代表历史误差已实测、MA(4) 假设已验证、NA 建议值已获用户确认、方法有效或实际冻结已完成。
+
+
+## 2026-11-14 验证轨 Phase 0 v0.4.3 文档层重新冻结（pvis-phase0-refreeze-v043-20261114-01）
+
+- **状态：**v0.4.3 文档层重新冻结修订已提交至独立分支，等待 PR review；不合并、不改 main。
+- **仓库／账号：**vileosbot-bot/personal-value-investing-system；GitHub 认证账号 vileosbot-bot。
+- **基线与分支：**基线 main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73（PR #6 merge commit）；本次分支 validation/phase0-refreeze-v043。
+- **修订范围：**仅修改三份 Phase 0 文档与本 Plan.md 新增本节；只修订措辞、状态、数据来源规格和解释边界。NA 20%、m=3、N=20、阈值 −3.0pp、α_k、误差表所有数值、校准脚本、src/pvis/regression.py 及其他模型代码均未修改。
+- **S-1 NA 确认：**负责人卫勒于 2026-11-14 13:36 确认 NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列）、分子仅计仍无可识别终值的 NA 队列，以及永久不可评估次数 m=3；破产按终值计回报、可识别对价私有化／并购按对价计回报，均不计 NA。数据契约 §13 验收项已勾选。
+- **M-5 注册与标签：**OSF／AsPredicted 于 2026-11-14 13:50 获豁免（个人学习项目）；负责人于 14:01 决定不创建 Git 签名标签。公开记录采用 GitHub 冻结提交／分支及 OTS 锚点；OTS 清单中的完整 commit SHA 是锚点，冻结分支仅作查找 aid。逾期截止继续为 2026-12-15 23:59:59（Asia/Shanghai），条件为截止前未完成含 v0.4.3 的冻结包与第三方时间证明，以 OTS 区块时间判定；2027 队列作废，2028+ 须另行授权。
+- **误差表措辞：**表明确区分无条件与可计算条件概率；P(不可评估)≈0.61% 为无条件概率。首次 N=20 的无条件实际水平 2.65% 比名义 α_1=2.5% 略宽；方差修正以分母 c_N 表述，Var_HH^c=Var_HH/c_N，N=20、L=4 时 c_N=0.55、方差约放大 1.82 倍。该表仅覆盖首次评估，不外推后续 k、N 或累积错误率。
+- **数据来源规格：**H00300／N00300 与 1006800／2006800 的 Gross／Net 区分保留；补齐 CCDC MOF-China Government Bond Yield Curve 10 年期、HKMA 10 年期、CFETS HKD/CNY 中间价、Federal Reserve H.10 / FRED DEXHKUS、PKU A 股因子与 French Asia Pacific ex Japan 区域因子的具体序列和来源机构。指数／因子／FX 数据版本及哈希尚不能冻结，须在数据冻结时封存。
+- **A 区治理：**A 区数据采集开始后禁止修改参数；每次重新冻结须声明尚未查看 A 区数据。
+- **Plan.md PR #6 逐行处理：**以下均属于带日期轮次中的历史状态或历史执行边界，保留原文，不改写为当前状态：第 249 行（2026-11-13 设计记录中的 Open／未合并）；第 262 行（第二轮修订校正时的 Open／未合并）；第 302 行（该轮“不合并 PR #6”的历史执行边界）；第 328 行（monitor-fix 轮次开始时的分支／main／PR 状态）；第 340 行（该轮“不合并 PR #6”的历史边界）；第 342 行（monitor-fix 轮次的 PR #6 状态及不合并要求）；第 350 行（monitor-fix2 轮次开始时的 PR #6 状态）；第 366 行（monitor-fix2 轮次“不合并 PR #6”的历史边界）。这些历史行均不修改；本节记录当前事实：PR #6 已 Closed 且 merged=true，合并提交为 66a0832eef7ed4bfc6626486bbeb7a4a16549f73，main HEAD 为同一提交。
+- **v0.4.2 冻结状态：**OSF／AsPredicted 未注册（已豁免）、签名标签未创建、OTS 锚点已完成、v0.4.2 已冻结于 main@66a0832e；v0.4.3 当前通过本分支 PR 等待合并，最终 OTS 清单由总管另行更新。
+- **PR #8：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/8；源分支 `validation/phase0-refreeze-v043`，目标 `main`；状态 Open、merged=false、mergeable=true。只开 PR，不合并。
+- **分支保护（M-4）尝试结果：**GitHub 连接器仅暴露 `create_branch`／`search_branches` 等分支操作，没有 branch protection 或 ruleset 写入动作；`GET /rulesets` 返回空数组；冻结分支与本次分支的 classic branch-protection GET 均返回 403（Resource not accessible by integration）。因此无法配置或读回保护状态；未改任何设置，未绕过权限。
+- **CI 验证：**GitHub Actions run `43604946124`（workflow `ci`，2026-11-14 14:27:24Z）完成且 conclusion=success；Python 3.10、3.11、3.12、3.13 四个 job 均成功执行 `PYTHONPATH=src python -m unittest discover -s tests -v`。该 workflow 没有独立 typecheck job。
