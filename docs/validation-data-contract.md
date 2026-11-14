@@ -3,9 +3,9 @@
 > 上一轮数据契约配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本轮补充 NA、事件、数据质量门和归档数据字段；不扩大固定样本，不修改冻结模型代码，不执行实际冻结、外部注册或第三方时间戳。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.3（文档层重新冻结；仅修订措辞、状态与数据来源规格；参数值不变）
+- 版本：Phase 0 / v0.4.4（文档层重新冻结；仅修订措辞、状态与数据来源规格；参数值不变）
 - 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；历史形成截面 2016–2021，前瞻年度监测队列自 2027 起。
-- 本次基线：main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73；本次修订分支 validation/phase0-refreeze-v043。状态原则：本文件定义字段、来源优先级、时点、NA、标的事件和数据质量门；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。前瞻队列只作描述性监测；唯一重大失败停止规则及 HH／有效自由度规则见预注册 §6.2。
+- 本次基线：main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；本次修订分支 validation/phase0-refreeze-v044。状态原则：本文件定义字段、来源优先级、时点、NA、标的事件和数据质量门；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。前瞻队列只作描述性监测；唯一重大失败停止规则及 HH／有效自由度规则见预注册 §6.2。
 
 ## 1. 数据对象与强制字段
 
@@ -115,12 +115,13 @@
 | 类别 | 具体序列／字段 | 来源机构 | 频率与时点 | Gross／Net 或税务口径 |
 |---|---|---|---|---|
 | CNY 无风险利率 | MOF-China Government Bond Yield Curve（中债国债收益率曲线）10-year maturity yield；使用最近可得月末值 | 中央国债登记结算有限责任公司（CCDC／中债） | 日终发布，官方说明约北京时间 17:30；按 §3.1 的形成日前最近可得月末规则取值 | 债券到期收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
-| HKD 无风险利率 | HKMA Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”（percent per annum） | 香港金融管理局（HKMA） | 官方统计序列；按最近可得月末值，记录观测月份及发布日期 | 政府债券收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
+| HKD 无风险利率 | HKMA Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”（percent per annum）；对应 10 年期港元 HKSAR Government Bond（HKGB）基准，不是 Exchange Fund Notes。HKMA 官方报告说明：2025-01-15 前为 Government Bond Programme 基准债券，此后为 Infrastructure Bond Programme 与 Government Sustainable Bond Programme 基准债券 | 香港金融管理局（HKMA） | 官方统计序列；按最近可得月末值，记录观测月份及发布日期 | 政府债券收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
 | 主汇率 | CFETS CNY Central Parity Rate 中的 HKD/CNY 人民币对港币中间价；规范为 1 HKD 对应的 CNY | 中国外汇交易中心（CFETS／ChinaMoney） | 每个工作日北京时间 09:15 发布；非发布日沿用此前最近一次发布值 | 汇率，不适用 Gross／Net |
 | 港股区域因子币种转换 | DEXHKUS（Hong Kong Dollars to One U.S. Dollar；HKD per USD） | 美国联邦储备委员会（Federal Reserve Board），H.10 Foreign Exchange Rates；由 FRED 分发 | 日频；按 §11.3 月末当日或之前最近有效观测 | 汇率，不适用 Gross／Net |
+| 主基准序列声明 | A 股主基准为沪深 300 全收益 H00300（Gross TRI），N00300 仅作税后敏感性；港股主基准为恒生 Gross TRI 1006800，Net TRI 2006800 仅作税后敏感性；不得误用价格指数 000300 | 中证指数有限公司；恒生指数公司／香港交易所 OMD-C | 与下列官方指数历史序列相同；逐文件记录下载时间、币种和数据版本 | 主序列使用 Gross TRI；Net TRI 仅作税后敏感性；价格指数 000300 不得替代 H00300 |
 | A 股指数 | 沪深 300 全收益 H00300；净收益 N00300 | 中证指数有限公司 | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | H00300 为 Gross TRI；N00300 为 Net TRI；价格指数 000300 不得替代 |
 | 港股指数 | 恒生指数 Gross Total Return Index 1006800；Net Total Return Index 2006800 | 恒生指数公司／香港交易所 OMD-C | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | 1006800 为 Gross TRI；2006800 为 Net TRI |
-| A 股因子 | `factors_monthly_2023.xlsx`：MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM（月度） | 北京大学新金融与创业投资研究中心公开因子库 | 公开版本覆盖 2000-01 至 2023-12；后续月份无新官方版本时记 NA | 这是源定义的因子收益序列，不是 Gross／Net 总回报指数的双版本；公开文件未提供可据以标记为税后 Net 的独立序列。原样使用，不自行重标 |
+| A 股因子 | 北京大学新金融与创业投资研究中心公开因子库月度文件 factors_monthly_2023.xlsx：MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM | 北京大学新金融与创业投资研究中心公开因子库 | 月度；覆盖 2000-01 至 2023-12；后续月份无新官方版本时记 NA | 这是源定义的因子收益序列，不是 Gross／Net 总回报指数的双版本；公开文件未提供可据以标记为税后 Net 的独立序列。原样使用，不自行重标 |
 | 港股区域代理因子 | “Asia Pacific ex Japan Fama/French 5 Factors [Monthly]”：Mkt-RF、SMB、HML、RMW、CMA、RF；“Asia Pacific ex Japan Momentum Factor (Mom) [Monthly]”：Mom | Kenneth R. French Data Library（Dartmouth／Tuck） | 月频、USD；仅作腾讯的区域代理敏感性，不是香港本地因子 | 源定义因子组合收益，不提供香港本地 Gross／Net TRI 双版本；不得称为香港本地净因子或香港本地 alpha。RF 为美国 1 个月国库券收益率，不替代 HKD 模型 Rf |
 
 以上序列是数据源规格，不表示数据已下载或获授权。指数与因子属于事后（ex-post）序列；HKD/CNY 与 DEXHKUS 按各自发布时点使用。所有源数据须保存原始字段、单位、币种、发布日期、观测日期、data_vintage、retrieved_at、source_url 和 SHA-256。
@@ -318,9 +319,9 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 - **公司—队列记录有效：**该公司的形成日关键输入、冻结模型信号、未四舍五入排序值、入场与退出执行、五年总回报、现金分红及公司行动、FX、交易成本和适用税费均有可审计来源与哈希，且没有本节 12.2 所列使该记录失效的标的事件。
 - **有效成熟年度队列：**同一年度队列的四家公司记录必须全部有效；任一家公司—队列记录为 NA，则该队列的前两家组合与四家等权基线同步记 NA，整个队列不计入预注册停止统计量的 N。不得只保留剩余三家，不得重新排序、补位、替换或重新归一权重。
-- **NA 比例计算（已确认）：**对截至评估日已成熟的 2027+ 前瞻计划队列，NA 队列比例 = 至少有一家固定公司记录被判为 NA 的成熟计划队列数 ÷ 全部已成熟 2027+ 计划队列数（分母包含有效与 NA 队列）。破产清算已按回收率／−100% 计入回报的队列，以及按可识别现金或换股对价计入回报的私有化／并购队列，不计入 NA 分子。历史 2016–2021 复演不计入该比例；该分母口径已由负责人卫勒于 2026-11-14 13:36 确认。
-- **上限（已确认）：**NA 队列比例不超过 20%。该上限是已确认的操作性数据质量参数，不是历史实测、统计校正或功效参数；负责人卫勒已于 2026-11-14 13:36 确认。
-- **超限处理：**NA 比例超过已确认的 20% 上限时，该次预定评估标记“不可评估”，不运行停止检验、不递增 k、不消耗 α 预算。全部 NA 队列及其原因永久保留；不插补、不删除、不替换。连续 3 次预定评估超限，或首次预定评估无法计算时，按预注册 §6.1 的永久不可评估终止规则固定结论“监测装置无法执行，停止规则无结论”；不再无限顺延。m=3 已由负责人卫勒于 2026-11-14 13:36 确认。
+- **NA 比例计算（已确认）：**对截至评估日已成熟的 2027+ 前瞻计划队列，NA 队列比例 = 至少有一家固定公司记录被判为 NA 的成熟计划队列数 ÷ 全部已成熟 2027+ 计划队列数（分母包含有效与 NA 队列）。破产清算已按回收率／−100% 计入回报的队列，以及按可识别现金或换股对价计入回报的私有化／并购队列，不计入 NA 分子。历史 2016–2021 复演不计入该比例；该分母口径已由负责人卫勒于 2026-11-14 13:36 CST 确认。
+- **上限（已确认）：**NA 队列比例不超过 20%。该上限是已确认的操作性数据质量参数，不是历史实测、统计校正或功效参数；负责人卫勒已于 2026-11-14 13:36 CST 确认。
+- **超限处理：**NA 比例超过已确认的 20% 上限时，该次预定评估标记“不可评估”，不运行停止检验、不递增 k、不消耗 α 预算。全部 NA 队列及其原因永久保留；不插补、不删除、不替换。仅当 NA 比例超限连续 3 次预定评估，或首次预定评估因任何原因无法计算时，按预注册 §6.1 永久不可评估终止规则固定结论“监测装置无法执行，停止规则无结论”。基线模拟下首次预定评估无法计算的概率约 0.61%（P(不可评估)≈0.61%），因此首次评估直接进入永久终止的概率约 0.61%。m=3 的连续计数只统计 NA 比例超限的预定评估。非首次评估若仅因 HH 方差非正、任一滞后无有效配对或 c_N≤0 而不可评估，不计入 m=3；按 §13，此类评估不递增 k、不消耗 α。m=3 已由负责人卫勒于 2026-11-14 13:36 CST 确认。
 - **NA 信息性：**NA 可能具有信息性，较差公司更可能发生停牌、退市或无法识别终值的事件；不得假设 NA 随机。破产清算按终值计入回报已消除最坏情形被 NA 排除的主要路径，但剩余 NA 风险仍须按公司、事件类型和队列披露，不得插补或将 NA 视为随机缺失。
 - 缺数必须写 NA，并填写缺失原因、来源查询记录、尝试日期和责任人；不使用均值、行业均值、分析师预测或供应商当前值补齐。原始公告无法获取、公告时间无法确定、关键公司行动／股息／价格缺失、币种无法统一或基准序列不完整时，相应公司—队列记录失效。
 
@@ -359,7 +360,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [ ] A 股 PKU FF5+MOM、港股 Asia Pacific ex Japan 区域代理、各自币种、ex-post vintage、覆盖和哈希核对。
 - [ ] 实物分派税务单独记录，不自动套用 H 股现金股息 20% 代扣；交易税、佣金、交易所费用、滑点和股息再投资成本核对。
 - [ ] A 区与 B 区数据快照均在数据冻结时、B 区解封前生成 SHA-256 manifest；B 区哈希由结果保管人独立计算；指定独立复核人于首次评估前完成数据质量复核。
-- [x] NA 比例上限及分母口径已由负责人卫勒于 2026-11-14 13:36 确认：NA 队列比例=NA 成熟计划队列／全部已成熟 2027+ 计划队列（分母含有效与 NA 队列），上限 20%；分子只计仍无可识别终值的 NA 队列。破产按终值计入回报、可识别现金或换股对价的私有化／并购按对价计入回报，均不计 NA；连续 3 次预定评估超限或首次评估无法计算时按 m=3 永久终止规则处理。
+- [x] NA 比例上限及分母口径已由负责人卫勒于 2026-11-14 13:36 CST 确认：NA 队列比例=NA 成熟计划队列／全部已成熟 2027+ 计划队列（分母含有效与 NA 队列），上限 20%；分子只计仍无可识别终值的 NA 队列。破产按终值计入回报、可识别现金或换股对价的私有化／并购按对价计入回报，均不计 NA。m=3 仅在 NA 比例超限连续 3 次预定评估，或首次预定评估因任何原因无法计算时触发；基线下首次预定评估无法计算概率约 0.61%。m=3 的连续计数只统计 NA 比例超限的预定评估。非首次评估仅因 HH 方差非正、任一滞后无有效配对或 c_N≤0 而不可评估时不计入 m=3，且不递增 k、不消耗 α。
 - [ ] 按 §12.2 区分事件终值：破产清算按可审计回收率计入，缺少可靠回收率时记 −100%；私有化／并购有可识别现金或换股对价时按对价计入；停牌／退市无可识别终值时记 NA。破产与可识别对价队列不计入 NA 分子；固定四家公司池不补位、不替换。
 - [ ] Phase 1：在 2016–2021 历史队列完成逐队列净 RMB 回报、成本、公司行动、NA 与时点资格核验后，计算历史队列级 ΔCAGR、σ_ΔCAGR 和年度自相关／HAC 结构；仅作描述性报告，不得据此改动已冻结停止规则参数。2027 年前任何参数变更须另行授权并重新完整冻结；自 2027-01-01 起禁止修改停止规则参数。当前未实测，不得标 VERIFIED。
 
@@ -383,6 +384,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
 - [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US)
 - [香港金融管理局：Economic & Financial Data for Hong Kong（Government bond yield - 10-year）](https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/)
+- [HKMA Half-Yearly Monetary and Financial Stability Report, March 2025, Chapter 4, §4.4, Chart 4.14（10-year HKD HKSAR Government Bond benchmark 定义）](https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb202503/Chapter4.pdf)
 - [CFETS：CNY Central Parity Rate（含 HKD/CNY 中间价）](https://www.chinamoney.org.cn/english/bmkcpr/)
 
 以上资料仅作为规则来源入口；未完成逐文件下载、哈希、许可和历史覆盖核验前，不标 VERIFIED。
@@ -392,7 +394,17 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 - **版本与基线：**Phase 0 / v0.4.3；基线 main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73；工作分支 validation/phase0-refreeze-v043。
 - **修订性质：**只修订措辞、状态、来源序列规格及数据封存时点；不改任何参数值、误差表数字、校准脚本或模型代码。
-- **NA 验收：**NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列）、分子仅计仍无可识别终值的 NA 队列，以及 m=3 永久终止规则均已由负责人于 2026-11-14 13:36 确认；§13 对应验收项已勾选。
+- **NA 验收：**NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列）、分子仅计仍无可识别终值的 NA 队列，以及 m=3 永久终止规则均已由负责人于 2026-11-14 13:36 CST 确认；§13 对应验收项已勾选。
 - **来源核对：**CSI 300 Gross TRI H00300／Net TRI N00300、恒生 Gross TRI 1006800／Net TRI 2006800 已有具体序列及 gross/net 区分；CNY Rf 已指定 CCDC 的 MOF-China Government Bond Yield Curve 10-year maturity；HKD Rf、HKD/CNY 中间价、HKD/USD 因子转换序列已补充来源机构与具体名称；A 股 PKU 因子与港股 Asia Pacific ex Japan 区域代理均列出具体月度序列和来源，且明确因子收益序列不等同于 gross/net 总回报指数。
 - **版本与哈希：**指数、因子和 FX 数据尚未采集，当前不能冻结数据版本或 SHA-256；在实际数据冻结时逐文件封存，不编造版本号或哈希。
 - **数据边界：**A 区数据采集开始后禁止修改参数；每次重新冻结必须声明尚未查看 A 区数据。
+
+## 2026-11-14 验证轨 Phase 0 v0.4.4 文档层重新冻结（pvis-phase0-refreeze-v044-20261114-01）
+
+- **版本、基线与分支：**Phase 0 / v0.4.4；仓库 vileosbot-bot/personal-value-investing-system；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
+- **复核依据：**独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人卫勒于 2026-11-14 23:21 CST 批准本轮修订。
+- **修订性质：**只修订数据契约措辞、来源规格与状态澄清；不改任何参数值、模型代码或校准脚本。
+- **§3.3 序列规格：**主基准声明固定为 A 股 H00300 Gross TRI、N00300 仅作税后敏感性；港股 1006800 Gross TRI、2006800 仅作税后敏感性；价格指数 000300 不得替代 H00300。PKU 因子完整标识为北京大学新金融与创业投资研究中心公开因子库 factors_monthly_2023.xlsx，包含 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM，覆盖 2000-01 至 2023-12。
+- **HKMA 10 年期序列：**HKMA 官方统计序列 “Government bond yield - 10-year” 对应 10 年期港元 HKSAR Government Bond（HKGB）基准，而非 Exchange Fund Notes；HKMA 2025 年 3 月官方报告 §4.4、Chart 4.14 注明 2025-01-15 前使用 Government Bond Programme 基准债券，此后使用 Infrastructure Bond Programme 与 Government Sustainable Bond Programme 基准债券。来源链接见预注册附表 B 及本文件 §14。
+- **§12.1／§13：**m=3 仅由 NA 比例超限连续 3 次预定评估或首次预定评估无法计算触发；非首次评估仅因 HH 方差非正、滞后无配对或 c_N≤0 而不可评估时不计入 m=3，且不递增 k、不消耗 α；首次评估直接终止概率约 0.61%。
+- **时区：**负责人 2026-11-14 13:36 CST、2026-11-14 13:46 CST、2026-11-14 13:50 CST、2026-11-14 14:01 CST 的决定时间均为 CST。
