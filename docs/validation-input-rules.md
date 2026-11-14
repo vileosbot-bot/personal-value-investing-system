@@ -1,8 +1,9 @@
 # V1.1 四模型输入规则化与知识隔离协议
-> 本轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
+> 第二轮小修：request-id pvis-phase0-monitor-fix2-20261114-01；基于 validation/phase0-design@cc133b024dad0a591af4c35bcc3bd38896de38ed，main@43629ab4c9e336731578f118ebb54625bb4173de。仅补充 B 区事件终值与监测复核载荷；V1.1 模型输入、模型函数和冻结参数不变。
+> 上一轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
-- Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.1（监测排序规则配套稿；V1.1 模型输入与参数保持冻结）
+- 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
+- 版本：Phase 0 / v0.4.2（第二轮监测规则配套稿；V1.1 模型输入与参数保持冻结）
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -326,7 +327,7 @@ PayoutRatio=\operatorname{median}_{5y}\left(\frac{DividendsDeclared_y}{NetProfit
 ### 8.2 谁执行、谁复核、谁保管结局
 
 - **输入执行人**：运行冻结脚本、采集形成日前原始公告、按字段映射表生成输入；不得访问 B 区结果库、后续行情或已揭示的队列结果。
-- **独立复核人**：A 区冻结前复核公告时间、单位换算、字段映射、公式和 A 区输入哈希，不得接触 B 区；A/B 数据快照哈希均生成并封存、B 区由结果保管人正式解封后，独立复核人可在首次评估前复核 B 区结果数据、实现回报、NA 事件、HH 方差与临界值复算。独立复核人不得参与输入生成，也不得在 B 区解封前读取 B 区。
+- **独立复核人**：A 区冻结前复核公告时间、单位换算、字段映射、公式和 A 区输入哈希，不得接触 B 区；A/B 数据快照哈希均生成并封存、B 区由结果保管人正式解封后，独立复核人可在首次评估前复核 B 区实现回报、破产回收率／−100%终值、私有化／并购现金或换股对价、停牌／退市 NA 分类、去均值 HH 方差、N 相关偏误校正、SE_c、α_k、临界值及校准脚本输出。独立复核人不得参与输入生成，也不得在 B 区解封前读取 B 区。
 - **结果保管人**：独立保存未来财务、行情、公司行动和基准数据；在 A 区封存前不得向输入执行人或复核人披露。
 - 若无法找到独立执行人与结果保管人，或执行人已读过该队列结果，队列只能标记为“历史信息集约束复演”，不得标记真正盲测。
 
@@ -357,6 +358,19 @@ PayoutRatio=\operatorname{median}_{5y}\left(\frac{DividendsDeclared_y}{NetProfit
 - canonical JSON SHA-256、Git commit、冻结时间。
 
 A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B 区只有在独立保管人确认 A 区哈希和冻结时间后才可解封。
+
+### 8.5 B 区事件终值载荷（实现回报，不进入模型输入）
+
+B 区用于记录形成日之后的实现结果与终值事件；以下字段不得回写 A 区，也不得作为 V1.1 模型输入或改变信号排序：
+
+- event_code、event_date、event_notice_id、source_url、published_at、available_at、raw_sha256；
+- terminal_value_method（market_exit、bankruptcy_recovery、cash_consideration、share_consideration、unidentifiable）；
+- recovery_rate、recovery_amount、recovery_currency；
+- consideration_type、consideration_quantity、consideration_price、consideration_value、settlement_date；
+- terminal_value、terminal_return、queue_status、na_reason；
+- reviewer_id、review_status、reviewed_at。
+
+事件分类和终值计算严格按数据契约 §12.2：破产清算按回收率计入，无可靠回收率时记 −100%；私有化／并购有可识别现金或换股对价时按对价计入；停牌／退市无可识别终值时记 NA。破产及可识别对价队列的损失／收益必须进入实际回报；固定四家公司池不补位、不替换。
 
 ## 9. V1.1 五年隐含 IRR 与年度现金流映射
 
@@ -397,7 +411,7 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 
 ### 10.1 本文件在预注册监测中的边界
 
-本文件只负责按冻结 V1.1 规则机械生成形成日输入；模型输入、模型估值与五年隐含毛 IRR 不因本次监测定位修订而改变。2027 年起的前瞻年度队列使用这些冻结输出形成排序；排序精度与精确并列裁决按本文件 §9 执行，该裁决不修改模型输出。实际五年净 RMB 回报按数据契约重建；所有指标只作描述性监测。15% 目标、模型 target_entry_price 与五年隐含毛 IRR 不是同一个口径，均不得写成确认性通过。唯一重大失败停止规则见预注册 §6.2，不得通过修改本文件输入规则影响停止判断。
+本文件只负责按冻结 V1.1 规则机械生成形成日输入；模型输入、模型估值与五年隐含毛 IRR 不因本轮监测规则修订而改变。2027 年起的前瞻年度队列使用这些冻结输出形成排序；排序精度与精确并列裁决按本文件 §9 执行，该裁决不修改模型输出。实现回报与事件终值按数据契约 §12.2 在 B 区记录：破产清算按回收率／−100%计入，私有化／并购按可识别现金或换股对价计入，停牌／退市无可识别终值时记 NA；这些事件处理不属于 V1.1 模型输入。所有指标只作描述性监测，不产生确认性结论。15% 目标、模型 target_entry_price 与五年隐含毛 IRR 不是同一个口径，均不得写成确认性通过。唯一重大失败停止规则及去均值 HH 偏误校正见预注册 §6.2，不得通过修改本文件输入规则影响停止判断。
 
 ## 11. 规则冻结前待核实项
 
