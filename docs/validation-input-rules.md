@@ -1,8 +1,8 @@
 # V1.1 四模型输入规则化与知识隔离协议
-> 本次监测定位修订：request-id pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；修订前分支 HEAD 48c4ad5496b0b2d2ba6846c287b3b13db8dddcbf；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 输入生成规则，并同步 Phase 0 监测边界；不修改模型代码或模型参数，不执行实际冻结或外部注册。
+> 本轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
-- Request ID：pvis-phase0-monitor-20261114-01
-- 版本：Phase 0 / v0.4.0（监测定位配套稿；输入规则保持冻结）
+- Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
+- 版本：Phase 0 / v0.4.1（监测排序规则配套稿；V1.1 模型输入与参数保持冻结）
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -369,6 +369,8 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 | 比亚迪价值驱动 FCFF | `tuple(projection.fcff_per_share[:5])` | `projection.year_five_exit_value_per_share` |
 | 招商银行 Residual Income | `tuple(projection.dividends_per_share[:5])` | `projection.year_five_exit_value_per_share` |
 
+**排序与精确并列裁决：**组合排序使用冻结模型输出的未四舍五入 five_year_irr 原始精度值，由高到低排列；若原始存储精度下完全相等，按固定 security_id 升序裁决并列。不得使用展示值四舍五入后的数值、V/P、MOS、公司名称或后续实现回报进行二次排序。该规则只确定监测队列的排序，不改变 V1.1 模型输入、函数或参数；并列标记须写入 A 区载荷。
+
 - `entry_price` 固定为形成参考日收盘价 P，与 V/P 和 MOS 使用同一价格；下一共同交易日开盘价只用于实际模拟成交和实现回报。
 - 茅台与腾讯的 `five_year_return_profile()` 年度现金流来自冻结 DCF 的模型预测现金流；比亚迪来自 FCFF／股；招行来自 Residual Income 模型生成的预测每股股息。这些现金流是 V1.1 的模型定义，不代表公司承诺派发的实际现金股息。
 - `five_year_irr` 是冻结模型现金流和形成日收盘价推导的**模型隐含毛 IRR**。当前冻结函数不接收佣金、印花税、滑点、股息税或执行价格，因此该信号本身不扣交易成本。实际样本外组合收益必须另按数据契约，在下一交易日开盘成交、持有期公司行动、股息再投资和退出交易中扣除成本。
@@ -395,7 +397,7 @@ A 区哈希生成后只允许追加审计日志，不允许修改原载荷。B �
 
 ### 10.1 本文件在预注册监测中的边界
 
-本文件只负责按冻结 V1.1 规则机械生成形成日输入；模型输入、模型估值与五年隐含毛 IRR 不因本次监测定位修订而改变。2027 年起的前瞻年度队列使用这些冻结输出形成排序，并按数据契约重建实际五年净 RMB 回报；所有指标只作描述性监测。15% 目标、模型 target_entry_price 与五年隐含毛 IRR 不是同一个口径，均不得写成确认性通过。唯一重大失败停止规则见预注册 §6.2，不得通过修改本文件输入规则影响停止判断。
+本文件只负责按冻结 V1.1 规则机械生成形成日输入；模型输入、模型估值与五年隐含毛 IRR 不因本次监测定位修订而改变。2027 年起的前瞻年度队列使用这些冻结输出形成排序；排序精度与精确并列裁决按本文件 §9 执行，该裁决不修改模型输出。实际五年净 RMB 回报按数据契约重建；所有指标只作描述性监测。15% 目标、模型 target_entry_price 与五年隐含毛 IRR 不是同一个口径，均不得写成确认性通过。唯一重大失败停止规则见预注册 §6.2，不得通过修改本文件输入规则影响停止判断。
 
 ## 11. 规则冻结前待核实项
 
