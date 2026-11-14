@@ -1,12 +1,10 @@
 # 验证轨数据契约
-> 第二轮校正：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；原修订起点 `d3a0c3cc`；本次接续时分支 HEAD `2d17ea2621d893424fe6fcab12080b18c829f466`。本轮仅校正文档，不修改模型代码，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
+> 本次监测定位修订：request-id pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；修订前分支 HEAD 48c4ad5496b0b2d2ba6846c287b3b13db8dddcbf；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件同步 Phase 0 预注册监测定位；不修改冻结模型代码，不执行实际冻结、外部注册或第三方时间戳。
 
-> 第二轮修订：request-id `pvis-phase0-revise2-20261114-01`；仓库 `vileosbot-bot/personal-value-investing-system`；分支 `validation/phase0-design`；基线 `main@6d6b7474`；修订起点 `d3a0c3cc`。本轮仅修订文档，不实际注册 OSF／AsPredicted、不创建外部账号、不执行第三方时间戳或冻结操作。
-
-- Request ID：`pvis-phase0-revise-20261113-01`（修订自 `pvis-phase0-design-20261113-01`）
-- 版本：Phase 0 / v0.3.1（第二轮校正稿；待独立复核；未采集、未验证）
-- 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；形成截面 2016–2021，前瞻保留 2027。
-- 状态原则：本文件定义字段、来源优先级、时点和缺失规则；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。
+- Request ID：pvis-phase0-monitor-20261114-01
+- 版本：Phase 0 / v0.4.0（监测定位配套稿；待独立复核；数据未采集、未验证）
+- 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；历史形成截面 2016–2021，前瞻年度监测队列自 2027 起。
+- 状态原则：本文件定义字段、来源优先级、时点和缺失规则；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。前瞻队列只作描述性监测；唯一重大失败停止规则见预注册 §6.2。
 
 ## 1. 数据对象与强制字段
 
@@ -282,23 +280,24 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 ### 11.3 港股 FF5 + 动量因子
 
-目前没有已核实的香港本地 FF5+MOM 国家因子序列。港股诊断可使用 Kenneth R. French Data Library 的 **Asia Pacific ex Japan Fama/French 5 Factors（月度）**与 **Asia Pacific ex Japan Momentum Factor（月度）**作为明确标注的区域代理敏感性；不得将其称为 Hong Kong factor、香港本地 alpha 或香港本地确认性因子。
+目前没有已核实的香港本地 FF5+MOM 国家因子序列。港股诊断可使用 Kenneth R. French Data Library 的 **Asia Pacific ex Japan Fama/French 5 Factors（月度）**与 **Asia Pacific ex Japan Momentum Factor（月度）**作为明确标注的区域代理敏感性；不得将其称为 Hong Kong factor 或香港本地因子，也不得据此声称香港本地 alpha。
 
 这两套区域因子以 USD 计价；MKT 使用美国 1 个月国库券收益率作为无风险基准。腾讯、京东、美团的港币月度总回报在回归前须用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率转换为 USD；x_t 表示每美元兑换的港币数，取月末当日或之前最近一个有效交易日的观测，则 USD 回报 = (1 + HKD 回报) × (x_(t−1) / x_t) − 1。不得把港币个股收益直接与 USD 因子回归，也不得把港币估值模型中的 10 年期 Rf 与因子库的美国 1 个月 Rf 混用。
 
-区域代理只作事后敏感性诊断，不作为香港本地确认性门槛。若下载版本缺少 Asia Pacific ex Japan 因子或月份，相关敏感性 alpha 记 NA；不得用 Developed Markets 整体因子或其他区域代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
+区域代理只作事后敏感性诊断，不作为香港本地 alpha 结论或任何停止门槛。若下载版本缺少 Asia Pacific ex Japan 因子或月份，相关敏感性 alpha 记 NA；不得用 Developed Markets 整体因子或其他区域代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
 
 ### 11.4 统一版本与使用边界
 
 指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。数据授权、商业使用、缓存、存储和再分发条款未确认前，不批量抓取、不提交受限原始文件到 GitHub。
 
-## 12. 缺失值、异常值和停止规则
+## 12. 缺失值、异常值和监测停止规则
 
+本文件只定义数据有效性、NA 传导与异常值留痕；2027 年起前瞻队列只作预注册监测，全部指标按冻结口径报告描述性统计，不产生确认性结论。唯一重大失败停止规则完整参数见预注册 §6.2；本文件不得另行创建停止阈值、改变 N、改变统计量或改变 Newey–West 阶数。
 缺数写 NA，并填写缺失原因、来源查询记录、尝试日期和责任人；不使用均值、行业均值、分析师预测或供应商当前值补齐。原始公告无法获取、公告时间无法确定、关键公司行动／股息／价格缺失、币种无法统一或基准序列不完整时，相应指标停止计算。
 
 **队列级 NA 传导：**四家公司是固定组合成员。任一公司在某队列的关键模型输入或实现回报为 NA，该队列的前两家主策略和四家等权基线同步作废为 NA；不以剩余三家重新排序，不补位、不替换、不重新归一四家基线权重。不得只从四家等权中剔除缺失公司后把余下公司重新加权。
 
-**诊断指标的剩余样本：**Rank IC 与横截面校准斜率可对剩余有效公司—结果配对作描述性计算，但 n_valid 必须至少为 3，且逐队列报告 n_valid/4、覆盖率和缺失公司；n_valid <3 时记 NA。任何不完整队列均不得进入主检验，也不得进入确认性 ICIR／Fama–MacBeth 汇总。逐公司 FF5+MOM alpha 可对有足够月度数据的剩余公司独立报告，不能代替缺失公司，也不能拼接为完整横截面。
+**诊断指标的剩余样本：**Rank IC 与横截面校准斜率可对剩余有效公司—结果配对作描述性计算，但 n_valid 必须至少为 3，且逐队列报告 n_valid/4、覆盖率和缺失公司；n_valid <3 时记 NA。任何不完整队列均不得进入累计 ΔCAGR 主监测序列；ICIR／Fama–MacBeth 等跨队列汇总只作描述性统计，并披露有效队列数与缺失情况。逐公司 FF5+MOM alpha 可对有足够月度数据的剩余公司独立报告，不能代替缺失公司，也不能拼接为完整横截面。
 
 不删除异常值。若确认录入错误，保留原始值并追加修正记录；若确为经济异常，原样保留并报告稳健性。任何数据供应商接口条款、商业使用、缓存、存储、再分发限制未确认前，不批量抓取、不将受限原始数据提交到 GitHub。不提交 API Token、Cookie、账户凭据或个人身份资料。需要付费积分、商业订阅或额外授权时，先停下并单独取得用户授权。
 
@@ -321,6 +320,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [ ] A 股 PKU FF5+MOM、港股 Asia Pacific ex Japan 区域代理、各自币种、ex-post vintage、覆盖和哈希核对。
 - [ ] 实物分派税务单独记录，不自动套用 H 股现金股息 20% 代扣；交易税、佣金、交易所费用、滑点和股息再投资成本核对。
 - [ ] A 区冻结哈希先于 B 区解封；未满足时不得使用“盲测”标签。
+- [ ] Phase 1：在 2016–2021 历史队列完成逐队列净 RMB 回报、成本、公司行动、NA 与时点资格核验后，计算历史队列级 ΔCAGR、σ_ΔCAGR 和年度自相关／HAC 结构；当前未实测，不得标 VERIFIED。
 
 ## 14. 参考依据
 
