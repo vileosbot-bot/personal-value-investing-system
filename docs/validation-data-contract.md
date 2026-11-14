@@ -82,7 +82,7 @@
 | A/H 交易价格与成交 | 上交所、深交所、港交所及有授权的历史行情源 | 日频未复权价格、成交量、停复牌与交易日历 |
 | 公司行动 | 交易所公告、发行人公告、登记结算／授权公司行动数据 | 分红、送转、拆并股、配股、供股、分拆和退市现金对价 |
 | 基准指数 | 中证指数有限公司、恒生指数公司 | 必须使用全收益／总回报序列，保留 gross 与 net 区分 |
-| 利率与汇率 | CNY：中央国债登记结算有限责任公司（CCDC）中债国债收益率曲线 10 年期到期收益率；HKD：香港金融管理局（HKMA）Government bond yield - 10-year；HKD/CNY：CFETS CNY Central Parity Rate；HKD/USD：Federal Reserve H.10 / FRED DEXHKUS（仅用于港股区域因子 USD 换算） | 保存具体序列、来源机构、频率、观测日、发布时间、报价单位与原始文件；不得混用序列 |
+| 利率与汇率 | CNY：中央国债登记结算有限责任公司（CCDC）MOF-China Government Bond Yield Curve（中债国债收益率曲线）10 年期到期收益率；HKD：香港金融管理局（HKMA）Government bond yield - 10-year；HKD/CNY：CFETS CNY Central Parity Rate；HKD/USD：Federal Reserve H.10 / FRED DEXHKUS（仅用于港股区域因子 USD 换算） | 保存具体序列、来源机构、频率、观测日、发布时间、报价单位与原始文件；不得混用序列 |
 
 ### 3.2 免费或低成本辅助源评估
 
@@ -114,7 +114,7 @@
 
 | 类别 | 具体序列／字段 | 来源机构 | 频率与时点 | Gross／Net 或税务口径 |
 |---|---|---|---|---|
-| CNY 无风险利率 | ChinaBond Government Bond Yield Curve（中债国债收益率曲线）10-year yield to maturity；使用最近可得月末值 | 中央国债登记结算有限责任公司（CCDC／中债） | 日终发布，官方说明约北京时间 17:30；按 §3.1 的形成日前最近可得月末规则取值 | 债券到期收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
+| CNY 无风险利率 | MOF-China Government Bond Yield Curve（中债国债收益率曲线）10-year maturity yield；使用最近可得月末值 | 中央国债登记结算有限责任公司（CCDC／中债） | 日终发布，官方说明约北京时间 17:30；按 §3.1 的形成日前最近可得月末规则取值 | 债券到期收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
 | HKD 无风险利率 | HKMA Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”（percent per annum） | 香港金融管理局（HKMA） | 官方统计序列；按最近可得月末值，记录观测月份及发布日期 | 政府债券收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
 | 主汇率 | CFETS CNY Central Parity Rate 中的 HKD/CNY 人民币对港币中间价；规范为 1 HKD 对应的 CNY | 中国外汇交易中心（CFETS／ChinaMoney） | 每个工作日北京时间 09:15 发布；非发布日沿用此前最近一次发布值 | 汇率，不适用 Gross／Net |
 | 港股区域因子币种转换 | DEXHKUS（Hong Kong Dollars to One U.S. Dollar；HKD per USD） | 美国联邦储备委员会（Federal Reserve Board），H.10 Foreign Exchange Rates；由 FRED 分发 | 日频；按 §11.3 月末当日或之前最近有效观测 | 汇率，不适用 Gross／Net |
@@ -381,7 +381,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [中证指数有限公司《沪深300指数》事实表（列明全收益 H00300、净收益 N00300）](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
 - [香港交易所 OMD-C 接口规范 v1.39a（列明 1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf)
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
-- [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-pbc-web/pbc/more?locale=cn_zh)
+- [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US)
 - [香港金融管理局：Economic & Financial Data for Hong Kong（Government bond yield - 10-year）](https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/)
 - [CFETS：CNY Central Parity Rate（含 HKD/CNY 中间价）](https://www.chinamoney.org.cn/english/bmkcpr/)
 
@@ -393,6 +393,6 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - **版本与基线：**Phase 0 / v0.4.3；基线 main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73；工作分支 validation/phase0-refreeze-v043。
 - **修订性质：**只修订措辞、状态、来源序列规格及数据封存时点；不改任何参数值、误差表数字、校准脚本或模型代码。
 - **NA 验收：**NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列）、分子仅计仍无可识别终值的 NA 队列，以及 m=3 永久终止规则均已由负责人于 2026-11-14 13:36 确认；§13 对应验收项已勾选。
-- **来源核对：**CSI 300 Gross TRI H00300／Net TRI N00300、恒生 Gross TRI 1006800／Net TRI 2006800 已有具体序列及 gross/net 区分；CNY Rf、HKD Rf、HKD/CNY 中间价、HKD/USD 因子转换序列已补充来源机构与具体名称；A 股 PKU 因子与港股 Asia Pacific ex Japan 区域代理均列出具体月度序列和来源，且明确因子收益序列不等同于 gross/net 总回报指数。
+- **来源核对：**CSI 300 Gross TRI H00300／Net TRI N00300、恒生 Gross TRI 1006800／Net TRI 2006800 已有具体序列及 gross/net 区分；CNY Rf 已指定 CCDC 的 MOF-China Government Bond Yield Curve 10-year maturity；HKD Rf、HKD/CNY 中间价、HKD/USD 因子转换序列已补充来源机构与具体名称；A 股 PKU 因子与港股 Asia Pacific ex Japan 区域代理均列出具体月度序列和来源，且明确因子收益序列不等同于 gross/net 总回报指数。
 - **版本与哈希：**指数、因子和 FX 数据尚未采集，当前不能冻结数据版本或 SHA-256；在实际数据冻结时逐文件封存，不编造版本号或哈希。
 - **数据边界：**A 区数据采集开始后禁止修改参数；每次重新冻结必须声明尚未查看 A 区数据。

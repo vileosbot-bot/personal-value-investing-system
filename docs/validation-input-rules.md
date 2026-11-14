@@ -88,7 +88,7 @@ StartingCashFlow_s=Revenue_{latest}\times Margin_s
 
 ### 3.1 本币无风险利率
 
-- CNY 模型：使用形成日前最近一个可得月末的 CCDC／中债 ChinaBond Government Bond Yield Curve（中债国债收益率曲线）10 年期到期收益率。
+- CNY 模型：使用形成日前最近一个可得月末的 CCDC／中债 MOF-China Government Bond Yield Curve（中债国债收益率曲线）10 年期到期收益率。
 - HKD 模型：使用形成日前最近一个可得月末的 HKMA Economic & Financial Data for Hong Kong 序列 “Government bond yield - 10-year”（percent per annum）；若连续性、期限或可得时点不能确认，记 NA。
 - 记录来源机构、具体序列名、发布日期、观测日期、年化方式、报价单位和原始文件哈希；完整序列规格见数据契约 §3.3。
 - 不用美国国债收益率替代人民币或港币无风险利率。
@@ -434,5 +434,5 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 
 - **版本与基线：**Phase 0 / v0.4.3；基线 main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73；工作分支 validation/phase0-refreeze-v043。
 - **修订性质：**只作文档措辞与来源规格澄清；V1.1 模型函数、输入参数和数值不变。
-- **利率序列：**CNY 无风险利率固定指向 CCDC／中债 ChinaBond Government Bond Yield Curve 10 年期到期收益率；HKD 无风险利率固定指向 HKMA “Government bond yield - 10-year”；按 §3.1 月末取值规则执行，具体来源及时间戳要求见数据契约 §3.3。
+- **利率序列：**CNY 无风险利率固定指向 CCDC／中债 MOF-China Government Bond Yield Curve 10 年期到期收益率；HKD 无风险利率固定指向 HKMA “Government bond yield - 10-year”；按 §3.1 月末取值规则执行，具体来源及时间戳要求见数据契约 §3.3。
 - **A 区治理：**A 区数据采集开始后禁止修改停止规则与模型输入规则参数；每次重新冻结须声明尚未查看 A 区数据。任何偏离须如实记录并另行授权，不得静默改参。
