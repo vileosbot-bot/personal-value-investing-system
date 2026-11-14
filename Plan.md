@@ -147,7 +147,7 @@
 - 反向估值：2026-11-13 报价 HKD 142.10，最新已发行股份 1,331,779,203；财务锚使用 2025 年末 NOPAT RMB 12,900.419m 与附注34(c)净现金 RMB 10,923.255m。WACC 10%、永续增长3%、RONIC 30%-60%时隐含初始 NOPAT 增长约 2.61%-3.35%。
 - 风险与未决：CFO/利润转化率下降、存货周转天数增加、THE MONSTERS 与毛绒品类集中、税率代理口径、三情景股数分母与股份奖励信托持股差异、2026 当前净现金未知；5 项缺失保持未填补。
 - 决策卡：pvis-popmart-fcff-20261113-02，supersedes 2024 草稿卡 pvis-popmart-fcff-20261113-01；状态“待总管验收”，未冻结，用户本人临时判断摘要留空。
-- PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；状态 Open，未合并；目标 main；源分支 valuation/HK-09992-2025-rereview。
+- PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；状态已合并（merge commit 43629ab4，2026-11-14 08:07 CST）；目标 main；源分支 valuation/HK-09992-2025-rereview。
 - 日期：2026-11-13。
 
 ## 2026-11-14 泡泡玛特（09992.HK）2025 年报复核修订记录
@@ -155,7 +155,7 @@
 - Request ID：pvis-popmart-revise-20261113-01。
 - 仓库：vileosbot-bot/personal-value-investing-system；账号：vileosbot-bot。
 - 分支：valuation/HK-09992-2025-rereview；修订前 HEAD：8d3fcea9c1a2aa4454c0b01c95c7f918592573ce；基线 main：6d6b7474771329c05d697c7051686110313ec091。
-- PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；仅更新原 PR，不合并。
+- PR #7：https://github.com/vileosbot-bot/personal-value-investing-system/pull/7；已于 2026-11-14 合并进 main。
 - 修改范围仅限：valuations/HK-09992/2025-fcff-workpaper.md、valuations/HK-09992/2025-fcff-decision-card.md，以及本节追加；旧 Plan.md 章节不变。
 - 现金税情景：即期所得税/税前利润代理 33.0529% 用于前五年，第六年起恢复 23.6231%；三情景值 RMB 104.68 / 164.08 / 275.33，每股相对主表差额 +3.32 / -2.16 / -15.02。税率敏感区间扩展为20%-30%，33.0529%单独列为压力情景。
 - 补充高增长压力网格：集团单年增量 RONIC 代理162.53%；补充增长10%/20%/30%，前向 RONIC仍为14%/22%/30%，三情景值 RMB103.78 /194.05 /397.90，相对主表差额+2.42 /+27.81 /+107.55；不替代主表8%/15%/22%网格。
@@ -164,7 +164,7 @@
 - 净现金时间错配特别说明：按2026年中报同口径计算的2026-06-30净现金代理为RMB8,724.155m，低于2025年末RMB10,923.255m；因此用2025年末较高净现金会压低而非抬高隐含增长。2026-11-13同日净现金未知，不作单向断言。
 - 定期存款敏感值：附加超三个月定期存款RMB3,449.922m后，基准每股价值RMB168.81（主表RMB166.24 + RMB2.57）；主表继续使用与2024底稿一致的附注34(c)口径。
 - 冻结模型源码与路由未修改；证据 JSON 未修改；未跑回测、未执行仓库测试、未给买卖建议。
-- 修订状态：待总管复核；决策卡未冻结；PR #7 保持 Open、未合并。
+- 修订状态：总管验收通过；决策卡已冻结（decision_id pvis-popmart-fcff-20261113-02，2026-11-14 合并）。
 - 日期：2026-11-14。
 
 ## 2026-11-13 验证轨 Phase 0 设计（pvis-phase0-design-20261113-01）
