@@ -290,23 +290,29 @@
 
 ## 11. 基准与因子数据
 
-### 11.1 指数基准（主基准不变）
+### 11.1 指数与市场基准（v0.4.8）
 
 - A 股主基准：中证指数有限公司“沪深 300 全收益指数”，指数代码 **H00300**；使用税前现金红利再投资的 Gross TRI。对应净收益指数代码为 **N00300**，仅作税后敏感性。不得误用价格指数 000300 代替全收益基准。
-- 港股主基准：恒生指数 Gross Total Return Index，HKEX OMD-C 指数代码 **1006800**；Net Total Return Index 代码 **2006800**。主基准使用 Gross TRI，Net TRI 仅作税后敏感性。
-- 两个指数历史值均标记为 ex-post 官方历史序列，不声称具备逐日 point-in-time vintage。每次下载保存供应商、指数代码、币种、下载时间、文件版本和 SHA-256；主基准定义本轮不变。
+- 港股主基准：Kenneth R. French Data Library 的 **Fama/French Asia Pacific ex Japan 3 Factors（月度）**市场组合收益，市场总收益按 Mkt-RF + RF 恢复。该区域市值加权组合包含澳大利亚、香港、新西兰和新加坡；它是港股市场的区域代理，不是香港本地指数，不是恒生指数公司官方 Gross TRI 1006800，也不与其等价。
+- 新基准同时用于 Phase 1 2016–2021 历史队列及 2027 前瞻队列；Phase 1 历史队列按本版规则重算。v0.4.7 及以前 1006800 设计下的结果与本版结果不可直接比较。
 
 ### 11.2 A 股 FF5 + 动量因子
 
 A 股月度因子主来源为北京大学新金融与创业投资研究中心公开因子库，使用其月度因子文件 factors_monthly_2023.xlsx，字段为 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM。当前已核实公开版本覆盖至 2023-12；该文件未覆盖的月份记 NA，不外推、不用其他地区因子填充。因子为 ex-post 研究数据，不是历史形成日可得的 point-in-time 因子；只用于事后因子诊断，不作为模型输入。后续若官方发布新版本，保留旧版并新增 data_vintage，不覆盖。
 
-### 11.3 港股 FF5 + 动量因子
+### 11.3 港股市场基准：French APAC ex Japan 3 Factors 与 USD → HKD 转换
 
-目前没有已核实的香港本地 FF5+MOM 国家因子序列。港股诊断可使用 Kenneth R. French Data Library 的 **Asia Pacific ex Japan Fama/French 5 Factors（月度）**与 **Asia Pacific ex Japan Momentum Factor（月度）**作为明确标注的区域代理敏感性；不得将其称为 Hong Kong factor 或香港本地因子，也不得据此声称香港本地 alpha。
+**固定数据文件：**Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors [Monthly]，使用该地区 **3 Factors 月度 CSV 文件**（预期文件名 Asia_Pacific_ex_Japan_3_Factors_CSV.zip）。不得以 5 Factors、Momentum、Developed、Developed ex US、其他地区或其他频率文件替代或拼接。官方 Data Library 页面提供该地区 3 Factors 的 TXT／CSV 下载入口；本次执行未能取得原始 ZIP，故文件字节、实际覆盖和 SHA-256 仍待验，不标 VERIFIED。
 
-这两套区域因子以 USD 计价；MKT 使用美国 1 个月国库券收益率作为无风险基准。腾讯、京东、美团的港币月度总回报在回归前须用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率转换为 USD；x_t 表示每美元兑换的港币数，取月末当日或之前最近一个有效交易日的观测，则 USD 回报 = (1 + HKD 回报) × (x_(t−1) / x_t) − 1。不得把港币个股收益直接与 USD 因子回归，也不得把港币估值模型中的 10 年期 Rf 与因子库的美国 1 个月 Rf 混用。
+**市场总收益恢复：**源文件 Mkt-RF 与 RF 均按百分数记录。每月 t 的 USD 市场组合简单总收益固定为 R_m,USD,t = (Mkt-RF_t + RF_t) / 100。不得把 Mkt-RF 单独当作市场总收益；不得把 RF 作为港币无风险利率。
 
-区域代理只作事后敏感性诊断，不作为香港本地 alpha 结论或任何停止门槛。若下载版本缺少 Asia Pacific ex Japan 因子或月份，相关敏感性 alpha 记 NA；不得用 Developed Markets 整体因子或其他区域代理冒充香港本地因子。A 股与港股 alpha 分市场报告，不合并成单一 A/H alpha。
+**USD → HKD：**使用 Federal Reserve H.10 / FRED DEXHKUS，报价方向为 HKD per USD（每 1 美元对应的港币数）。每个月 t，X_t 取该月最后一个日历日当日或之前最近一个有效 DEXHKUS 观测；X_(t−1) 按前一个月相同规则取值。换算后的港币市场总收益为 R_m,HKD,t = (1 + R_m,USD,t) × (X_t / X_(t−1)) − 1。不得倒置汇率比值，不得把 HKD/USD 误写成 USD/HKD，不得用月平均值替代月末值。
+
+**Beta 同币种处理：**腾讯月度个股总回报保持 HKD；市场代理按上述规则转换为 HKD。Beta 回归只使用同一 60 个月窗口、同一月份、同为 HKD 的 R_i,HKD 与 R_m,HKD，并按既有 HKD 10 年期无风险利率月有效收益 r_f,HKD,m = (1 + y_m)^(1/12) − 1 构造超额收益。Beta 仍要求最近 60 个完整月、至少 36 个共同有效月份；窗口和下限不变。
+
+**ERP 同币种处理：**最近 120 个完整月份使用 ERP_HKD = 12 × mean(R_m,HKD,t − r_f,HKD,m)；市场收益和无风险收益均为 HKD。120 个月窗口、算术平均、年化乘数及 ERP 正阈值均不变。French RF 只用于恢复 R_m,USD，不替代 HKMA 10 年期 HKD Rf，也不改无风险利率来源。
+
+**适用范围与限制：**该区域市场组合包含澳大利亚、香港、新西兰和新加坡，属于区域市值加权市场代理，不是香港本地指数，不是恒生指数，不是恒生官方 Gross TRI 1006800，也不与其等价。该基准同时用于 Phase 1 历史队列与 2027 前瞻队列；v0.4.7 及以前 1006800 设计下的结果与本版结果不可直接比较。腾讯香港本地因子 alpha 不据此计算或宣称；缺失的本地因子 alpha 记 NA。
 
 ### 11.4 统一版本与使用边界
 
