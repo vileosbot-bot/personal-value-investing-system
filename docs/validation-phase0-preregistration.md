@@ -3,8 +3,8 @@
 > 上一轮统计与监测规则修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本轮仅修订设计文档，不修改冻结模型代码，不执行实际冻结、外部注册、签名标签或第三方时间戳。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.7（文档层重新冻结；只改措辞与记录，不改既有参数值；新增设计规则见本轮记录）
-- 基线：main@0df7b0c5e3d5712274fe12939abe8ef0b1212c02；本次修订分支：validation/phase0-refreeze-v047（由该基线创建）
+- 版本：Phase 0 / v0.4.8（香港市场基准替补重冻；不改任何既有停止规则参数、样本池、形成日／结果日、成本税务、模型代码或其他冻结口径）
+- 基线：main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；本次修订分支：validation/phase0-refreeze-v048（由该基线创建）
 - 状态：MONITORING_DESIGN；本次未执行历史重算、回测、统计检验或新估值；任何描述性统计均不得标记为确认性证据或 VERIFIED。
 - 本文件与 docs/validation-data-contract.md、docs/validation-input-rules.md、Plan.md 配套。冲突时先暂停，修订并记录，不自行选择有利口径。
 - 当前治理状态：OSF／AsPredicted 已豁免且未注册；未创建 Git 签名标签；各版本合并、冻结分支与第三方时间证明事实见附表 A5。文档层冻结的最终锚点为 OTS 盖戳清单中的完整 commit SHA，冻结分支仅作查找用途。A/B 数据快照、指数／因子／FX 数据版本与逐文件 SHA-256 属于数据层冻结，按附表 A2／A5 在数据采集完成后、B 区解封前封存。
@@ -78,9 +78,10 @@
 ### 4. 结果、基准与币种
 
 - 三家 A 股：对照沪深 300 全收益指数（CSI 300 Total Return Index），不使用价格指数替代。
-- 腾讯：对照恒生指数总回报指数（Hang Seng Index Gross Total Return）；税后敏感性另报恒生净总回报指数（Net Total Return），不把价格指数当总回报。
+- 腾讯：市场基准采用 Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors（月度）所含区域市值加权市场组合。先按源文件百分数单位恢复 USD 市场总收益，再按数据契约 §11.3 使用 Federal Reserve H.10 / FRED DEXHKUS 月末 HKD/USD 汇率换算为 HKD。该区域组合包含香港，同时包含澳大利亚、新西兰和新加坡等市场；它是区域市场代理，不是香港本地指数，不是恒生指数公司官方 Gross TRI 1006800，也不与 1006800 等价。
 - 个股 Rank IC 与超额回报按各自上市市场本币计算：A 股为 CNY，腾讯为 HKD；腾讯另换算为 RMB 报告汇率影响。
 - 15% 组合目标统一按 RMB 计价，包含腾讯 HKD/CNY 汇率变动。汇率使用每个交易日可追溯的官方或授权日汇率；缺少日度汇率时不估算。
+- 新基准统一适用于 Phase 1 的 2016–2021 历史队列与 2027 前瞻队列；Phase 1 历史队列须按本版规则重算。v0.4.7 及以前按恒生 1006800 Gross TRI 设计得到的结果，与本版区域代理基准结果不可直接比较。
 - 现金分红、送股、转增、拆并股等公司行动计入股东总回报；股息再投资规则见数据契约。
 
 ### 5. 15% 目标的精确定义
@@ -102,7 +103,7 @@
 | Rank IC | 每个形成截面，对信号与随后五年扣除交易成本、适用税项后的股东总回报做 Spearman 秩相关；分别报告 V/P、MOS、模型隐含毛 IRR | 描述性；报告点估计、区间、n_valid 和覆盖率 | 描述性；报告点估计、区间、n_valid 和覆盖率，不设门槛 |
 | ICIR | 平均 Rank IC ÷ Rank IC 时间序列标准差 | 描述性；报告点估计和区间，不设门槛 | 描述性；有效期数不足或标准差为 0 时记 NA，不设门槛 |
 | 校准回归斜率 | 每期横截面回归：实际五年 CAGR = 截距 + 斜率 × 预测五年 IRR；报告 Fama–MacBeth 平均斜率 | 描述性；报告斜率、截距及区间，不设门槛 | 描述性；报告斜率、截距、覆盖率和区间，不设门槛 |
-| FF5 + 动量 alpha | A 股用 PKU 月度 FF5+MOM；腾讯没有已确认的香港本地 FF5+MOM，Kenneth French Asia Pacific ex Japan 只能作区域代理敏感性，不得称为香港本地因子 | 描述性；报告 alpha、标准误、区间、覆盖和因子版本 | 描述性；A/H 分市场报告；腾讯区域代理只作敏感性，不设门槛 |
+| 因子 alpha（诊断） | A 股用 PKU 月度 FF5+MOM；腾讯不计算香港本地因子 alpha。French APAC ex Japan 3 Factors 在本版只定义区域市场基准及其 Beta／ERP 市场回报，不把区域组合称为香港本地因子 alpha；不得用 5 Factors、Momentum 或其他地区文件替代本版主基准 | 描述性；报告 alpha、标准误、区间、覆盖和因子版本；腾讯香港本地 alpha 记 NA | 描述性；A/H 分市场报告；腾讯香港本地 alpha 记 NA，不设门槛 |
 | 主信号统计量 | 每队列前两家等权组合五年净 RMB 几何 CAGR − 同队列四家等权组合五年净 RMB 几何 CAGR，即 ΔCAGR | 描述性历史复演；不用于停止规则校准或确认性结论 | 报告逐队列 ΔCAGR、累计均值及 §6.2 单侧上界；只有上界低于 −3.0pp 才触发重大失败停止，不存在正向“通过”门槛 |
 | PBO | CSCV 下样本内最优候选策略在样本外排名低于中位数的概率 | 不计算 | **不适用**：本预注册只有一个冻结策略，没有候选策略选择集合；不得给出 PBO 数值或通过门槛 |
 | DSR／PSR | DSR 按试验次数 N、偏度、峰度和有效样本长度计算；N=1 时退化为 PSR | 仅作描述性诊断 | N=1 是一个冻结策略的试验次数，不是队列数；DSR／PSR 仅作描述性诊断，不设 ≥0.95 门槛；前瞻队列数量不足时记 NA／不具解释力 |
@@ -401,15 +402,17 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 | v0.4.4 | `0756f70ecc2478358c3bc791b3c026a840599d92`（非冻结提交；v0.4.4 首个文档层修订提交）；合并提交 `5a71143a28529a59d6e59fbd3054a699ffb51fba` | 2026-11-15 08:10:13 CST（00:10:13Z） | PR #9 已合并至 main；冻结清单 freeze-manifest-v044-2026-12-15.json（SHA-256 c44fe2db5ce0aeb8c733b5e92fe95c7e2a960e7c0675e20d17444a73d330f2e7）；OTS 比特币锚定已完成（区块 975864，nTime 2026-11-15 00:36:34 UTC）。 |
 | v0.4.5 | `00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40` | 2026-11-15 09:44:39 CST（01:44:39Z） | PR #10 已合并至 main；清单 freeze-manifest-v045-2026-12-15.json（SHA-256 cd767e2587761737a79ce983153cb6af82c2bf120c52ba5ed19bb7d4b0597c59）；OTS 已盖戳、升级待验证。 |
 | v0.4.6 | `0df7b0c5e3d5712274fe12939abe8ef0b1212c02` | 2026-11-15 12:00:27 CST（04:00:27Z） | PR #11 已合并至 main；清单 freeze-manifest-v046-2026-12-15.json（SHA-256 1151c63d…）；OTS 已盖戳、升级待验证；phase0-freeze-v046-2026-12-15 指向该提交。 |
+| v0.4.7 | `cc97e5978b440ab96159b1969f9cb25ac245b6b7` | 2026-11-15 14:13:56 CST（06:13:56Z） | PR #12 已合并至 main；文档层冻结基线为本提交；v0.4.7 独立清单未见于该冻结分支文件树。 |
+| v0.4.8 | CI 验证提交 `6dd8e54333e94a02b22976fe1d17b4ac76e82ec0` | 未合并 | PR #13 Open、merged=false；GitHub Actions run 213（run id 43734616335，workflow ci）success；French 与 DEXHKUS 原始快照仍 NOT_RETRIEVED，OTS 待确认。 |
 
 ## 附表 B：公开方法与数据来源入口
 
 - 中证指数有限公司：沪深 300 全收益指数代码 H00300、净收益指数代码 N00300；不得误用价格指数 000300 代替全收益基准。官方事实表：https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf
-- 恒生指数／香港交易所 OMD-C：恒生指数 Gross Total Return Index 代码 1006800；Net Total Return Index 代码 2006800。主基准为 Gross TRI，Net TRI 只作税后敏感性。官方 OMD-C 接口规范 v1.39a：https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf
+- 历史原设计基准（v0.4.7 及以前）：恒生指数 Gross Total Return Index 代码 1006800；Net Total Return Index 代码 2006800。该条仅保留为旧版设计来源记录；v0.4.8 起不再作为 Phase 0 港股主基准。官方 OMD-C 接口规范 v1.39a：https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf
 - HKMA 官方统计序列：Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”（percent per annum）：https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/。检索路径为 HKMA 官方统计门户人工查询（Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”），无公开 API 端点；在 2025-01-15 断点处检验收益率跳变并记录，序列按披露口径拼接使用；“不是 Exchange Fund Notes”的识别适用于 2016 年以后样本。
 - HKMA 官方报告对 10 年期港元基准债券标的的说明：Half-Yearly Monetary and Financial Stability Report, March 2025, Chapter 4, §4.4, Chart 4.14；10-year HKD HKSAR Government Bond 在 2025-01-15 前对应 Government Bond Programme，此后对应 Infrastructure Bond Programme 与 Government Sustainable Bond Programme：https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb202503/Chapter4.pdf。该官方定义指向 HKSAR Government Bond（HKGB）基准，不是 Exchange Fund Notes。PDF 第 9 页（Chart 4.14）；文件 SHA-256 0df21fc8b50ce57cbfde1202ab411ee00ae1a2e87d67a862bde59e8667c634f9（15 页）。 检索路径为 HKMA 官方统计门户人工查询（Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”），无公开 API 端点；在 2025-01-15 断点处检验收益率跳变并记录，序列按披露口径拼接使用；“不是 Exchange Fund Notes”的识别适用于 2016 年以后样本。
 - A 股 FF5+MOM：北京大学新金融与创业投资研究中心公开因子库，使用月度文件 factors_monthly_2023.xlsx 的 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM；当前已核实公开版本覆盖至 2023-12，后续月份未有新版本时记 NA。
-- 港股没有已核实的香港本地 FF5+MOM 国家因子序列。Kenneth R. French Data Library 的 Asia Pacific ex Japan Fama/French 5 Factors（月度）与 Asia Pacific ex Japan Momentum Factor（月度）只能作为**区域代理敏感性**，不能称为 Hong Kong factor、香港本地 alpha 或香港本地确认性因子。该序列以 USD 计价，MKT 使用美国 1 个月国库券收益率；港股个股月度 HKD 总回报按 Federal Reserve H.10 / FRED DEXHKUS 月末汇率转换为 USD。
+- v0.4.8 港股主基准：Kenneth R. French Data Library 的 **Fama/French Asia Pacific ex Japan 3 Factors [Monthly]**，固定使用对应 3 Factors 月度 CSV 文件；市场总收益按 (Mkt-RF + RF) / 100 恢复为 USD 简单收益，再按数据契约 §3.3 的 DEXHKUS 月末 HKD/USD 汇率转换为 HKD。该区域市值加权组合包括澳大利亚、香港、新西兰和新加坡，不是香港本地指数，不是恒生官方 Gross TRI，不得称为恒生指数或与 1006800 等价。不得用 5 Factors、Momentum 或其他地区文件替代该主基准。
 - 指数与因子历史均按 ex-post 发布版本处理，不声称 point-in-time；只用于结果基准和事后诊断，不作为模型输入。每次下载保存 data_vintage、retrieved_at、原始文件和 SHA-256。
 - 中国结算上海分公司《港股通存管结算业务指南》（2025 年 6 月版）：用于港股通证券登记、存管、公司行为的一般规则；腾讯实物分派的具体资格、入账和可交易限制仍以腾讯各次原始公告为准。
 - 腾讯 2021-12-23 京东实物分派公告及 2022-03-25 分派付款公告；腾讯 2022-11-16 美团实物分派公告及 2023-03-24 分派付款公告。
@@ -420,7 +423,7 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 
 - 本轮已把数据源指定到指数代码、供应商或公开因子库，但尚未批量下载、核验全部历史文件、授权条款或逐文件哈希；不得标记为 VERIFIED。
 - 北京大学 A 股公开因子文件当前已核实到 2023-12；2024–2026 若无更新文件则 A 股因子 alpha 记 NA，不外推。
-- 未找到已核实的香港本地 FF5+MOM 国家因子序列；French Data Library Asia Pacific ex Japan 只能作为 USD 区域代理敏感性，不能作为香港本地因子或确认性门槛。需保存版本哈希并按数据契约转换币种。
+- v0.4.8 的 French APAC ex Japan 3 Factors 是区域市场代理，不是香港本地因子或确认性 alpha。其原始月度文件、获取日期、SHA-256、实际起止月份及逐月缺失检查须按数据契约 §11.4 封存；在快照实际取得并核验前不得标记 VERIFIED。
 - 腾讯实物分派主情景为内地非美国个人经南向港股通持有腾讯。美团的中国结算接收／持有路径有发行人公告明确说明；京东虽允许港股通投资者选择持有、且可经港股通卖出，但公告未明确中国结算账户入账路径，需实际券商／托管人／中国结算参与人确认；未确认前腾讯队列记 NA，不得假设收到现金或已到账股份。
 - 实物分派的税务后果由腾讯公告要求投资者另行咨询税务顾问；不得把普通 H 股现金股息 20% 代扣规则自动套用于京东／美团实物分派。
 - 每一历史形成日的公告时间、财报版本、共同交易日、开盘成交和公司行动仍须在实际数据阶段逐项核验；缺失时按 NA 规则处理。
@@ -435,7 +438,7 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 - **NA 决定（S-1）：**负责人卫勒于 2026-11-14 13:36 确认 NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列），分子只计仍无可识别终值的 NA 队列；破产按终值计入回报、可识别现金或换股对价的私有化／并购按对价计入回报，均不计 NA；永久不可评估终止次数 m=3。数据契约 §13 对应验收项已勾选。
 - **误差表澄清：**四档表明确同时报告无条件概率与可计算条件概率；P(不可评估)≈0.61% 为无条件概率。首次 N=20 的无条件实际水平 2.65%，较名义 α_1=2.5% 略宽；方差校正表述改为方差分母 c_N，Var_HH^c=Var_HH/c_N。误差表只覆盖首次评估，不外推后续 k、N 或累积错误率。
 - **公开记录与时间证明（M-5）：**OSF／AsPredicted 已豁免（负责人 2026-11-14 13:50 决定，个人学习项目）；不创建 Git 签名标签（负责人 2026-11-14 14:01 决定）。公开记录采用 GitHub 冻结提交／分支与 OTS 锚点；被钉住的是 OTS 清单中的完整 commit SHA，冻结分支只作查找 aid。截止时间 2026-12-15 23:59:59（Asia/Shanghai）继续有效；逾期条件为截止前未完成含 v0.4.3 的冻结包与第三方时间证明，以 OTS 区块时间判定。
-- **数据来源规格：**CSI 300 Gross TRI H00300／Net TRI N00300；恒生 Gross TRI 1006800／Net TRI 2006800；CNY Rf 为中债国债收益率曲线 10 年期到期收益率；HKD Rf 为 HKMA Government bond yield - 10-year；HKD/CNY 为 CFETS CNY Central Parity Rate；HKD/USD 因子转换为 Federal Reserve H.10 / FRED DEXHKUS；A 股因子为北京大学公开月度因子文件；港股只使用 French Data Library Asia Pacific ex Japan 区域代理，不冒充香港本地因子。指数、因子和 FX 的版本及哈希在数据冻结时封存。
+- **历史数据来源规格（v0.4.7）：**CSI 300 Gross TRI H00300／Net TRI N00300；恒生 Gross TRI 1006800／Net TRI 2006800；其余利率、汇率与 A 股因子来源保持当时冻结口径。该行记录旧版基准，不代表 v0.4.8 继续使用 1006800。
 - **复核人记录：**独立复核人 Opus 5.5 由负责人于 2026-11-14 13:46 指定，发生在 v0.4.2 合并之后，记为顺序偏差。v0.4.2 复核 request-id：`pvis-phase0-freeze-opus-20261114-01`，verdict 为“有保留同意”；本次 v0.4.3 复核 request-id：`pvis-phase0-refreeze-v043-opus-20261114-01`，由总管另行安排。
 - **A 区治理：**A 区数据采集开始后禁止修改参数；每次重新冻结须声明尚未查看 A 区数据。本次文档修订执行过程未读取 A 区队列数据。
 - **v0.4.2 实际状态：**OSF／AsPredicted 未注册、标签未创建、OTS 已完成、v0.4.2 已冻结于 main@66a0832e；本次 v0.4.3 仍以 PR 方式等待合并，最终 OTS 清单由总管另行更新。
@@ -484,3 +487,15 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 - **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
 - **修订范围：**M-1～M-6、L-1、L-2、L-5～L-12；M-4 冻结清单修正不在本 PR 内，由总管在合并后制作冻结清单时执行；L-3/L-4 不做。
 - **历史节恢复：**本文件恢复 v0.4.3 节及 v0.4.5 节'修订性质与不变量'原文。
+
+
+## 2026-11-15 验证轨 Phase 0 v0.4.8 香港市场基准重冻（pvis-phase0-refreeze-v048-20261115-01）
+
+- **版本、基线与分支：**Phase 0 / v0.4.8；仓库 vileosbot-bot/personal-value-investing-system；基线 main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；工作分支 validation/phase0-refreeze-v048。
+- **负责人授权：**负责人于 2026-11-15 22:12 CST 拍板更换香港市场基准并重冻；本轮据此采用 Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors（月度）作为港股市场代理。
+- **新基准定义：**月度市场总收益按源文件百分数 R_m,USD=(Mkt-RF+RF)/100 恢复，再使用 Federal Reserve H.10 / FRED DEXHKUS（HKD per USD）按月末最后有效观测换算为 HKD；完整币种转换、Beta 同币种和 ERP 口径见数据契约 §3.3、§11.3 与输入规则 §3.2。
+- **经济含义与限制：**该市值加权组合包含澳大利亚、香港、新西兰和新加坡，是区域市场代理，不是香港本地指数，不是恒生指数公司官方 Gross TRI 1006800，也不与之等价。新基准同时适用于 Phase 1 2016–2021 历史队列和 2027 前瞻队列；历史队列按新规则重算。v0.4.7 及以前 1006800 设计下的结果与本版结果不可直接比较。
+- **候选排除：**MSCI Hong Kong Net Total Return 虽有公开查询／下载界面，但 HKD 选项禁用、完整月度历史文件未实际取得，且官方使用条款对自动化抓取有明确限制；未满足免费、完整、可重复获取条件，不采用。恒生价格指数加股息率自建序列无法证明可免费完整复现官方 Gross TRI，也不采用。
+- **不变量：**停止规则全部参数、四家公司池、形成日／结果日、成本与税务、ERP 120 个月窗口、Beta 60 个月窗口及 36 个共同有效月份下限、模型代码、A 股 H00300、无风险利率来源、HKD/CNY 汇率口径均不变。
+- **数据快照状态：**本轮已核实官方 Data Library 页面及月度 3 Factors 数据集入口，但本次执行未能取得原始 French CSV ZIP，也未取得 DEXHKUS 原始 CSV 快照；故两份原始文件的 SHA-256、实际首末月份／日期及逐月缺失检查均留空、状态 NOT_RETRIEVED，不标 VERIFIED。Phase 1 使用新基准重算前必须先封存原始文件快照及完整性检查；不得只保存链接，不得以其他地区或 5 Factors 文件代替。
+- **OTS：**待总管确认；本轮未执行 OTS 锚定。
