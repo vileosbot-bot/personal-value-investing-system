@@ -36,7 +36,7 @@ MSCI Hong Kong Net Total Return 不采用：完整月度历史文件未实际取
 - Plan.md: a8687c33b511576b2c665bfb76fbc05efb702cac59a53b7908129ce44d66b7f6
 - docs/validation/trial-ledger-entry-v048.md: af708f31964834383356ec867fcc7f75c0d2071477495c6718a1ab450517b1aa
 
-- docs/validation/freeze-manifest-v048-2026-12-15.json: 2c2c89118329308b76ace4da7711e0d3826984e9955d00d9eb6470b688556ae4
+- docs/validation/freeze-manifest-v048-2026-12-15.json: 248919e8b42f545e13cf7203a65b1be8f36c77c3c526b743d79f8b6c2e6d0996
 
 ## 冻结清单格式说明
 
