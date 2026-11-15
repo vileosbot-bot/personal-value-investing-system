@@ -12,8 +12,13 @@
   },
   "working_branch": "validation/phase0-refreeze-v048",
   "pull_request": {
-    "status": "pending_creation",
+    "status": "open",
+    "number": 13,
+    "url": "https://github.com/vileosbot-bot/personal-value-investing-system/pull/13",
     "base": "main",
+    "base_sha": "cc97e5978b440ab96159b1969f9cb25ac245b6b7",
+    "head_branch": "validation/phase0-refreeze-v048",
+    "head_sha_at_pr_open": "3991b20c8502d24d485335b1718c20ea83ab78a0",
     "merge_allowed": false
   },
   "benchmark": {
@@ -99,7 +104,7 @@
     "docs/validation-phase0-preregistration.md": "3410c8030875153ef2bc0d7035d0257b330694fb0f2621d00a5e83adf5974335",
     "docs/validation-data-contract.md": "3e2753ffb4a634b160614b1a96c120ca5cc038cccaefd6f6e660f6e329aa19be",
     "docs/validation-input-rules.md": "8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add",
-    "Plan.md": "a284e1870681e0642b3a812264b50980ab730eb148645dbbeadc2f8980bec5aa",
+    "Plan.md": "56f7de5e5b6613b0c7d5f3258e9ae9c9543bebd37eb7a50edffd6acbd237068a",
     "docs/validation/trial-ledger-entry-v048.md": "332fbc8fad288e99afd30b1d5c215951e99997464956d9c3d4ecdae03c24d6b2"
   },
   "manifest_schema_note": "No v0.4.7 freeze-manifest JSON was present in main@cc97e597, phase0-freeze-v047-2026-12-15, or validation/phase0-refreeze-v047. This v0.4.8 manifest uses an explicit self-contained schema; schema identity with a non-existent v0.4.7 artifact cannot be asserted.",
@@ -115,5 +120,13 @@
     "status": "OPEN",
     "phase1_recalculation_allowed": false,
     "reason": "original French and DEXHKUS source snapshots not retrieved"
+  },
+  "ci": {
+    "workflow": "ci",
+    "run_number": 197,
+    "run_id": 43733249494,
+    "conclusion": "success",
+    "url": "https://github.com/vileosbot-bot/personal-value-investing-system/actions/runs/43733249494",
+    "head_sha_at_run": "3991b20c8502d24d485335b1718c20ea83ab78a0"
   }
 }
