@@ -82,8 +82,8 @@
 | 港股财务报告、公告、分红方案 | HKEXnews 披露易、发行人官网 | 原始公告及港交所时间戳优先 |
 | A/H 交易价格与成交 | 上交所、深交所、港交所及有授权的历史行情源 | 日频未复权价格、成交量、停复牌与交易日历 |
 | 公司行动 | 交易所公告、发行人公告、登记结算／授权公司行动数据 | 分红、送转、拆并股、配股、供股、分拆和退市现金对价 |
-| 基准指数 | 中证指数有限公司、恒生指数公司 | 必须使用全收益／总回报序列，保留 gross 与 net 区分 |
-| 利率与汇率 | CNY：中央国债登记结算有限责任公司（CCDC）MOF-China Government Bond Yield Curve（中债国债收益率曲线）10 年期到期收益率；HKD：香港金融管理局（HKMA）Government bond yield - 10-year；HKD/CNY：CFETS CNY Central Parity Rate；HKD/USD：Federal Reserve H.10 / FRED DEXHKUS（仅用于港股区域因子 USD 换算） | 保存具体序列、来源机构、频率、观测日、发布时间、报价单位与原始文件；不得混用序列 |
+| 基准市场组合 | A 股：中证指数有限公司 CSI 300 Gross TRI H00300；港股：Kenneth R. French Data Library Fama/French Asia Pacific ex Japan 3 Factors（月度）市场组合 | A 股必须使用全收益序列；港股使用源定义含股息与资本利得的区域市值加权市场组合，明确其为代理而非香港本地指数或恒生官方 Gross TRI |
+| 利率与汇率 | CNY：中央国债登记结算有限责任公司（CCDC）MOF-China Government Bond Yield Curve（中债国债收益率曲线）10 年期到期收益率；HKD：香港金融管理局（HKMA）Government bond yield - 10-year；HKD/CNY：CFETS CNY Central Parity Rate；HKD/USD：Federal Reserve H.10 / FRED DEXHKUS（用于将 French APAC ex Japan USD 市场总收益转换为 HKD；报价方向 HKD per USD） | 保存具体序列、来源机构、频率、观测日、发布时间、报价单位与原始文件；不得混用序列 |
 
 ### 3.2 免费或低成本辅助源评估
 
@@ -96,7 +96,7 @@
 | Financial Modeling Prep 免费层 | 通用财务数据接口评估 | 免费层对国际市场覆盖、历史年限与字段可用性限制明显；目前不作为 A/H 主源。FMP 的 `filingDate`／报告日期语义需逐字段验证，不能用 report date 替代公告日 |
 | Open Source Asset Pricing | 因子构造代码、信号定义和复现方法 | 官方代码基于 CRSP v2 / WRDS 美国市场数据；不等于 A/H 股票历史数据，不能直接作为 A/H FF5 因子序列 |
 | 北京大学中国 A 股因子数据 | A 股月度 MKT、SMB、HML、RMW、CMA、MOM | 公开说明覆盖 2000-01 至 2023-12；2024–2026 更新、许可、历史构造与可复现性待核实 |
-| Kenneth French Data Library | 区域 FF5 与动量因子 | Asia Pacific ex Japan 可作腾讯的区域代理敏感性，不等于香港本地因子；币种、无风险利率和地区覆盖必须披露 |
+| Kenneth French Data Library | Fama/French Asia Pacific ex Japan 3 Factors（月度） | v0.4.8 港股主基准；固定对应 3 Factors 月度 CSV 文件，不得混用 5 Factors、Momentum 或其他地区文件；它是含香港的区域市场代理，不是香港本地指数 |
 
 公开文档入口：
 
@@ -118,14 +118,14 @@
 | CNY 无风险利率 | MOF-China Government Bond Yield Curve（中债国债收益率曲线）10-year maturity yield；使用最近可得月末值 | 中央国债登记结算有限责任公司（CCDC／中债） | 日终发布，官方说明约北京时间 17:30；按 §3.1 的形成日前最近可得月末规则取值 | 债券到期收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
 | HKD 无风险利率 | HKMA Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”（percent per annum）；对应 10 年期港元 HKSAR Government Bond（HKGB）基准；“不是 Exchange Fund Notes”的识别适用于 2016 年以后样本。HKMA 官方报告说明：2025-01-15 前为 Government Bond Programme 基准债券，此后为 Infrastructure Bond Programme 与 Government Sustainable Bond Programme 基准债券。检索路径为 HKMA 官方统计门户人工查询（Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”），无公开 API 端点；在 2025-01-15 断点处检验收益率跳变并记录，序列按披露口径拼接使用；“不是 Exchange Fund Notes”的识别适用于 2016 年以后样本。 | 香港金融管理局（HKMA） | 官方统计序列；按最近可得月末值，记录观测月份及发布日期 | 政府债券收益率，不是股息总回报指数；不适用 Gross／Net TRI 标签 |
 | 主汇率 | CFETS CNY Central Parity Rate 中的 HKD/CNY 人民币对港币中间价；规范为 1 HKD 对应的 CNY | 中国外汇交易中心（CFETS／ChinaMoney） | 每个工作日北京时间 09:15 发布；非发布日沿用此前最近一次发布值 | 汇率，不适用 Gross／Net |
-| 港股区域因子币种转换 | DEXHKUS（Hong Kong Dollars to One U.S. Dollar；HKD per USD） | 美国联邦储备委员会（Federal Reserve Board），H.10 Foreign Exchange Rates；由 FRED 分发 | 日频；按 §11.3 月末当日或之前最近有效观测 | 汇率，不适用 Gross／Net |
-| 主基准序列声明 | A 股主基准为沪深 300 全收益 H00300（Gross TRI），N00300 仅作税后敏感性；港股主基准为恒生 Gross TRI 1006800，Net TRI 2006800 仅作税后敏感性；不得误用价格指数 000300 | 中证指数有限公司；恒生指数公司／香港交易所 OMD-C | 与下列官方指数历史序列相同；逐文件记录下载时间、币种和数据版本 | 主序列使用 Gross TRI；Net TRI 仅作税后敏感性；价格指数 000300 不得替代 H00300 |
+| 港股市场基准币种转换 | DEXHKUS（Hong Kong Dollars to One U.S. Dollar；HKD per USD） | 美国联邦储备委员会（Federal Reserve Board），H.10 Foreign Exchange Rates；由 FRED 分发 | 日频；每月取月末当日或之前最近有效观测；对 USD 市场总收益使用 X_m/X_(m−1) 转换为 HKD | 汇率，不适用 Gross／Net |
+| 主基准序列声明 | A 股主基准为沪深 300 全收益 H00300（Gross TRI），N00300 仅作税后敏感性；港股主基准为 French APAC ex Japan 3 Factors（月度）恢复的区域市值加权市场总收益，并经 DEXHKUS 转为 HKD | 中证指数有限公司；Kenneth R. French Data Library；Federal Reserve H.10 / FRED | A 股按官方指数历史序列；港股按月度因子文件与月末 FX 快照；逐文件记录获取日期、币种、SHA-256 和覆盖检查 | 港股序列是区域代理，不是香港本地指数，不是恒生官方 Gross TRI，与 v0.4.7 及以前的 1006800 结果不可直接比较 |
 | A 股指数 | 沪深 300 全收益 H00300；净收益 N00300 | 中证指数有限公司 | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | H00300 为 Gross TRI；N00300 为 Net TRI；价格指数 000300 不得替代 |
-| 港股指数 | 恒生指数 Gross Total Return Index 1006800；Net Total Return Index 2006800 | 恒生指数公司／香港交易所 OMD-C | 官方指数历史序列；逐文件记录下载时间、币种和数据版本 | 1006800 为 Gross TRI；2006800 为 Net TRI |
+| 港股市场总收益代理 | French APAC ex Japan 3 Factors（月度）：Mkt-RF、RF；恢复市场总收益 R_m,USD=(Mkt-RF+RF)/100，再按 DEXHKUS 转为 HKD | Kenneth R. French Data Library；Federal Reserve H.10 / FRED DEXHKUS | 月度；按因子月份取月末 FX；保留原始百分数值、转换输入和转换后序列 | 源市场组合收益包含股息与资本利得；它是区域市场代理，不是香港本地 Gross/Net TRI，不得标记为 1006800 或称与其等价 |
 | A 股因子 | 北京大学新金融与创业投资研究中心公开因子库月度文件 factors_monthly_2023.xlsx：MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM | 北京大学新金融与创业投资研究中心公开因子库 | 月度；覆盖 2000-01 至 2023-12；后续月份无新官方版本时记 NA | 这是源定义的因子收益序列，不是 Gross／Net 总回报指数的双版本；公开文件未提供可据以标记为税后 Net 的独立序列。原样使用，不自行重标 |
-| 港股区域代理因子 | “Asia Pacific ex Japan Fama/French 5 Factors [Monthly]”：Mkt-RF、SMB、HML、RMW、CMA、RF；“Asia Pacific ex Japan Momentum Factor (Mom) [Monthly]”：Mom | Kenneth R. French Data Library（Dartmouth／Tuck） | 月频、USD；仅作腾讯的区域代理敏感性，不是香港本地因子 | 源定义因子组合收益，不提供香港本地 Gross／Net TRI 双版本；不得称为香港本地净因子或香港本地 alpha。RF 为美国 1 个月国库券收益率，不替代 HKD 模型 Rf |
+| French APAC ex Japan 3 Factors 文件 | Asia_Pacific_ex_Japan_3_Factors_CSV.zip（月度 CSV；只使用 3 Factors 文件） | Kenneth R. French Data Library（Dartmouth／Tuck） | 月频、USD；获取日期、实际起止月份、逐月缺失检查及原始 ZIP SHA-256 必须随快照保存 | Mkt-RF 与 RF 原始单位为百分数；市场总收益按 (Mkt-RF+RF)/100 恢复；RF 只用于恢复市场总收益，不替代 HKD 模型 Rf |
 
-以上序列是数据源规格，不表示数据已下载或获授权。指数与因子属于事后（ex-post）序列；HKD/CNY 与 DEXHKUS 按各自发布时点使用。所有源数据须保存原始字段、单位、币种、发布日期、观测日期、data_vintage、retrieved_at、source_url 和 SHA-256。
+以上序列是数据源规格，不表示数据已下载或获授权。指数与因子属于事后（ex-post）序列；HKD/CNY 与 DEXHKUS 按各自发布时点使用。French APAC 3 Factors 与 DEXHKUS 均须保存原始文件快照、获取日期、SHA-256、数据起止月份／日期、逐月缺失检查、原始字段、单位、币种、data_vintage、retrieved_at 和 source_url。French 数据库会修订历史值；仅保存链接不构成数据快照。未取得原始快照前不得标 VERIFIED，不得启动依赖该序列的 Phase 1 重算。
 
 ## 4. 数据可得性状态（截至设计日）
 
@@ -136,9 +136,9 @@
 | 2016–2021 五年价格结果 | 至 2026-08-31 | 结果日期已过去；四股逐日行情、成交可执行性、公司行动完整性尚未逐项下载验收，标记待核实 |
 | 2016–2021 原始财报 | 每个形成日前最近可用公告 | 官方披露渠道存在；逐份原件、发布时间、历史版本及文件哈希待核实 |
 | CSI 300 全收益 | 2016–2026 日频 | 指数编制文件确认全收益与净收益序列；历史全量下载、许可和时间戳待核实 |
-| 恒生总回报 | 2016–2026 日频 | 恒生官方说明 gross/net TR 及股息再投资；历史全量下载、许可和时间戳待核实 |
+| 港股市场总收益代理 | 2016–2026 月频 | French APAC ex Japan 3 Factors 已确定为新主基准；原始文件快照与逐月完整性尚待实际下载验收，不标 VERIFIED |
 | A 股 FF5+MOM | 2016–2026 月频 | 公开数据说明到 2023-12；后续更新待核实 |
-| 港股 FF5+MOM | 2016–2026 月频 | 暂无已确认的香港专属、同口径免费因子序列；Asia Pacific ex Japan 仅区域代理 |
+| 港股市场基准 | 2016–2026 月频 | 使用 French APAC ex Japan 3 Factors 恢复 USD 市场总收益并转为 HKD；与旧 1006800 设计结果不可直接比较 |
 | CNY/HKD FX、CNY/HKD 无风险利率 | 形成日及持有期日频／月频 | 官方数据入口存在；具体历史接口、时点与授权待核实 |
 
 未完成下载前，不得将“有公开网页／API”写成“数据可得”。缺少某一队列关键数据时，该队列标记不完整，不以供应商当前重述值补回。
@@ -163,7 +163,7 @@
 ### 6.2 现金分红
 
 - 记录公告日、股权登记日、除息日、派息日、每股税前股息、币种、代扣税和实际到账日。
-- 总回报主序列采用税前现金股息再投资；个股模拟再投资价格固定为除息日实际开盘价（停牌或无成交时顺延至首个可交易日开盘），并计入再投资买入佣金、适用税费与滑点。此为可执行价格近似；CSI／恒生官方总回报指数按其指数规则在除息日开市时点／开盘参考价再投资，二者细节不完全相同，需在报告中披露。
+- 个股模拟总回报主序列采用税前现金股息再投资；个股模拟再投资价格固定为除息日实际开盘价（停牌或无成交时顺延至首个可交易日开盘），并计入再投资买入佣金、适用税费与滑点。此为可执行价格近似；A 股 CSI 300 官方总回报指数按其指数规则再投资；港股基准是 French APAC ex Japan 区域市值加权市场组合收益，非香港本地指数，二者构造和成分范围不同，需在报告中披露。
 - 再投资股数：`新增股数 = 当前股数 × 每股可再投资股息 / 再投资价格`；若税后敏感性则将每股可再投资股息替换为扣税后金额。
 - 税后敏感性将可分配股息替换为税后金额，不覆盖税前主序列。
 
@@ -258,7 +258,7 @@
 - 若投资者身份／持有渠道不明确，至少报告 0% 与 20% 两个股息税情景，并标记税后结果待核实；不得把 20% 当作所有投资人的普遍税率。
 - A 股个人股息税涉及持有期限和投资者身份，不能统一套用一个税率；税前总回报和按具体规则计算的税后回报分开保存。
 - CSI 300 全收益指数反映税前股息再投资；净收益指数采用指数规则中的 10% 股息税假设。主基准用全收益，税后敏感性可用净收益，但必须说明指数税率与个人实际税率不一定相同。
-- 恒生 Gross TRI 使用税前股息，Net TRI 使用税后净股息；主基准用 Gross TRI，税后敏感性用 Net TRI，并核对其税率假设。
+- 历史原设计基准税务说明（v0.4.7 及以前）：恒生 Gross TRI 使用税前股息，Net TRI 使用税后净股息。该历史说明不再定义 v0.4.8 主基准；个股股息税、交易税、佣金和成本规则保持原冻结口径不变。
 
 税务依据入口：国家税务总局财税〔2016〕127 号深港通税收政策，关于内地个人投资者 H 股股息 20% 代扣见 https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203646/content.html 。后续政策变更须按每个历史派息日的有效规则记录。
 
@@ -310,7 +310,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 ### 11.4 统一版本与使用边界
 
-指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。**当前数据尚未采集，指数、因子与 FX 的具体数据版本及哈希无法在本轮冻结；不得编造版本号或哈希，须在数据冻结时逐文件封存。**数据授权、商业使用、缓存、存储和再分发条款未确认前，不批量抓取、不提交受限原始文件到 GitHub。
+指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。French APAC 3 Factors 与 DEXHKUS 原始文件快照是本版港股基准的强制数据层交付：保存原始文件本体、获取时间、SHA-256、首末日期／月份、期望月份清单、实际月份清单、缺失月份、源文件缺失值哨兵检查及月末 FX 映射结果。French 数据库会修订历史值，只留链接不构成快照。**本次文档 PR 尚未取得这两份原始文件，文件哈希与实际覆盖／缺失月结果均为 NOT_RETRIEVED，不得标 VERIFIED；Phase 1 新基准重算必须等快照验收完成后启动。**数据授权、商业使用、缓存、存储和再分发条款未确认前，不提交受限原始文件到 GitHub。
 
 ## 12. 缺失值、异常值和监测停止规则
 
@@ -349,7 +349,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [ ] 京东／美团分派的原始公告、比例、除权日、登记日、股份证明寄发日期、港股通资格、ChinaClear／CCASS 入账与可交易限制核对。
 - [ ] 主投资者情景固定为内地非美国个人经南向港股通持有腾讯；京东入账路径需券商／托管人／中国结算参与人确认，未确认时队列 NA。
 - [ ] 腾讯、京东、美团三只证券的日价格、现金股息、拆并股、送转及其他公司行动数据齐全。
-- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对；HK 区域因子 USD 转换另使用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率。
+- [ ] FX 固定为 CFETS HKD/CNY 中间价，09:15 发布时间及非发布日沿用规则核对；French APAC USD 市场总收益转换为 HKD 使用 Federal Reserve H.10 / FRED DEXHKUS 月末汇率，报价方向和月末取值规则按 §11.3 核对。
 - [ ] A 股开盘集合竞价、涨跌停无法成交、港股开市前竞价、停牌与最多五个共同交易日重试规则核对。
 - [ ] 共同交易日包含沪／深港通南向额外不开放日；台风／黑雨信号取香港天文台历史库，实际市场开闭以 HKEX 通告和 Severe Weather Trading 规则核对。
 - [ ] 中报／半年报／季度报告不入模，只用完整财年数据。
@@ -357,8 +357,8 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [ ] 每个形成日的交易日历、决策时区、下一日执行价核对。
 - [ ] 每家公司每个形成日的原始财报版本、公告时间、公告编号和 SHA-256 核对。
 - [ ] 财务字段原始值、标准化值、单位转换与重述链核对。
-- [ ] CSI 300 Gross TRI H00300 与 HSI Gross TRI 1006800 历史数据授权、连续性和缺失率核对。
-- [ ] A 股 PKU FF5+MOM、港股 Asia Pacific ex Japan 区域代理、各自币种、ex-post vintage、覆盖和哈希核对。
+- [ ] CSI 300 Gross TRI H00300 历史数据授权、连续性和缺失率核对；French APAC ex Japan 3 Factors 月度原始快照、版本、覆盖和逐月缺失检查核对。
+- [ ] A 股 PKU FF5+MOM 与港股 French APAC ex Japan 3 Factors 的币种、ex-post vintage、原始快照、SHA-256、覆盖和逐月缺失检查核对。
 - [ ] 实物分派税务单独记录，不自动套用 H 股现金股息 20% 代扣；交易税、佣金、交易所费用、滑点和股息再投资成本核对。
 - [ ] A 区与 B 区数据快照均在数据冻结时、B 区解封前生成 SHA-256 manifest；B 区哈希由结果保管人独立计算；指定独立复核人于首次评估前完成数据质量复核。
 - [x] NA 比例上限及分母口径已由负责人卫勒于 2026-11-14 13:36 CST 确认：NA 队列比例=NA 成熟计划队列／全部已成熟 2027+ 计划队列（分母含有效与 NA 队列），上限 20%；分子只计仍无可识别终值的 NA 队列。破产按终值计入回报、可识别现金或换股对价的私有化／并购按对价计入回报，均不计 NA。在规划数据生成过程（MA(4)、24 个连续年度、无缺失年份）下，首次评估直接进入永久终止的真实概率不低于 0.61%。条件 (a)/(b) 的完整定义见预注册 §6.1“永久不可评估终止规则（m=3，已确认）”；非首次预定评估若 NA 比例超限，该次标记“不可评估”，不运行停止检验、不递增 k、不消耗 α。中间插入一次可计算评估时，条件 (a) 的连续计数重置为 0（可计算评估是检验实际运行的评估，按'连续'口径中断序列；下一次超限从 1 重新计）。
@@ -380,9 +380,9 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - [香港天文台热带气旋警告信号历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb1.shtml)
 - [香港天文台暴雨警告历史数据库](https://www.hko.gov.hk/en/wxinfo/climat/warndb/warndb3.shtml)
 - [北京大学新金融与创业投资研究中心公开因子库](https://www.gsm.pku.edu.cn/finvc/info/1027/1147.htm)
-- [Kenneth R. French Data Library（含 Asia Pacific ex Japan FF5 与 Momentum 月度序列）](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+- [Kenneth R. French Data Library（Fama/French Asia Pacific ex Japan 3 Factors 月度序列）](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
 - [中证指数有限公司《沪深300指数》事实表（列明全收益 H00300、净收益 N00300）](https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf)
-- [香港交易所 OMD-C 接口规范 v1.39a（列明 1006800 Gross TRI、2006800 Net TRI）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf)
+- [历史原设计基准：香港交易所 OMD-C 接口规范 v1.39a（1006800 Gross TRI、2006800 Net TRI；v0.4.8 起不再作为港股主基准）](https://www.hkex.com.hk/eng/prod/dataprod/Documents/HKEX_OMD-C_Binary_Interface_Specifications_v1.39a.pdf)
 - [Federal Reserve H.10 / FRED：DEXHKUS（每日港币兑美元汇率，HKD per USD）](https://fred.stlouisfed.org/series/DEXHKUS)
 - [中债国债收益率曲线：10 年期到期收益率（CCDC）](https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US)
 - [香港金融管理局：Economic & Financial Data for Hong Kong（Government bond yield - 10-year）](https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/)。检索路径为 HKMA 官方统计门户人工查询（Economic & Financial Data for Hong Kong → Interest Rate → “Government bond yield - 10-year”），无公开 API 端点；在 2025-01-15 断点处检验收益率跳变并记录，序列按披露口径拼接使用；“不是 Exchange Fund Notes”的识别适用于 2016 年以后样本。
@@ -443,3 +443,12 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 - **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
 - **修订范围：**同步本数据契约中的停止规则措辞与验收记录，并恢复 v0.4.3/v0.4.4 历史节、改写 v0.4.6 更正句；不改数据字段、来源优先级、模型输入参数或任何既有参数值。
 - **历史节恢复：**本文件恢复 v0.4.3/v0.4.4 节原文。
+
+
+## 2026-11-15 验证轨 Phase 0 v0.4.8 数据基准重冻记录（pvis-phase0-refreeze-v048-20261115-01）
+
+- **基线与分支：**main@cc97e5978b440ab96159b1969f9cb25ac245b6b7 → validation/phase0-refreeze-v048。
+- **基准变化：**港股主基准由恒生 Gross TRI 1006800 改为 French APAC ex Japan 3 Factors（月度）恢复的区域市场总收益；不改变 A 股 H00300。
+- **币种与回归：**French 源收益 USD → HKD；DEXHKUS 报价方向 HKD per USD，月末取值与换算公式见 §11.3。Beta 的腾讯个股与市场月收益均为 HKD，HKD 10 年期 Rf 来源不变；ERP 使用 HKD 市场收益减原 HKD 月度 Rf。
+- **适用与可比性：**同一新基准适用于 Phase 1 2016–2021 和 2027 前瞻队列。该代理不是香港本地指数或恒生官方 Gross TRI；旧版 1006800 结果与本版结果不可直接比较。
+- **原始快照：**French 月度 3 Factors ZIP 与 FRED DEXHKUS 原始 CSV 的实际文件、SHA-256、首末日期／月份和逐月缺失检查尚未取得；均为 NOT_RETRIEVED，不得标 VERIFIED。必须在 Phase 1 重算前封存。
