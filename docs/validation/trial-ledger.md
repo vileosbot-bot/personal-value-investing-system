@@ -22,3 +22,4 @@
 | pvis-phase0-refreeze-v045-opus-20261115-01 | 2026-11-15 | Opus 复核 v0.4.5 | verdict 不通过（revise）；裁决见总管本地 opus-adjudication-pvis-phase0-refreeze-v045-20261115-01.md。
 | pvis-phase0-refreeze-v046-20261115-01 | 2026-11-15 | v0.4.6 执行 | PR #11，执行中。
 | pvis-phase0-refreeze-v046-opus-20261115-01 | 2026-11-15 | Opus 复核 v0.4.6 | verdict 有保留同意；S-1/S-2 已修好，数字全部一致；M-1～M-6、L-1～L-12 见总管裁决 opus-adjudication-pvis-phase0-refreeze-v046-20261115-01.md；条件 1 为 OTS 证明（待确认），条件 2 为 M-1～M-4 进 v0.4.7。（总管核对）
+| pvis-phase0-refreeze-v047-20261115-01 | 2026-11-15 | v0.4.7 执行 | PR #12，执行中。 |

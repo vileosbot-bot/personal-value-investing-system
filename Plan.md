@@ -443,4 +443,4 @@
 - **v0.4.6 基线 CI：**合并提交 0df7b0c5e3d5712274fe12939abe8ef0b1212c02 在 main 上的 GitHub Actions run 43674833093（workflow ci，2026-11-15T04:00:30Z，conclusion=success）。
 - **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
 - **执行边界：**不改 main、不合并、不建标签、不做 OSF；不新建或修改冻结清单与冻结记录文件；不改校准脚本、模型代码、证据 JSON、估值底稿或决策卡。
-- **PR：**创建后补录实际编号与链接；本轮只开 PR，不合并。
+- **PR：**PR #12（https://github.com/vileosbot-bot/personal-value-investing-system/pull/12）已创建；GitHub 元数据读回 state=open、merged=false；本轮只开 PR，不合并。
