@@ -1,0 +1,4 @@
+# Phase 0 calibration environment lock (frozen v0.4.5; verified by operator 2026-11-15)
+# Python 3.12.3; OS Linux htch-runtime 7.0.0-44-generic x86_64; RNG NumPy PCG64 (default_rng), seed 20261114
+numpy==1.26.4
+scipy==1.11.4
