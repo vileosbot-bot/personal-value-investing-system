@@ -4,7 +4,7 @@
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
 - 版本：Phase 0 / v0.4.6（文档层重新冻结；只改措辞与记录，不改既有参数值；新增设计规则见本轮记录）
-- 基线：main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；本次修订分支：validation/phase0-refreeze-v044（由该基线创建）
+- 基线：main@00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40；本次修订分支：validation/phase0-refreeze-v046（由该基线创建）
 - 状态：MONITORING_DESIGN；本次未执行历史重算、回测、统计检验或新估值；任何描述性统计均不得标记为确认性证据或 VERIFIED。
 - 本文件与 docs/validation-data-contract.md、docs/validation-input-rules.md、Plan.md 配套。冲突时先暂停，修订并记录，不自行选择有利口径。
 - 当前治理状态：OSF／AsPredicted 已豁免且未注册；未创建 Git 签名标签；各版本合并、冻结分支与第三方时间证明事实见附表 A5。文档层冻结的最终锚点为 OTS 盖戳清单中的完整 commit SHA，冻结分支仅作查找用途。A/B 数据快照、指数／因子／FX 数据版本与逐文件 SHA-256 属于数据层冻结，按附表 A2／A5 在数据采集完成后、B 区解封前封存。
