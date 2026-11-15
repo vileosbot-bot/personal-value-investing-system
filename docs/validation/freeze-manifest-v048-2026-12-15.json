@@ -101,11 +101,11 @@
     }
   ],
   "document_sha256": {
-    "docs/validation-phase0-preregistration.md": "3ff883b6dae6db6252fd865abd312400ab8ea2d3665c61b8f3d619d741d61049",
-    "docs/validation-data-contract.md": "eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f",
-    "docs/validation-input-rules.md": "8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add",
-    "Plan.md": "de6d6e5093b1ae89b76b240ad72e4107c77f8c71b154a0a4dbc4cdc7ed2569c3",
-    "docs/validation/trial-ledger-entry-v048.md": "dc3573fa25fe34555361be663ea51b9dee2c8059bed9b5d34254575e77417645"
+    "docs/validation-phase0-preregistration.md": "b0b95bdd195c4ae17b3a6400f1babe37b4a0adad7d12aefbe665ac3b82064e75",
+    "docs/validation-data-contract.md": "d5795a300b625a98698c990ccdaab950f3545aa93152aa6cdba7fd0bf740d5d6",
+    "docs/validation-input-rules.md": "df4c3a0e0e58a1a9578e51b75e39188bf7a92fc0a7166877c8304a4dda4f4302",
+    "Plan.md": "d081434d3c5541298aa4da95d96b966436f762ba612ba9ccc1718998468fa7a8",
+    "docs/validation/trial-ledger-entry-v048.md": "6358e2d3941db7ed2976ff4daf840885969442412bf1f44f060f67f53e7bbef2"
   },
   "manifest_schema_note": "No v0.4.7 freeze-manifest JSON was present in main@cc97e597, phase0-freeze-v047-2026-12-15, or validation/phase0-refreeze-v047. This v0.4.8 manifest uses an explicit self-contained schema; schema identity with a non-existent v0.4.7 artifact cannot be asserted.",
   "owner_authorization": {
