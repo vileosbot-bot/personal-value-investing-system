@@ -30,13 +30,13 @@ MSCI Hong Kong Net Total Return 不采用：官方页面有公开查询／下载
 
 ## 文档 SHA-256
 
-- docs/validation-phase0-preregistration.md: 3ff883b6dae6db6252fd865abd312400ab8ea2d3665c61b8f3d619d741d61049
+- docs/validation-phase0-preregistration.md: c90741b63ed4661a3b24c4d1d4ddfbd167c29327a5f96d1aa2e6af604e973370
 - docs/validation-data-contract.md: eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f
 - docs/validation-input-rules.md: 8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add
 - Plan.md: de6d6e5093b1ae89b76b240ad72e4107c77f8c71b154a0a4dbc4cdc7ed2569c3
 - docs/validation/trial-ledger-entry-v048.md: dc3573fa25fe34555361be663ea51b9dee2c8059bed9b5d34254575e77417645
 
-- docs/validation/freeze-manifest-v048-2026-12-15.json: 3972b26ab140197225480c4e377a275a2a60f13b5990a765da7b64efb93327d3
+- docs/validation/freeze-manifest-v048-2026-12-15.json: 2e53735ad8193ce7a80dfba495b05cf959d618231067f50f5fc7991da0c08759
 
 ## 冻结清单格式说明
 
