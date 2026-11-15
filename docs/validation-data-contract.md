@@ -304,11 +304,13 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 **固定数据文件：**Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors [Monthly]，使用该地区 **3 Factors 月度 CSV 文件**（预期文件名 Asia_Pacific_ex_Japan_3_Factors_CSV.zip）。不得以 5 Factors、Momentum、Developed、Developed ex US、其他地区或其他频率文件替代或拼接。官方 Data Library 页面提供该地区 3 Factors 的 TXT／CSV 下载入口；本次执行未能取得原始 ZIP，故文件字节、实际覆盖和 SHA-256 仍待验，不标 VERIFIED。
 
+**文件解析与版本锁定规则：**(1) 只解析文件中的月度数据段，遇到首个空行或年度段标题即停止，不读取后续年度汇总／其他频率数据段；(2) 源文件哨兵值（例如 −99.99）一律按缺失值处理，不得作为有效收益；(3) 实际文件名与预期文件名 Asia_Pacific_ex_Japan_3_Factors_CSV.zip 不符时停止解析并转人工处理，不得自动切换或替换文件；(4) 原始快照一经取得，即以原始 ZIP 的 SHA-256 锁定该版本，此后官网历史值修订不追溯、不覆盖已锁定快照，若另行采用新版本须单独建立 data_vintage 并重新审批。
+
 **市场总收益恢复：**源文件 Mkt-RF 与 RF 均按百分数记录。每月 t 的 USD 市场组合简单总收益固定为 R_m,USD,t = (Mkt-RF_t + RF_t) / 100。不得把 Mkt-RF 单独当作市场总收益；不得把 RF 作为港币无风险利率。
 
-**USD → HKD：**使用 Federal Reserve H.10 / FRED DEXHKUS，报价方向为 HKD per USD（每 1 美元对应的港币数）。每个月 t，X_t 取该月最后一个日历日当日或之前最近一个有效 DEXHKUS 观测；X_(t−1) 按前一个月相同规则取值。换算后的港币市场总收益为 R_m,HKD,t = (1 + R_m,USD,t) × (X_t / X_(t−1)) − 1。不得倒置汇率比值，不得把 HKD/USD 误写成 USD/HKD，不得用月平均值替代月末值。
+**USD → HKD：**使用 Federal Reserve H.10 / FRED DEXHKUS，报价方向为 HKD per USD（每 1 美元对应的港币数）。每个月 t，X_t 取该月最后一个日历日当日或之前最近一个有效 DEXHKUS 观测；X_(t−1) 按前一个月相同规则取值；若某月内无任何有效 DEXHKUS 观测（回溯会跨入上一个月），该月记 NA。换算后的港币市场总收益为 R_m,HKD,t = (1 + R_m,USD,t) × (X_t / X_(t−1)) − 1。不得倒置汇率比值，不得把 HKD/USD 误写成 USD/HKD，不得用月平均值替代月末值。
 
-**Beta 同币种处理：**腾讯月度个股总回报保持 HKD；市场代理按上述规则转换为 HKD。Beta 回归只使用同一 60 个月窗口、同一月份、同为 HKD 的 R_i,HKD 与 R_m,HKD，并按既有 HKD 10 年期无风险利率月有效收益 r_f,HKD,m = (1 + y_m)^(1/12) − 1 构造超额收益。Beta 仍要求最近 60 个完整月、至少 36 个共同有效月份；窗口和下限不变。
+**Beta 同币种处理：**腾讯月度个股总回报保持 HKD；市场代理按上述规则转换为 HKD。Beta 回归只使用同一 60 个月窗口、同一月份、同为 HKD 的 R_i,HKD 与 R_m,HKD，并按既有 HKD 10 年期无风险利率月有效收益 r_f,HKD,m = (1 + y_m)^(1/12) − 1 构造超额收益。y_m 以小数表示（例如 4.00% 记为 0.04）。Beta 仍要求最近 60 个完整月、至少 36 个共同有效月份；窗口和下限不变。
 
 **ERP 同币种处理：**最近 120 个完整月份使用 ERP_HKD = 12 × mean(R_m,HKD,t − r_f,HKD,m)；市场收益和无风险收益均为 HKD。120 个月窗口、算术平均、年化乘数及 ERP 正阈值均不变。French RF 只用于恢复 R_m,USD，不替代 HKMA 10 年期 HKD Rf，也不改无风险利率来源。
 
