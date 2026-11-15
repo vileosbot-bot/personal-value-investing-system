@@ -30,13 +30,13 @@ MSCI Hong Kong Net Total Return 不采用：官方页面有公开查询／下载
 
 ## 文档 SHA-256
 
-- docs/validation-phase0-preregistration.md: b193f46bf167367e0eff1936d3db95ae6cb0a1a6b260ab2f1eeda19759dbcb05
+- docs/validation-phase0-preregistration.md: 3ff883b6dae6db6252fd865abd312400ab8ea2d3665c61b8f3d619d741d61049
 - docs/validation-data-contract.md: eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f
 - docs/validation-input-rules.md: 8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add
-- Plan.md: 6e3ee0bcfeca8c08b734c70617418835317740694dd53a4c00eb44731c6ed76a
-- docs/validation/trial-ledger-entry-v048.md: 2cfce39fa81ee7cac01cc4e6c091f6cac6df4a4c386f12a8eba80c669692d9fe
+- Plan.md: de6d6e5093b1ae89b76b240ad72e4107c77f8c71b154a0a4dbc4cdc7ed2569c3
+- docs/validation/trial-ledger-entry-v048.md: dc3573fa25fe34555361be663ea51b9dee2c8059bed9b5d34254575e77417645
 
-- docs/validation/freeze-manifest-v048-2026-12-15.json: e8ec1cb2c87f6120b2773261dd4b5efc2d886cbf01c356fb76b1dfb2add01ad7
+- docs/validation/freeze-manifest-v048-2026-12-15.json: 3972b26ab140197225480c4e377a275a2a60f13b5990a765da7b64efb93327d3
 
 ## 冻结清单格式说明
 
