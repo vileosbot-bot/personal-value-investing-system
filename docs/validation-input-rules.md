@@ -3,8 +3,8 @@
 > 上一轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.6（文档层重新冻结；V1.1 模型输入与参数保持不变）
-- 本次基线：main@00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40；工作分支 validation/phase0-refreeze-v046。
+- 版本：Phase 0 / v0.4.7（文档层重新冻结；V1.1 模型输入与参数保持不变）
+- 本次基线：main@0df7b0c5e3d5712274fe12939abe8ef0b1212c02；工作分支 validation/phase0-refreeze-v047。
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -462,7 +462,17 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 - **请求与复核：**本次 request-id pvis-phase0-refreeze-v046-20261115-01；Opus v0.4.5 复核 request-id pvis-phase0-refreeze-v045-opus-20261115-01，verdict 不通过（revise）；本次 v0.4.6 复核 request-id pvis-phase0-refreeze-v046-opus-20261115-01（总管另行安排）。
 - **负责人批准：**负责人卫勒于 2026-11-15 10:41 CST 按总管裁决批准本轮修订。
 - **修订性质：**不改既有参数值；新增 M-6（30 次预定评估上限）与 M-7（截止后重新冻结的队列后果）设计规则，均经负责人批准（批准记录 freeze-approval-v046-20261115.md，SHA-256 0da6daadb06c98aa4c9ad0143825672b34080e9c382147e9adbc52fb0acbf9a1）。
-- **更正：**v0.4.5 各处‘不改任何参数值’表述有误，现更正为‘不改既有参数值；新增 M-6 与 M-7 设计规则，均经负责人批准（见批准记录）’。
+- **更正：**v0.4.5'修订性质与不变量'称'仅修订措辞'，但 M-6（30 次预定评估上限）与 M-7（截止后重新冻结的队列后果）为新增设计规则，当时未逐项批准；现更正为'不改既有参数值；新增 M-6 与 M-7 设计规则，均经负责人批准（见批准记录 freeze-approval-v046-20261115.md）'。历史节（v0.4.3/v0.4.4）的'不改任何参数值'为当时正确表述，已恢复原文。
 - **数值与代码不变量：**NA 20%、m=3、N=20、U_N < −3.0pp、α_k=0.05/[k(k+1)]、无条件误差表 2.65%/1.49%/24.52%/48.43%、条件误差表 2.66%/1.50%/24.67%/48.73%、c_N=0.55、P(不可评估)≈0.61%、临界值 t_(3,0.975)=3.182446、校准脚本 docs/validation/mc-calibration-stop-rule.py 与模型代码 src/pvis/regression.py 均不变。
 - **修订范围：**S-1、S-2、M-1 至 M-6、L-1 至 L-6、L-8；本轮无独立 M-7 修订项，M-7 作为负责人已批准的设计规则按 M-5 定稿表述。
 - **批准记录：**freeze-approval-v046-20261115.md；SHA-256 0da6daadb06c98aa4c9ad0143825672b34080e9c382147e9adbc52fb0acbf9a1。
+
+## 2026-11-15 验证轨 Phase 0 v0.4.7 文档层重新冻结（pvis-phase0-refreeze-v047-20261115-01）
+
+- **版本、基线与分支：**Phase 0 / v0.4.7；仓库 vileosbot-bot/personal-value-investing-system；基线 main@0df7b0c5e3d5712274fe12939abe8ef0b1212c02；工作分支 validation/phase0-refreeze-v047。
+- **请求与复核：**本次 request-id pvis-phase0-refreeze-v047-20261115-01；Opus v0.4.6 复核 request-id pvis-phase0-refreeze-v046-opus-20261115-01，verdict 有保留同意；本次 v0.4.7 复核 request-id pvis-phase0-refreeze-v047-opus-20261115-01（总管另行安排）。
+- **负责人批准：**负责人卫勒于 2026-11-15 12:36 CST 点选批准本轮修订。
+- **修订性质：**只改措辞与记录；M-5 可计算评估重置计数为已冻结“连续”的澄清，经负责人单列确认；不改既有参数值。
+- **数值与代码不变量：**NA 20%、m=3、N=20、U_N < −3.0pp、α_k=0.05/[k(k+1)]、无条件误差表 2.65%/1.49%/24.52%/48.43%、条件误差表 2.66%/1.50%/24.67%/48.73%、c_N=0.55、P(不可评估)≈0.61%、30 次预定评估上限、校准脚本 docs/validation/mc-calibration-stop-rule.py（blob a84c1213）与模型代码 src/pvis/regression.py（blob d4bcbafc）均不变。
+- **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
+- **本文件边界：**只更新版本状态与记录；V1.1 模型输入规则、公式、函数、输入参数和输出口径均不变；M-5 是停止规则中“连续”计数的解释性澄清，不改变模型输入规则。
