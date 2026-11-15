@@ -78,7 +78,7 @@
 ### 4. 结果、基准与币种
 
 - 三家 A 股：对照沪深 300 全收益指数（CSI 300 Total Return Index），不使用价格指数替代。
-- 腾讯：市场基准采用 Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors（月度）所含区域市值加权市场组合。先按源文件百分数单位恢复 USD 市场总收益，再按数据契约 §3.3 使用 Federal Reserve H.10 / FRED DEXHKUS 月末 HKD/USD 汇率换算为 HKD。该区域组合包含香港，同时包含澳大利亚、新西兰和新加坡等市场；它是区域市场代理，不是香港本地指数，不是恒生指数公司官方 Gross TRI 1006800，也不与 1006800 等价。
+- 腾讯：市场基准采用 Kenneth R. French Data Library 的 Fama/French Asia Pacific ex Japan 3 Factors（月度）所含区域市值加权市场组合。先按源文件百分数单位恢复 USD 市场总收益，再按数据契约 §11.3 使用 Federal Reserve H.10 / FRED DEXHKUS 月末 HKD/USD 汇率换算为 HKD。该区域组合包含香港，同时包含澳大利亚、新西兰和新加坡等市场；它是区域市场代理，不是香港本地指数，不是恒生指数公司官方 Gross TRI 1006800，也不与 1006800 等价。
 - 个股 Rank IC 与超额回报按各自上市市场本币计算：A 股为 CNY，腾讯为 HKD；腾讯另换算为 RMB 报告汇率影响。
 - 15% 组合目标统一按 RMB 计价，包含腾讯 HKD/CNY 汇率变动。汇率使用每个交易日可追溯的官方或授权日汇率；缺少日度汇率时不估算。
 - 新基准统一适用于 Phase 1 的 2016–2021 历史队列与 2027 前瞻队列；Phase 1 历史队列须按本版规则重算。v0.4.7 及以前按恒生 1006800 Gross TRI 设计得到的结果，与本版区域代理基准结果不可直接比较。
@@ -403,6 +403,7 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 | v0.4.5 | `00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40` | 2026-11-15 09:44:39 CST（01:44:39Z） | PR #10 已合并至 main；清单 freeze-manifest-v045-2026-12-15.json（SHA-256 cd767e2587761737a79ce983153cb6af82c2bf120c52ba5ed19bb7d4b0597c59）；OTS 已盖戳、升级待验证。 |
 | v0.4.6 | `0df7b0c5e3d5712274fe12939abe8ef0b1212c02` | 2026-11-15 12:00:27 CST（04:00:27Z） | PR #11 已合并至 main；清单 freeze-manifest-v046-2026-12-15.json（SHA-256 1151c63d…）；OTS 已盖戳、升级待验证；phase0-freeze-v046-2026-12-15 指向该提交。 |
 | v0.4.7 | `cc97e5978b440ab96159b1969f9cb25ac245b6b7` | 2026-11-15 14:13:56 CST（06:13:56Z） | PR #12 已合并至 main；文档层冻结基线为本提交；v0.4.7 独立清单未见于该冻结分支文件树。 |
+| v0.4.8 | CI 验证提交 `0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4` | 未合并 | PR #13 Open、merged=false；GitHub Actions run 202（run id 43733459211，workflow ci）success；French 与 DEXHKUS 原始快照仍 NOT_RETRIEVED，OTS 待确认。 |
 
 ## 附表 B：公开方法与数据来源入口
 
