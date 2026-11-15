@@ -24,8 +24,8 @@ MSCI Hong Kong Net Total Return 不采用：官方页面有公开查询／下载
 ## 原始数据快照状态
 
 - French APAC ex Japan 3 Factors 原始月度 CSV ZIP：NOT_RETRIEVED；SHA-256、实际首末月份、逐月缺失检查均为 null／待完成。
-- FRED DEXHKUS 原始日频 CSV：NOT_RETRIEVED；SHA-256、实际首末日期、缺失观测及月末映射检查均为 null／待完成。
-- 不得将未取得的数据标记 VERIFIED；Phase 1 新基准重算必须等原始快照封存并完成逐月检查后启动。
+- FRED DEXHKUS 原始日频 CSV：RETRIEVED；获取时间 2026-11-16 00:49 CST（2026-11-15 16:49 UTC）；SHA-256 `1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7`；11,961 行数据，首末日期 1981-01-02 至 2026-11-06，日期升序且无重复；空缺值日 456 天；2006-07 至 2021-08 共 182 个月的月末映射全部覆盖，无缺失，抽查 2006-07-31=7.7703、2006-08-31=7.7767、2021-08-31=7.7779。来源：FRED Max 全历史下载 https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXHKUS&cosd=1981-01-02&coed=2026-11-16。已由总管取得并验讫。
+- DEXHKUS 快照已由总管取得并验讫；French APAC ex Japan 3 Factors 原始快照仍 NOT_RETRIEVED。Phase 1 新基准重算必须等 French 原始快照封存并完成逐月检查后启动。
 - 仅保存下载链接不构成快照。French 数据库历史值会修订，必须保存原始文件本体、获取日期和 SHA-256。
 
 ## 文档 SHA-256
