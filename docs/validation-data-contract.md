@@ -318,7 +318,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 ### 11.4 统一版本与使用边界
 
-指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。French APAC 3 Factors 与 DEXHKUS 原始文件快照是本版港股基准的强制数据层交付：保存原始文件本体、获取时间、SHA-256、首末日期／月份、期望月份清单、实际月份清单、缺失月份、源文件缺失值哨兵检查及月末 FX 映射结果。French 数据库会修订历史值，只留链接不构成快照。**本次文档 PR 尚未取得这两份原始文件，文件哈希与实际覆盖／缺失月结果均为 NOT_RETRIEVED，不得标 VERIFIED；Phase 1 新基准重算必须等快照验收完成后启动。**数据授权、商业使用、缓存、存储和再分发条款未确认前，不提交受限原始文件到 GitHub。
+指数与因子序列均不是模型输入，不参与形成日排序；它们只用于结果基准和事后诊断。所有文件须保存 source_url、data_vintage、point_in_time_status=ex_post、retrieved_at、currency、字段字典和 SHA-256。French APAC 3 Factors 与 DEXHKUS 原始文件快照是本版港股基准的强制数据层交付：保存原始文件本体、获取时间、SHA-256、首末日期／月份、期望月份清单、实际月份清单、缺失月份、源文件缺失值哨兵检查及月末 FX 映射结果。French 数据库会修订历史值，只留链接不构成快照。**截至本次更新，French 原始 ZIP 仍 NOT_RETRIEVED，文件哈希、实际覆盖及逐月缺失检查均待完成，不得标 VERIFIED；DEXHKUS 全历史 CSV 已由总管取得并验讫，具体快照信息见冻结清单与冻结记录。Phase 1 新基准重算必须等 French 原始快照封存并完成逐月检查后启动。**数据授权、商业使用、缓存、存储和再分发条款未确认前，不提交受限原始文件到 GitHub。
 
 ## 12. 缺失值、异常值和监测停止规则
 
