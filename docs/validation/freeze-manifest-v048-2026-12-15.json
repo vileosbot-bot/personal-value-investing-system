@@ -1,0 +1,119 @@
+{
+  "schema_version": "v0.4.8-explicit",
+  "artifact": "Phase 0 freeze manifest",
+  "request_id": "pvis-phase0-refreeze-v048-20261115-01",
+  "version": "v0.4.8",
+  "freeze_target_date": "2026-12-15",
+  "repository": "vileosbot-bot/personal-value-investing-system",
+  "github_identity": "vileosbot-bot",
+  "baseline": {
+    "branch": "main",
+    "commit": "cc97e5978b440ab96159b1969f9cb25ac245b6b7"
+  },
+  "working_branch": "validation/phase0-refreeze-v048",
+  "pull_request": {
+    "status": "pending_creation",
+    "base": "main",
+    "merge_allowed": false
+  },
+  "benchmark": {
+    "a_share": {
+      "name": "CSI 300 Gross Total Return",
+      "code": "H00300",
+      "unchanged": true
+    },
+    "hong_kong_proxy": {
+      "dataset": "Fama/French Asia Pacific ex Japan 3 Factors [Monthly]",
+      "provider": "Kenneth R. French Data Library",
+      "fixed_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+      "fields": [
+        "Mkt-RF",
+        "RF"
+      ],
+      "source_currency": "USD",
+      "market_total_return_formula": "R_m_USD_t = (Mkt-RF_t + RF_t) / 100",
+      "fx_series": "DEXHKUS",
+      "fx_provider": "Federal Reserve H.10 / FRED",
+      "fx_quote": "HKD per USD",
+      "monthly_observation_rule": "last valid DEXHKUS observation on or before each calendar month-end",
+      "hkd_conversion_formula": "R_m_HKD_t = (1 + R_m_USD_t) * (X_t / X_(t-1)) - 1",
+      "beta_currency": "HKD stock total returns regressed against HKD-converted market total returns",
+      "rf_usage": "French RF only restores the USD market total return; HKD risk-free source remains HKMA 10-year yield",
+      "applies_to": [
+        "Phase 1 historical queues 2016-2021",
+        "2027 forward queue"
+      ],
+      "limitations": [
+        "regional value-weighted portfolio including Australia, Hong Kong, New Zealand and Singapore",
+        "not a Hong Kong local index",
+        "not Hang Seng Gross TRI 1006800 and not equivalent",
+        "old 1006800-design results are not directly comparable"
+      ]
+    }
+  },
+  "unchanged_invariants": {
+    "stop_rule_parameters": "unchanged in full, including N, thresholds, HH kernel, alpha-spending, m=3, 30 endpoints, NA 20% cap and denominator",
+    "company_pool": "unchanged four companies",
+    "formation_and_result_dates": "unchanged",
+    "costs_and_taxes": "unchanged",
+    "erp_window_months": 120,
+    "beta_window_months": 60,
+    "beta_minimum_common_months": 36,
+    "model_code": "unchanged",
+    "a_share_benchmark": "H00300 unchanged",
+    "risk_free_sources": "unchanged",
+    "hkd_cny_fx_convention": "unchanged"
+  },
+  "source_snapshots": [
+    {
+      "dataset": "French APAC ex Japan 3 Factors monthly",
+      "official_landing_page": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+      "expected_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+      "attempted_download_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+      "status": "NOT_RETRIEVED",
+      "retrieved_at": null,
+      "sha256": null,
+      "actual_first_month": null,
+      "actual_last_month": null,
+      "missing_months": null,
+      "note": "Official page entry verified; raw archive fetch failed in this execution environment. Do not mark VERIFIED or start Phase 1 recalculation until the original archive is captured and checked."
+    },
+    {
+      "dataset": "Federal Reserve H.10 / FRED DEXHKUS",
+      "official_series_page": "https://fred.stlouisfed.org/series/DEXHKUS",
+      "series_id": "DEXHKUS",
+      "frequency": "daily",
+      "quote": "HKD per USD",
+      "official_series_start_date": "1981-01-02",
+      "status": "NOT_RETRIEVED",
+      "retrieved_at": null,
+      "sha256": null,
+      "actual_first_date": null,
+      "actual_last_date": null,
+      "missing_observations": null,
+      "month_end_mapping_check": null,
+      "note": "Series metadata and quote direction verified; raw daily CSV snapshot not captured in this execution."
+    }
+  ],
+  "document_sha256": {
+    "docs/validation-phase0-preregistration.md": "3410c8030875153ef2bc0d7035d0257b330694fb0f2621d00a5e83adf5974335",
+    "docs/validation-data-contract.md": "3e2753ffb4a634b160614b1a96c120ca5cc038cccaefd6f6e660f6e329aa19be",
+    "docs/validation-input-rules.md": "8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add",
+    "Plan.md": "a284e1870681e0642b3a812264b50980ab730eb148645dbbeadc2f8980bec5aa",
+    "docs/validation/trial-ledger-entry-v048.md": "332fbc8fad288e99afd30b1d5c215951e99997464956d9c3d4ecdae03c24d6b2"
+  },
+  "manifest_schema_note": "No v0.4.7 freeze-manifest JSON was present in main@cc97e597, phase0-freeze-v047-2026-12-15, or validation/phase0-refreeze-v047. This v0.4.8 manifest uses an explicit self-contained schema; schema identity with a non-existent v0.4.7 artifact cannot be asserted.",
+  "owner_authorization": {
+    "decision": "replace Hong Kong benchmark and refreeze",
+    "authorized_at": "2026-11-15 22:12 CST"
+  },
+  "ots": {
+    "status": "pending_confirmation",
+    "executed": false
+  },
+  "data_snapshot_gate": {
+    "status": "OPEN",
+    "phase1_recalculation_allowed": false,
+    "reason": "original French and DEXHKUS source snapshots not retrieved"
+  }
+}
