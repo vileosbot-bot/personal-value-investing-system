@@ -3,9 +3,9 @@
 > 上一轮数据契约配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本轮补充 NA、事件、数据质量门和归档数据字段；不扩大固定样本，不修改冻结模型代码，不执行实际冻结、外部注册或第三方时间戳。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.7（文档层重新冻结；仅修订措辞与记录；不改既有参数值，新增设计规则见本轮记录）
+- 版本：Phase 0 / v0.4.8（香港市场基准替补重冻；仅改香港基准直接相关的来源、币种转换、Beta／ERP 市场代理与版本记录；其他冻结参数及模型规则不变）
 - 适用范围：600519.SH、00700.HK、002594.SZ、600036.SH；历史形成截面 2016–2021，前瞻年度监测队列自 2027 起。
-- 本次基线：main@0df7b0c5e3d5712274fe12939abe8ef0b1212c02；本次修订分支 validation/phase0-refreeze-v047。
+- 本次基线：main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；本次修订分支 validation/phase0-refreeze-v048。
 状态原则：本文件定义字段、来源优先级、时点、NA、标的事件和数据质量门；不表示任何数据源已经成功下载、获准长期存储或完成历史 PIT 验证。前瞻队列只作描述性监测；唯一重大失败停止规则及 HH／有效自由度规则见预注册 §6.2。
 
 ## 1. 数据对象与强制字段
