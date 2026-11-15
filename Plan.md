@@ -450,7 +450,7 @@
 ## 2026-11-15 验证轨 Phase 0 v0.4.8 香港市场基准重冻（pvis-phase0-refreeze-v048-20261115-01）
 
 - **状态：**文档层基准替补修订已在独立分支；原始 French 3 Factors ZIP 与 DEXHKUS CSV 快照尚未取得，数据层验收未完成，Phase 1 新基准重算暂缓；PR #13 已创建并保持 Open、未合并。
-- **PR 与 CI：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/13；base main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；PR 创建时 head 3991b20c8502d24d485335b1718c20ea83ab78a0；GitHub Actions run 197（ci）已成功。
+- **PR 与 CI：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/13；base main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；PR 创建时 head 3991b20c8502d24d485335b1718c20ea83ab78a0；PR 创建时 GitHub Actions run 197（ci）已成功；最近一次已回读成功的 PR CI 为 run 202（run id 43733459211），验证提交 0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4。
 - **仓库／账号：**vileosbot-bot/personal-value-investing-system；GitHub 账号 vileosbot-bot；ViLeo06 原仓库只读、不写。
 - **基线与分支：**main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；工作分支 validation/phase0-refreeze-v048。
 - **请求与授权：**request-id pvis-phase0-refreeze-v048-20261115-01；负责人于 2026-11-15 22:12 CST 授权更换基准并重冻；总管随后确认采用 French APAC ex Japan 3 Factors（月度 Mkt-RF + RF）。
