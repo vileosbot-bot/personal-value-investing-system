@@ -449,7 +449,7 @@
 
 ## 2026-11-15 验证轨 Phase 0 v0.4.8 香港市场基准重冻（pvis-phase0-refreeze-v048-20261115-01）
 
-- **状态：**文档层基准替补修订已在独立分支；原始 French 3 Factors ZIP 与 DEXHKUS CSV 快照尚未取得，数据层验收未完成，Phase 1 新基准重算暂缓；PR #13 已创建并保持 Open、未合并。
+- **状态：**文档层基准替补修订已在独立分支；原始 French 3 Factors ZIP 尚未取得，数据层验收未完成；DEXHKUS 全历史 CSV 已由总管取得并验讫，Phase 1 新基准重算暂缓；PR #13 已创建并保持 Open、未合并。
 - **PR 与 CI：**https://github.com/vileosbot-bot/personal-value-investing-system/pull/13；base main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；PR 创建时 head 3991b20c8502d24d485335b1718c20ea83ab78a0；PR 创建时 GitHub Actions run 197（ci）已成功；最近一次已回读成功的 PR CI 为 run 213（run id 43734616335），验证提交 6dd8e54333e94a02b22976fe1d17b4ac76e82ec0。
 - **仓库／账号：**vileosbot-bot/personal-value-investing-system；GitHub 账号 vileosbot-bot；ViLeo06 原仓库只读、不写。
 - **基线与分支：**main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；工作分支 validation/phase0-refreeze-v048。
@@ -458,5 +458,5 @@
 - **适用范围：**新基准同时用于 Phase 1 2016–2021 历史队列及 2027 前瞻队列；旧版 1006800 设计下的结果与新基准结果不可直接比较。
 - **不变量：**停止规则全部参数、四家公司池、形成日／结果日、成本税务、ERP 120 个月、Beta 60 个月及至少 36 个共同有效月份、模型代码、H00300、无风险利率来源、HKD/CNY 汇率口径不变。
 - **交付范围：**三份冻结文档、Plan.md 本记录、docs/validation/trial-ledger-entry-v048.md、freeze-manifest-v048-2026-12-15.json、phase0-refreeze-v048-record-20261115.md；不直接修改 docs/validation/trial-ledger.md。
-- **未完成数据证据：**French 原始月度 ZIP 与 DEXHKUS 原始日频 CSV 未成功取得；SHA-256、实际起止日期／月份和逐月缺失检查均不得编造或标 VERIFIED。Phase 1 重算必须等待原始快照封存与验收。
+- **未完成数据证据：**French 原始月度 ZIP 仍 NOT_RETRIEVED；DEXHKUS 原始日频 CSV 已 RETRIEVED 并验讫：获取时间 2026-11-16 00:49 CST（2026-11-15 16:49 UTC），SHA-256 `1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7`，11,961 行，1981-01-02 至 2026-11-06，456 天空值，日期升序无重复；2006-07 至 2021-08 共 182 个月末映射全覆盖。Phase 1 重算仍须等待 French 原始快照封存与逐月验收。
 - **OTS：**待确认；本轮不创建标签、不执行 OTS。
