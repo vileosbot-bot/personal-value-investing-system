@@ -7,7 +7,8 @@
 - PR: #13 — https://github.com/vileosbot-bot/personal-value-investing-system/pull/13
 - PR state: Open; merged=false; merge prohibited
 - PR creation head: 3991b20c8502d24d485335b1718c20ea83ab78a0
-- CI run number: 197 (workflow ci, conclusion success; run id 43733249494)
+- PR creation CI run: 197 (workflow ci, conclusion success; run id 43733249494; head 3991b20c8502d24d485335b1718c20ea83ab78a0)
+- Latest verified PR CI at this record update: run 202 (workflow ci, conclusion success; run id 43733459211; head 0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4)
 - owner authorization: 负责人于 2026-11-15 22:12 CST 授权更换基准并重冻；总管确认采用 Kenneth R. French Asia Pacific ex Japan 3 Factors（月度 Mkt-RF + RF）
 
 ## 基准与计算口径
@@ -29,13 +30,13 @@ MSCI Hong Kong Net Total Return 不采用：官方页面有公开查询／下载
 
 ## 文档 SHA-256
 
-- docs/validation-phase0-preregistration.md: 3410c8030875153ef2bc0d7035d0257b330694fb0f2621d00a5e83adf5974335
-- docs/validation-data-contract.md: 3e2753ffb4a634b160614b1a96c120ca5cc038cccaefd6f6e660f6e329aa19be
+- docs/validation-phase0-preregistration.md: b193f46bf167367e0eff1936d3db95ae6cb0a1a6b260ab2f1eeda19759dbcb05
+- docs/validation-data-contract.md: eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f
 - docs/validation-input-rules.md: 8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add
-- Plan.md: 56f7de5e5b6613b0c7d5f3258e9ae9c9543bebd37eb7a50edffd6acbd237068a
-- docs/validation/trial-ledger-entry-v048.md: 332fbc8fad288e99afd30b1d5c215951e99997464956d9c3d4ecdae03c24d6b2
+- Plan.md: 6e3ee0bcfeca8c08b734c70617418835317740694dd53a4c00eb44731c6ed76a
+- docs/validation/trial-ledger-entry-v048.md: 2cfce39fa81ee7cac01cc4e6c091f6cac6df4a4c386f12a8eba80c669692d9fe
 
-- docs/validation/freeze-manifest-v048-2026-12-15.json: b584364f4ad85bd731f6a9171db1af1776498a39f82ba463a6950967fd1ed8f1
+- docs/validation/freeze-manifest-v048-2026-12-15.json: e8ec1cb2c87f6120b2773261dd4b5efc2d886cbf01c356fb76b1dfb2add01ad7
 
 ## 冻结清单格式说明
 
