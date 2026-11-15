@@ -427,4 +427,4 @@
 - **修订范围：**S-1、S-2、M-1 至 M-6、L-1 至 L-6、L-8；五份修改文件为预注册、数据契约、输入规则、Plan.md 验证轨记录和 trial-ledger.md；本轮无独立 M-7 修订项，M-7 作为负责人已批准的设计规则按 M-5 定稿表述。
 - **v0.4.5 基线 CI：**合并提交 00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40 在 main 上的 GitHub Actions run 43664511275（workflow ci，2026-11-15T01:44:41Z，conclusion=success）。
 - **批准记录：**freeze-approval-v046-20261115.md；SHA-256 0da6daadb06c98aa4c9ad0143825672b34080e9c382147e9adbc52fb0acbf9a1。
-- **PR：**本轮只创建 PR，不合并；PR 编号在开 PR 后依据 GitHub 元数据回填。
+- **PR：**PR #11（https://github.com/vileosbot-bot/personal-value-investing-system/pull/11）已创建；GitHub 元数据读回 state=open、merged=false；本轮只开 PR，不合并。
