@@ -101,11 +101,11 @@
     }
   ],
   "document_sha256": {
-    "docs/validation-phase0-preregistration.md": "b193f46bf167367e0eff1936d3db95ae6cb0a1a6b260ab2f1eeda19759dbcb05",
-    "docs/validation-data-contract.md": "eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f",
-    "docs/validation-input-rules.md": "8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add",
-    "Plan.md": "6e3ee0bcfeca8c08b734c70617418835317740694dd53a4c00eb44731c6ed76a",
-    "docs/validation/trial-ledger-entry-v048.md": "2cfce39fa81ee7cac01cc4e6c091f6cac6df4a4c386f12a8eba80c669692d9fe"
+    "docs/validation-phase0-preregistration.md": "e383c6f446066c1df4b3ca44211642a819ab2b7112ebe44978a67cca20fd292d",
+    "docs/validation-data-contract.md": "eeea23534f57a54a3ac966862a770270bbf4de58cace9f64151458ca80ffc2df",
+    "docs/validation-input-rules.md": "fe02ad52065cd9ad58247029c02eeed6b9eaa7339709e26e921a9143e42b5538",
+    "Plan.md": "a220d8c9021f9a5ff4cf4208398bebf7b782cf4d004b445f25e7258a244da6a1",
+    "docs/validation/trial-ledger-entry-v048.md": "697efc5832990d4ec433f25bd0ca22b3216890cdd9a714502b94ad1d7c09336b"
   },
   "manifest_schema_note": "No v0.4.7 freeze-manifest JSON was present in main@cc97e597, phase0-freeze-v047-2026-12-15, or validation/phase0-refreeze-v047. This v0.4.8 manifest uses an explicit self-contained schema; schema identity with a non-existent v0.4.7 artifact cannot be asserted.",
   "owner_authorization": {
@@ -123,11 +123,11 @@
   },
   "ci": {
     "workflow": "ci",
-    "run_number": 202,
-    "run_id": 43733459211,
+    "run_number": 213,
+    "run_id": 43734616335,
     "conclusion": "success",
-    "url": "https://github.com/vileosbot-bot/personal-value-investing-system/actions/runs/43733459211",
-    "head_sha_at_run": "0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4"
+    "url": "https://github.com/vileosbot-bot/personal-value-investing-system/actions/runs/43734616335",
+    "head_sha_at_run": "6dd8e54333e94a02b22976fe1d17b4ac76e82ec0"
   },
   "latest_branch_head_when_manifest_prepared": "b6a79cbf9b14a3b662c867f401c6cebc1ec6470b"
 }
