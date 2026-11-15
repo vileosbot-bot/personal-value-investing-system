@@ -388,7 +388,7 @@
 
 - **项目与仓库：**个人价值投资系统；bot 仓库 vileosbot-bot/personal-value-investing-system；不操作 ViLeo06 原仓库。
 - **版本、基线与分支：**Phase 0 / v0.4.4；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
-- **请求与复核：**本次 request-id pvis-phase0-refreeze-v044-20261114-01；独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人于 2026-11-14 23:21 CST 放行。
+- **请求与复核：**本次 request-id pvis-phase0-refreeze-v044-20261114-01；独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人于 2026-11-14 23:21 CST（UTC+08:00）放行。
 - **修订性质：**只修订四份文档的措辞、状态和澄清；不改参数值、误差表数字、模型代码、校准脚本或其他文件。
 - **S-1：**明确区分文档层冻结（2026-12-15 23:59:59 Asia/Shanghai 截止）与数据层冻结（A/B 数据采集完成后、B 区解封前）；数据层条目不纳入文档层截止条件。逾期判定按 OTS 区块头 nTime，按 UTC 转换为 Asia/Shanghai，并披露 nTime 可能与真实时间偏差数小时。
 - **M-1／M-2：**记录 v0.4.2、v0.4.3、v0.4.4 冻结分支目标及带时点的版本事实表；冻结分支仅作查找，OTS 清单中的完整 commit SHA 才是时间锚点。
@@ -397,3 +397,19 @@
 - **L-1／L-2／L-5／L-6：**负责人 2026-11-14 13:36 CST、2026-11-14 13:46 CST、2026-11-14 13:50 CST、2026-11-14 14:01 CST 作出的决定时间均为 CST；以 OTS nTime 换算 Asia/Shanghai 判定截止并说明偏差限制；5.17%／5.14%仅为未校正 HH 对照值，不是另一检验水平；首次评估前独立复核单列为流程要求，不混入冻结包。
 - **参数与执行边界：**NA 20%、m=3、N=20、U_N < −3.0pp、α_k 表和误差表数字保持不变；本次不改模型代码、校准脚本，不做数据采集、外部注册、标签创建或 PR 合并。
 - **v0.4.3 基线 CI：**合并提交 29eb7dd4fc17c50e29f61ef10cb39c3e065756c8 对应 GitHub Actions run 43606896139（workflow ci，2026-11-14T14:49:50Z，conclusion=success）。
+
+## 2026-11-15 验证轨 Phase 0 v0.4.5 文档层重新冻结（pvis-phase0-refreeze-v045-20261115-01）
+
+- **状态：**v0.4.5 文档层重新冻结修订已提交至独立分支；本轮交付为 PR，保持 Open、未合并，等待独立复核与总管验收。
+- **仓库／账号：**vileosbot-bot/personal-value-investing-system；GitHub 账号 vileosbot-bot；不操作 ViLeo06 原仓库。
+- **基线与分支：**main@5a71143a28529a59d6e59fbd3054a699ffb51fba；工作分支 validation/phase0-refreeze-v045。
+- **请求与复核：**本次 request-id pvis-phase0-refreeze-v045-20261115-01；Opus v0.4.4 复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01，verdict 为“有保留同意”；本次 v0.4.5 复核 request-id pvis-phase0-refreeze-v045-opus-20261115-01，由总管另行安排。
+- **负责人批准与 v0.4.4 最终批准记录：**负责人卫勒于 2026-11-15 08:46 CST 批准本轮 v0.4.5 修订，并确认 v0.4.4 包（合并提交 `5a71143a28529a59d6e59fbd3054a699ffb51fba`、清单 `freeze-manifest-v044-2026-12-15.json`，SHA-256 `c44fe2db5ce0aeb8c733b5e92fe95c7e2a960e7c0675e20d17444a73d330f2e7`）作为最终批准；批准记录 `freeze-approval-v044-20261115.md`（SHA-256 `72ec0ca826b6fdd0fcdf0bd1df9f7d16b838a41ec36262d1574d49eaadbe45fc`）由总管另行保管，不复制全文。
+- **批准与提交时序：**负责人于 2026-11-14 23:21 CST 批准覆盖 v0.4.4 任务范围；三笔提交分别发生于 2026-11-15 00:05:51、00:07:43、00:09:22 CST，均在该批准之后；长期合并规则于 2026-11-15 08:08 CST 立定；v0.4.4 于 2026-11-15 08:10:13 CST 合并。
+- **修订性质：**只修订措辞、状态与澄清；M-6（30 次预定评估序列终点）与 M-7（截止后重新冻结的队列后果）为新增设计规则。NA 20%、m=3、N=20、U_N < −3.0pp、α_k、误差表四档数字、校正因子、临界值、校准脚本与模型代码均不变；30 次上限作为新设计参数冻结。
+- **修订清单：**A2 标题与冻结包清单统一；人员指定去歧义；首次 NA 超限归入条件 (b)，m=3 只计 NA 比例超限连续评估；首次不可评估概率 0.61% 改为真实终止概率下界；新增 30 次预定评估终点；明确截止后重冻后果及 OTS nTime 规则；补充 HKMA 检索路径、断点处理、页码和文件 SHA-256；补齐版本事实与校准原始计数。
+- **新增文件：**docs/validation/trial-ledger.md（13 个 request-id 的单文件试验台账；Plan.md 未记载的事项标记“待总管核对”）；docs/validation/requirements-freeze.txt（Python 3.12.3、NumPy 1.26.4、SciPy 1.11.4 环境锁）。
+- **文件范围：**只修改 docs/validation-phase0-preregistration.md、docs/validation-data-contract.md、docs/validation-input-rules.md、本 Plan.md 验证轨记录部分；只新增上述两个文件。
+- **CI：**v0.4.4 合并提交 5a71143a28529a59d6e59fbd3054a699ffb51fba 对应 GitHub Actions run 43656832799（workflow ci，2026-11-15T00:10:15Z，conclusion=success）。
+- **执行边界：**不改 main、不合并本次 PR、不建标签、不执行 OSF；不改校准脚本 docs/validation/mc-calibration-stop-rule.py（blob a84c1213）、模型代码 src/pvis/regression.py（blob d4bcbafc）、证据 JSON、估值底稿、决策卡或历史记录原文。
+- **状态词项自查：**新增内容自查通过。
