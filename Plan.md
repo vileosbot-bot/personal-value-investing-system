@@ -409,7 +409,7 @@
 - **修订性质：**只修订措辞、状态与澄清；M-6（30 次预定评估序列终点）与 M-7（截止后重新冻结的队列后果）为新增设计规则。NA 20%、m=3、N=20、U_N < −3.0pp、α_k、误差表四档数字、校正因子、临界值、校准脚本与模型代码均不变；30 次上限作为新设计参数冻结。
 - **修订清单：**A2 标题与冻结包清单统一；人员指定去歧义；首次 NA 超限归入条件 (b)，m=3 只计 NA 比例超限连续评估；首次不可评估概率 0.61% 改为真实终止概率下界；新增 30 次预定评估终点；明确截止后重冻后果及 OTS nTime 规则；补充 HKMA 检索路径、断点处理、页码和文件 SHA-256；补齐版本事实与校准原始计数。
 - **新增文件：**docs/validation/trial-ledger.md（13 个 request-id 的单文件试验台账；Plan.md 未记载的事项标记“待总管核对”）；docs/validation/requirements-freeze.txt（Python 3.12.3、NumPy 1.26.4、SciPy 1.11.4 环境锁）。
-- **文件范围：**仅修改 docs/validation-phase0-preregistration.md、docs/validation-data-contract.md、docs/validation-input-rules.md、Plan.md 开工卡行尾格式与验证轨记录部分、docs/validation/trial-ledger.md。
+- **文件范围：**只修改 docs/validation-phase0-preregistration.md、docs/validation-data-contract.md、docs/validation-input-rules.md、本 Plan.md 验证轨记录部分；只新增上述两个文件。
 - **CI：**v0.4.4 合并提交 5a71143a28529a59d6e59fbd3054a699ffb51fba 对应 GitHub Actions run 43656832799（workflow ci，2026-11-15T00:10:15Z，conclusion=success）。
 - **执行边界：**不改 main、不合并本次 PR、不建标签、不执行 OSF；不改校准脚本 docs/validation/mc-calibration-stop-rule.py（blob a84c1213）、模型代码 src/pvis/regression.py（blob d4bcbafc）、证据 JSON、估值底稿、决策卡或历史记录原文。
 - **状态词项自查：**新增内容自查通过。
@@ -439,7 +439,7 @@
 - **修订性质：**只改措辞与记录；M-5 可计算评估重置计数为已冻结“连续”的澄清，经负责人单列确认；不改既有参数值。
 - **数值与代码不变量：**NA 20%、m=3、N=20、U_N < −3.0pp、α_k=0.05/[k(k+1)]、无条件误差表 2.65%/1.49%/24.52%/48.43%、条件误差表 2.66%/1.50%/24.67%/48.73%、c_N=0.55、P(不可评估)≈0.61%、30 次预定评估上限、校准脚本 docs/validation/mc-calibration-stop-rule.py（blob a84c1213）与模型代码 src/pvis/regression.py（blob d4bcbafc）均不变。
 - **修订范围：**M-1～M-6、L-1、L-2、L-5～L-12；M-4 冻结清单修正不在本 PR 内，由总管在合并后制作冻结清单时执行；L-3/L-4 不做。
-- **文件范围：**仅修改 docs/validation-phase0-preregistration.md、docs/validation-data-contract.md、docs/validation-input-rules.md、Plan.md 验证轨记录部分、docs/validation/trial-ledger.md。
+- **文件范围：**仅修改 docs/validation-phase0-preregistration.md、docs/validation-data-contract.md、docs/validation-input-rules.md、Plan.md 开工卡行尾格式与验证轨记录部分、docs/validation/trial-ledger.md。
 - **v0.4.6 基线 CI：**合并提交 0df7b0c5e3d5712274fe12939abe8ef0b1212c02 在 main 上的 GitHub Actions run 43674833093（workflow ci，2026-11-15T04:00:30Z，conclusion=success）。
 - **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
 - **执行边界：**不改 main、不合并、不建标签、不做 OSF；不新建或修改冻结清单与冻结记录文件；不改校准脚本、模型代码、证据 JSON、估值底稿或决策卡。
