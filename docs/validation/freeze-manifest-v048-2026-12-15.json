@@ -90,22 +90,36 @@
       "frequency": "daily",
       "quote": "HKD per USD",
       "official_series_start_date": "1981-01-02",
-      "status": "NOT_RETRIEVED",
-      "retrieved_at": null,
-      "sha256": null,
-      "actual_first_date": null,
-      "actual_last_date": null,
-      "missing_observations": null,
-      "month_end_mapping_check": null,
-      "note": "Series metadata and quote direction verified; raw daily CSV snapshot not captured in this execution."
+      "status": "RETRIEVED",
+      "retrieved_at": "2026-11-16 00:49 CST (2026-11-15 16:49 UTC)",
+      "sha256": "1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7",
+      "actual_first_date": "1981-01-02",
+      "actual_last_date": "2026-11-06",
+      "missing_observations": "456 blank-value days (including holidays/non-observation days)",
+      "month_end_mapping_check": {
+        "period": "2006-07 through 2021-08",
+        "months": 182,
+        "covered_months": 182,
+        "missing_months": 0,
+        "sample_values": {
+          "2006-07-31": "7.7703",
+          "2006-08-31": "7.7767",
+          "2021-08-31": "7.7779"
+        }
+      },
+      "note": "Full-history CSV retrieved by the owner and independently checked by the owner; 11,961 data rows, ascending dates, no duplicates, and all 182 required month-end mappings covered. This is the full-history file, not the previously encountered five-year truncated file.",
+      "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXHKUS&cosd=1981-01-02&coed=2026-11-16",
+      "data_rows": 11961,
+      "date_order": "ascending",
+      "duplicate_dates": 0
     }
   ],
   "document_sha256": {
-    "docs/validation-phase0-preregistration.md": "c90741b63ed4661a3b24c4d1d4ddfbd167c29327a5f96d1aa2e6af604e973370",
-    "docs/validation-data-contract.md": "eae55d03d6e3306844048deb7b6f293f0903d879512f999cea83145ba5f7fb2f",
-    "docs/validation-input-rules.md": "8d1a015e42878f347611193c33df4e876a80af98c64c12d91313fa8ee5ff9add",
-    "Plan.md": "de6d6e5093b1ae89b76b240ad72e4107c77f8c71b154a0a4dbc4cdc7ed2569c3",
-    "docs/validation/trial-ledger-entry-v048.md": "dc3573fa25fe34555361be663ea51b9dee2c8059bed9b5d34254575e77417645"
+    "docs/validation-phase0-preregistration.md": "8ddebed6eb5a37a28f3e4feef91b2f49e0b258555a1668309b4df52e5df2f9d7",
+    "docs/validation-data-contract.md": "88337a2cfb44b918fd03400fd5152db8f52d9a7e1f7391f6ee7263c6a37460ab",
+    "docs/validation-input-rules.md": "f692a4ef5d157f011c154e883b9cabd57ff8925bee225a4c7dbd12ef1f7c017f",
+    "Plan.md": "3b17f2fd0b10c96c3ed92419748645352c8e54e66f4b4925be9002198251607a",
+    "docs/validation/trial-ledger-entry-v048.md": "0305e66ce58ed17fc008d5a1c694df9fd8c1264c1b32fbf0df5316696cef3988"
   },
   "manifest_schema_note": "No v0.4.7 freeze-manifest JSON was present in main@cc97e597, phase0-freeze-v047-2026-12-15, or validation/phase0-refreeze-v047. This v0.4.8 manifest uses an explicit self-contained schema; schema identity with a non-existent v0.4.7 artifact cannot be asserted.",
   "owner_authorization": {
@@ -119,7 +133,7 @@
   "data_snapshot_gate": {
     "status": "OPEN",
     "phase1_recalculation_allowed": false,
-    "reason": "original French and DEXHKUS source snapshots not retrieved"
+    "reason": "Only the original French APAC ex Japan 3 Factors monthly archive remains NOT_RETRIEVED; DEXHKUS full-history CSV has been retrieved and verified."
   },
   "ci": {
     "workflow": "ci",
