@@ -445,3 +445,17 @@
 - **执行边界：**不改 main、不合并、不建标签、不做 OSF；不新建或修改冻结清单与冻结记录文件；不改校准脚本、模型代码、证据 JSON、估值底稿或决策卡。
 - **PR：**PR #12（https://github.com/vileosbot-bot/personal-value-investing-system/pull/12）已创建；GitHub 元数据读回 state=open、merged=false；本轮只开 PR，不合并。
 - **历史节恢复：**本文件未恢复历史节；恢复原文见数据契约（v0.4.3/v0.4.4 节）与预注册（v0.4.3 节、v0.4.5 节）。
+
+
+## 2026-11-15 验证轨 Phase 0 v0.4.8 香港市场基准重冻（pvis-phase0-refreeze-v048-20261115-01）
+
+- **状态：**文档层基准替补修订已在独立分支准备；原始 French 3 Factors ZIP 与 DEXHKUS CSV 快照尚未取得，数据层验收未完成，Phase 1 新基准重算暂缓；PR 创建后保持 Open、未合并。
+- **仓库／账号：**vileosbot-bot/personal-value-investing-system；GitHub 账号 vileosbot-bot；ViLeo06 原仓库只读、不写。
+- **基线与分支：**main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；工作分支 validation/phase0-refreeze-v048。
+- **请求与授权：**request-id pvis-phase0-refreeze-v048-20261115-01；负责人于 2026-11-15 22:12 CST 授权更换基准并重冻；总管随后确认采用 French APAC ex Japan 3 Factors（月度 Mkt-RF + RF）。
+- **新基准：**港股使用 French APAC ex Japan 3 Factors 月度市场组合；按 (Mkt-RF+RF)/100 恢复 USD 市场总收益，再按 DEXHKUS（HKD per USD）月末汇率换算为 HKD。该区域代理包含香港但不是香港本地指数，不是恒生官方 Gross TRI 1006800，也不与其等价。
+- **适用范围：**新基准同时用于 Phase 1 2016–2021 历史队列及 2027 前瞻队列；旧版 1006800 设计下的结果与新基准结果不可直接比较。
+- **不变量：**停止规则全部参数、四家公司池、形成日／结果日、成本税务、ERP 120 个月、Beta 60 个月及至少 36 个共同有效月份、模型代码、H00300、无风险利率来源、HKD/CNY 汇率口径不变。
+- **交付范围：**三份冻结文档、Plan.md 本记录、docs/validation/trial-ledger-entry-v048.md、freeze-manifest-v048-2026-12-15.json、phase0-refreeze-v048-record-20261115.md；不直接修改 docs/validation/trial-ledger.md。
+- **未完成数据证据：**French 原始月度 ZIP 与 DEXHKUS 原始日频 CSV 未成功取得；SHA-256、实际起止日期／月份和逐月缺失检查均不得编造或标 VERIFIED。Phase 1 重算必须等待原始快照封存与验收。
+- **OTS：**待确认；本轮不创建标签、不执行 OTS。
