@@ -5,7 +5,8 @@
 | request-id | 日期 | 事项（一句话） | 结果（以 Plan.md 为准） |
 |---|---|---|---|
 | pvis-phase0-design-20261113-01 | 2026-11-13 | 建立 Phase 0 设计框架，固定四家公司、历史候选形成日及 V1.1 输入／数据契约规则 | Plan 记录设计框架与五项决定；尚未执行数据抓取、历史重算、回测、统计检验或模型估值 |
-| pvis-phase0-revise-20261113-01 | 2026-11-13 | GPT 方法论全文复核 | verdict 有保留不通过（revise）；裁决见总管本地 gpt-review-pvis-review-20261113-01.md；以仓库 Plan.md 验证轨记录核对一致。
+| pvis-phase0-revise-20261113-01 | 2026-11-13 | 按对抗评审 revise 裁决修订预注册、输入规则和数据契约 | Plan 仅将其列为设计节的修订请求，未单列验收结论；待总管核对 |
+| pvis-review-verify-20261113-01 | 2026-11-13 | GPT 方法论全文复核 | verdict 有保留不通过（revise）；裁决见总管本地 gpt-review-pvis-review-20261113-01.md；以仓库 Plan.md 验证轨记录核对一致。
 | pvis-phase0-revise2-20261114-01 | 2026-11-14 | 验证轨第二轮修订校正 | 文档校正后等待独立复核；冻结门槛记录为 BLOCKED；未运行回测、统计检验或估值，未实际注册、冻结或执行第三方时间戳 |
 | pvis-phase0-monitor-20261114-01 | 2026-11-14 | 将 Phase 0 从确认性验证改为预注册监测与重大失败停止规则 | Plan 记录负责人批准监测定位变更；本轮未执行冻结或外部注册 |
 | pvis-phase0-monitor-fix-20261114-01 | 2026-11-14 | 监测统计与数据质量 A–K 修订 | Plan 记录 verdict 为 proceed to independent review only；PR #6 当时 Open、未合并 |

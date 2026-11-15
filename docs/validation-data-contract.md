@@ -395,7 +395,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 ## 2026-11-14 验证轨 Phase 0 v0.4.3 文档层重新冻结（pvis-phase0-refreeze-v043-20261114-01）
 
 - **版本与基线：**Phase 0 / v0.4.3；基线 main@66a0832eef7ed4bfc6626486bbeb7a4a16549f73；工作分支 validation/phase0-refreeze-v043。
-- **修订性质：**v0.4.3 当时只修订措辞、状态、来源序列规格及数据封存时点；未修改该版本当时已存在的参数值、误差表数字、校准脚本或模型代码。
+- **修订性质：**只修订措辞、状态、来源序列规格及数据封存时点；不改任何参数值、误差表数字、校准脚本或模型代码。
 - **NA 验收：**NA 上限 20%、分母为全部已成熟 2027+ 计划队列（含 NA 队列）、分子仅计仍无可识别终值的 NA 队列，以及 m=3 永久终止规则均已由负责人于 2026-11-14 13:36 确认；§13 对应验收项已勾选。
 - **来源核对：**CSI 300 Gross TRI H00300／Net TRI N00300、恒生 Gross TRI 1006800／Net TRI 2006800 已有具体序列及 gross/net 区分；CNY Rf 已指定 CCDC 的 MOF-China Government Bond Yield Curve 10-year maturity；HKD Rf、HKD/CNY 中间价、HKD/USD 因子转换序列已补充来源机构与具体名称；A 股 PKU 因子与港股 Asia Pacific ex Japan 区域代理均列出具体月度序列和来源，且明确因子收益序列不等同于 gross/net 总回报指数。
 - **版本与哈希：**指数、因子和 FX 数据尚未采集，当前不能冻结数据版本或 SHA-256；在实际数据冻结时逐文件封存，不编造版本号或哈希。
@@ -405,7 +405,7 @@ A 股月度因子主来源为北京大学新金融与创业投资研究中心公
 
 - **版本、基线与分支：**Phase 0 / v0.4.4；仓库 vileosbot-bot/personal-value-investing-system；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
 - **复核依据：**独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人卫勒于 2026-11-14 23:21 CST 批准本轮修订。
-- **修订性质：**v0.4.4 当时只修订数据契约措辞、来源规格与状态澄清；未修改该版本当时已存在的参数值、模型代码或校准脚本。
+- **修订性质：**只修订数据契约措辞、来源规格与状态澄清；不改任何参数值、模型代码或校准脚本。
 - **§3.3 序列规格：**主基准声明固定为 A 股 H00300 Gross TRI、N00300 仅作税后敏感性；港股 1006800 Gross TRI、2006800 仅作税后敏感性；价格指数 000300 不得替代 H00300。PKU 因子完整标识为北京大学新金融与创业投资研究中心公开因子库 factors_monthly_2023.xlsx，包含 MKT、SMB-FF5、HML-FF5、RMW、CMA、MOM，覆盖 2000-01 至 2023-12。
 - **HKMA 10 年期序列：**HKMA 官方统计序列 “Government bond yield - 10-year” 对应 10 年期港元 HKSAR Government Bond（HKGB）基准，而非 Exchange Fund Notes；HKMA 2025 年 3 月官方报告 §4.4、Chart 4.14 注明 2025-01-15 前使用 Government Bond Programme 基准债券，此后使用 Infrastructure Bond Programme 与 Government Sustainable Bond Programme 基准债券。来源链接见预注册附表 B 及本文件 §14。
 - **§12.1／§13：**m=3 仅由 NA 比例超限连续 3 次预定评估或首次预定评估无法计算触发；非首次评估仅因 HH 方差非正、滞后无配对或 c_N≤0 而不可评估时不计入 m=3，且不递增 k、不消耗 α；首次评估直接终止概率约 0.61%。
