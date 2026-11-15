@@ -3,7 +3,8 @@
 > 上一轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.3（文档层重新冻结；V1.1 模型输入与参数保持不变）
+- 版本：Phase 0 / v0.4.4（文档层重新冻结；V1.1 模型输入与参数保持不变）
+- 本次基线：main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -436,3 +437,11 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 - **修订性质：**只作文档措辞与来源规格澄清；V1.1 模型函数、输入参数和数值不变。
 - **利率序列：**CNY 无风险利率固定指向 CCDC／中债 MOF-China Government Bond Yield Curve 10 年期到期收益率；HKD 无风险利率固定指向 HKMA “Government bond yield - 10-year”；按 §3.1 月末取值规则执行，具体来源及时间戳要求见数据契约 §3.3。
 - **A 区治理：**A 区数据采集开始后禁止修改停止规则与模型输入规则参数；每次重新冻结须声明尚未查看 A 区数据。任何偏离须如实记录并另行授权，不得静默改参。
+
+## 2026-11-14 验证轨 Phase 0 v0.4.4 文档层重新冻结（pvis-phase0-refreeze-v044-20261114-01）
+
+- **版本、基线与分支：**Phase 0 / v0.4.4；仓库 vileosbot-bot/personal-value-investing-system；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
+- **复核依据：**独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人卫勒于 2026-11-14 23:21 CST 批准本轮修订。
+- **修订性质：**只修订本文件版本状态和澄清性记录；V1.1 模型输入公式、字段映射、模型函数、参数值与输出口径不变。
+- **一致性边界：**文档层冻结与数据层冻结的截止和角色分层见预注册附表 A2／A5；本文件继续规定形成日机械输入，不代表任何 A 区或 B 区数据已经采集、冻结或解封。
+- **时区记录：**负责人 2026-11-14 13:36 CST、2026-11-14 13:46 CST、2026-11-14 13:50 CST、2026-11-14 14:01 CST 作出的相关决定时间均为 CST。
