@@ -107,7 +107,7 @@
           "2021-08-31": "7.7779"
         }
       },
-      "note": "Full-history CSV retrieved by the owner and independently checked by the owner; 11,961 data rows, ascending dates, no duplicates, and all 182 required month-end mappings covered. This is the full-history file, not the previously encountered five-year truncated file.",
+      "note": "Full-history CSV retrieved via the operator's cloud browser and independently checked by the operator; 11,961 data rows, ascending dates, no duplicates, and all 182 required month-end mappings covered. This is the full-history file, not the previously encountered five-year truncated file.",
       "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXHKUS&cosd=1981-01-02&coed=2026-11-16",
       "data_rows": 11961,
       "date_order": "ascending",
