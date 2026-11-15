@@ -403,7 +403,7 @@ Power(μ) = Φ((μ − 15%) / 2pp − 1.64485)。
 | v0.4.5 | `00cb9b1e4e3f75e1a86b7db1aeaa9e7d99a42c40` | 2026-11-15 09:44:39 CST（01:44:39Z） | PR #10 已合并至 main；清单 freeze-manifest-v045-2026-12-15.json（SHA-256 cd767e2587761737a79ce983153cb6af82c2bf120c52ba5ed19bb7d4b0597c59）；OTS 已盖戳、升级待验证。 |
 | v0.4.6 | `0df7b0c5e3d5712274fe12939abe8ef0b1212c02` | 2026-11-15 12:00:27 CST（04:00:27Z） | PR #11 已合并至 main；清单 freeze-manifest-v046-2026-12-15.json（SHA-256 1151c63d…）；OTS 已盖戳、升级待验证；phase0-freeze-v046-2026-12-15 指向该提交。 |
 | v0.4.7 | `cc97e5978b440ab96159b1969f9cb25ac245b6b7` | 2026-11-15 14:13:56 CST（06:13:56Z） | PR #12 已合并至 main；文档层冻结基线为本提交；v0.4.7 独立清单未见于该冻结分支文件树。 |
-| v0.4.8 | CI 验证提交 `0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4` | 未合并 | PR #13 Open、merged=false；GitHub Actions run 213（run id 43734616335，workflow ci）success；French 与 DEXHKUS 原始快照仍 NOT_RETRIEVED，OTS 待确认。 |
+| v0.4.8 | CI 验证提交 `6dd8e54333e94a02b22976fe1d17b4ac76e82ec0` | 未合并 | PR #13 Open、merged=false；GitHub Actions run 213（run id 43734616335，workflow ci）success；French 与 DEXHKUS 原始快照仍 NOT_RETRIEVED，OTS 待确认。 |
 
 ## 附表 B：公开方法与数据来源入口
 
