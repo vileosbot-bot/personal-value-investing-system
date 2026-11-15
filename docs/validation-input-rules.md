@@ -3,7 +3,7 @@
 > 上一轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.4（文档层重新冻结；V1.1 模型输入与参数保持不变）
+- 版本：Phase 0 / v0.4.5（文档层重新冻结；V1.1 模型输入与参数保持不变）
 - 本次基线：main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
@@ -441,7 +441,17 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 ## 2026-11-14 验证轨 Phase 0 v0.4.4 文档层重新冻结（pvis-phase0-refreeze-v044-20261114-01）
 
 - **版本、基线与分支：**Phase 0 / v0.4.4；仓库 vileosbot-bot/personal-value-investing-system；基线 main@29eb7dd4fc17c50e29f61ef10cb39c3e065756c8；工作分支 validation/phase0-refreeze-v044。
-- **复核依据：**独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人卫勒于 2026-11-14 23:21 CST 批准本轮修订。
+- **复核依据：**独立复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01；复核人 Opus 5.5；v0.4.3 审查 verdict 为“有保留同意”；负责人卫勒于 2026-11-14 23:21 CST（UTC+08:00）批准本轮修订。
 - **修订性质：**只修订本文件版本状态和澄清性记录；V1.1 模型输入公式、字段映射、模型函数、参数值与输出口径不变。
 - **一致性边界：**文档层冻结与数据层冻结的截止和角色分层见预注册附表 A2／A5；本文件继续规定形成日机械输入，不代表任何 A 区或 B 区数据已经采集、冻结或解封。
 - **时区记录：**负责人 2026-11-14 13:36 CST、2026-11-14 13:46 CST、2026-11-14 13:50 CST、2026-11-14 14:01 CST 作出的相关决定时间均为 CST。
+
+## 2026-11-15 验证轨 Phase 0 v0.4.5 文档层重新冻结（pvis-phase0-refreeze-v045-20261115-01）
+
+- **版本、基线与分支：**Phase 0 / v0.4.5；仓库 vileosbot-bot/personal-value-investing-system；基线 main@5a71143a28529a59d6e59fbd3054a699ffb51fba；工作分支 validation/phase0-refreeze-v045。
+- **请求与复核：**本次 request-id pvis-phase0-refreeze-v045-20261115-01；Opus v0.4.4 复核 request-id pvis-phase0-refreeze-v044-opus-20261114-01，verdict 为“有保留同意”；本次 v0.4.5 复核 request-id pvis-phase0-refreeze-v045-opus-20261115-01，由总管另行安排。
+- **负责人批准与 v0.4.4 最终批准记录：**负责人卫勒于 2026-11-15 08:46 CST 批准本轮 v0.4.5 修订，并确认 v0.4.4 包（合并提交 `5a71143a28529a59d6e59fbd3054a699ffb51fba`、清单 `freeze-manifest-v044-2026-12-15.json`，SHA-256 `c44fe2db5ce0aeb8c733b5e92fe95c7e2a960e7c0675e20d17444a73d330f2e7`）作为最终批准；批准记录 `freeze-approval-v044-20261115.md`（SHA-256 `72ec0ca826b6fdd0fcdf0bd1df9f7d16b838a41ec36262d1574d49eaadbe45fc`）由总管另行保管，不复制全文。
+- **批准与提交时序：**负责人于 2026-11-14 23:21 CST 批准覆盖 v0.4.4 任务范围；三笔提交分别发生于 2026-11-15 00:05:51、00:07:43、00:09:22 CST，均在该批准之后；长期合并规则于 2026-11-15 08:08 CST 立定；v0.4.4 于 2026-11-15 08:10:13 CST 合并。
+- **修订性质与不变量：**仅修订措辞、状态与澄清；M-6（30 次预定评估序列终点）与 M-7（截止后重新冻结的队列后果）为新增设计规则。NA 20%、m=3、N=20、U_N < −3.0pp、α_k、误差表四档数字、校准脚本及模型代码均保持不变；校正因子、临界值及其他既有参数不变。
+- **本文件修订范围：**仅更新 Phase 0 版本状态与本轮记录；V1.1 模型输入公式、字段映射、模型函数、模型参数与输出口径不变。
+- **一致性边界：**文档层冻结与数据层冻结、人员指定、m=3 穷尽规则及 30 次预定评估终点，以预注册附表 A2／A5 与数据契约 §12.1／§13 为准；本文件不表示 A 区或 B 区数据已经采集、冻结或解封。
