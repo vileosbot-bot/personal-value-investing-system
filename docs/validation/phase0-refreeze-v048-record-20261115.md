@@ -8,7 +8,7 @@
 - PR state: Open; merged=false; merge prohibited
 - PR creation head: 3991b20c8502d24d485335b1718c20ea83ab78a0
 - PR creation CI run: 197 (workflow ci, conclusion success; run id 43733249494; head 3991b20c8502d24d485335b1718c20ea83ab78a0)
-- Latest verified PR CI at this record update: run 202 (workflow ci, conclusion success; run id 43733459211; head 0b2073ae531ada8b3f6421f35bb4d71b98ecb9a4)
+- Latest verified PR CI at this record update: run 213 (workflow ci, conclusion success; run id 43734616335; head 6dd8e54333e94a02b22976fe1d17b4ac76e82ec0)
 - owner authorization: 负责人于 2026-11-15 22:12 CST 授权更换基准并重冻；总管确认采用 Kenneth R. French Asia Pacific ex Japan 3 Factors（月度 Mkt-RF + RF）
 
 ## 基准与计算口径
