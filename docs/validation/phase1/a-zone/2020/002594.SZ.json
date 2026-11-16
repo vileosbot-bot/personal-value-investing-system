@@ -1,0 +1,725 @@
+{
+  "status": "DRAFT",
+  "known_defects": [
+    "Frozen input rules §1.2: only 4 of 5 adjacent-year NOPAT growth observations are valid; FY2014–2015 is invalid because FY2014 NOPAT is negative. Growth input is NA; no smoothing or substitution.",
+    "2010–2019 nominal GDP CAGR was computed from NBS 2010 final-verification and 2019 preliminary-vintage values, but raw NBS source-file SHA-256 values were not retrieved.",
+    "valuation_outputs remains null; this step creates A-zone inputs only and does not calculate valuation."
+  ],
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-phase1-batchB-2020-20261116-01",
+  "zone": "A",
+  "queue_year": 2020,
+  "formation_date": "2020-08-31",
+  "decision_at": "2020-08-31T23:59:59+08:00",
+  "company": {
+    "name": "比亚迪",
+    "ticker": "002594",
+    "exchange": "SZSE",
+    "currency": "CNY",
+    "model_route": "value_driver_fcff"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2019,
+    "six_year_window": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2015-03-31T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2016-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-03-29 00:00:00",
+        "pdf_file": "002594_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203217016.PDF",
+        "sha256": "932d750e8c264638f4e66f8751a1650b3b04bce5c74d1c230ccac3bc598d3c7f",
+        "bytes": 4500450,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2017-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "002594_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204525860.PDF",
+        "sha256": "4e73a4556852e2ab8bb0f6805ee41cbf70a640cb34bc0b1ec5c0aa4c939ae110",
+        "bytes": 5030737,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2018-03-29T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2018,
+        "published_at": "2019-03-28",
+        "available_at": "2019-03-29T09:30:00+08:00",
+        "pdf_file": "002594_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-28/1205949227.PDF",
+        "sha256": "eb2499d85f2b9a3e4a13f31c6f30f7d22f0c1191cb74f9f0b3f7d2b1d0e7a5c3",
+        "bytes": 11540728,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      },
+      {
+        "fiscal_year": 2019,
+        "published_at": "2020-04-22",
+        "available_at": "2020-04-23T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "pdf_file": "002594_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-22/1207552329.PDF",
+        "sha256": "36b8b03bdd6d5c8db5ed64ae758e2ae31ddc6f5f356de6b407c6ec7d3d22e657",
+        "bytes": 12282193,
+        "download_status": "downloaded_and_sha256_verified",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": true,
+    "comparative_restatements_used": false,
+    "comparative_restatement_note": "2014–2018 original annual reports are reused from existing A-zone source records; 2019 original annual report is newly downloaded. Comparative restatement columns are not used to overwrite prior original-announcement inputs.",
+    "time_eligibility": {
+      "decision_at": "2020-08-31T23:59:59+08:00",
+      "all_six_original_reports_available_at_or_before_decision_at": true,
+      "available_at_rule": "Date-only annual-report release dates are conservatively mapped to the next common A-share trading day at 09:30 Asia/Shanghai.",
+      "eligible_fiscal_years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    }
+  },
+  "market_price_and_execution": {
+    "formation_date": "2020-08-31",
+    "formation_close_rmb": 85,
+    "execution_date": "2020-09-01",
+    "execution_open_rmb": 86.99,
+    "source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy",
+    "adjustment": "",
+    "source_quality": "AKShare unadjusted daily data; independently cross-checked by owner against Eastmoney unadjusted daily K-line",
+    "status": "retrieved",
+    "retrieved_at": "2026-11-16"
+  },
+  "market_inputs": {
+    "formation_date": "2020-08-31",
+    "risk_free_month": "2020-07",
+    "risk_free_yield_pct": 2.9664,
+    "risk_free_monthly_effective": 0.002439014186710331,
+    "erp_window_months": 120,
+    "erp_raw": 0.06232827738550423,
+    "erp_used": 0.06232827738550423,
+    "erp_status": "eligible_above_3pct",
+    "beta_window_months": 60,
+    "beta_common_valid_months": 60,
+    "beta_excluded_months": [],
+    "beta_status": "calculated",
+    "source_index": "CSI 300 Gross Total Return Index H00300",
+    "risk_free_source": "CCDC MOF-China Government Bond Yield Curve 10-year",
+    "individual_security_return_source": "AKShare stock_zh_a_hist_tx (Tencent Finance proxy); corporate actions from AKShare stock_dividend_cninfo / CNINFO p_sysapi1139",
+    "window_end_month": "2020-07",
+    "erp_window_start_month": "2010-08",
+    "erp_window_end_month": "2020-07",
+    "beta_window_start_month": "2015-08",
+    "beta_window_end_month": "2020-07",
+    "beta_excluded_months_note": "No months excluded; all 60 complete months from 2015-08 through 2020-07 are in the Beta window.",
+    "beta_return_method": "Monthly total returns from unadjusted month-end closes; gross cash dividends reinvested at ex-date close and bonus/conversion share factors applied on ex-date.",
+    "erp_formula": "12 * arithmetic mean of monthly H00300 Gross TRI returns minus monthly effective CCDC 10-year risk-free returns.",
+    "risk_free_conversion_formula": "(1 + annual CCDC 10-year yield)^(1/12) - 1",
+    "erp_valid_months": 120,
+    "beta_valid_months": 60,
+    "data_vintage": "historical observations retrieved 2026-11-16; only observations through 2020-07 enter ERP and Beta inputs",
+    "beta": 0.8864217968536239,
+    "ke": 0.08491314363484975,
+    "ke_inputs": {
+      "risk_free_rate": 0.029664,
+      "beta": 0.8864217968536239,
+      "erp_raw": 0.06232827738550423,
+      "erp_used": 0.06232827738550423,
+      "status": "eligible_above_3pct",
+      "formula": "Ke=Rf+Beta*ERP"
+    }
+  },
+  "source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2015-03-31T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2016-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-03-29 00:00:00",
+        "pdf_file": "002594_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203217016.PDF",
+        "sha256": "932d750e8c264638f4e66f8751a1650b3b04bce5c74d1c230ccac3bc598d3c7f",
+        "bytes": 4500450,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2017-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "002594_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204525860.PDF",
+        "sha256": "4e73a4556852e2ab8bb0f6805ee41cbf70a640cb34bc0b1ec5c0aa4c939ae110",
+        "bytes": 5030737,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2018-03-29T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2018,
+        "published_at": "2019-03-28",
+        "available_at": "2019-03-29T09:30:00+08:00",
+        "pdf_file": "002594_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-28/1205949227.PDF",
+        "sha256": "eb2499d85f2b9a3e4a13f31c6f30f7d22f0c1191cb74f9f0b3f7d2b1d0e7a5c3",
+        "bytes": 11540728,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      },
+      {
+        "fiscal_year": 2019,
+        "published_at": "2020-04-22",
+        "available_at": "2020-04-23T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "pdf_file": "002594_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-22/1207552329.PDF",
+        "sha256": "36b8b03bdd6d5c8db5ed64ae758e2ae31ddc6f5f356de6b407c6ec7d3d22e657",
+        "bytes": 12282193,
+        "download_status": "downloaded_and_sha256_verified",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      }
+    ],
+    "market_inputs": [
+      "H00300_20100701_20200731.csv",
+      "CCDC_MOF_10Y_20090801_20190731.csv",
+      "CCDC_10Y_20190101_20191231.csv",
+      "CCDC_10Y_20200101_20200731.csv"
+    ],
+    "security_price_source": [
+      "002594_daily_20150701_20200901.csv"
+    ],
+    "corporate_action_source": [
+      "002594_dividends.csv"
+    ],
+    "company_annual_reports": [
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2015-03-31T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2016-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-03-29 00:00:00",
+        "pdf_file": "002594_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203217016.PDF",
+        "sha256": "932d750e8c264638f4e66f8751a1650b3b04bce5c74d1c230ccac3bc598d3c7f",
+        "bytes": 4500450,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2017-03-30T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "002594_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204525860.PDF",
+        "sha256": "4e73a4556852e2ab8bb0f6805ee41cbf70a640cb34bc0b1ec5c0aa4c939ae110",
+        "bytes": 5030737,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "available_at": "2018-03-29T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step"
+      },
+      {
+        "fiscal_year": 2018,
+        "published_at": "2019-03-28",
+        "available_at": "2019-03-29T09:30:00+08:00",
+        "pdf_file": "002594_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-28/1205949227.PDF",
+        "sha256": "eb2499d85f2b9a3e4a13f31c6f30f7d22f0c1191cb74f9f0b3f7d2b1d0e7a5c3",
+        "bytes": 11540728,
+        "download_status": "reused_existing_2019_queue_metadata",
+        "sha256_provenance": "reused from existing Batch A manifest / 2019 queue JSON; not re-downloaded in this step",
+        "timezone": "Asia/Shanghai",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      },
+      {
+        "fiscal_year": 2019,
+        "published_at": "2020-04-22",
+        "available_at": "2020-04-23T09:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "pdf_file": "002594_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-22/1207552329.PDF",
+        "sha256": "36b8b03bdd6d5c8db5ed64ae758e2ae31ddc6f5f356de6b407c6ec7d3d22e657",
+        "bytes": 12282193,
+        "download_status": "downloaded_and_sha256_verified",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16",
+        "source_type": "original_annual_report",
+        "point_in_time_status": "original"
+      }
+    ],
+    "market_snapshot": {
+      "h00300_file": "H00300_20100701_20200731.csv",
+      "h00300_source_url": "https://www.csindex.com.cn/csindex-home/perf/index-perf",
+      "h00300_endpoint": "AKShare stock_zh_index_hist_csindex(symbol='H00300')",
+      "h00300_sha256": "b8a16c79d13b8234dcbb34f16c54b7ce237886ce5b709424763d99661e3cd69a",
+      "h00300_daily_observations": 2456,
+      "h00300_month_end_observations": 121,
+      "h00300_coverage": "2010-07-01 to 2020-07-31",
+      "ccdc_files": [
+        {
+          "file": "CCDC_MOF_10Y_20090801_20190731.csv",
+          "source_url": "https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US",
+          "endpoint": "AKShare bond_china_yield",
+          "coverage": "2009-08-01 to 2019-07-31",
+          "rows": 2502,
+          "sha256": "5fff52af9dfd28a688d8def9e1a07a5d1692efc6afca4be98fa451a50844fe26",
+          "role": "reused historical baseline; includes 2018-09 through 2019-07"
+        },
+        {
+          "file": "CCDC_10Y_20190101_20191231.csv",
+          "source_url": "https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US",
+          "endpoint": "AKShare bond_china_yield",
+          "coverage": "2019-01-01 to 2019-12-31",
+          "rows": 750,
+          "sha256": "676ab91df81e4f350909a80da24102fc94f65d7e548b4e74ee737f079f364923",
+          "role": "small-batch increment; overlap with baseline deduplicated; extends through 2019-12"
+        },
+        {
+          "file": "CCDC_10Y_20200101_20200731.csv",
+          "source_url": "https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US",
+          "endpoint": "AKShare bond_china_yield",
+          "coverage": "2020-01-01 to 2020-07-31",
+          "rows": 432,
+          "sha256": "788dd57687859165e0ee6ec71dda22e4a8d2ac56439fde7225898caf9f4a030d",
+          "role": "small-batch increment; extends through 2020-07"
+        }
+      ],
+      "ccdc_provider": "China Central Depository & Clearing Co., Ltd. (CCDC／中债)",
+      "ccdc_curve": "中债国债收益率曲线",
+      "ccdc_month_end_observations_after_deduplication": 132,
+      "ccdc_input_window_months": 120,
+      "ccdc_input_window": "2010-08 through 2020-07",
+      "nominal_gdp": {
+        "measure": "nominal GDP, current prices",
+        "unit": "RMB 100 million",
+        "start_year": 2010,
+        "end_year": 2019,
+        "start_value_100m_cny": 401513,
+        "end_value_100m_cny": 990865,
+        "years": 10,
+        "cagr": 0.0945396224670898,
+        "formula": "(GDP_2019/GDP_2010)^(1/10)-1; same ten-observation method used in prior queues",
+        "source_vintage": "latest NBS vintages publicly available by 2020-08-31 decision_at",
+        "sources": [
+          {
+            "year": 2010,
+            "value_100m_cny": 401513,
+            "vintage": "final_verification",
+            "published_at": "2012-01-05",
+            "source_url": "https://www.stats.gov.cn/english/NewsEvents/201201/t20120110_26553.html",
+            "sha256": null,
+            "sha256_status": "NOT_RETRIEVED",
+            "note": "NBS final-verified 2010 current-price GDP; raw source bytes were not downloaded for hashing."
+          },
+          {
+            "year": 2019,
+            "value_100m_cny": 990865,
+            "vintage": "preliminary_accounting",
+            "published_at": "2020-01-17",
+            "source_url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202001/t20200117_1767747.html",
+            "sha256": null,
+            "sha256_status": "NOT_RETRIEVED",
+            "note": "NBS preliminary 2019 current-price GDP available by 2020-08-31; final verification published 2020-12-30 is after decision_at and is excluded. Raw source bytes were not downloaded for hashing."
+          }
+        ],
+        "status": "calculated_with_source_hash_gap"
+      }
+    },
+    "rights_issue_notice": null,
+    "security_price_evidence": {
+      "endpoint": "AKShare stock_zh_a_hist_tx",
+      "upstream_provider": "Tencent Finance proxy",
+      "adjustment": "",
+      "source_url": "https://gu.qq.com/sz002594/zs",
+      "daily_export_file": "002594_daily_20150701_20200901.csv",
+      "daily_export_sha256": "b28d53204baec855b6f4755afed4e6612e6f0387e271b5eb9ea9e50e367f2beb",
+      "daily_export_rows": 1262,
+      "daily_export_sha256_scope": "normalized AKShare DataFrame export for 2015-07-01 through 2020-09-01; raw HTTP response body hash not retained",
+      "query_start_date": "2015-07-01",
+      "query_end_date": "2020-09-01",
+      "formation_date_close_rmb": 85,
+      "execution_date": "2020-09-01",
+      "execution_open_rmb": 86.99,
+      "owner_independent_cross_check": "Eastmoney unadjusted daily K-line; owner confirmed both formation close and execution open"
+    },
+    "corporate_action_evidence": {
+      "endpoint": "AKShare stock_dividend_cninfo",
+      "upstream_provider": "CNINFO p_sysapi1139",
+      "source_url": "https://webapi.cninfo.com.cn/",
+      "export_file": "002594_dividends.csv",
+      "export_sha256": "5f83037a490f6108a53b6d310fd7ca5e9ae0063813c85f5fa489a27ac899842c",
+      "export_scope": "full endpoint response; only events with ex_date through 2020-07-31 were used in Beta; later events excluded",
+      "beta_event_window": "2015-08 through 2020-07"
+    },
+    "macro_sources": [
+      {
+        "year": 2010,
+        "value_100m_cny": 401513,
+        "vintage": "final_verification",
+        "published_at": "2012-01-05",
+        "source_url": "https://www.stats.gov.cn/english/NewsEvents/201201/t20120110_26553.html",
+        "sha256": null,
+        "sha256_status": "NOT_RETRIEVED",
+        "note": "NBS final-verified 2010 current-price GDP; raw source bytes were not downloaded for hashing."
+      },
+      {
+        "year": 2019,
+        "value_100m_cny": 990865,
+        "vintage": "preliminary_accounting",
+        "published_at": "2020-01-17",
+        "source_url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202001/t20200117_1767747.html",
+        "sha256": null,
+        "sha256_status": "NOT_RETRIEVED",
+        "note": "NBS preliminary 2019 current-price GDP available by 2020-08-31; final verification published 2020-12-30 is after decision_at and is excluded. Raw source bytes were not downloaded for hashing."
+      }
+    ],
+    "market_calculation_evidence": {
+      "beta_method": "OLS slope Cov(R_i-r_f,R_m-r_f)/Var(R_m-r_f), monthly total returns, 60 common valid months",
+      "stock_total_return_method": "Unadjusted monthly closes with gross cash dividends reinvested at ex-date close and bonus/conversion share factors applied on ex-date; CNINFO stock_dividend_cninfo events",
+      "beta_window": "2015-08 to 2020-07",
+      "beta_excluded_months": [],
+      "erp_method": "12 * arithmetic mean of monthly H00300 Gross TRI returns minus monthly effective CCDC 10-year risk-free returns.",
+      "erp_window": "2010-08 to 2020-07",
+      "risk_free_method": "(1 + annual CCDC 10-year yield)^(1/12) - 1",
+      "erp_valid_months": 120,
+      "beta_valid_months": 60
+    }
+  },
+  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_downloaded": true,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "post_formation_execution_price_recorded": true,
+    "post_formation_execution_price_used_only_for_execution": true,
+    "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
+    "deviation": "AKShare stock_zh_a_hist_tx request covered 2015-07-01 through 2020-09-01, including the 2020-09-01 execution date after formation. Only unadjusted closes through 2020-08-31 entered formation inputs; the 2020-09-01 open is recorded solely as simulated execution price. AKShare stock_dividend_cninfo returned full history including future corporate actions; only events with ex_date through 2020-07-31 were used for Beta. This is not a strict blind test."
+  },
+  "valuation_outputs": null,
+  "financial_series": [
+    {
+      "fiscal_year": 2014,
+      "revenue_rmb_m": 58195.878,
+      "reported_operating_profit_ebit_rmb_m": -179.115,
+      "profit_before_tax_rmb_m": 873.952,
+      "income_tax_expense_rmb_m": 134.082,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": -150.90841948715152,
+      "nopat_margin": -0.0025931118263591026,
+      "period_end_ordinary_shares_m": 2476
+    },
+    {
+      "fiscal_year": 2015,
+      "revenue_rmb_m": 80008.968,
+      "reported_operating_profit_ebit_rmb_m": 3175.965,
+      "profit_before_tax_rmb_m": 3794.986,
+      "income_tax_expense_rmb_m": 656.79,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": 2675.822005396037,
+      "nopat_margin": 0.03344402599213675,
+      "period_end_ordinary_shares_m": 2476
+    },
+    {
+      "fiscal_year": 2016,
+      "revenue_rmb_m": 103469.997,
+      "reported_operating_profit_ebit_rmb_m": 5986.251,
+      "profit_before_tax_rmb_m": 6568.41,
+      "income_tax_expense_rmb_m": 1088.398,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": 5043.551221636269,
+      "nopat_margin": 0.04874409362973373,
+      "period_end_ordinary_shares_m": 2728.143
+    },
+    {
+      "fiscal_year": 2017,
+      "revenue_rmb_m": 105914.702,
+      "reported_operating_profit_ebit_rmb_m": 5410.551,
+      "profit_before_tax_rmb_m": 5620.641,
+      "income_tax_expense_rmb_m": 703.705,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": 4558.51101228053,
+      "nopat_margin": 0.04303945463851213,
+      "period_end_ordinary_shares_m": 2728.143
+    },
+    {
+      "fiscal_year": 2018,
+      "revenue_rmb_m": 130054.707,
+      "reported_operating_profit_ebit_rmb_m": 4241.76,
+      "profit_before_tax_rmb_m": 4385.64,
+      "income_tax_expense_rmb_m": 829.447,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": 3573.778284587108,
+      "nopat_margin": 0.027479038375651473,
+      "period_end_ordinary_shares_m": 2728.143,
+      "net_profit_parent_rmb_m": 2780.194,
+      "source_pages": [
+        "2018 annual report pp.6-7 and p.127"
+      ]
+    },
+    {
+      "fiscal_year": 2019,
+      "revenue_rmb_m": 127738.523,
+      "reported_operating_profit_ebit_rmb_m": 2312.288,
+      "profit_before_tax_rmb_m": 2431.131,
+      "income_tax_expense_rmb_m": 312.274,
+      "queue_specific_tax_rate": 0.1574774893942355,
+      "derived_nopat_rmb_m": 1948.154691003582,
+      "nopat_margin": 0.015251113330968935,
+      "period_end_ordinary_shares_m": 2728.143,
+      "net_profit_parent_rmb_m": 1614.45,
+      "source_pages": [
+        "2019 annual report p.7 (financial data summary)",
+        "2019 annual report p.123 (consolidated income statement)"
+      ]
+    }
+  ],
+  "tax_rate_assessment": {
+    "five_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "income_tax_expense_sum_rmb_m": 3590.614,
+    "profit_before_tax_sum_rmb_m": 22800.808,
+    "tax_rate": 0.1574774893942355,
+    "range_check_0_to_35pct": true,
+    "status": "calculated"
+  },
+  "growth_assessment": {
+    "required_valid_observations": 5,
+    "actual_valid_observations": 4,
+    "valid_observations": [
+      {
+        "from_fy": 2015,
+        "to_fy": 2016,
+        "growth": 0.884860506964025
+      },
+      {
+        "from_fy": 2016,
+        "to_fy": 2017,
+        "growth": -0.09617037441296727
+      },
+      {
+        "from_fy": 2017,
+        "to_fy": 2018,
+        "growth": -0.21602069733747997
+      },
+      {
+        "from_fy": 2018,
+        "to_fy": 2019,
+        "growth": -0.4548753347667006
+      }
+    ],
+    "invalid_pairs": [
+      {
+        "from_fy": 2014,
+        "to_fy": 2015,
+        "reason": "one or both adjacent NOPAT levels are non-positive"
+      }
+    ],
+    "status": "NA_fewer_than_five_valid_positive_adjacent_pairs"
+  },
+  "model_inputs": {
+    "starting_nopat_scenarios_rmb_m": {
+      "bear": 3510.1317755660384,
+      "base": 4272.090483409158,
+      "bull": 5497.796366249038
+    },
+    "nopat_margin_scenarios": {
+      "bear": 0.027479038375651473,
+      "base": 0.03344402599213675,
+      "bull": 0.04303945463851213
+    },
+    "initial_growth_scenarios": null,
+    "initial_ronic_scenarios": null,
+    "shares_m": 2728.143,
+    "shares_basis": "period_end_ordinary_shares; 2019 annual-report share-capital figure retained; not substituted with weighted-average diluted shares",
+    "ke": 0.08491314363484975,
+    "wacc": null,
+    "perpetual_growth": null,
+    "net_debt": null,
+    "entry_price_rmb": 85,
+    "status": "NA_initial_growth_rule_failed",
+    "not_evaluated": [
+      "RONIC three-window series",
+      "WACC/Kd",
+      "net debt",
+      "WACC-based terminal growth"
+    ],
+    "missing": [
+      "Frozen input rules §1.2 require five valid positive adjacent NOPAT growth observations; only four of five pairs are valid (FY2015–2016, FY2016–2017, FY2017–2018, FY2018–2019). FY2014–2015 is invalid because FY2014 NOPAT is negative."
+    ]
+  },
+  "queue_status": "NA_required_frozen_input",
+  "model_version": "V1.1",
+  "time_eligibility": {
+    "decision_at": "2020-08-31T23:59:59+08:00",
+    "all_six_original_reports_available_at_or_before_decision_at": true,
+    "available_at_rule": "Date-only annual-report release dates are conservatively mapped to the next common A-share trading day at 09:30 Asia/Shanghai.",
+    "eligible_fiscal_years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  "macro_inputs": {
+    "measure": "nominal GDP, current prices",
+    "unit": "RMB 100 million",
+    "start_year": 2010,
+    "end_year": 2019,
+    "start_value_100m_cny": 401513,
+    "end_value_100m_cny": 990865,
+    "years": 10,
+    "cagr": 0.0945396224670898,
+    "formula": "(GDP_2019/GDP_2010)^(1/10)-1; same ten-observation method used in prior queues",
+    "source_vintage": "latest NBS vintages publicly available by 2020-08-31 decision_at",
+    "sources": [
+      {
+        "year": 2010,
+        "value_100m_cny": 401513,
+        "vintage": "final_verification",
+        "published_at": "2012-01-05",
+        "source_url": "https://www.stats.gov.cn/english/NewsEvents/201201/t20120110_26553.html",
+        "sha256": null,
+        "sha256_status": "NOT_RETRIEVED",
+        "note": "NBS final-verified 2010 current-price GDP; raw source bytes were not downloaded for hashing."
+      },
+      {
+        "year": 2019,
+        "value_100m_cny": 990865,
+        "vintage": "preliminary_accounting",
+        "published_at": "2020-01-17",
+        "source_url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202001/t20200117_1767747.html",
+        "sha256": null,
+        "sha256_status": "NOT_RETRIEVED",
+        "note": "NBS preliminary 2019 current-price GDP available by 2020-08-31; final verification published 2020-12-30 is after decision_at and is excluded. Raw source bytes were not downloaded for hashing."
+      }
+    ],
+    "status": "calculated_with_source_hash_gap"
+  }
+}
