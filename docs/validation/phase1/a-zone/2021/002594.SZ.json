@@ -1,7 +1,6 @@
 {
   "status": "DRAFT",
   "known_defects": [
-    "All five adjacent-year NOPAT growth observations are valid under frozen §1.2; no growth NA applies. RONIC three-window series, debt cost/WACC and net debt are not fully mapped, so FCFF valuation inputs remain incomplete.",
     "2011–2020 nominal GDP CAGR was calculated from NBS 2011 final-verification and 2020 preliminary-vintage values; raw NBS source-file SHA-256 values were not retrieved.",
     "valuation_outputs remains null; this step creates A-zone inputs only and does not calculate valuation."
   ],
@@ -683,22 +682,18 @@
     },
     "initial_ronic_scenarios": null,
     "shares_m": 2861.142855,
-    "shares_basis": "2020 annual report dividend distribution share base 2,861,142,855; period-end ordinary shares",
+    "shares_basis": "2020 annual report dividend distribution share base 2,861,142,855; period-end ordinary shares. The latest complete annual report does not separately disclose a diluted weighted-average ordinary share count, so the §6.4 period-end fallback is used and the share-count basis is downgraded.",
     "ke": 0.07300711554106745,
-    "wacc": null,
-    "perpetual_growth": null,
-    "net_debt": null,
+    "wacc": 0.07114619399896355,
+    "perpetual_growth": 0.03,
+    "net_debt": 37819.892,
     "entry_price_rmb": 281.97,
-    "status": "NA_RONIC_WACC_and_net_debt_inputs_incomplete",
+    "status": "NA",
     "not_evaluated": [
-      "RONIC three-window series",
-      "WACC/Kd",
-      "net debt",
-      "WACC-based terminal growth"
+      "initial_ronic_scenarios Type 7 Q25/median/Q75: only 1 valid rolling 3-year window; frozen §6.3 requires at least 3."
     ],
-    "missing": [
-      "All five adjacent-year NOPAT growth observations are valid under frozen §1.2; however, RONIC three-window series, debt cost/WACC and net debt have not been fully mapped from the original report notes, so the FCFF valuation input set is incomplete."
-    ]
+    "missing": "initial_ronic_scenarios is NA under frozen §6.3: only the 2015-2018 rolling window has positive ΔIC and positive raw RONIC; the 2016-2019 window has negative raw RONIC; the 2017-2020 window has negative ΔIC. Only 1 valid window is available, below the required minimum of 3, so Type 7 Q25/median/Q75 scenarios cannot be calculated. WACC, perpetual_growth and net_debt are mapped.",
+    "net_debt_unit": "RMB million"
   },
   "queue_status": "NA_required_frozen_input",
   "model_version": "V1.1",
@@ -749,5 +744,261 @@
       }
     ],
     "status": "calculated_with_source_hash_gap"
+  },
+  "capital_inputs_assessment": {
+    "unit": "RMB million",
+    "source_unit_conversion": "Annual-report statement amounts are RMB yuan; all amounts below are divided by 1,000,000. NOPAT series is already RMB million. No RMB yuan/RMB million mixing.",
+    "invested_capital_formula": "IC_y = ordinary_equity_y + interest_bearing_borrowings_y + lease_liabilities_y - cash_and_cash_equivalents_y - nonoperating_investments_y",
+    "cash_basis": "Year-end cash and cash equivalents from annual-report cash-flow statements; restricted deposits are excluded from cash equivalents and are not deducted again.",
+    "nonoperating_investment_policy": "Include non-operating equity and financial investments, FVTPL/trading financial assets, identified wealth-management products and large certificates of deposit. Exclude operating receivables/receivables financing and trade payables.",
+    "current_portion_note": "Current portion of non-current liabilities includes any current lease-liability portion; only non-current lease liabilities are added separately, avoiding double counting.",
+    "years": [
+      {
+        "year": 2015,
+        "equity_attributable_to_parent": 32294.404,
+        "perpetual_bonds_in_other_equity_instruments": 3200,
+        "ordinary_equity": 29094.404,
+        "debt_components": {
+          "short_term_borrowings": 19943.8,
+          "current_portion_of_noncurrent_liabilities": 6469.06,
+          "long_term_borrowings": 6745.955,
+          "bonds_payable": 4483.946,
+          "short_term_financing_notes": 0,
+          "noncurrent_lease_liabilities": 0
+        },
+        "interest_bearing_borrowings_and_leases": 37642.761,
+        "cash_and_cash_equivalents": 6279.531,
+        "nonoperating_investment_components": {
+          "available_for_sale_financial_assets": 3071.357,
+          "long_term_equity_investments": 1888.715,
+          "fvtpl_financial_assets": 18.207,
+          "wealth_management_products": 200
+        },
+        "nonoperating_investments_total": 5178.279,
+        "invested_capital": 55279.355,
+        "source_basis": "2015 original annual report: consolidated balance sheet, cash-flow statement and notes for monetary funds, other current assets/wealth-management products, FVTPL assets, available-for-sale financial assets, long-term equity investments, borrowings, bonds and other equity instruments."
+      },
+      {
+        "year": 2016,
+        "equity_attributable_to_parent": 51255.929,
+        "perpetual_bonds_in_other_equity_instruments": 3795.8,
+        "ordinary_equity": 47460.129,
+        "debt_components": {
+          "short_term_borrowings": 25009.611,
+          "current_portion_of_noncurrent_liabilities": 7918.83,
+          "long_term_borrowings": 4847.936,
+          "bonds_payable": 4490.584,
+          "short_term_financing_notes": 0,
+          "noncurrent_lease_liabilities": 0
+        },
+        "interest_bearing_borrowings_and_leases": 42266.961,
+        "cash_and_cash_equivalents": 7358.594,
+        "nonoperating_investment_components": {
+          "available_for_sale_financial_assets": 3225.238,
+          "long_term_equity_investments": 2244.758
+        },
+        "nonoperating_investments_total": 5469.996,
+        "invested_capital": 76898.5,
+        "source_basis": "2016 original annual report: consolidated balance sheet, cash-flow statement and notes for monetary funds, available-for-sale financial assets, long-term equity investments, borrowings, bonds and other equity instruments; no year-end FVTPL financial asset balance identified."
+      },
+      {
+        "year": 2017,
+        "equity_attributable_to_parent": 55004.194,
+        "perpetual_bonds_in_other_equity_instruments": 3895.8,
+        "ordinary_equity": 51108.394,
+        "debt_components": {
+          "short_term_borrowings": 35774.916,
+          "current_portion_of_noncurrent_liabilities": 9873.754,
+          "long_term_borrowings": 6369.237,
+          "bonds_payable": 4493.109,
+          "short_term_financing_notes": 0,
+          "noncurrent_lease_liabilities": 0
+        },
+        "interest_bearing_borrowings_and_leases": 56511.016,
+        "cash_and_cash_equivalents": 8935.954,
+        "nonoperating_investment_components": {
+          "available_for_sale_financial_assets": 4185.46,
+          "long_term_equity_investments": 3064.911,
+          "fvtpl_financial_assets": 1.095
+        },
+        "nonoperating_investments_total": 7251.466,
+        "invested_capital": 91431.99,
+        "source_basis": "2017 original annual report: consolidated balance sheet, cash-flow statement and notes for monetary funds, FVTPL assets, available-for-sale financial assets, long-term equity investments, borrowings, bonds and other equity instruments."
+      },
+      {
+        "year": 2018,
+        "equity_attributable_to_parent": 55198.289,
+        "perpetual_bonds_in_other_equity_instruments": 3895.8,
+        "ordinary_equity": 51302.489,
+        "debt_components": {
+          "short_term_borrowings": 37788.977,
+          "current_portion_of_noncurrent_liabilities": 7482.634,
+          "long_term_borrowings": 6847.603,
+          "bonds_payable": 7076.777,
+          "short_term_financing_notes": 5496.811,
+          "noncurrent_lease_liabilities": 0
+        },
+        "interest_bearing_borrowings_and_leases": 64692.802,
+        "cash_and_cash_equivalents": 11151.057,
+        "nonoperating_investment_components": {
+          "long_term_equity_investments": 3560.88,
+          "other_equity_instrument_investments": 1620.969,
+          "other_noncurrent_financial_assets": 83.509,
+          "trading_financial_assets": 0.451
+        },
+        "nonoperating_investments_total": 5265.809,
+        "invested_capital": 99578.425,
+        "source_basis": "2018 original annual report: consolidated balance sheet, cash-flow statement and notes for cash, long-term equity investments, other equity instruments, other non-current financial assets, trading financial assets, borrowings, bonds and short-term financing notes."
+      },
+      {
+        "year": 2019,
+        "equity_attributable_to_parent": 56762.289,
+        "perpetual_bonds_in_other_equity_instruments": 4394.592,
+        "ordinary_equity": 52367.697,
+        "debt_components": {
+          "short_term_borrowings": 40332.365,
+          "current_portion_of_noncurrent_liabilities": 8747.448,
+          "long_term_borrowings": 11947.932,
+          "bonds_payable": 9968.555,
+          "short_term_financing_notes": 4997.982,
+          "current_lease_liabilities_included_in_current_portion": 219.04,
+          "noncurrent_lease_liabilities": 548.68
+        },
+        "interest_bearing_borrowings_and_leases": 76542.962,
+        "lease_liabilities_total": 767.72,
+        "cash_and_cash_equivalents": 11674.297,
+        "nonoperating_investment_components": {
+          "long_term_equity_investments": 4060.175,
+          "other_equity_instrument_investments": 1922.304,
+          "other_noncurrent_financial_assets": 46.608,
+          "trading_financial_assets": 34.345
+        },
+        "nonoperating_investments_total": 6063.432,
+        "invested_capital": 111172.93,
+        "source_basis": "2019 original annual report for consolidated balance-sheet and cash-flow values. The 2019 short-term financing note component 4,997.982 is disaggregated from the 2020 original annual report's 2019 comparative note; it is a component classification only and does not replace the 2019 reported balance-sheet total."
+      },
+      {
+        "year": 2020,
+        "equity_attributable_to_parent": 56874.274,
+        "perpetual_bonds_in_other_equity_instruments": 1094.592,
+        "ordinary_equity": 55779.682,
+        "debt_components": {
+          "short_term_borrowings": 16400.69,
+          "current_portion_of_noncurrent_liabilities": 11412.46,
+          "long_term_borrowings": 14745.495,
+          "bonds_payable": 8880.459,
+          "short_term_financing_notes": 0,
+          "current_lease_liabilities_included_in_current_portion": 168.507,
+          "noncurrent_lease_liabilities": 843.286
+        },
+        "interest_bearing_borrowings_and_leases": 52282.39,
+        "lease_liabilities_total": 1011.793,
+        "cash_and_cash_equivalents": 13738.498,
+        "restricted_cash_not_deducted": 706.532,
+        "nonoperating_investment_components": {
+          "long_term_equity_investments": 5465.588,
+          "other_equity_instrument_investments": 1420.08,
+          "other_noncurrent_financial_assets": 284.896,
+          "trading_financial_assets": 24,
+          "large_certificates_of_deposit": 700
+        },
+        "nonoperating_investments_total": 7894.564,
+        "invested_capital": 86429.01,
+        "source_basis": "2020 original annual report: consolidated balance sheet, cash-flow statement and notes for cash, trading financial assets, long-term equity investments, other equity instruments, other non-current financial assets, large certificates of deposit, borrowings, bonds and lease liabilities."
+      }
+    ],
+    "ronic_assessment": {
+      "formula": "RONIC_3y,t = (NOPAT_t - NOPAT_(t-3)) / (IC_t - IC_(t-3))",
+      "epsilon_formula": "epsilon_IC = max(RMB 1 million, 1% * abs(IC_(t-3)))",
+      "minimum_valid_windows": 3,
+      "quantile_method": "Type 7",
+      "windows": [
+        {
+          "window": "2015-2018",
+          "nopat_start": 2709.4843536875906,
+          "nopat_end": 3618.7370931662895,
+          "nopat_change": 909.2527394786989,
+          "ic_start": 55279.355,
+          "ic_end": 99578.425,
+          "ic_change": 44299.07,
+          "epsilon_ic": 552.79355,
+          "raw_ronic_3y": 0.02052532343181694,
+          "valid": true
+        },
+        {
+          "window": "2016-2019",
+          "nopat_start": 5107.000052502686,
+          "nopat_end": 1972.6628464795965,
+          "nopat_change": -3134.3372060230895,
+          "ic_start": 76898.5,
+          "ic_end": 111172.93,
+          "ic_change": 34274.43,
+          "epsilon_ic": 768.985,
+          "valid": false,
+          "na_reason": "Raw RONIC_3y is non-positive under frozen §6.3."
+        },
+        {
+          "window": "2017-2020",
+          "nopat_start": 4615.857945326459,
+          "nopat_end": 6045.026024305047,
+          "nopat_change": 1429.168078978588,
+          "ic_start": 91431.99,
+          "ic_end": 86429.01,
+          "ic_change": -5002.98,
+          "epsilon_ic": 914.3199,
+          "valid": false,
+          "na_reason": "The main cumulative IC denominator is non-positive under frozen §6.3."
+        }
+      ],
+      "valid_window_count": 1,
+      "status": "NA",
+      "reason": "Only one valid window is available; frozen §6.3 requires at least three, so the Type 7 Q25/median/Q75 initial RONIC scenarios are not calculable."
+    },
+    "wacc_assessment": {
+      "formula": "WACC = E/(D+E)*Ke + D/(D+E)*Kd*(1-T)",
+      "formation_date": "2021-08-30",
+      "formation_date_close_price_rmb": 281.97,
+      "shares_m": 2861.142855,
+      "shares_basis_status": "period_end_fallback_downgraded",
+      "market_equity_value_rmb_m": 806756.45082435,
+      "latest_balance_sheet_year": 2020,
+      "debt_and_lease_rmb_m": 52282.39,
+      "interest_expense_rmb_m_by_year": {
+        "2018": 3118.751,
+        "2019": 3487.407,
+        "2020": 3123.801
+      },
+      "average_interest_bearing_debt_rmb_m_by_year": {
+        "2018": 60601.909,
+        "2019": 70617.882,
+        "2020": 64412.676
+      },
+      "interest_expense_sum_rmb_m": 9729.959,
+      "average_debt_sum_rmb_m": 195632.467,
+      "kd": 0.0497359111665243,
+      "ke": 0.07300711554106745,
+      "tax_rate": 0.1468783964283012,
+      "wacc": 0.07114619399896355,
+      "source_notes": "2018 interest expense 3,118.751 is taken from the 2019 annual report's 2018 comparative interest-expense line; 2019 and 2020 interest expenses are from their respective annual reports. The 2019 short-term financing note component is disaggregated from the 2020 annual report's 2019 comparative note."
+    },
+    "perpetual_growth_assessment": {
+      "formula": "g0 = min(3%, nominal_GDP_CAGR); perpetual_growth = min(g0, WACC - 2.00pp)",
+      "nominal_gdp_cagr": 0.07942658584344775,
+      "g0": 0.03,
+      "wacc_minus_2pp": 0.05114619399896355,
+      "perpetual_growth": 0.03
+    },
+    "net_debt_assessment": {
+      "formula": "net_debt = interest_bearing_borrowings_and_leases - cash_and_cash_equivalents - nonoperating_current_financial_assets",
+      "interest_bearing_borrowings_and_leases_rmb_m": 52282.39,
+      "cash_and_cash_equivalents_rmb_m": 13738.498,
+      "restricted_cash_not_deducted_rmb_m": 706.532,
+      "nonoperating_current_financial_assets_components_rmb_m": {
+        "large_certificates_of_deposit": 700,
+        "trading_financial_assets": 24
+      },
+      "nonoperating_current_financial_assets_rmb_m": 724,
+      "net_debt_rmb_m": 37819.892
+    }
   }
 }
