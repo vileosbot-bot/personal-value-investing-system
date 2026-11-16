@@ -1,7 +1,6 @@
 {
   "status": "DRAFT",
   "known_defects": [
-    "模型输入价格误用了下一交易日开盘价；须改为形成参考日收盘价。",
     "valuation_outputs 仍为空（null）；冻结 V1.1 估值输出及 five_year_irr 尚未生成。"
   ],
   "schema_version": "phase1-a-zone-v1",
@@ -388,7 +387,7 @@
     "initial_roe": 0.16535159311486808,
     "year_five_roe": 0.17089794286222065,
     "cost_of_equity": 0.07547216439047578,
-    "entry_price_rmb": 28.01,
+    "entry_price_rmb": 28.14,
     "status": "complete",
     "missing": []
   },

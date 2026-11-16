@@ -1,7 +1,6 @@
 {
   "status": "DRAFT",
   "known_defects": [
-    "模型输入价格误用了下一交易日开盘价；须改为形成参考日收盘价。",
     "valuation_outputs 仍为空（null）；冻结 V1.1 估值输出及 five_year_irr 尚未生成。"
   ],
   "schema_version": "phase1-a-zone-v1",
@@ -402,7 +401,7 @@
     "wacc": null,
     "perpetual_growth": null,
     "net_debt": null,
-    "entry_price_rmb": 44.42,
+    "entry_price_rmb": 45.00,
     "status": "NA_initial_growth_rule_failed",
     "not_evaluated": [
       "RONIC three-window series",
