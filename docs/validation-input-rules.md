@@ -3,8 +3,8 @@
 > 上一轮监测排序规则配套修正：request-id pvis-phase0-monitor-fix-20261114-01；承接上一轮 pvis-phase0-monitor-20261114-01；仓库 vileosbot-bot/personal-value-investing-system；工作分支 validation/phase0-design；本轮修订前分支 HEAD a88cfb2830440e13c1180782fa2cfff58bc84337；当前 main 基线 43629ab4c9e336731578f118ebb54625bb4173de。本文件继续冻结 V1.1 模型输入生成规则，仅补充监测排序的确定性并列裁决；不修改模型代码或模型参数，不执行实际冻结或外部注册。
 
 - 上一轮 Request ID：pvis-phase0-monitor-fix-20261114-01（承接上一轮 pvis-phase0-monitor-20261114-01）
-- 版本：Phase 0 / v0.4.7（文档层重新冻结；V1.1 模型输入与参数保持不变）
-- 本次基线：main@0df7b0c5e3d5712274fe12939abe8ef0b1212c02；工作分支 validation/phase0-refreeze-v047。
+- 版本：Phase 0 / v0.4.8（香港市场基准替补重冻；V1.1 模型代码与模型参数保持不变）
+- 本次基线：main@cc97e5978b440ab96159b1969f9cb25ac245b6b7；工作分支 validation/phase0-refreeze-v048。
 - 基线模型：V1.1；设计依据为 src/pvis/valuation.py 与 examples/regression/v1_1_models.json。
 - 状态：未生成任何历史输入、估值或回测结果；本文件只规定形成日输入的机械生成规则。
 - 硬约束：不改模型代码、函数、参数校验、预测年限和输出口径；数据不满足规则时输出 NA／该队列失效，不以人工猜数补齐。
@@ -77,7 +77,7 @@ StartingCashFlow_s=Revenue_{latest}\times Margin_s
 | `period_end_shares` | 期末已发行普通股数（扣库存股） | 用于每股净资产，不以加权平均股数替代 |
 | `dividends_declared` | 对应财年的普通股现金股息总额 | 仅计在决策时点前已公告的中期／末期股息；未公告的年度不假设 |
 | `market_price` | 形成参考日未复权收盘价 | 交易所原始收盘价 |
-| `market_total_return` | 市场总回报指数 | A 股使用 CSI 300 Gross TRI；腾讯使用 HSI Gross TRI；税前股息再投资 |
+| `market_total_return` | 市场总回报 | A 股使用 CSI 300 Gross TRI；腾讯使用 French APAC ex Japan 3 Factors 月度市场组合总收益，先恢复 USD 再按 DEXHKUS 转为 HKD；源市场组合含股息与资本利得 |
 | `risk_free_yield` | 当地 10 年期主权债券收益率 | CNY 用中国国债；HKD 用香港政府／外汇基金 10 年期债券可比收益率 |
 | `nominal_gdp` | 名义 GDP | 公司主要经营／计价经济体的官方名义 GDP，按可得 vintage |
 | `minority_interest` | 非控股权益 | SOTP 中如经营现金流为合并口径则扣除 |
@@ -98,15 +98,16 @@ StartingCashFlow_s=Revenue_{latest}\times Margin_s
 
 为避免把美国 ERP 直接套用到中国或香港，本 Phase 0 使用与模型计价货币一致的本地市场历史超额收益代理。该值是历史估计，不声称是完美的前瞻 ERP。
 
-- 市场代理：A 股 CSI 300 Gross TRI；港股 HSI Gross TRI。指数代码及数据供应商见数据契约 §11。
-- Beta：以形成日前最近 60 个完整月的个股与市场月度总回报做 OLS；至少 36 个共同有效月份，否则 NA。月度回报必须同币种、含股息再投资。
-- 月度无风险收益：将各月末本币 10 年期收益率 y_m 转为月有效收益 (1+y_m)^(1/12)-1。
+- 市场代理：A 股 CSI 300 Gross TRI；腾讯使用 French APAC ex Japan 3 Factors（月度）所含区域市值加权市场组合总收益，经 DEXHKUS 月末汇率转换为 HKD。该区域组合包含香港，但不是香港本地指数或恒生官方 Gross TRI；来源文件及转换规则见数据契约 §11。
+- Beta：以形成日前最近 60 个完整月的个股与市场月度总回报做 OLS；至少 36 个共同有效月份，否则 NA。月度回报必须同币种、含股息再投资。腾讯个股月回报为 HKD；市场回报按下列冻结规则从 French USD 市场总收益转换为 HKD。按下方 Beta 公式对超额收益 (R_i−r_f, R_m−r_f) 做 OLS。
+- 港股市场总收益币种转换（冻结）：French 源文件 Mkt-RF_t、RF_t 均为百分数，先按 R_m,USD,t=(Mkt-RF_t+RF_t)/100 恢复 USD 市场组合简单总收益。X_t 为 Federal Reserve H.10 / FRED DEXHKUS 月末汇率，报价方向 HKD per USD；取该月最后一个日历日当日或之前最近一个有效观测，X_(t−1) 按前一个月相同规则取值；若某月内无任何有效 DEXHKUS 观测（回溯会跨入上一个月），该月记 NA。港币市场总收益固定为 R_m,HKD,t=(1+R_m,USD,t)×(X_t/X_(t−1))-1。不得倒置汇率比值或改用月平均汇率。French RF 只用于恢复市场总收益，不替代 HKMA 港币 10 年期无风险利率。
+- 月度无风险收益：将各月末本币 10 年期收益率 y_m 转为月有效收益 (1+y_m)^(1/12)-1。y_m 以小数表示（例如 4.00% 记为 0.04）。
 - Beta = Cov(R_i-r_f, R_m-r_f) / Var(R_m-r_f)，不做主观调整、不缩尾。
-- 历史 ERP 代理：最近 120 个有效月份的市场月度总回报减对应月度无风险收益的算术平均，年化为 ERP = 12 × mean(R_m − r_f,m)。主规则必须有完整 120 个月；不足 120 个月记 NA，不以 60–119 个月降级值替代主输入。
+- 历史 ERP 代理：最近 120 个有效月份的市场月度总回报减对应月度无风险收益的算术平均，年化为 ERP = 12 × mean(R_m − r_f,m)。腾讯市场收益先按 Mkt-RF + RF 恢复 USD，再按 DEXHKUS 转为 HKD，ERP 与 HKD 月度无风险收益在同一币种下计算。主规则必须有完整 120 个月；不足 120 个月记 NA，不以 60–119 个月降级值替代主输入。
 - **正阈值：ERP <3.00% 时记 NA 或转人工复核；ERP 本身不截断、不改写、不抬高到 3%，也不得用美国 ERP、调查值或任意常数替代。** ERP =3.00% 可进入后续公式；低于阈值的原始估计仍须保存并披露。
 - 股权资本成本：Ke = Rf,本币 + β × ERP。若 Ke ≤0、关键输入缺失或估计窗口不足，模型输入 NA。
 
-**腾讯市场选择按模型计价货币固定：**腾讯主估值现金流、SOTP 和输出均以 HKD 计价，因此主情景采用香港市场 ERP 与 HKD 无风险利率，公式为 Ke_HKD = Rf_HKD + β_HSI × ERP_HK。中国市场 ERP 配 CNY Rf 只能作为单独的敏感性情景；若计算该情景，须把现金流与估值同步转换为 CNY，并使用中国市场 Beta／ERP，不能将中国 ERP 与 HKD Rf 混用，也不能将 HK ERP 与 CNY Rf 混用。该选择依据是现金流／估值计价货币和本地市场风险匹配，不按公司注册地或投资者国籍临时切换。
+**腾讯市场选择按模型计价货币固定：**腾讯主估值现金流、SOTP 和输出均以 HKD 计价，因此主情景采用 HKD 计价的 APAC ex Japan 区域市场代理 ERP 与 HKD 无风险利率，公式为 Ke_HKD = Rf_HKD + β_APAC,HKD × ERP_APAC,HKD。这里的 APAC 是包含香港的区域代理，不是香港本地指数或香港本地 ERP；不得将其称为 HSI／恒生 ERP，也不得声称与 1006800 Gross TRI 等价。中国市场 ERP 配 CNY Rf 只能作为单独的敏感性情景；若计算该情景，须把现金流与估值同步转换为 CNY，并使用中国市场 Beta／ERP，不能将中国 ERP 与 HKD Rf 混用，也不能将 HKD 代理 ERP 与 CNY Rf 混用。该选择依据仍为现金流／估值计价货币和市场风险口径匹配，不按公司注册地或投资者国籍临时切换。
 
 ERP 是滚动历史实现值，容易受样本期影响。Ke 会传导至第五年退出值并影响隐含 IRR：茅台与腾讯的 Ke 进入权益折现率，改变第五年退出值；比亚迪的 Ke 进入 WACC 并改变第五年股权退出值；招行的 Ke 既作为剩余收益折现率，也作为 ROE 收敛终点，改变第五年退出值。regression.py 将模型第五年退出值作为 five_year_return_profile 的 exit_value，与前五年模型现金流共同求得五年隐含 IRR。因此 ERP／Ke 缺失或变动会通过退出值直接传导至隐含 IRR；不得只报告 Ke 对现值的影响而忽略该传导。
 
@@ -420,8 +421,8 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 
 - A 股与港股 2011–2026 原始公告的完整 vintage、精确发布时间及公告更正链。
 - 四家公司每一历史队列的财务字段可比性，特别是茅台有机 CapEx、腾讯核心 FCFF／SOTP 拆分、比亚迪三年累计 IC／NOPAT、招行普通股权益。
-- A 股 10 年期收益率、HKD 10 年期收益率、CSI 300 Gross TRI H00300、HSI Gross TRI 1006800 的完整历史版本、覆盖与授权。
-- A 股 PKU FF5+MOM 当前公开文件覆盖到 2023-12；未来月份须等待官方新版本。港股 French Hong Kong FF5+MOM 为 USD ex-post 序列，需核对下载版本、月度覆盖和 Federal Reserve H.10 / FRED DEXHKUS 转换。
+- A 股 10 年期收益率、HKD 10 年期收益率、CSI 300 Gross TRI H00300 的完整历史版本、覆盖与授权；French APAC ex Japan 3 Factors 原始月度快照、DEXHKUS 汇率快照、覆盖与逐月缺失检查。
+- A 股 PKU FF5+MOM 当前公开文件覆盖到 2023-12；未来月份须等待官方新版本。港股主基准为 French APAC ex Japan 3 Factors（月度）恢复的 USD 市场总收益，并按 DEXHKUS 转为 HKD；该代理不是香港本地指数，原始文件快照及逐月缺失检查须在数据冻结时完成。
 - 形成日前可用的中国与香港名义 GDP 历史 vintage。
 - 港股公司行动、腾讯实物分派、京东／美团价格与分红、汇率和股息税数据的历史精度。
 - 上交所／深交所官方交易日历、HKEX 沪／深港通日历、HKEX Severe Weather Trading 实施日及 HKO 台风／黑雨警告历史记录的逐日一致性。
@@ -477,3 +478,12 @@ B 区用于记录形成日之后的实现结果与终值事件；以下字段不
 - **批准记录：**freeze-approval-v047-20261115.md；SHA-256 47521f0206571a7fb53a5e5c5c83640196ca606d13c242418f08245d0ffc4546
 - **本文件边界：**只更新版本状态与记录；V1.1 模型输入规则、公式、函数、输入参数和输出口径均不变；M-5 是停止规则中“连续”计数的解释性澄清，不改变模型输入规则。
 - **历史节恢复：**本文件未恢复历史节；恢复原文见数据契约（v0.4.3/v0.4.4 节）与预注册（v0.4.3 节、v0.4.5 节）。
+
+
+## 2026-11-15 验证轨 Phase 0 v0.4.8 港股 Beta／ERP 市场口径重冻（pvis-phase0-refreeze-v048-20261115-01）
+
+- **基线与分支：**main@cc97e5978b440ab96159b1969f9cb25ac245b6b7 → validation/phase0-refreeze-v048。
+- **唯一变化：**腾讯 HKD 模型的市场代理改为 French APAC ex Japan 3 Factors（月度）市场总收益，经 DEXHKUS 转为 HKD；本地无风险利率来源、Beta／ERP 窗口与全部阈值不变。
+- **同币种规则：**腾讯个股月度总回报与区域市场代理均转换为 HKD 后进行 Beta 回归；ERP 亦以 HKD 市场总收益减 HKD 月度无风险收益计算。公式见 §3.2。
+- **限制：**区域组合包含香港但不是香港本地指数，不得称为恒生指数或与 1006800 Gross TRI 等价；Phase 1 历史队列与 2027 前瞻队列统一使用本版规则，旧设计结果不可直接比较。
+- **数据层前置条件：**French 原始文件与 DEXHKUS 原始 CSV 的 SHA-256、覆盖及逐月缺失检查完成前，不得把数据标 VERIFIED 或开始 Phase 1 新基准重算。
