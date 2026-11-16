@@ -26,34 +26,96 @@
       {
         "fiscal_year": 2012,
         "issuer": "Tencent Holdings Limited",
-        "source_channel": "Tencent official investor-relations direct original PDF (official issuer fallback)",
+        "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
+        "original_filename": "Tencent_2012_Annual_Report.pdf",
         "published_at": null,
         "available_at": null,
-        "retrieved_at": "2026-11-16T19:03:04.9844694+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 2759984,
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
-        "download_status": "retrieved_original_pdf_sha256_computed",
-        "point_in_time_status": "publication_timestamp_unresolved_not_verified",
-        "note": "Original issuer PDF bytes downloaded successfully and SHA-256 computed. Exact HKEX/issuer annual-report publication timestamp was not independently established in this pass; available_at intentionally remains null."
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+      },
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "original_filename": "Tencent_2013_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 9244495,
+        "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "original_filename": "Tencent_2014_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3255722,
+        "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "original_filename": "Tencent_2015_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3035911,
+        "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "original_filename": "Tencent_2016_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3168651,
+        "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
       },
       {
         "fiscal_year": 2017,
         "issuer": "Tencent Holdings Limited",
-        "source_channel": "Tencent official investor-relations direct original PDF (official issuer fallback)",
+        "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/c86a6eba3592140c2fdecab13676581f.pdf",
+        "original_filename": "Tencent_2017_Annual_Report.pdf",
         "published_at": null,
         "available_at": null,
-        "retrieved_at": "2026-11-16T19:03:04.9844694+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 8301878,
         "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
-        "download_status": "retrieved_original_pdf_sha256_computed",
-        "point_in_time_status": "publication_timestamp_unresolved_not_verified",
-        "note": "Original issuer PDF bytes downloaded successfully and SHA-256 computed. Exact HKEX/issuer annual-report publication timestamp was not independently established in this pass; available_at intentionally remains null."
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
       }
     ],
     "only_original_public_reports_available_by_decision_at": null,
-    "point_in_time_status": "original_report_bytes_retrieved_but_publication_timestamps_not_confirmed"
+    "point_in_time_status": "original_pdf_bytes_and_hashes_recorded_all_six_years_but_HKEX_release_timestamps_not_verified"
   },
   "market_price_and_execution": {
     "formation_date": "2018-08-30",
@@ -64,7 +126,7 @@
     "source_primary": "AKShare stock_hk_hist (attempted; request failed at Eastmoney proxy connection)",
     "source_primary_endpoint": "AKShare stock_hk_hist(symbol='00700', period='daily', start_date='20160801', end_date='20180903', adjust='')",
     "upstream_attempted_url": "https://33.push2his.eastmoney.com/api/qt/stock/kline/get?secid=116.00700&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=0&end=20500000&lmt=1000000",
-    "primary_status": "not_obtained_hkex_historical_data_subscription_not_available; eastmoney_webpage_timeout",
+    "primary_status": "not_obtained_after_three_authorized_source_attempts",
     "source_auxiliary": "yfinance",
     "source_auxiliary_endpoint": "yf.download('0700.HK', start='2016-08-29', end='2018-09-03', auto_adjust=False, actions=True)",
     "auxiliary_status": "unavailable_rate_limited_zero_rows",
@@ -86,7 +148,29 @@
         "2018-08-31": 313.06
       },
       "comparison_status": "not_compared_primary_source_unavailable"
-    }
+    },
+    "primary_source_attempts": [
+      {
+        "source": "Eastmoney quote webpage",
+        "url": "https://quote.eastmoney.com/hk/00700.html",
+        "attempt": "one retry",
+        "result": "timeout/no historical table response"
+      },
+      {
+        "source": "Sina Finance Hong Kong historical transactions",
+        "url": "https://stock.finance.sina.com.cn/hkstock/history/00700.html",
+        "attempt": "opened official free historical transaction page",
+        "result": "page returned only default 2019 Q4 rows; date selector did not expose 2016-2018 historical rows in this retrieval; six requested OHLC observations not obtained"
+      },
+      {
+        "source": "HKEX free historical market data",
+        "url": "https://www.hkex.com.hk/Global/Exchange/FAQ/Market-Data?sc_lang=en",
+        "attempt": "checked official FAQ and historical data catalogue",
+        "result": "no free downloadable historical daily OHLC file found; historical data products are ordered through HKEX Data Marketplace; price input remains NA"
+      }
+    ],
+    "next_owner_decision": "负责人拍板：是否付费购买 HKEX Data Marketplace 历史行情，或接受这六个价格输入为 NA。",
+    "yahoo_crosscheck_comparison": "not_performed_because_no_primary_source_values_were_obtained; Yahoo values remain auxiliary references only"
   },
   "market_inputs": {
     "currency": "HKD",
@@ -94,7 +178,7 @@
     "risk_free_yield_pct": null,
     "risk_free_monthly_effective": null,
     "risk_free_source": "HKMA Economic & Financial Data for Hong Kong, Interest Rate, Government bond yield - 10-year",
-    "risk_free_status": "NA_manual_HKMA_historical_portal_observation_not_obtained",
+    "risk_free_status": "NA_HKMA_historical_download_not_completed",
     "beta_window_months": 60,
     "beta": null,
     "beta_status": "NA_security_total_return_series_unavailable",
@@ -132,37 +216,99 @@
       "start": "1981-01-02",
       "end": "2026-11-06"
     },
-    "risk_free_note": "Frozen data-contract §3.3 specifies manual portal lookup (Economic & Financial Data for Hong Kong → Interest Rate → Government bond yield - 10-year), no public API. The accessible page exposed only current/latest summary; historical monthly observations and release dates for July 2016, July 2017, and July 2018 were not obtained. T10040301.xls is excluded because it is not the frozen historical series."
+    "risk_free_note": "HKMA official Economic & Financial Data for Hong Kong page was located and confirms the series label and current update convention. This pass did not obtain the historical download/export file containing the 2016-07, 2017-07, and 2018-07 monthly observations and their release dates. No API used; T10040301.xls excluded. Values and release dates remain null."
   },
   "source_refs": {
     "annual_reports": [
       {
         "fiscal_year": 2012,
         "issuer": "Tencent Holdings Limited",
-        "source_channel": "Tencent official investor-relations direct original PDF (official issuer fallback)",
+        "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
+        "original_filename": "Tencent_2012_Annual_Report.pdf",
         "published_at": null,
         "available_at": null,
-        "retrieved_at": "2026-11-16T19:03:04.9844694+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 2759984,
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
-        "download_status": "retrieved_original_pdf_sha256_computed",
-        "point_in_time_status": "publication_timestamp_unresolved_not_verified",
-        "note": "Original issuer PDF bytes downloaded successfully and SHA-256 computed. Exact HKEX/issuer annual-report publication timestamp was not independently established in this pass; available_at intentionally remains null."
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+      },
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "original_filename": "Tencent_2013_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 9244495,
+        "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "original_filename": "Tencent_2014_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3255722,
+        "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "original_filename": "Tencent_2015_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3035911,
+        "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "original_filename": "Tencent_2016_Annual_Report.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3168651,
+        "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
       },
       {
         "fiscal_year": 2017,
         "issuer": "Tencent Holdings Limited",
-        "source_channel": "Tencent official investor-relations direct original PDF (official issuer fallback)",
+        "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/c86a6eba3592140c2fdecab13676581f.pdf",
+        "original_filename": "Tencent_2017_Annual_Report.pdf",
         "published_at": null,
         "available_at": null,
-        "retrieved_at": "2026-11-16T19:03:04.9844694+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 8301878,
         "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
-        "download_status": "retrieved_original_pdf_sha256_computed",
-        "point_in_time_status": "publication_timestamp_unresolved_not_verified",
-        "note": "Original issuer PDF bytes downloaded successfully and SHA-256 computed. Exact HKEX/issuer annual-report publication timestamp was not independently established in this pass; available_at intentionally remains null."
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
       }
     ],
     "market_inputs": [
@@ -200,8 +346,17 @@
         "dataset": "HKMA Government bond yield - 10-year",
         "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/",
         "manual_query_path": "Economic & Financial Data for Hong Kong → Interest Rate → Government bond yield - 10-year",
-        "status": "historical_monthly_observation_not_obtained",
-        "sha256": null
+        "status": "historical_download_export_not_obtained",
+        "sha256": null,
+        "attempted_path": "Economic & Financial Data for Hong Kong → Interest Rate → Government bond yield - 10-year → download/export",
+        "required_observations": [
+          "2016-07",
+          "2017-07",
+          "2018-07"
+        ],
+        "values": null,
+        "release_dates": null,
+        "note": "Official page is readable but historical download/export did not yield the required monthly observations and release dates in this pass. No API used; T10040301.xls excluded."
       }
     ],
     "security_price_source": {
@@ -265,6 +420,14 @@
       "retrieved_at": "2026-11-16",
       "original_vendor_files_committed": false,
       "sha256_values": null
+    },
+    "hkex_release_lookup": {
+      "source": "HKEXnews Listed Company Information Title Search",
+      "stock_code": "00700",
+      "query_attempted": true,
+      "official_search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+      "outcome": "Exact Annual Report document release-time rows for all eight fiscal years were not reliably retrieved in this pass. HKEX annual-results announcements were found for some years, but they are not treated as annual-report publication timestamps. published_at and available_at therefore remain null.",
+      "annual_report_release_timestamps_confirmed": 0
     }
   },
   "blind_integrity": {
@@ -288,12 +451,11 @@
     "entry_price_hkd": null,
     "status": "NA_required_frozen_inputs_partially_retrieved",
     "missing": [
-      "Original annual-report PDFs retrieved and SHA-256 recorded, but exact publication/available_at timestamps remain unresolved; PIT eligibility not established.",
-      "Audited core FCFF six-year series and SOTP balance-sheet components not yet extracted and mapped from the original reports.",
-      "HKMA historical monthly 10-year HKD government bond yield values and release dates for July 2016, July 2017, and July 2018 not obtained from the required manual portal query.",
-      "Primary unadjusted Tencent formation-date close and entry-date open were not obtained from HKEX licensed historical files or Eastmoney webpage; Yahoo cross-check values are not accepted as primary evidence.",
-      "Tencent monthly security total-return series required for 60-month Beta is not available; Beta and Ke remain NA.",
-      "HKD ERP requires HKMA monthly risk-free series; ERP and Ke remain NA."
+      "All six annual-report PDFs for each queue are now present with actual bytes, URLs, retrieved_at, byte counts and SHA-256; exact HKEX annual-report release timestamps/available_at remain unverified.",
+      "Primary unadjusted formation close and entry open were not obtained from Eastmoney webpage, Sina historical page or free HKEX sources; six Yahoo auxiliary references were not promoted to primary inputs.",
+      "HKMA historical 10-year HKD government bond yields and release dates for 2016-07, 2017-07 and 2018-07 were not obtained through the portal download/export function.",
+      "Core FCFF financial-series extraction and SOTP balance-sheet components remain uncompleted.",
+      "Beta, ERP and Ke remain NA because required HKD security total-return and HKMA risk-free inputs are incomplete."
     ]
   },
   "valuation_outputs": null,
@@ -302,6 +464,7 @@
     "This is an evidence-gap DRAFT, not a completed valuation and not VERIFIED.",
     "No source SHA-256 is claimed where original bytes were not retrieved.",
     "Do not infer market prices, HKMA yields, French factor values, DEXHKUS, annual-report publication timestamps, financial statement values, or SOTP components.",
-    "Supplemental retrieval: official issuer annual-report PDF bytes and hashes are now recorded; exact PIT publication timestamps, primary OHLC, HKMA historical observations, audited financial-series extraction and SOTP inputs remain unresolved."
+    "Supplemental retrieval: official issuer annual-report PDF bytes and hashes are now recorded; exact PIT publication timestamps, primary OHLC, HKMA historical observations, audited financial-series extraction and SOTP inputs remain unresolved.",
+    "Replenishment-2: corrected annual_reports arrays to include all six consecutive fiscal years. The previous pass selected only the first and last year because the [start,end] window tuple was incorrectly treated as a list of fiscal years. Original PDF bytes/hashes are now recorded for all six reports. HKEX report release timestamps, primary OHLC and HKMA historical yields remain unresolved."
   ]
 }
