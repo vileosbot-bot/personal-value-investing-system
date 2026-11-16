@@ -1,8 +1,7 @@
 {
   "status": "DRAFT",
   "known_defects": [
-    "2011–2020 nominal GDP CAGR was calculated from NBS 2011 final-verification and 2020 preliminary-vintage values; raw NBS source-file SHA-256 values were not retrieved.",
-    "valuation_outputs remains null; this step creates A-zone inputs only and does not calculate valuation."
+    "2011–2020 nominal GDP CAGR was calculated from NBS 2011 final-verification and 2020 preliminary-vintage values; raw NBS source-file SHA-256 values were not retrieved."
   ],
   "schema_version": "phase1-a-zone-v1",
   "request_id": "pvis-phase1-batchB-2021-20261116-01",
@@ -539,7 +538,11 @@
     "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
     "deviation": "AKShare stock_zh_a_hist_tx query includes the 2021-08-31 execution date, which is after the 2021-08-30 formation date. Only month-end prices through 2021-07 and formation-date close were used for Beta/ERP and formation inputs; the 2021-08-31 open is recorded solely as simulated execution price. AKShare stock_dividend_cninfo returned full corporate-action history; only events with ex_date through 2021-07-31 were used in Beta. This is not a strict blind test."
   },
-  "valuation_outputs": null,
+  "valuation_outputs": {
+    "intrinsic_value_per_share": 38.82034738907008,
+    "five_year_irr": 0.03956743255971726,
+    "target_entry_price": 30.191361167014765
+  },
   "financial_series": [
     {
       "fiscal_year": 2015,
