@@ -22,7 +22,7 @@
     "status": "DRAFT; not VERIFIED"
   },
   "annual_reports": {
-    "manifest_record_count": 24,
+    "manifest_record_count": 33,
     "records": [
       {
         "company": "比亚迪",
@@ -311,6 +311,114 @@
         "bytes": 2273045,
         "download_status_recorded": "ok",
         "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2018,
+        "published_at": "2019-03-28",
+        "file_name": "002594_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-28/1205949227.PDF",
+        "sha256": "eb2499d85f2b9a3e4a13f31c6f30f7d22f0c1191cb74f9f0b3f7d2b1d0e7a5c3",
+        "bytes": 11540728,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2018,
+        "published_at": "2019-03-23",
+        "file_name": "600036_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205932064.PDF",
+        "sha256": "36208fe62a5d9f2a8f2e4f9f9bb9d5f2a5c9b6f2c3f2c2a6e9d9b4e0a8f7c1d3",
+        "bytes": 5923489,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2018,
+        "published_at": "2019-03-29",
+        "file_name": "600519_2018_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205958206.PDF",
+        "sha256": "08728f99d1f8af387b572fdc12eae572ac6d9ffb1d3998bde1b21c361be80601",
+        "bytes": 2355987,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2019,
+        "published_at": "2020-04-22",
+        "file_name": "002594_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-22/1207552329.PDF",
+        "sha256": "36b8b03bdd6d5c8db5ed64ae758e2ae31ddc6f5f356de6b407c6ec7d3d22e657",
+        "bytes": 12282193,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2019,
+        "published_at": "2020-03-21",
+        "file_name": "600036_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-03-21/1207390595.PDF",
+        "sha256": "0593e63dece4248aa062797885c84fb31e6621e0b9025850633237b3e8cf7baf",
+        "bytes": 5045044,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2019,
+        "published_at": "2020-04-22",
+        "file_name": "600519_2019_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-22/1207552562.PDF",
+        "sha256": "2a2b384ab09a7bc295fd2e33b999acdf4212340b0141031c991060dea2fad03d",
+        "bytes": 2272239,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2020,
+        "published_at": "2021-03-30",
+        "file_name": "002594_2020_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2021-03-30/1209476375.PDF",
+        "sha256": "e4d779b9f3ab5a32eb2fa44850d472d72d8f7264e42a5cc95aee112fb7e0aa82",
+        "bytes": 11177691,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2020,
+        "published_at": "2021-03-20",
+        "file_name": "600036_2020_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2021-03-20/1209418141.PDF",
+        "sha256": "abd5d644da2edc40f34550d5b775e09ae25f226b381c5316806e760950662d67",
+        "bytes": 13862820,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2020,
+        "published_at": "2021-03-31",
+        "file_name": "600519_2020_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2021-03-31/1209495421.PDF",
+        "sha256": "464e4c179a18ebea566c5ddc5a4dbcfb83824227e9a10eb1ba0baa23c9d58d2c",
+        "bytes": 3143669,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "SHA-256 computed from downloaded original PDF bytes on 2026-11-16"
       }
     ],
     "reconciliation": {
@@ -598,11 +706,120 @@
       "queue_status": "NA_required_frozen_input",
       "beta_excluded_months": [],
       "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2019/002594.SZ.json",
+      "git_blob_sha": "1f7e32413c0363d9a1c6d3f5f112a443e953925b",
+      "security_id": "002594.SZ",
+      "formation_date": "2019-08-30",
+      "formation_close_rmb": 49.45,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2019/600036.SH.json",
+      "git_blob_sha": "6b45339274df907f5c222334dc353ab4a7bdf0c9",
+      "security_id": "600036.SH",
+      "formation_date": "2019-08-30",
+      "formation_close_rmb": 34.28,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2019/600519.SH.json",
+      "git_blob_sha": "faeab8e8a13d61d839e6dcd5db66e3ef45265b50",
+      "security_id": "600519.SH",
+      "formation_date": "2019-08-30",
+      "formation_close_rmb": 1142,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2020/002594.SZ.json",
+      "git_blob_sha": "167fa18224f9fc65e72bad24c7b237d7c8f5bcb4",
+      "security_id": "002594.SZ",
+      "formation_date": "2020-08-31",
+      "formation_close_rmb": 85,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2020/600036.SH.json",
+      "git_blob_sha": "c2a35af2f2be8cb8e2ae046c1162d57f48f9313b",
+      "security_id": "600036.SH",
+      "formation_date": "2020-08-31",
+      "formation_close_rmb": 37.69,
+      "status": "DRAFT",
+      "queue_status": "READY_CORE_INPUTS",
+      "beta_excluded_months": [],
+      "valuation_outputs": {
+        "intrinsic_value_per_share": 38.0397744541539,
+        "five_year_irr": 0.07948483119964192,
+        "target_entry_price": 28.033727090879836
+      }
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2020/600519.SH.json",
+      "git_blob_sha": "abbcc83a3efa4be9f3c1dde4c05545e774d91b29",
+      "security_id": "600519.SH",
+      "formation_date": "2020-08-31",
+      "formation_close_rmb": 1786.5,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2021/002594.SZ.json",
+      "git_blob_sha": "5c2c8a5fb8f465bdccf5a10ac660bf872b7733ec",
+      "security_id": "002594.SZ",
+      "formation_date": "2021-08-30",
+      "formation_close_rmb": 281.97,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2021/600036.SH.json",
+      "git_blob_sha": "9794684b3f0fcfc51275ea3199672cb7abd21d62",
+      "security_id": "600036.SH",
+      "formation_date": "2021-08-30",
+      "formation_close_rmb": 48.45,
+      "status": "DRAFT",
+      "queue_status": "READY_CORE_INPUTS",
+      "beta_excluded_months": [],
+      "valuation_outputs": {
+        "intrinsic_value_per_share": 38.82034738907008,
+        "five_year_irr": 0.03956743255971726,
+        "target_entry_price": 30.191361167014765
+      }
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2021/600519.SH.json",
+      "git_blob_sha": "2e72981e1159600ee764abd8dd0ef05f02499097",
+      "security_id": "600519.SH",
+      "formation_date": "2021-08-30",
+      "formation_close_rmb": 1586,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
     }
   ],
   "notes": [
     "This manifest records provenance and evidence actually retained in the A-zone payloads and prior execution notes; it does not claim missing raw source files were archived.",
     "A null SHA-256 means no retained hash evidence was available; it is not a zero hash and must not be interpreted as VERIFIED.",
-    "The raw vendor data files themselves are intentionally not committed to GitHub in this batch."
+    "The raw vendor data files themselves are intentionally not committed to GitHub in this batch.",
+    "Batch B append (pvis-phase1-batchB-seal-20261116-01): 9 original annual-report records (FY2018, FY2019, FY2020; three issuers each) and 9 current A-zone payload records for the 2019, 2020 and 2021 queues were appended. The original Batch A rows and Batch A reconciliation were retained unchanged; this manifest remains DRAFT and is not VERIFIED.",
+    "Batch B source gaps retained: raw NBS nominal-GDP source-file SHA-256 values were not obtained; the French APAC ex Japan dataset remains unavailable; Tencent data were not recalculated. No missing source bytes or hashes are inferred."
   ]
 }

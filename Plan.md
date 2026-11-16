@@ -455,3 +455,13 @@
 - **封存清单：**新增 `docs/validation/phase1/data-manifest.json`，记录年报来源、市场／宏观数据源、行情与公司行动来源、FX 未下载状态及各 A 区 JSON Blob SHA。原始 vendor 文件不提交。
 - **来源完整性说明：**九份 JSON 的详细年报清单并集为 24 份（每家公司 FY2010–FY2017 各 8 份），与中期回报所记 23 份（8/7/8）存在一份差异；清单保留全部 24 条并标待总管核对。H00300 原始数据哈希未记录；CCDC 完整历史快照未封存（此前仅 2015 查询成功）；NBS GDP 文件仅有文件名引用、无 URL／哈希；AKShare／CNINFO 行情及分红原始文件的请求 URL 与哈希未留存；CFETS HKD/CNY 只登记来源、未下载。上述缺口均如实标注，不标 VERIFIED。
 - **执行边界：**批 A 完成；腾讯 3 份暂停；批 B 未启动；未修改 main、冻结文档或冻结模型；本轮只创建 PR，不合并。
+
+## 2026-11-16 Phase 1 批 B（2019–2021）封存交付（pvis-phase1-batchB-seal-20261116-01）
+
+- **状态：**批 B A 区工作完成；2019、2020、2021 三个队列共 9 份 A 区 JSON，全部保持 `DRAFT`，未标记 `VERIFIED`。
+- **2019 队列：**三家公司均为 NA；ERP 原值 0.018836243158518007（1.8836%）低于冻结 3.00% 门槛，三家 Ke 均为 null；茅台 ΔNWC、比亚迪 NOPAT 增长率、招行 Ke 均按各自冻结规则记 NA。
+- **2020 队列：**茅台因 ΔNWC 记 NA；比亚迪因五个相邻年度 NOPAT 增长观测不足记 NA；招行 READY，冻结 V1.1 剩余收益模型信号为 intrinsic_value_per_share 38.0397744541539、five_year_irr 0.07948483119964192、target_entry_price 28.033727090879836。
+- **2021 队列：**茅台因 ΔNWC 记 NA；比亚迪已补全 WACC 0.07114619399896355、perpetual_growth 0.03、net_debt 37819.892 百万元，但冻结 §6.3 仅 1/3 个滚动 RONIC 窗口有效，不足 3 个，initial_ronic_scenarios 保持 null、队列记 NA；招行 READY，冻结 V1.1 剩余收益模型信号为 intrinsic_value_per_share 38.82034738907008、five_year_irr 0.03956743255971726、target_entry_price 30.191361167014765。
+- **封存清单：**在既有批 A 清单基础上追加 9 条年报记录（FY2018–FY2020，每年三家公司）及 9 条当前 A 区载荷记录（2019–2021 三队列）；所有载荷 Blob SHA 均取自本次封存前分支实际读回值。
+- **数据缺口：**名义 GDP 原始文件 SHA-256 未取得；French APAC ex Japan 数据仍未取得；腾讯未重算。上述缺口如实保留，不推断、不伪造。
+- **执行边界：**本次仅追加 data-manifest.json、trial-ledger.md 与 Plan.md；不修改 9 份 A 区 JSON、冻结文档、冻结模型或 main；不新开 PR、不合并 PR #14。
