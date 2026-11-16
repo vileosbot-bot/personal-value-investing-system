@@ -1,8 +1,6 @@
 {
   "status": "DRAFT",
-  "known_defects": [
-    "valuation_outputs 仍为空（null）；冻结 V1.1 估值输出及 five_year_irr 尚未生成。"
-  ],
+  "known_defects": [],
   "schema_version": "phase1-a-zone-v1",
   "request_id": "pvis-phase1-execution-20261115-01",
   "zone": "A",
@@ -267,7 +265,11 @@
     "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
     "deviation": "AKShare/Tencent daily-history retrieval returned observations beyond some formation dates. The calculations below use only pre-formation windows, but the executor had downloaded the overbroad raw history; do not describe this as a strict blind test."
   },
-  "valuation_outputs": null,
+  "valuation_outputs": {
+    "intrinsic_value": 29.806763089668696,
+    "five_year_irr": 0.0887015860133504,
+    "target_entry_price": 21.777989353277743
+  },
   "financial_series": [
     {
       "fiscal_year": 2013,
