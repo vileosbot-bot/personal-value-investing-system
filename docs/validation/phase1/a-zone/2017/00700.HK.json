@@ -1,0 +1,350 @@
+{
+  "status": "DRAFT",
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-tencent-sync-20261116-01",
+  "zone": "A",
+  "queue_year": 2017,
+  "formation_date": "2017-08-30",
+  "decision_at": "2017-08-30T23:59:59+08:00",
+  "entry_date": "2017-08-31",
+  "result_date": "2022-08-31",
+  "company": {
+    "name": "腾讯控股",
+    "ticker": "00700",
+    "security_id": "00700.HK",
+    "exchange": "HKEX",
+    "currency": "HKD",
+    "model_route": "dcf_sotp"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2016,
+    "six_year_window": [
+      2011,
+      2016
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2011,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/3366557d8d87e634fbb78a99f2ec0ec3.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2012,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": null,
+    "point_in_time_status": "not_verified_due_missing_publication_timestamps_and_original_bytes"
+  },
+  "market_price_and_execution": {
+    "formation_date": "2017-08-30",
+    "formation_close_hkd": null,
+    "execution_date": "2017-08-31",
+    "execution_open_hkd": null,
+    "price_adjustment": "unadjusted",
+    "source_primary": "AKShare stock_hk_hist (attempted; request failed at Eastmoney proxy connection)",
+    "source_primary_endpoint": "AKShare stock_hk_hist(symbol='00700', period='daily', start_date='20160801', end_date='20180903', adjust='')",
+    "upstream_attempted_url": "https://33.push2his.eastmoney.com/api/qt/stock/kline/get?secid=116.00700&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=0&end=20500000&lmt=1000000",
+    "primary_status": "unavailable_proxy_error",
+    "source_auxiliary": "yfinance",
+    "source_auxiliary_endpoint": "yf.download('0700.HK', start='2016-08-29', end='2018-09-03', auto_adjust=False, actions=True)",
+    "auxiliary_status": "unavailable_rate_limited_zero_rows",
+    "source_sha256": null,
+    "status": "NA_missing_primary_price_evidence",
+    "note": "No formation close or next-day opening price is populated. yfinance was used only as auxiliary cross-check with auto_adjust=False; it returned zero rows due rate limiting and is not treated as primary evidence."
+  },
+  "market_inputs": {
+    "currency": "HKD",
+    "risk_free_month": "2017-07",
+    "risk_free_yield_pct": null,
+    "risk_free_monthly_effective": null,
+    "risk_free_source": "HKMA Economic & Financial Data for Hong Kong, Interest Rate, Government bond yield - 10-year",
+    "risk_free_status": "NA_historical_series_not_retrieved",
+    "beta_window_months": 60,
+    "beta": null,
+    "beta_status": "NA_stock_total_return_and_French_market_series_unavailable",
+    "erp_window_months": 120,
+    "erp_raw": null,
+    "erp_used": null,
+    "erp_status": "NA_French_APAC_ex_Japan_3_Factors_monthly_and_DEXHKUS_snapshot_not_retrieved",
+    "ke": null,
+    "ke_status": "NA",
+    "source_index": "Kenneth R. French Data Library Fama/French Asia Pacific ex Japan 3 Factors [Monthly]",
+    "source_index_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+    "source_index_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "source_index_status": "official_dataset_listing_confirmed_original_zip_not_retrieved",
+    "fx_source": "Federal Reserve H.10 / FRED DEXHKUS (HKD per USD)",
+    "fx_source_url": "https://fred.stlouisfed.org/series/DEXHKUS",
+    "fx_status": "not_retrieved",
+    "alpha": null,
+    "alpha_status": "NA_not_estimated_per_frozen_rule"
+  },
+  "source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2011,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/3366557d8d87e634fbb78a99f2ec0ec3.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2012,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations financial-reports page",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "published_at": null,
+        "available_at": null,
+        "retrieved_at": null,
+        "bytes": null,
+        "sha256": null,
+        "download_status": "official_link_located_but_original_bytes_not_retrieved",
+        "point_in_time_status": "not_verified",
+        "note": "Official issuer IR page lists this annual-report PDF; exact HKEX/issuer publication timestamp and original PDF bytes/hash were not obtained in this execution. Do not infer VERIFIED or PIT eligibility."
+      }
+    ],
+    "market_inputs": [
+      {
+        "dataset": "HKMA Government bond yield - 10-year",
+        "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/",
+        "status": "historical_observations_not_retrieved",
+        "sha256": null
+      },
+      {
+        "dataset": "French APAC ex Japan 3 Factors Monthly",
+        "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+        "expected_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+        "status": "official_listing_confirmed_original_zip_not_retrieved",
+        "sha256": null
+      },
+      {
+        "dataset": "FRED DEXHKUS",
+        "source_url": "https://fred.stlouisfed.org/series/DEXHKUS",
+        "quote": "HKD per USD",
+        "status": "not_retrieved",
+        "sha256": null
+      }
+    ],
+    "security_price_source": {
+      "primary_endpoint": "AKShare stock_hk_hist",
+      "upstream_provider": "Eastmoney historical K-line API",
+      "attempted_url": "https://33.push2his.eastmoney.com/api/qt/stock/kline/get",
+      "status": "request_failed_proxy_error",
+      "normalized_file": null,
+      "sha256": null
+    },
+    "auxiliary_price_source": {
+      "endpoint": "yfinance Ticker/download",
+      "ticker": "0700.HK",
+      "auto_adjust": false,
+      "actions": true,
+      "status": "rate_limited_zero_rows",
+      "sha256": null
+    },
+    "corporate_action_source": {
+      "primary": "Tencent issuer announcements / HKEXnews",
+      "status": "not_retrieved",
+      "sha256": null
+    },
+    "tencent_in_kind_distributions": {
+      "jd_09618_hk": {
+        "announcement_date": "2021-12-23",
+        "ex_date": "2022-01-20",
+        "record_date": "2022-01-25",
+        "distribution_date": "2022-03-25",
+        "ratio": "1 JD share per 21 Tencent shares",
+        "china_clear_path": "not confirmed for the main investor custody account",
+        "treatment": "queue_NA_if_receipt_path_unconfirmed"
+      },
+      "meituan_03690_hk": {
+        "announcement_date": "2022-11-16",
+        "ex_date": "2023-01-05",
+        "record_date": "2023-01-10",
+        "distribution_date": "2023-03-24",
+        "ratio": "1 Meituan share per 10 Tencent shares",
+        "china_clear_path": "issuer announcement indicates ChinaClear custody route",
+        "treatment": "outside_result_window"
+      }
+    },
+    "market_snapshot": {
+      "retrieved_at": "2026-11-16",
+      "original_vendor_files_committed": false,
+      "sha256_values": null
+    }
+  },
+  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "classification": "A_zone_information_set_replay",
+    "note": "No B-zone outcomes or realized returns were inspected or computed."
+  },
+  "financial_series": [],
+  "financial_series_status": "not_retrieved_original_reports_not_downloaded_or_parsed",
+  "model_inputs": {
+    "route": "dcf_sotp",
+    "currency": "HKD",
+    "starting_core_fcff_per_share": null,
+    "initial_growth": null,
+    "wacc": null,
+    "perpetual_growth": null,
+    "non_operating_value_per_share": null,
+    "entry_price_hkd": null,
+    "status": "NA_required_frozen_inputs_unavailable",
+    "missing": [
+      "Six original annual-report PDFs were linked from the issuer IR page but original bytes, exact publication timestamps, and SHA-256 were not retrieved.",
+      "Core FCFF financial series cannot be extracted or audited without original annual-report bytes.",
+      "HKMA historical 10-year HKD government bond yield observations not retrieved.",
+      "French APAC ex Japan 3 Factors monthly original ZIP and DEXHKUS daily snapshot not retrieved.",
+      "Primary unadjusted Tencent OHLC from AKShare failed at the upstream proxy; yfinance auxiliary cross-check was rate-limited and returned zero rows.",
+      "SOTP book-value components, diluted shares, debt, leases, non-controlling interests and investment holdings not verified from the original reports.",
+      "JD 09618.HK distribution custody/receipt path for the fixed southbound investor scenario is not confirmed; under data contract §6.5 the affected Tencent queue is NA."
+    ]
+  },
+  "valuation_outputs": null,
+  "queue_status": "NA_required_frozen_input",
+  "known_defects": [
+    "This is an evidence-gap DRAFT, not a completed valuation and not VERIFIED.",
+    "No source SHA-256 is claimed where original bytes were not retrieved.",
+    "Do not infer market prices, HKMA yields, French factor values, DEXHKUS, annual-report publication timestamps, financial statement values, or SOTP components."
+  ]
+}
