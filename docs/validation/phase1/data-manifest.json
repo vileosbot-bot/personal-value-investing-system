@@ -1,0 +1,608 @@
+{
+  "schema_version": "phase1-data-manifest-v1",
+  "request_id": "pvis-phase1-batchA-continuation-20261116-01",
+  "created_date": "2026-11-16",
+  "repository": "vileosbot-bot/personal-value-investing-system",
+  "branch": "validation/phase1-historical",
+  "inventory_commit": "6201b4c217ad7a8e8ed3edabecb1d6ad0ab166bf",
+  "scope": {
+    "batch": "A",
+    "formation_dates": [
+      "2016-08-30",
+      "2017-08-30",
+      "2018-08-30"
+    ],
+    "securities": [
+      "600519.SH",
+      "002594.SZ",
+      "600036.SH"
+    ],
+    "a_zone_json_count": 9,
+    "raw_vendor_files_committed": false,
+    "status": "DRAFT; not VERIFIED"
+  },
+  "annual_reports": {
+    "manifest_record_count": 24,
+    "records": [
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2010,
+        "published_at": "2011-04-21",
+        "file_name": "BYD_2010_HKEX_annual_report.pdf",
+        "source_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2011/0421/ltn20110421029.pdf",
+        "sha256": "2c2b0b316178b44b65daa373f488592bde503a7cd57a0af7329ee44ef7317c3d",
+        "bytes": 4862898,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2011,
+        "published_at": "2012-03-26 06:30:00",
+        "file_name": "002594_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-26/60719854.PDF",
+        "sha256": "b0805f57a3c7ca61e0b613425f04ccda2dbbe95e9a1184ca2761b7d34335f056",
+        "bytes": 1513623,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2012,
+        "published_at": "2013-03-25 00:00:00",
+        "file_name": "002594_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-25/62257540.PDF",
+        "sha256": "60a1ed3cb6fc2e6b49ad128e47d88f022fd32610c3233931baf44f6a0acfc32b",
+        "bytes": 4282662,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2013,
+        "published_at": "2014-03-20 00:00:00",
+        "file_name": "002594_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-20/63698039.PDF",
+        "sha256": "8c2b66039af7617735e31532738344fcbc89cd2618e3aaced053c557cc5f10fc",
+        "bytes": 4337261,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "file_name": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "file_name": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2016,
+        "published_at": "2017-03-29 00:00:00",
+        "file_name": "002594_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203217016.PDF",
+        "sha256": "932d750e8c264638f4e66f8751a1650b3b04bce5c74d1c230ccac3bc598d3c7f",
+        "bytes": 4500450,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "比亚迪",
+        "security_id": "002594.SZ",
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "file_name": "002594_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204525860.PDF",
+        "sha256": "4e73a4556852e2ab8bb0f6805ee41cbf70a640cb34bc0b1ec5c0aa4c939ae110",
+        "bytes": 5030737,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2010,
+        "published_at": "2011-04-01 06:30:00",
+        "file_name": "600036_2010_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2011-04-01/59215193.PDF",
+        "sha256": "7c3e1a1e24c71cd1b1700d054beac086e5f25a713c05fb58784b5bbabd43c0fc",
+        "bytes": 2740412,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2011,
+        "published_at": "2012-03-29 06:30:00",
+        "file_name": "600036_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-29/60750411.PDF",
+        "sha256": "d5481aa53bde153a8b91b7271dc6c64383f388d253a46d9040bb80e8a3ba19da",
+        "bytes": 2801499,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:01",
+        "file_name": "600036_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296708.PDF",
+        "sha256": "8bae31752f1950e52f51b804a76d0c1831793da09941fb561598be909c5fa849",
+        "bytes": 3098820,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2013,
+        "published_at": "2014-03-29 00:00:00",
+        "file_name": "600036_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-29/63753255.PDF",
+        "sha256": "66513c70e073fe2993fe9c06a8cc9c6a15345e78bbe65e56c52b965b4b072c58",
+        "bytes": 2768052,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2014,
+        "published_at": "2015-03-19 00:00:00",
+        "file_name": "600036_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-19/1200715897.PDF",
+        "sha256": "52bfff7ed33f9b7f4a7c64c7366b2a3a63ad4687bb9f82e9d6f252fb6f417d65",
+        "bytes": 6938555,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2015,
+        "published_at": "2016-03-31 00:00:00",
+        "file_name": "600036_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202113640.PDF",
+        "sha256": "4b78e80eb792816c2091e7045d405efb8f1ade74033acd5066dd001d52f88264",
+        "bytes": 2892411,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2016,
+        "published_at": "2017-03-25 00:00:00",
+        "file_name": "600036_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-25/1203196857.PDF",
+        "sha256": "0dc3f3f46a498acdd287069f5f6107c73bbaa4200f2320219dd4a92191497bda",
+        "bytes": 5127040,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "招商银行",
+        "security_id": "600036.SH",
+        "fiscal_year": 2017,
+        "published_at": "2018-03-24 00:00:00",
+        "file_name": "600036_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204512929.PDF",
+        "sha256": "bb7e82bf4fd017284e076ff98ba4095d484dbb74436a48d3b0a89add79fc0a08",
+        "bytes": 5210924,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2010,
+        "published_at": "2011-03-21 06:35:00",
+        "file_name": "600519_2010_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2011-03-21/59148907.PDF",
+        "sha256": "6a34f066141a696a55b90410aeab52911c9a4153d6442e1205523a7326675e36",
+        "bytes": 593755,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2011,
+        "published_at": "2012-04-11 06:30:00",
+        "file_name": "600519_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-04-11/60811608.PDF",
+        "sha256": "0b63ee70ae66fd908e8239c2745d8036a5f3a47be1e711f1f557fcd6ffbc6b1b",
+        "bytes": 616082,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:00",
+        "file_name": "600519_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296687.PDF",
+        "sha256": "9a8faef737d4dd64e8260325247b8ffe77e5de506f4b23b046f28c0758377eae",
+        "bytes": 1758264,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2013,
+        "published_at": "2014-03-25 00:00:00",
+        "file_name": "600519_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-25/63720184.PDF",
+        "sha256": "26524de9281264e149c23bdc618a32820678c8d07c5dc7c88cbc7e19b3df0bff",
+        "bytes": 1898954,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2014,
+        "published_at": "2015-04-21 00:00:00",
+        "file_name": "600519_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-04-21/1200877315.PDF",
+        "sha256": "89145ef5bd12256c4c75c122b1c8d59846a912434f1abd0570f678bdb1a20f24",
+        "bytes": 2278854,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2015,
+        "published_at": "2016-03-24 00:00:00",
+        "file_name": "600519_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-24/1202072290.PDF",
+        "sha256": "11a32c1e7f02a54fc2eea3c0d852af59ad37af9a2cbe91857cd93a6208a96d6c",
+        "bytes": 2261535,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2016,
+        "published_at": "2017-04-15 00:00:00",
+        "file_name": "600519_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-15/1203301659.PDF",
+        "sha256": "dd26d9e0017a938cb5e1aa0a830bab7502d0de1f85eb7c00abffb4888c8c20ad",
+        "bytes": 2241732,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      },
+      {
+        "company": "贵州茅台",
+        "security_id": "600519.SH",
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "file_name": "600519_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204526780.PDF",
+        "sha256": "b66a4641e5f2313ed7964e5bef0026021ff2164459d0e0615f1b4385ba1a78e3",
+        "bytes": 2273045,
+        "download_status_recorded": "ok",
+        "sha256_provenance": "copied from A-zone JSON metadata; original PDF bytes not re-hashed in this sealing step"
+      }
+    ],
+    "reconciliation": {
+      "interim_report_claim": {
+        "total": 23,
+        "by_company": {
+          "贵州茅台": 8,
+          "比亚迪": 7,
+          "招商银行": 8
+        }
+      },
+      "detailed_json_union": {
+        "total": 24,
+        "by_security": {
+          "600519.SH": 8,
+          "002594.SZ": 8,
+          "600036.SH": 8
+        }
+      },
+      "discrepancy": "The interim report records 23 PDFs (8/7/8), while the union of annual_reports in the nine A-zone JSONs contains 24 distinct company-year PDF records (8 per company, FY2010–FY2017). All 24 detailed records are retained here rather than silently omitting one; the count discrepancy remains for owner reconciliation.",
+      "note": "PDF SHA-256 values are the recorded values copied from the A-zone JSON metadata. Original PDF bytes are not present in the branch tree, so this sealing step did not independently recompute those hashes."
+    }
+  },
+  "market_and_macro_sources": [
+    {
+      "dataset": "CSI 300 Gross Total Return Index",
+      "series_code": "H00300",
+      "provider": "China Securities Index Co., Ltd. (中证指数有限公司)",
+      "referenced_raw_file": "H00300_official_daily_raw.json",
+      "retrieval_endpoint": "official index-perf endpoint; exact request URL was not retained in the A-zone source record",
+      "source_url": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000300factsheet.pdf",
+      "status": "RETRIEVED_METADATA_ONLY",
+      "recorded_observations": 3325,
+      "recorded_coverage": {
+        "start": "2005-01-01",
+        "end": "2018-08-31"
+      },
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The prior execution record reports 3,325 official H00300 daily records. The raw JSON is not present in the current repository tree; the factsheet URL is a series reference, not the retained raw-data download URL."
+    },
+    {
+      "dataset": "CCDC MOF-China Government Bond Yield Curve, 10-year maturity",
+      "provider": "China Central Depository & Clearing Co., Ltd. (CCDC／中债)",
+      "referenced_file_pattern": "CCDC_10Y_CGB_2006.html through CCDC_10Y_CGB_2018.html",
+      "source_url": "https://yield.chinabond.com.cn/cbweb-czb-web/czb/bzcxsmDown?locale=en_US",
+      "status": "PARTIAL_NOT_SEALED",
+      "recorded_retrieval": "Prior context confirms a historical query succeeded for 2015 only; the complete 2005–2018 HTML snapshot set was not completed.",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The filenames appear in A-zone source references, but file bytes and per-year hashes are not available in the repository tree. Do not treat the 2006–2018 pattern as proof of a complete snapshot."
+    },
+    {
+      "dataset": "China nominal GDP vintage series",
+      "provider": "National Bureau of Statistics of China (国家统计局)",
+      "referenced_file": "NBS_GDP_vintages.json",
+      "source_url": null,
+      "status": "NOT_VERIFIABLE_FROM_RETAINED_ARTIFACTS",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The filename is referenced in A-zone market_snapshot metadata; no source URL, retained file bytes, or hash was found in the branch tree or nine A-zone payloads."
+    }
+  ],
+  "security_market_data": [
+    {
+      "security_id": "600519.SH",
+      "endpoint": "AKShare stock_zh_a_hist_tx",
+      "upstream_provider": "Tencent Finance proxy",
+      "documentation_url": "https://akshare.akfamily.xyz/",
+      "referenced_normalized_file": "600519_akshare_tencent_daily.csv",
+      "referenced_raw_files": "600519_tencent_daily_raw_01..07.txt",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The endpoint function and upstream proxy are recorded, but the exact per-request URL and raw/normalized file SHA-256 values were not retained in the branch."
+    },
+    {
+      "security_id": "002594.SZ",
+      "endpoint": "AKShare stock_zh_a_hist_tx",
+      "upstream_provider": "Tencent Finance proxy",
+      "documentation_url": "https://akshare.akfamily.xyz/",
+      "referenced_normalized_file": "002594_akshare_tencent_daily.csv",
+      "referenced_raw_files": "002594_tencent_daily_raw_01..07.txt",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The endpoint function and upstream proxy are recorded, but the exact per-request URL and raw/normalized file SHA-256 values were not retained in the branch."
+    },
+    {
+      "security_id": "600036.SH",
+      "endpoint": "AKShare stock_zh_a_hist_tx",
+      "upstream_provider": "Tencent Finance proxy",
+      "documentation_url": "https://akshare.akfamily.xyz/",
+      "referenced_normalized_file": "600036_akshare_tencent_daily.csv",
+      "referenced_raw_files": "600036_tencent_daily_raw_01..07.txt",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The endpoint function and upstream proxy are recorded, but the exact per-request URL and raw/normalized file SHA-256 values were not retained in the branch."
+    }
+  ],
+  "corporate_action_sources": [
+    {
+      "security_id": "600519.SH",
+      "akshare_referenced_file": "600519_akshare_dividend.json",
+      "akshare_endpoint": "AKShare dividend endpoint; exact function name and request URL not retained in A-zone payload",
+      "cninfo_referenced_file": "600519_cninfo_dividend_raw.json",
+      "cninfo_endpoint": "CNINFO p_sysapi1139",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The source file names and CNINFO endpoint identifier are recorded; exact per-request URLs and file hashes are unavailable."
+    },
+    {
+      "security_id": "002594.SZ",
+      "akshare_referenced_file": "002594_akshare_dividend.json",
+      "akshare_endpoint": "AKShare dividend endpoint; exact function name and request URL not retained in A-zone payload",
+      "cninfo_referenced_file": "002594_cninfo_dividend_raw.json",
+      "cninfo_endpoint": "CNINFO p_sysapi1139",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The source file names and CNINFO endpoint identifier are recorded; exact per-request URLs and file hashes are unavailable."
+    },
+    {
+      "security_id": "600036.SH",
+      "akshare_referenced_file": "600036_akshare_dividend.json",
+      "akshare_endpoint": "AKShare dividend endpoint; exact function name and request URL not retained in A-zone payload",
+      "cninfo_referenced_file": "600036_cninfo_dividend_raw.json",
+      "cninfo_endpoint": "CNINFO p_sysapi1139",
+      "source_url": null,
+      "status": "REFERENCED_IN_A_ZONE_PAYLOAD; RAW_BYTES_NOT_IN_REPOSITORY",
+      "sha256": null,
+      "sha256_status": "NOT_RECORDED",
+      "note": "The source file names and CNINFO endpoint identifier are recorded; exact per-request URLs and file hashes are unavailable."
+    },
+    {
+      "dataset": "招商银行 2013 年度 A 股配股发行提示性公告",
+      "notice_id": "2013-035",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2013-08-28/63008058.PDF",
+      "sha256": "b09ea54ca08bca4ff24ee89345c4f091a4a97b1cc5d3711393e313f690336448",
+      "sha256_provenance": "recorded in the Phase 1 interim report; not re-hashed in this sealing step",
+      "status": "SOURCE_AND_HASH_RECORDED"
+    }
+  ],
+  "fx_sources": [
+    {
+      "dataset": "CFETS HKD/CNY CNY Central Parity Rate",
+      "provider": "China Foreign Exchange Trade System (CFETS／中国外汇交易中心)",
+      "source_url": "https://www.chinamoney.com.cn/english/bmkcpr/?tab=2",
+      "alternative_contract_landing_url": "https://www.chinamoney.org.cn/english/bmkcpr/",
+      "status": "SOURCE_REGISTERED_NOT_DOWNLOADED",
+      "sha256": null,
+      "sha256_status": "NOT_APPLICABLE_NOT_DOWNLOADED",
+      "note": "No FX raw data were downloaded for this CNY A-zone batch; FX is recorded as a source specification only. Do not treat an error response as FX data."
+    }
+  ],
+  "formation_close_crosscheck": {
+    "provider": "Eastmoney historical daily K-line API",
+    "endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+    "parameters": {
+      "klt": 101,
+      "fqt": 0,
+      "one_day_per_request": true
+    },
+    "status": "QUERIED_IN_PRIOR_STEP; RESPONSE_BODIES_NOT_ARCHIVED",
+    "response_sha256": null,
+    "note": "The nine formation-date close values were cross-checked against this second source; the exact response bodies were not archived, so no response hash is asserted."
+  },
+  "a_zone_payloads": [
+    {
+      "path": "docs/validation/phase1/a-zone/2016/002594.SZ.json",
+      "git_blob_sha": "a9261c72f37989cbde8897b8f6ea3b82e8d4d81c",
+      "security_id": "002594.SZ",
+      "formation_date": "2016-08-30",
+      "formation_close_rmb": 58.47,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2016/600036.SH.json",
+      "git_blob_sha": "4cb3cb667cd515816ee5b467bf0a40e4dbda9fb8",
+      "security_id": "600036.SH",
+      "formation_date": "2016-08-30",
+      "formation_close_rmb": 18.44,
+      "status": "DRAFT",
+      "queue_status": "READY_CORE_INPUTS",
+      "beta_excluded_months": [
+        "2013-09"
+      ],
+      "valuation_outputs": {
+        "intrinsic_value": 20.096848326837616,
+        "five_year_irr": 0.16645195016473346,
+        "target_entry_price": 19.68957417041824
+      }
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2016/600519.SH.json",
+      "git_blob_sha": "e03e6092d22cfc3bcc3673f171532c554e0808a8",
+      "security_id": "600519.SH",
+      "formation_date": "2016-08-30",
+      "formation_close_rmb": 305.86,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2017/002594.SZ.json",
+      "git_blob_sha": "f5643593fd1b7c8b2238f36ef256ba0df037c26a",
+      "security_id": "002594.SZ",
+      "formation_date": "2017-08-30",
+      "formation_close_rmb": 48.39,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2017/600036.SH.json",
+      "git_blob_sha": "4f2077d9da0dd34760913bb41dd060c6d604e6c0",
+      "security_id": "600036.SH",
+      "formation_date": "2017-08-30",
+      "formation_close_rmb": 27.16,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [
+        "2013-09"
+      ],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2017/600519.SH.json",
+      "git_blob_sha": "4cfab0606c97776de3e1093026567978524ac826",
+      "security_id": "600519.SH",
+      "formation_date": "2017-08-30",
+      "formation_close_rmb": 492.97,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2018/002594.SZ.json",
+      "git_blob_sha": "75aa56ecffceb6412212658f2f60330e6da01ed2",
+      "security_id": "002594.SZ",
+      "formation_date": "2018-08-30",
+      "formation_close_rmb": 45,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2018/600036.SH.json",
+      "git_blob_sha": "f2a41742bcaf792255296237ffc483d80bd65e8d",
+      "security_id": "600036.SH",
+      "formation_date": "2018-08-30",
+      "formation_close_rmb": 28.14,
+      "status": "DRAFT",
+      "queue_status": "READY_CORE_INPUTS",
+      "beta_excluded_months": [
+        "2013-09"
+      ],
+      "valuation_outputs": {
+        "intrinsic_value": 29.806763089668696,
+        "five_year_irr": 0.0887015860133504,
+        "target_entry_price": 21.777989353277743
+      }
+    },
+    {
+      "path": "docs/validation/phase1/a-zone/2018/600519.SH.json",
+      "git_blob_sha": "cf5d35d65eb047177267a78b831a3ab8351fceac",
+      "security_id": "600519.SH",
+      "formation_date": "2018-08-30",
+      "formation_close_rmb": 680.4,
+      "status": "DRAFT",
+      "queue_status": "NA_required_frozen_input",
+      "beta_excluded_months": [],
+      "valuation_outputs": null
+    }
+  ],
+  "notes": [
+    "This manifest records provenance and evidence actually retained in the A-zone payloads and prior execution notes; it does not claim missing raw source files were archived.",
+    "A null SHA-256 means no retained hash evidence was available; it is not a zero hash and must not be interpreted as VERIFIED.",
+    "The raw vendor data files themselves are intentionally not committed to GitHub in this batch."
+  ]
+}
