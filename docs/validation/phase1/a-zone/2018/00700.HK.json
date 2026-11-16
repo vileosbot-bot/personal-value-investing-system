@@ -36,7 +36,9 @@
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2013,
@@ -51,7 +53,9 @@
         "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2014,
@@ -66,7 +70,9 @@
         "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2015,
@@ -81,7 +87,9 @@
         "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2016,
@@ -96,7 +104,9 @@
         "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2017,
@@ -111,7 +121,9 @@
         "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       }
     ],
     "only_original_public_reports_available_by_decision_at": null,
@@ -119,19 +131,19 @@
   },
   "market_price_and_execution": {
     "formation_date": "2018-08-30",
-    "formation_close_hkd": null,
+    "formation_close_hkd": 357.4,
     "execution_date": "2018-08-31",
-    "execution_open_hkd": null,
-    "price_adjustment": "unadjusted",
+    "execution_open_hkd": 339.6,
+    "price_adjustment": "unadjusted_fqt_0",
     "source_primary": "AKShare stock_hk_hist (attempted; request failed at Eastmoney proxy connection)",
     "source_primary_endpoint": "AKShare stock_hk_hist(symbol='00700', period='daily', start_date='20160801', end_date='20180903', adjust='')",
     "upstream_attempted_url": "https://33.push2his.eastmoney.com/api/qt/stock/kline/get?secid=116.00700&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=0&end=20500000&lmt=1000000",
-    "primary_status": "not_obtained_after_three_authorized_source_attempts",
+    "primary_status": "retrieved_eastmoney_push2his_fqt0",
     "source_auxiliary": "yfinance",
     "source_auxiliary_endpoint": "yf.download('0700.HK', start='2016-08-29', end='2018-09-03', auto_adjust=False, actions=True)",
     "auxiliary_status": "unavailable_rate_limited_zero_rows",
     "source_sha256": null,
-    "status": "NA_primary_unadjusted_OHLC_not_obtained",
+    "status": "primary_prices_retrieved_ADR_crosscheck_passed",
     "note": "HKEX historical day-end closing files are offered through HKEX Data Marketplace licensing/subscription; no licensed download file was available in this execution. Eastmoney webpage retrieval timed out. Eastmoney kline API was not retried per instruction. Supplied Yahoo values are stored only as cross-check references, not primary inputs.",
     "user_supplied_yahoo_crosscheck": {
       "source": "project-owner-supplied Yahoo Finance cross-check values; not independently retrieved in this pass",
@@ -170,15 +182,154 @@
       }
     ],
     "next_owner_decision": "负责人拍板：是否付费购买 HKEX Data Marketplace 历史行情，或接受这六个价格输入为 NA。",
-    "yahoo_crosscheck_comparison": "not_performed_because_no_primary_source_values_were_obtained; Yahoo values remain auxiliary references only"
+    "yahoo_crosscheck_comparison": "not_performed_because_no_primary_source_values_were_obtained; Yahoo values remain auxiliary references only",
+    "eastmoney_evidence": {
+      "endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+      "fixed_params": {
+        "secid": "116.00700",
+        "klt": "101",
+        "fqt": "0",
+        "fields1": "f1,f2,f3,f4,f5",
+        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58"
+      },
+      "windows": [
+        {
+          "label": "2016",
+          "beg": "20160826",
+          "end": "20160902",
+          "retrieved_at": "2026-11-16T20:27:14.0686931+08:00",
+          "attempts": 1,
+          "status": "success",
+          "response_bytes": 609,
+          "rows": [
+            "2016-08-26,199.200,200.400,202.600,199.200,8087753,1625797008.000,1.70",
+            "2016-08-29,200.800,201.400,202.200,200.000,9841567,1980118576.000,1.10",
+            "2016-08-30,202.800,204.800,205.000,202.000,11748201,2395398608.000,1.49",
+            "2016-08-31,205.000,201.800,205.000,201.000,15317560,3102824496.000,1.95",
+            "2016-09-01,201.000,202.600,203.400,200.800,13605995,2750477216.000,1.29",
+            "2016-09-02,202.600,201.800,204.600,201.200,16427579,3326356048.000,1.68"
+          ]
+        },
+        {
+          "label": "2017",
+          "beg": "20170828",
+          "end": "20170901",
+          "attempts": 3,
+          "status": "success_on_attempt_3",
+          "failed_attempts": 2,
+          "rows": [
+            "2017-08-28,327.000,323.000,329.000,321.400,22343373,7245720832.000,2.31",
+            "2017-08-29,320.200,319.800,322.000,314.600,22207064,7083439104.000,2.29",
+            "2017-08-30,325.600,326.600,327.600,323.000,17631515,5736477952.000,1.44",
+            "2017-08-31,326.600,329.000,330.400,326.600,17317121,5693113600.000,1.16",
+            "2017-09-01,331.800,326.200,332.200,326.200,23454734,7705307136.000,1.82"
+          ]
+        },
+        {
+          "label": "2018",
+          "beg": "20180828",
+          "end": "20180903",
+          "attempts": 1,
+          "status": "success",
+          "response_bytes": 538,
+          "rows": [
+            "2018-08-28,365.000,365.400,368.800,361.400,20573345,7515940864.000,2.05",
+            "2018-08-29,365.000,360.800,366.000,357.800,15732722,5688273152.000,2.24",
+            "2018-08-30,361.200,357.400,362.600,355.400,12131375,4341993216.000,2.00",
+            "2018-08-31,339.600,340.000,343.600,338.000,51544845,17524559872.000,1.57",
+            "2018-09-03,333.400,332.800,335.200,328.600,27672896,9168154368.000,1.94"
+          ]
+        }
+      ],
+      "price_semantics": "K-line row fields: date, open, close, high, low, volume, amount, amplitude. fqt=0 unadjusted."
+    },
+    "daily_ohlc": [
+      {
+        "date": "2016-08-30",
+        "open": 202.8,
+        "close": 204.8,
+        "high": 205,
+        "low": 202,
+        "volume": 11748201,
+        "amount": 2395398608,
+        "amplitude_pct": 1.49
+      },
+      {
+        "date": "2016-08-31",
+        "open": 205,
+        "close": 201.8,
+        "high": 205,
+        "low": 201,
+        "volume": 15317560,
+        "amount": 3102824496,
+        "amplitude_pct": 1.95
+      },
+      {
+        "date": "2017-08-30",
+        "open": 325.6,
+        "close": 326.6,
+        "high": 327.6,
+        "low": 323,
+        "volume": 17631515,
+        "amount": 5736477952,
+        "amplitude_pct": 1.44
+      },
+      {
+        "date": "2017-08-31",
+        "open": 326.6,
+        "close": 329,
+        "high": 330.4,
+        "low": 326.6,
+        "volume": 17317121,
+        "amount": 5693113600,
+        "amplitude_pct": 1.16
+      },
+      {
+        "date": "2018-08-30",
+        "open": 361.2,
+        "close": 357.4,
+        "high": 362.6,
+        "low": 355.4,
+        "volume": 12131375,
+        "amount": 4341993216,
+        "amplitude_pct": 2
+      },
+      {
+        "date": "2018-08-31",
+        "open": 339.6,
+        "close": 340,
+        "high": 343.6,
+        "low": 338,
+        "volume": 51544845,
+        "amount": 17524559872,
+        "amplitude_pct": 1.57
+      }
+    ],
+    "yahoo_0700_hk_status": "invalidated_by_project_owner; never use as price source or comparison",
+    "timing_adjustment_2018_08_30": {
+      "status": "accepted_by_project_owner_ruling",
+      "notice": "教育部等八部门关于限制新网游、防控近视的通知于2018-08-30周四港股收市后发布",
+      "tcehy_2018_08_30_open_usd": 45.44,
+      "tcehy_2018_08_30_close_usd": 42.98,
+      "hkex_next_session_date": "2018-08-31",
+      "hkex_next_session_open_hkd": 339.6,
+      "hkex_next_session_close_hkd": 340,
+      "hkex_next_session_close_change_pct": -4.9,
+      "reuters_market_cap_hkd_trillion": 3.25,
+      "ruling": "TCEHY 2018-08-30 close reflects the after-HK-close news; compare its converted close to HK stock 2018-08-31 close 340.00, not 2018-08-30 close 357.40.",
+      "comparison_implied_hkd": 337.3371,
+      "comparison_hk_close_hkd": 340,
+      "difference_pct": 0.7832,
+      "decision": "357.40 remains the valid HKEX 2018-08-30 close; timing-adjusted ADR cross-check passes."
+    }
   },
   "market_inputs": {
     "currency": "HKD",
     "risk_free_month": "2018-07",
     "risk_free_yield_pct": null,
     "risk_free_monthly_effective": null,
-    "risk_free_source": "HKMA Economic & Financial Data for Hong Kong, Interest Rate, Government bond yield - 10-year",
-    "risk_free_status": "NA_HKMA_historical_download_not_completed",
+    "risk_free_source": "HKMA-prepared Hong Kong Government Bond Programme Statistics download, Table 9.4.1 End of period figures",
+    "risk_free_status": "observations_retrieved_but_frozen_series_mapping_and_publication_timestamp_unconfirmed",
     "beta_window_months": 60,
     "beta": null,
     "beta_status": "NA_security_total_return_series_unavailable",
@@ -216,7 +367,42 @@
       "start": "1981-01-02",
       "end": "2026-11-06"
     },
-    "risk_free_note": "HKMA official Economic & Financial Data for Hong Kong page was located and confirms the series label and current update convention. This pass did not obtain the historical download/export file containing the 2016-07, 2017-07, and 2018-07 monthly observations and their release dates. No API used; T10040301.xls excluded. Values and release dates remain null."
+    "risk_free_note": "Official downloaded workbook contains two separate 10-year values (indicative pricing and closing reference rate) for each requested month. Both have been preserved in source_refs.hkma_download.observations. Exact publication dates are absent from workbook and were not independently confirmed; no single series is selected as the frozen risk-free input pending confirmation.",
+    "risk_free_file": {
+      "source": "Hong Kong Government Bond Programme Statistics download (HKMA-prepared statistical tables, Table 9.4.1 End of period figures)",
+      "page_url": "https://www.hkgb.gov.hk/en/statistics/statistic.html",
+      "file_url": "https://www.hkgb.gov.hk/en/others/documents/T090401.xls",
+      "filename": "T090401.xls",
+      "retrieved_at": "2026-11-16T20:27:14.0686931+08:00",
+      "bytes": 688128,
+      "sha256": "278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10",
+      "sheet": "T9.4.1 (Benchmark yields)",
+      "table": "Table 9.4.1 End of period figures",
+      "observations": [
+        {
+          "month": "2016-07",
+          "ten_year_indicative_pricing_pct": 1.002,
+          "ten_year_closing_reference_rate_pct": 1.013,
+          "workbook_row": 108
+        },
+        {
+          "month": "2017-07",
+          "ten_year_indicative_pricing_pct": 1.418,
+          "ten_year_closing_reference_rate_pct": 1.418,
+          "workbook_row": 121
+        },
+        {
+          "month": "2018-07",
+          "ten_year_indicative_pricing_pct": 2.194,
+          "ten_year_closing_reference_rate_pct": 2.163,
+          "workbook_row": 134
+        }
+      ],
+      "release_dates": null,
+      "release_date_status": "not_present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
+      "interpretation_note": "Workbook provides two distinct 10-year benchmark series (indicative pricing and closing reference rate). Both are preserved separately; no single risk-free input is selected pending confirmation of the frozen-series mapping and publication/available_at timestamps."
+    },
+    "risk_free_release_dates": null
   },
   "source_refs": {
     "annual_reports": [
@@ -233,7 +419,9 @@
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2013,
@@ -248,7 +436,9 @@
         "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2014,
@@ -263,7 +453,9 @@
         "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here."
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2015,
@@ -278,7 +470,9 @@
         "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2016,
@@ -293,7 +487,9 @@
         "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       },
       {
         "fiscal_year": 2017,
@@ -308,7 +504,9 @@
         "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
         "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved."
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
+        "hkex_annual_report_release_time": null,
+        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
       }
     ],
     "market_inputs": [
@@ -428,6 +626,140 @@
       "official_search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
       "outcome": "Exact Annual Report document release-time rows for all eight fiscal years were not reliably retrieved in this pass. HKEX annual-results announcements were found for some years, but they are not treated as annual-report publication timestamps. published_at and available_at therefore remain null.",
       "annual_report_release_timestamps_confirmed": 0
+    },
+    "adr_crosscheck": {
+      "source": "Yahoo Finance chart endpoint for TCEHY daily close (ADR, USD) and DEXHKUS.csv snapshot",
+      "tcehy_endpoint": "https://query1.finance.yahoo.com/v8/finance/chart/TCEHY",
+      "adr_to_ordinary_share_ratio": "1 TCEHY ADS = 1 Tencent HK ordinary share",
+      "formula": "TCEHY daily close USD × same-date DEXHKUS HKD/USD = implied HKD close",
+      "dexhkus_sha256": "1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7",
+      "comparisons": [
+        {
+          "date": "2016-08-30",
+          "tcehy_close_usd": 26.44,
+          "dexhkus_hkd_per_usd": 7.7578,
+          "implied_hkd": 205.1162,
+          "hk_close_hkd": 204.8,
+          "comparison_date": "2016-08-30",
+          "difference_pct": 0.1544,
+          "check": "pass"
+        },
+        {
+          "date": "2016-08-31",
+          "tcehy_close_usd": 25.89,
+          "dexhkus_hkd_per_usd": 7.7568,
+          "implied_hkd": 200.8236,
+          "hk_close_hkd": 201.8,
+          "comparison_date": "2016-08-31",
+          "difference_pct": 0.4839,
+          "check": "pass"
+        },
+        {
+          "date": "2017-08-30",
+          "tcehy_close_usd": 41.93,
+          "dexhkus_hkd_per_usd": 7.8254,
+          "implied_hkd": 328.119,
+          "hk_close_hkd": 326.6,
+          "comparison_date": "2017-08-30",
+          "difference_pct": 0.4651,
+          "check": "pass"
+        },
+        {
+          "date": "2017-08-31",
+          "tcehy_close_usd": 42.33,
+          "dexhkus_hkd_per_usd": 7.8267,
+          "implied_hkd": 331.3042,
+          "hk_close_hkd": 329,
+          "comparison_date": "2017-08-31",
+          "difference_pct": 0.7004,
+          "check": "pass"
+        },
+        {
+          "date": "2018-08-30",
+          "tcehy_close_usd": 42.98,
+          "dexhkus_hkd_per_usd": 7.8487,
+          "implied_hkd": 337.3371,
+          "hk_close_hkd": 340,
+          "comparison_date": "2018-08-31",
+          "difference_pct": 0.7832,
+          "check": "pass_timing_adjusted"
+        },
+        {
+          "date": "2018-08-31",
+          "tcehy_close_usd": 43.14,
+          "dexhkus_hkd_per_usd": 7.8486,
+          "implied_hkd": 338.5886,
+          "hk_close_hkd": 340,
+          "comparison_date": "2018-08-31",
+          "difference_pct": 0.4151,
+          "check": "pass"
+        }
+      ],
+      "tolerance_pct": 2,
+      "overall": "all six daily close comparisons pass; 2018-08-30 is aligned to the next HK trading session close due to after-HK-close news"
+    },
+    "hkex_annual_report_release_search": {
+      "source": "HKEXnews Listed Company Information Title Search",
+      "search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+      "stock_code": "00700",
+      "document_type_filter": "Financial Statements/ESG Information - [Annual Report]",
+      "fiscal_years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017
+      ],
+      "result": "The title-search page and category filter were opened, but this run did not obtain a reliable result row with the exact Annual Report release timestamp for all eight reports. Results that surfaced annual-results announcements were excluded. No annual-results announcement time or PDF download time was substituted.",
+      "confirmed_rows": [],
+      "unresolved_years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017
+      ],
+      "available_at": null
+    },
+    "hkma_download": {
+      "source": "Hong Kong Government Bond Programme Statistics download (HKMA-prepared statistical tables, Table 9.4.1 End of period figures)",
+      "page_url": "https://www.hkgb.gov.hk/en/statistics/statistic.html",
+      "file_url": "https://www.hkgb.gov.hk/en/others/documents/T090401.xls",
+      "filename": "T090401.xls",
+      "retrieved_at": "2026-11-16T20:27:14.0686931+08:00",
+      "bytes": 688128,
+      "sha256": "278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10",
+      "sheet": "T9.4.1 (Benchmark yields)",
+      "table": "Table 9.4.1 End of period figures",
+      "observations": [
+        {
+          "month": "2016-07",
+          "ten_year_indicative_pricing_pct": 1.002,
+          "ten_year_closing_reference_rate_pct": 1.013,
+          "workbook_row": 108
+        },
+        {
+          "month": "2017-07",
+          "ten_year_indicative_pricing_pct": 1.418,
+          "ten_year_closing_reference_rate_pct": 1.418,
+          "workbook_row": 121
+        },
+        {
+          "month": "2018-07",
+          "ten_year_indicative_pricing_pct": 2.194,
+          "ten_year_closing_reference_rate_pct": 2.163,
+          "workbook_row": 134
+        }
+      ],
+      "release_dates": null,
+      "release_date_status": "not_present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
+      "interpretation_note": "Workbook provides two distinct 10-year benchmark series (indicative pricing and closing reference rate). Both are preserved separately; no single risk-free input is selected pending confirmation of the frozen-series mapping and publication/available_at timestamps."
     }
   },
   "blind_integrity": {
@@ -451,11 +783,10 @@
     "entry_price_hkd": null,
     "status": "NA_required_frozen_inputs_partially_retrieved",
     "missing": [
-      "All six annual-report PDFs for each queue are now present with actual bytes, URLs, retrieved_at, byte counts and SHA-256; exact HKEX annual-report release timestamps/available_at remain unverified.",
-      "Primary unadjusted formation close and entry open were not obtained from Eastmoney webpage, Sina historical page or free HKEX sources; six Yahoo auxiliary references were not promoted to primary inputs.",
-      "HKMA historical 10-year HKD government bond yields and release dates for 2016-07, 2017-07 and 2018-07 were not obtained through the portal download/export function.",
+      "Eight HKEX Annual Report document-specific release timestamps and exact available_at values remain unconfirmed; Annual Results announcements were excluded and download time was not substituted.",
+      "The official HKMA-prepared Government Bond Programme workbook was downloaded and contains 10-year indicative-pricing and closing-reference-rate observations, but the exact frozen-series mapping and release dates are not confirmed; risk-free input remains NA.",
       "Core FCFF financial-series extraction and SOTP balance-sheet components remain uncompleted.",
-      "Beta, ERP and Ke remain NA because required HKD security total-return and HKMA risk-free inputs are incomplete."
+      "Beta, ERP and Ke remain NA pending full security total-return and frozen HKD risk-free inputs."
     ]
   },
   "valuation_outputs": null,
@@ -465,6 +796,7 @@
     "No source SHA-256 is claimed where original bytes were not retrieved.",
     "Do not infer market prices, HKMA yields, French factor values, DEXHKUS, annual-report publication timestamps, financial statement values, or SOTP components.",
     "Supplemental retrieval: official issuer annual-report PDF bytes and hashes are now recorded; exact PIT publication timestamps, primary OHLC, HKMA historical observations, audited financial-series extraction and SOTP inputs remain unresolved.",
-    "Replenishment-2: corrected annual_reports arrays to include all six consecutive fiscal years. The previous pass selected only the first and last year because the [start,end] window tuple was incorrectly treated as a list of fiscal years. Original PDF bytes/hashes are now recorded for all six reports. HKEX report release timestamps, primary OHLC and HKMA historical yields remain unresolved."
+    "Replenishment-2: corrected annual_reports arrays to include all six consecutive fiscal years. The previous pass selected only the first and last year because the [start,end] window tuple was incorrectly treated as a list of fiscal years. Original PDF bytes/hashes are now recorded for all six reports. HKEX report release timestamps, primary OHLC and HKMA historical yields remain unresolved.",
+    "Supplemental source closure: six Eastmoney unadjusted fqt=0 daily OHLC rows and six TCEHY/DEXHKUS ADR comparisons were recorded. The 2018-08-30 ADR comparison is timing-adjusted to 2018-08-31 HK close under the project-owner ruling. HKMA workbook observations were captured but risk-free selection remains NA pending series mapping/release timestamp confirmation; HKEX annual-report release timestamps remain unresolved."
   ]
 }
