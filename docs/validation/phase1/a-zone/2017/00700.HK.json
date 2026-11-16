@@ -135,16 +135,16 @@
     "execution_date": "2017-08-31",
     "execution_open_hkd": 326.6,
     "price_adjustment": "unadjusted_fqt_0",
-    "source_primary": "AKShare stock_hk_hist (attempted; request failed at Eastmoney proxy connection)",
-    "source_primary_endpoint": "AKShare stock_hk_hist(symbol='00700', period='daily', start_date='20160801', end_date='20180903', adjust='')",
-    "upstream_attempted_url": "https://33.push2his.eastmoney.com/api/qt/stock/kline/get?secid=116.00700&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=0&end=20500000&lmt=1000000",
+    "source_primary": "Eastmoney push2his historical daily K-line endpoint",
+    "source_primary_endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+    "upstream_attempted_url": null,
     "primary_status": "retrieved_eastmoney_push2his_fqt0",
     "source_auxiliary": "yfinance",
     "source_auxiliary_endpoint": "yf.download('0700.HK', start='2016-08-29', end='2018-09-03', auto_adjust=False, actions=True)",
     "auxiliary_status": "unavailable_rate_limited_zero_rows",
     "source_sha256": null,
     "status": "primary_prices_retrieved_ADR_crosscheck_passed",
-    "note": "HKEX historical day-end closing files are offered through HKEX Data Marketplace licensing/subscription; no licensed download file was available in this execution. Eastmoney webpage retrieval timed out. Eastmoney kline API was not retried per instruction. Supplied Yahoo values are stored only as cross-check references, not primary inputs.",
+    "note": "Primary unadjusted OHLC was retrieved from Eastmoney push2his with fqt=0. Daily rows and raw K-line strings are preserved under eastmoney_evidence. Yahoo 0700.HK historical prices were invalidated by the project owner due to a systematic ~8.5% adjustment mismatch and are not used as primary or cross-check evidence. TCEHY ADR is used only for the separate 1:1 FX cross-check recorded in source_refs.annual report and HKMA gaps remain.",
     "user_supplied_yahoo_crosscheck": {
       "source": "project-owner-supplied Yahoo Finance cross-check values; not independently retrieved in this pass",
       "ticker": "0700.HK",
@@ -159,7 +159,8 @@
         "2017-08-31": 301.08,
         "2018-08-31": 313.06
       },
-      "comparison_status": "not_compared_primary_source_unavailable"
+      "comparison_status": "not_compared_primary_source_unavailable",
+      "status": "invalidated_by_project_owner_not_used"
     },
     "primary_source_attempts": [
       {
@@ -182,7 +183,7 @@
       }
     ],
     "next_owner_decision": "负责人拍板：是否付费购买 HKEX Data Marketplace 历史行情，或接受这六个价格输入为 NA。",
-    "yahoo_crosscheck_comparison": "not_performed_because_no_primary_source_values_were_obtained; Yahoo values remain auxiliary references only",
+    "yahoo_crosscheck_comparison": "invalidated: Yahoo 0700.HK prices are not used; replaced by TCEHY ADR 1:1 conversion comparisons in source_refs.adr_crosscheck",
     "eastmoney_evidence": {
       "endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
       "fixed_params": {
@@ -321,6 +322,27 @@
       "comparison_hk_close_hkd": 340,
       "difference_pct": 0.7832,
       "decision": "357.40 remains the valid HKEX 2018-08-30 close; timing-adjusted ADR cross-check passes."
+    },
+    "source_primary_parameters": {
+      "secid": "116.00700",
+      "klt": "101",
+      "fqt": "0",
+      "fields1": "f1,f2,f3,f4,f5",
+      "fields2": "f51,f52,f53,f54,f55,f56,f57,f58",
+      "windows": [
+        {
+          "beg": "20160826",
+          "end": "20160902"
+        },
+        {
+          "beg": "20170828",
+          "end": "20170901"
+        },
+        {
+          "beg": "20180828",
+          "end": "20180903"
+        }
+      ]
     }
   },
   "market_inputs": {
