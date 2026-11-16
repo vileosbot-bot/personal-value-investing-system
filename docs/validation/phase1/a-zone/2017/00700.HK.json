@@ -800,7 +800,7 @@
       
     ]
   },
-  "valuation_outputs": null,
+  "valuation_outputs": {"intrinsic_value": 1419.198347, "five_year_irr": 0.426077, "target_entry_price": 934.189786}, "scenario_outputs": {"pessimistic": {"intrinsic_value": 1053.940023, "operating_value": 1033.448723, "terminal_value": 1515.960815, "year_five_exit_value": 1313.113092, "five_year_irr": 0.342436}, "baseline": {"intrinsic_value": 1419.198347, "operating_value": 1398.707047, "terminal_value": 2072.051697, "year_five_exit_value": 1783.732154, "five_year_irr": 0.426077}, "optimistic": {"intrinsic_value": 4421.447051, "operating_value": 4400.955751, "terminal_value": 6698.291776, "year_five_exit_value": 5680.28195, "five_year_irr": 0.792973}},
   "queue_status": "READY",
   "known_defects": [
     "This is an evidence-gap DRAFT, not a completed valuation and not VERIFIED.",
