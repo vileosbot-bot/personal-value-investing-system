@@ -29,16 +29,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/3366557d8d87e634fbb78a99f2ec0ec3.pdf",
         "original_filename": "Tencent_2011_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2012-03-25T18:03:00+08:00",
+        "available_at": "2012-03-25T18:03:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 4838461,
         "sha256": "c89bdd86df8b6fd53b2d44aa49a25c84dd9cc9c8f11f0d481629b8f64a84f4aa",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2012-03-25T18:03:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2012,
@@ -46,16 +46,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
         "original_filename": "Tencent_2012_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2013-03-28T19:26:00+08:00",
+        "available_at": "2013-03-28T19:26:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 2759984,
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2013-03-28T19:26:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2013,
@@ -63,16 +63,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
         "original_filename": "Tencent_2013_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2014-03-31T19:12:00+08:00",
+        "available_at": "2014-03-31T19:12:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 9244495,
         "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2014-03-31T19:12:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2014,
@@ -80,16 +80,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
         "original_filename": "Tencent_2014_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2015-03-30T20:35:00+08:00",
+        "available_at": "2015-03-30T20:35:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3255722,
         "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2015-03-30T20:35:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2015,
@@ -97,16 +97,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
         "original_filename": "Tencent_2015_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2016-03-29T22:11:00+08:00",
+        "available_at": "2016-03-29T22:11:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3035911,
         "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2016-03-29T22:11:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2016,
@@ -114,20 +114,20 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
         "original_filename": "Tencent_2016_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2017-04-10T22:42:00+08:00",
+        "available_at": "2017-04-10T22:42:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3168651,
         "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2017-04-10T22:42:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       }
     ],
     "only_original_public_reports_available_by_decision_at": null,
-    "point_in_time_status": "original_pdf_bytes_and_hashes_recorded_all_six_years_but_HKEX_release_timestamps_not_verified"
+    "point_in_time_status": "original_pdf_bytes_and_hashes_recorded_all_six_years_and_HKEX_release_timestamps_recorded"
   },
   "market_price_and_execution": {
     "formation_date": "2017-08-30",
@@ -348,10 +348,10 @@
   "market_inputs": {
     "currency": "HKD",
     "risk_free_month": "2017-07",
-    "risk_free_yield_pct": null,
+    "risk_free_yield_pct": 1.418,
     "risk_free_monthly_effective": null,
     "risk_free_source": "HKMA-prepared Hong Kong Government Bond Programme Statistics download, Table 9.4.1 End of period figures",
-    "risk_free_status": "observations_retrieved_but_frozen_series_mapping_and_publication_timestamp_unconfirmed",
+    "risk_free_status": "frozen_series_indicative_pricing_selected_by_project_owner_ruling",
     "beta_window_months": 60,
     "beta": null,
     "beta_status": "NA_security_total_return_series_unavailable",
@@ -389,7 +389,7 @@
       "start": "1981-01-02",
       "end": "2026-11-06"
     },
-    "risk_free_note": "Official downloaded workbook contains two separate 10-year values (indicative pricing and closing reference rate) for each requested month. Both have been preserved in source_refs.hkma_download.observations. Exact publication dates are absent from workbook and were not independently confirmed; no single series is selected as the frozen risk-free input pending confirmation.",
+    "risk_free_note": "Frozen series selected by project-owner ruling: 10-year indicative pricing. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly values. Closing reference rates (2016-07 1.013%, 2017-07 1.418%, 2018-07 2.163%) are retained in source_refs.hkma_download.observations for reference only and are not the frozen input. Exact workbook publication dates remain absent from the workbook.",
     "risk_free_file": {
       "source": "Hong Kong Government Bond Programme Statistics download (HKMA-prepared statistical tables, Table 9.4.1 End of period figures)",
       "page_url": "https://www.hkgb.gov.hk/en/statistics/statistic.html",
@@ -422,7 +422,7 @@
       ],
       "release_dates": null,
       "release_date_status": "not_present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
-      "interpretation_note": "Workbook provides two distinct 10-year benchmark series (indicative pricing and closing reference rate). Both are preserved separately; no single risk-free input is selected pending confirmation of the frozen-series mapping and publication/available_at timestamps."
+      "interpretation_note": "Frozen series: ten_year_indicative_pricing_pct, selected by project-owner ruling. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly observations. Closing reference rates are preserved in observations for reference only and are not the frozen input. Workbook publication dates are not present in the workbook."
     },
     "risk_free_release_dates": null
   },
@@ -434,16 +434,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/3366557d8d87e634fbb78a99f2ec0ec3.pdf",
         "original_filename": "Tencent_2011_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2012-03-25T18:03:00+08:00",
+        "available_at": "2012-03-25T18:03:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 4838461,
         "sha256": "c89bdd86df8b6fd53b2d44aa49a25c84dd9cc9c8f11f0d481629b8f64a84f4aa",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2012-03-25T18:03:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2012,
@@ -451,16 +451,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/01e79f5b098d8b703f7a256bcba9aa07.pdf",
         "original_filename": "Tencent_2012_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2013-03-28T19:26:00+08:00",
+        "available_at": "2013-03-28T19:26:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 2759984,
         "sha256": "25befee4ef4b4110d3b5b93d6c82f6f358b2132e43f4e9bf770a691c463b4460",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2013-03-28T19:26:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2013,
@@ -468,16 +468,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
         "original_filename": "Tencent_2013_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2014-03-31T19:12:00+08:00",
+        "available_at": "2014-03-31T19:12:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 9244495,
         "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2014-03-31T19:12:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2014,
@@ -485,16 +485,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
         "original_filename": "Tencent_2014_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2015-03-30T20:35:00+08:00",
+        "available_at": "2015-03-30T20:35:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3255722,
         "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2015-03-30T20:35:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2015,
@@ -502,16 +502,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
         "original_filename": "Tencent_2015_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2016-03-29T22:11:00+08:00",
+        "available_at": "2016-03-29T22:11:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3035911,
         "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2016-03-29T22:11:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       },
       {
         "fiscal_year": 2016,
@@ -519,16 +519,16 @@
         "source_channel": "Tencent official investor-relations original PDF",
         "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
         "original_filename": "Tencent_2016_Annual_Report.pdf",
-        "published_at": null,
-        "available_at": null,
+        "published_at": "2017-04-10T22:42:00+08:00",
+        "available_at": "2017-04-10T22:42:00+08:00",
         "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
         "bytes": 3168651,
         "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
         "download_status": "downloaded_original_pdf_sha256_recomputed",
-        "point_in_time_status": "not_verified_release_timestamp_not_yet_obtained",
-        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEX formal annual-report release timestamp remains unresolved.",
-        "hkex_annual_report_release_time": null,
-        "hkex_lookup_status": "annual_report_specific_release_timestamp_not_retrieved"
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2017-04-10T22:42:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
       }
     ],
     "market_inputs": [
@@ -566,7 +566,7 @@
         "dataset": "HKMA Government bond yield - 10-year",
         "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/economic-financial-data-for-hong-kong/",
         "manual_query_path": "Economic & Financial Data for Hong Kong → Interest Rate → Government bond yield - 10-year",
-        "status": "historical_download_export_not_obtained",
+        "status": "frozen_series_indicative_pricing_confirmed_by_project_owner_ruling",
         "sha256": null,
         "attempted_path": "Economic & Financial Data for Hong Kong → Interest Rate → Government bond yield - 10-year → download/export",
         "required_observations": [
@@ -574,9 +574,9 @@
           "2017-07",
           "2018-07"
         ],
-        "values": null,
+        "values": [1.002, 1.418, 2.194],
         "release_dates": null,
-        "note": "Official page is readable but historical download/export did not yield the required monthly observations and release dates in this pass. No API used; T10040301.xls excluded."
+        "note": "HKMA portal Government bond yield - 10-year is the indicative-pricing series (project-owner ruling): portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly observations. Values are the 10-year indicative-pricing values; no API used."
       }
     ],
     "security_price_source": {
@@ -646,8 +646,8 @@
       "stock_code": "00700",
       "query_attempted": true,
       "official_search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
-      "outcome": "Exact Annual Report document release-time rows for all eight fiscal years were not reliably retrieved in this pass. HKEX annual-results announcements were found for some years, but they are not treated as annual-report publication timestamps. published_at and available_at therefore remain null.",
-      "annual_report_release_timestamps_confirmed": 0
+      "outcome": "HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) returned one Annual Report row per fiscal year for all eight fiscal years (FY2010-FY2017); Release Times (Hong Kong time) recorded as published_at and available_at. Annual-results announcements were excluded.",
+      "annual_report_release_timestamps_confirmed": 8
     },
     "adr_crosscheck": {
       "source": "Yahoo Finance chart endpoint for TCEHY daily close (ADR, USD) and DEXHKUS.csv snapshot",
@@ -735,18 +735,9 @@
         2016,
         2017
       ],
-      "result": "The title-search page and category filter were opened, but this run did not obtain a reliable result row with the exact Annual Report release timestamp for all eight reports. Results that surfaced annual-results announcements were excluded. No annual-results announcement time or PDF download time was substituted.",
-      "confirmed_rows": [],
-      "unresolved_years": [
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017
-      ],
+      "result": "HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) returned one Annual Report row per fiscal year for all eight fiscal years (FY2010-FY2017); Release Times (Hong Kong time) recorded in confirmed_rows. Annual-results announcements were excluded; no annual-results announcement time or PDF download time was substituted.",
+      "confirmed_rows": ["2011-03-28T19:09:00+08:00", "2012-03-25T18:03:00+08:00", "2013-03-28T19:26:00+08:00", "2014-03-31T19:12:00+08:00", "2015-03-30T20:35:00+08:00", "2016-03-29T22:11:00+08:00", "2017-04-10T22:42:00+08:00", "2018-04-10T19:53:00+08:00"],
+      "unresolved_years": [],
       "available_at": null
     },
     "hkma_download": {
@@ -781,7 +772,7 @@
       ],
       "release_dates": null,
       "release_date_status": "not_present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
-      "interpretation_note": "Workbook provides two distinct 10-year benchmark series (indicative pricing and closing reference rate). Both are preserved separately; no single risk-free input is selected pending confirmation of the frozen-series mapping and publication/available_at timestamps."
+      "interpretation_note": "Frozen series: ten_year_indicative_pricing_pct, selected by project-owner ruling. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly observations. Closing reference rates are preserved in observations for reference only and are not the frozen input. Workbook publication dates are not present in the workbook."
     }
   },
   "blind_integrity": {
@@ -805,10 +796,8 @@
     "entry_price_hkd": null,
     "status": "NA_required_frozen_inputs_partially_retrieved",
     "missing": [
-      "Eight HKEX Annual Report document-specific release timestamps and exact available_at values remain unconfirmed; Annual Results announcements were excluded and download time was not substituted.",
-      "The official HKMA-prepared Government Bond Programme workbook was downloaded and contains 10-year indicative-pricing and closing-reference-rate observations, but the exact frozen-series mapping and release dates are not confirmed; risk-free input remains NA.",
       "Core FCFF financial-series extraction and SOTP balance-sheet components remain uncompleted.",
-      "Beta, ERP and Ke remain NA pending full security total-return and frozen HKD risk-free inputs."
+      "Beta, ERP and Ke remain NA pending full security total-return inputs; the frozen HKD risk-free input (10-year indicative pricing) is now recorded."
     ]
   },
   "valuation_outputs": null,
