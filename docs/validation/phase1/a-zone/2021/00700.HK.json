@@ -661,7 +661,7 @@
     "non_operating_value_per_share": 74.9174,
     "entry_price_hkd": 485.0,
     "status": "retrieved",
-    "missing": [],
+    "missing": []
   },
   "valuation_outputs": {"intrinsic_value": 11510.050415, "five_year_irr": 0.996441, "target_entry_price": 7294.748174}, "scenario_outputs": {"pessimistic": {"intrinsic_value": 5494.898661, "operating_value": 5419.981261, "terminal_value": 7821.373233, "year_five_exit_value": 6765.869801, "five_year_irr": 0.720053}, "baseline": {"intrinsic_value": 11510.050415, "operating_value": 11435.133015, "terminal_value": 16692.904473, "year_five_exit_value": 14312.163952, "five_year_irr": 0.996441}, "optimistic": {"intrinsic_value": 20915.363492, "operating_value": 20840.446092, "terminal_value": 30553.240149, "year_five_exit_value": 26099.335371, "five_year_irr": 1.2552}},
   "queue_status": "READY",
