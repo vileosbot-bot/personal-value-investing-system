@@ -139,6 +139,6 @@ FCFF / Revenue：
 
 1. **复用了什么：**目标 JSON Blob 52f6f5bc58d1eaee1b6e37779f85ad7998a4d6fb；冻结估值函数 growth_dcf、solve_growth_dcf_rate；冻结收益辅助函数 five_year_return_profile 及 finance.py 中的 irr、target_entry_price；冻结输入规则 docs/validation-input-rules.md。未使用其他估值方法。
 2. **改动量：**0 代码、1 报告；本次只新增本 Markdown 文件。
-3. **跳过／未检查：**其余五份腾讯 A 区 JSON 未读取；未重新审计原始外部数据及年报文件；未检查或修改 main；未执行投资决策分析。
+3. **跳过／未检查：**其余五份腾讯 A 区 JSON 未读取；未重新审计原始外部数据及年报文件；未修改 main；最终核验时仅只读获取 main HEAD=98f4b0b5483c72b92977813005ae33bbcf49e2ac；未执行投资决策分析。
 4. **风险：**JSON 输入精度不足以恢复全部生成时的未舍入参数，16 项差异的具体来源不能仅凭本载荷定因；所有六份腾讯 JSON 的状态不因本报告改变，目标 JSON 仍为 DRAFT，未标 VERIFIED。
 5. **捷径账本：**未用替代估值模型或手工指定情景值；基准参数直接使用 JSON 保存值，悲观／乐观参数按冻结 Type 7 规则从已保存财务序列重建；WACC 与永续增长率未从原始外部数据重新估计，沿用 JSON 保存值；未改 JSON、模型、其他仓库文件，未开 PR、未合并。
