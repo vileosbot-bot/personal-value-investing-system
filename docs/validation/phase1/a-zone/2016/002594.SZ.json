@@ -1,0 +1,420 @@
+{
+  "status": "DRAFT",
+  "known_defects": [
+    "valuation_outputs 仍为空（null）；冻结 V1.1 估值输出及 five_year_irr 尚未生成。"
+  ],
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-phase1-execution-20261115-01",
+  "zone": "A",
+  "queue_year": 2016,
+  "formation_date": "2016-08-30",
+  "decision_at": "2016-08-30T23:59:59+08:00",
+  "company": {
+    "name": "比亚迪",
+    "ticker": "002594",
+    "exchange": "SZSE",
+    "currency": "CNY",
+    "model_route": "value_driver_fcff"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2015,
+    "six_year_window": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-21",
+        "pdf_file": "BYD_2010_HKEX_annual_report.pdf",
+        "source_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2011/0421/ltn20110421029.pdf",
+        "sha256": "2c2b0b316178b44b65daa373f488592bde503a7cd57a0af7329ee44ef7317c3d",
+        "bytes": 4862898,
+        "download_status": "ok",
+        "note": "HKEX original FY2010 annual report"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-26 06:30:00",
+        "pdf_file": "002594_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-26/60719854.PDF",
+        "sha256": "b0805f57a3c7ca61e0b613425f04ccda2dbbe95e9a1184ca2761b7d34335f056",
+        "bytes": 1513623,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-25 00:00:00",
+        "pdf_file": "002594_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-25/62257540.PDF",
+        "sha256": "60a1ed3cb6fc2e6b49ad128e47d88f022fd32610c3233931baf44f6a0acfc32b",
+        "bytes": 4282662,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-20 00:00:00",
+        "pdf_file": "002594_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-20/63698039.PDF",
+        "sha256": "8c2b66039af7617735e31532738344fcbc89cd2618e3aaced053c557cc5f10fc",
+        "bytes": 4337261,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "ok"
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": true
+  },
+  "market_price_and_execution": {
+    "formation_date": "2016-08-30",
+    "formation_close_rmb": 58.47,
+    "execution_date": "2016-08-31",
+    "execution_open_rmb": 58.63,
+    "source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy",
+    "source_quality": "third_party_proxy_not_independently_cross_checked",
+    "status": "retrieved"
+  },
+  "market_inputs": {
+    "formation_date": "2016-08-30",
+    "risk_free_month": "2016-07",
+    "risk_free_yield_pct": 2.7768,
+    "risk_free_monthly_effective": 0.0022850618358902786,
+    "erp_window_months": 120,
+    "erp_raw": 0.13041476364676213,
+    "erp_used": 0.13041476364676213,
+    "erp_status": "calculated",
+    "beta_window_months": 60,
+    "beta": 0.7263863537802886,
+    "beta_excluded_months": [],
+    "beta_status": "calculated",
+    "ke": 0.12249950464448968,
+    "ke_inputs": {
+      "risk_free_rate": 0.027768,
+      "beta": 0.7263863537802886,
+      "erp_raw": 0.13041476364676213,
+      "erp_used": 0.13041476364676213,
+      "status": "calculated",
+      "formula": "Ke=Rf+Beta*ERP"
+    },
+    "source_index": "CSI 300 Gross TRI H00300",
+    "risk_free_source": "CCDC MOF-China Government Bond Yield Curve 10-year",
+    "individual_security_return_source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy; corporate actions via CNINFO p_sysapi1139",
+    "window_end_month": "2016-07",
+    "erp_window_start_month": "2006-07",
+    "beta_window_start_month": "2011-07"
+  },
+  "source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-21",
+        "pdf_file": "BYD_2010_HKEX_annual_report.pdf",
+        "source_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2011/0421/ltn20110421029.pdf",
+        "sha256": "2c2b0b316178b44b65daa373f488592bde503a7cd57a0af7329ee44ef7317c3d",
+        "bytes": 4862898,
+        "download_status": "ok",
+        "note": "HKEX original FY2010 annual report"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-26 06:30:00",
+        "pdf_file": "002594_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-26/60719854.PDF",
+        "sha256": "b0805f57a3c7ca61e0b613425f04ccda2dbbe95e9a1184ca2761b7d34335f056",
+        "bytes": 1513623,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-25 00:00:00",
+        "pdf_file": "002594_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-25/62257540.PDF",
+        "sha256": "60a1ed3cb6fc2e6b49ad128e47d88f022fd32610c3233931baf44f6a0acfc32b",
+        "bytes": 4282662,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-20 00:00:00",
+        "pdf_file": "002594_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-20/63698039.PDF",
+        "sha256": "8c2b66039af7617735e31532738344fcbc89cd2618e3aaced053c557cc5f10fc",
+        "bytes": 4337261,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "ok"
+      }
+    ],
+    "market_inputs": [
+      "market_inputs.json",
+      "H00300_official_daily_raw.json",
+      "CCDC_10Y_CGB_2006.html..CCDC_10Y_CGB_2018.html"
+    ],
+    "security_price_source": [
+      "002594_akshare_tencent_daily.csv",
+      "002594_tencent_daily_raw_01..07.txt"
+    ],
+    "corporate_action_source": [
+      "002594_akshare_dividend.json",
+      "002594_cninfo_dividend_raw.json"
+    ],
+    "company_annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-21",
+        "pdf_file": "BYD_2010_HKEX_annual_report.pdf",
+        "source_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2011/0421/ltn20110421029.pdf",
+        "sha256": "2c2b0b316178b44b65daa373f488592bde503a7cd57a0af7329ee44ef7317c3d",
+        "bytes": 4862898,
+        "download_status": "ok",
+        "note": "HKEX original FY2010 annual report"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-26 06:30:00",
+        "pdf_file": "002594_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-26/60719854.PDF",
+        "sha256": "b0805f57a3c7ca61e0b613425f04ccda2dbbe95e9a1184ca2761b7d34335f056",
+        "bytes": 1513623,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-25 00:00:00",
+        "pdf_file": "002594_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-25/62257540.PDF",
+        "sha256": "60a1ed3cb6fc2e6b49ad128e47d88f022fd32610c3233931baf44f6a0acfc32b",
+        "bytes": 4282662,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-20 00:00:00",
+        "pdf_file": "002594_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-20/63698039.PDF",
+        "sha256": "8c2b66039af7617735e31532738344fcbc89cd2618e3aaced053c557cc5f10fc",
+        "bytes": 4337261,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-30 00:00:00",
+        "pdf_file": "002594_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-30/1200756892.PDF",
+        "sha256": "bc6889c23f7a76c9bb4092cf3d4020d9642285f4d7bc6010a945a9825f4638bb",
+        "bytes": 3990400,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-29 00:00:00",
+        "pdf_file": "002594_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-29/1202089377.PDF",
+        "sha256": "5771afc95d3eea9039320ce4450b127eb1c61cd0bc220c61219514f70d718cfa",
+        "bytes": 4355041,
+        "download_status": "ok"
+      }
+    ],
+    "market_snapshot": {
+      "market_inputs_file": "market_inputs.json",
+      "h00300_file": "H00300_official_daily_raw.json",
+      "ccdc_files": "CCDC_10Y_CGB_2006.html through CCDC_10Y_CGB_2018.html",
+      "nbs_gdp_vintages_file": "NBS_GDP_vintages.json"
+    },
+    "rights_issue_notice": null
+  },
+  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_downloaded": true,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
+    "deviation": "AKShare/Tencent daily-history retrieval returned observations beyond some formation dates. The calculations below use only pre-formation windows, but the executor had downloaded the overbroad raw history; do not describe this as a strict blind test."
+  },
+  "valuation_outputs": null,
+  "financial_series": [
+    {
+      "fiscal_year": 2010,
+      "revenue_rmb_m": 46685.349,
+      "reported_operating_profit_ebit_rmb_m": 2767.5,
+      "profit_before_tax_rmb_m": 3142.267,
+      "income_tax_expense_rmb_m": 223.677,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": 2378.3429249651695,
+      "nopat_margin": 0.050944096507989464,
+      "period_end_ordinary_shares_m": 2354.1
+    },
+    {
+      "fiscal_year": 2011,
+      "revenue_rmb_m": 48826.919,
+      "reported_operating_profit_ebit_rmb_m": 1410.351,
+      "profit_before_tax_rmb_m": 1727.484,
+      "income_tax_expense_rmb_m": 132.408,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": 1212.0319142068843,
+      "nopat_margin": 0.024823026703914786,
+      "period_end_ordinary_shares_m": 2354.1
+    },
+    {
+      "fiscal_year": 2012,
+      "revenue_rmb_m": 46853.774,
+      "reported_operating_profit_ebit_rmb_m": -304.372,
+      "profit_before_tax_rmb_m": 290.725,
+      "income_tax_expense_rmb_m": 77.835,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": -261.57217443812056,
+      "nopat_margin": -0.005582734369233961,
+      "period_end_ordinary_shares_m": 2354.1
+    },
+    {
+      "fiscal_year": 2013,
+      "revenue_rmb_m": 52863.284,
+      "reported_operating_profit_ebit_rmb_m": 106.653,
+      "profit_before_tax_rmb_m": 832.081,
+      "income_tax_expense_rmb_m": 56.215,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": 91.6557933067065,
+      "nopat_margin": 0.0017338270794282568,
+      "period_end_ordinary_shares_m": 2354.1
+    },
+    {
+      "fiscal_year": 2014,
+      "revenue_rmb_m": 58195.878,
+      "reported_operating_profit_ebit_rmb_m": -179.115,
+      "profit_before_tax_rmb_m": 873.952,
+      "income_tax_expense_rmb_m": 134.082,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": -153.9284166233555,
+      "nopat_margin": -0.002645005486872378,
+      "period_end_ordinary_shares_m": 2476.0
+    },
+    {
+      "fiscal_year": 2015,
+      "revenue_rmb_m": 80008.968,
+      "reported_operating_profit_ebit_rmb_m": 3175.965,
+      "profit_before_tax_rmb_m": 3794.986,
+      "income_tax_expense_rmb_m": 656.79,
+      "queue_specific_tax_rate": 0.1406168292808783,
+      "derived_nopat_rmb_m": 2729.3708717929558,
+      "nopat_margin": 0.03411331179515971,
+      "period_end_ordinary_shares_m": 2476.0
+    }
+  ],
+  "tax_rate_assessment": {
+    "five_years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "income_tax_expense_sum_rmb_m": 1057.33,
+    "profit_before_tax_sum_rmb_m": 7519.228,
+    "tax_rate": 0.1406168292808783,
+    "range_check_0_to_35pct": true,
+    "status": "calculated"
+  },
+  "growth_assessment": {
+    "required_valid_observations": 5,
+    "actual_valid_observations": 1,
+    "valid_observations": [
+      {
+        "from_fy": 2010,
+        "to_fy": 2011,
+        "growth": -0.4903880758807587
+      }
+    ],
+    "invalid_pairs": [
+      {
+        "from_fy": 2011,
+        "to_fy": 2012,
+        "reason": "one or both adjacent NOPAT levels are non-positive"
+      },
+      {
+        "from_fy": 2012,
+        "to_fy": 2013,
+        "reason": "one or both adjacent NOPAT levels are non-positive"
+      },
+      {
+        "from_fy": 2013,
+        "to_fy": 2014,
+        "reason": "one or both adjacent NOPAT levels are non-positive"
+      },
+      {
+        "from_fy": 2014,
+        "to_fy": 2015,
+        "reason": "one or both adjacent NOPAT levels are non-positive"
+      }
+    ],
+    "status": "NA_fewer_than_five_valid_positive_adjacent_pairs"
+  },
+  "model_inputs": {
+    "starting_nopat_scenarios_rmb_m": {
+      "bear": -211.6241593589965,
+      "base": 138.72171531550885,
+      "bull": 1986.0647492166634
+    },
+    "nopat_margin_scenarios": {
+      "bear": -0.002645005486872378,
+      "base": 0.0017338270794282568,
+      "bull": 0.024823026703914786
+    },
+    "initial_growth_scenarios": null,
+    "initial_ronic_scenarios": null,
+    "shares_m": 2476.0,
+    "shares_basis": "period_end_ordinary_shares_not_yet_verified_against_diluted_weighted_average",
+    "ke": 0.12249950464448968,
+    "wacc": null,
+    "perpetual_growth": null,
+    "net_debt": null,
+    "entry_price_rmb": 58.47,
+    "status": "NA_initial_growth_rule_failed",
+    "not_evaluated": [
+      "RONIC three-window series",
+      "WACC/Kd",
+      "net debt",
+      "WACC-based terminal growth"
+    ],
+    "missing": [
+      "Frozen rule requires five valid positive adjacent NOPAT growth observations. The six-year windows contain non-positive NOPAT levels (FY2012 and/or FY2014), leaving fewer than five valid observations. No smoothing, clipping or substitution is permitted."
+    ]
+  },
+  "queue_status": "NA_required_frozen_input"
+}

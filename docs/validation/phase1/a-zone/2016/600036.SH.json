@@ -1,0 +1,397 @@
+{
+  "status": "DRAFT",
+  "known_defects": [],
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-phase1-execution-20261115-01",
+  "zone": "A",
+  "queue_year": 2016,
+  "formation_date": "2016-08-30",
+  "decision_at": "2016-08-30T23:59:59+08:00",
+  "company": {
+    "name": "招商银行",
+    "ticker": "600036",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "model_route": "residual_income"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2015,
+    "six_year_window": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-01 06:30:00",
+        "pdf_file": "600036_2010_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2011-04-01/59215193.PDF",
+        "sha256": "7c3e1a1e24c71cd1b1700d054beac086e5f25a713c05fb58784b5bbabd43c0fc",
+        "bytes": 2740412,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-29 06:30:00",
+        "pdf_file": "600036_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-29/60750411.PDF",
+        "sha256": "d5481aa53bde153a8b91b7271dc6c64383f388d253a46d9040bb80e8a3ba19da",
+        "bytes": 2801499,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:01",
+        "pdf_file": "600036_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296708.PDF",
+        "sha256": "8bae31752f1950e52f51b804a76d0c1831793da09941fb561598be909c5fa849",
+        "bytes": 3098820,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-29 00:00:00",
+        "pdf_file": "600036_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-29/63753255.PDF",
+        "sha256": "66513c70e073fe2993fe9c06a8cc9c6a15345e78bbe65e56c52b965b4b072c58",
+        "bytes": 2768052,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-19 00:00:00",
+        "pdf_file": "600036_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-19/1200715897.PDF",
+        "sha256": "52bfff7ed33f9b7f4a7c64c7366b2a3a63ad4687bb9f82e9d6f252fb6f417d65",
+        "bytes": 6938555,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-31 00:00:00",
+        "pdf_file": "600036_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202113640.PDF",
+        "sha256": "4b78e80eb792816c2091e7045d405efb8f1ade74033acd5066dd001d52f88264",
+        "bytes": 2892411,
+        "download_status": "ok"
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": true
+  },
+  "market_price_and_execution": {
+    "formation_date": "2016-08-30",
+    "formation_close_rmb": 18.44,
+    "execution_date": "2016-08-31",
+    "execution_open_rmb": 18.36,
+    "source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy",
+    "source_quality": "third_party_proxy_not_independently_cross_checked",
+    "status": "retrieved"
+  },
+  "market_inputs": {
+    "formation_date": "2016-08-30",
+    "risk_free_month": "2016-07",
+    "risk_free_yield_pct": 2.7768,
+    "risk_free_monthly_effective": 0.0022850618358902786,
+    "erp_window_months": 120,
+    "erp_raw": 0.13041476364676213,
+    "erp_used": 0.13041476364676213,
+    "erp_status": "calculated",
+    "beta_window_months": 59,
+    "beta": 0.898307550923601,
+    "beta_excluded_months": [
+      "2013-09"
+    ],
+    "beta_status": "calculated",
+    "ke": 0.14492056693580319,
+    "ke_inputs": {
+      "risk_free_rate": 0.027768,
+      "beta": 0.898307550923601,
+      "erp_raw": 0.13041476364676213,
+      "erp_used": 0.13041476364676213,
+      "status": "calculated",
+      "formula": "Ke=Rf+Beta*ERP"
+    },
+    "source_index": "CSI 300 Gross TRI H00300",
+    "risk_free_source": "CCDC MOF-China Government Bond Yield Curve 10-year",
+    "individual_security_return_source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy; corporate actions via CNINFO p_sysapi1139",
+    "window_end_month": "2016-07",
+    "erp_window_start_month": "2006-07",
+    "beta_window_start_month": "2011-07"
+  },
+  "source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-01 06:30:00",
+        "pdf_file": "600036_2010_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2011-04-01/59215193.PDF",
+        "sha256": "7c3e1a1e24c71cd1b1700d054beac086e5f25a713c05fb58784b5bbabd43c0fc",
+        "bytes": 2740412,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-29 06:30:00",
+        "pdf_file": "600036_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-29/60750411.PDF",
+        "sha256": "d5481aa53bde153a8b91b7271dc6c64383f388d253a46d9040bb80e8a3ba19da",
+        "bytes": 2801499,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:01",
+        "pdf_file": "600036_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296708.PDF",
+        "sha256": "8bae31752f1950e52f51b804a76d0c1831793da09941fb561598be909c5fa849",
+        "bytes": 3098820,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-29 00:00:00",
+        "pdf_file": "600036_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-29/63753255.PDF",
+        "sha256": "66513c70e073fe2993fe9c06a8cc9c6a15345e78bbe65e56c52b965b4b072c58",
+        "bytes": 2768052,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-19 00:00:00",
+        "pdf_file": "600036_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-19/1200715897.PDF",
+        "sha256": "52bfff7ed33f9b7f4a7c64c7366b2a3a63ad4687bb9f82e9d6f252fb6f417d65",
+        "bytes": 6938555,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-31 00:00:00",
+        "pdf_file": "600036_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202113640.PDF",
+        "sha256": "4b78e80eb792816c2091e7045d405efb8f1ade74033acd5066dd001d52f88264",
+        "bytes": 2892411,
+        "download_status": "ok"
+      }
+    ],
+    "market_inputs": [
+      "market_inputs.json",
+      "H00300_official_daily_raw.json",
+      "CCDC_10Y_CGB_2006.html..CCDC_10Y_CGB_2018.html"
+    ],
+    "security_price_source": [
+      "600036_akshare_tencent_daily.csv",
+      "600036_tencent_daily_raw_01..07.txt"
+    ],
+    "corporate_action_source": [
+      "600036_akshare_dividend.json",
+      "600036_cninfo_dividend_raw.json"
+    ],
+    "company_annual_reports": [
+      {
+        "fiscal_year": 2010,
+        "published_at": "2011-04-01 06:30:00",
+        "pdf_file": "600036_2010_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2011-04-01/59215193.PDF",
+        "sha256": "7c3e1a1e24c71cd1b1700d054beac086e5f25a713c05fb58784b5bbabd43c0fc",
+        "bytes": 2740412,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2011,
+        "published_at": "2012-03-29 06:30:00",
+        "pdf_file": "600036_2011_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2012-03-29/60750411.PDF",
+        "sha256": "d5481aa53bde153a8b91b7271dc6c64383f388d253a46d9040bb80e8a3ba19da",
+        "bytes": 2801499,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:01",
+        "pdf_file": "600036_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296708.PDF",
+        "sha256": "8bae31752f1950e52f51b804a76d0c1831793da09941fb561598be909c5fa849",
+        "bytes": 3098820,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-29 00:00:00",
+        "pdf_file": "600036_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-29/63753255.PDF",
+        "sha256": "66513c70e073fe2993fe9c06a8cc9c6a15345e78bbe65e56c52b965b4b072c58",
+        "bytes": 2768052,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-03-19 00:00:00",
+        "pdf_file": "600036_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-03-19/1200715897.PDF",
+        "sha256": "52bfff7ed33f9b7f4a7c64c7366b2a3a63ad4687bb9f82e9d6f252fb6f417d65",
+        "bytes": 6938555,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-31 00:00:00",
+        "pdf_file": "600036_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202113640.PDF",
+        "sha256": "4b78e80eb792816c2091e7045d405efb8f1ade74033acd5066dd001d52f88264",
+        "bytes": 2892411,
+        "download_status": "ok"
+      }
+    ],
+    "market_snapshot": {
+      "market_inputs_file": "market_inputs.json",
+      "h00300_file": "H00300_official_daily_raw.json",
+      "ccdc_files": "CCDC_10Y_CGB_2006.html through CCDC_10Y_CGB_2018.html",
+      "nbs_gdp_vintages_file": "NBS_GDP_vintages.json"
+    },
+    "rights_issue_notice": "CMB_2013_rights_issue_CNINFO.pdf"
+  },
+  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_downloaded": true,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
+    "deviation": "AKShare/Tencent daily-history retrieval returned observations beyond some formation dates. The calculations below use only pre-formation windows, but the executor had downloaded the overbroad raw history; do not describe this as a strict blind test."
+  },
+  "valuation_outputs": {
+    "intrinsic_value": 20.096848326837616,
+    "five_year_irr": 0.16645195016473346,
+    "target_entry_price": 19.68957417041824
+  },
+  "financial_series": [
+    {
+      "fiscal_year": 2011,
+      "net_profit_common_rmb_m": 36129,
+      "ordinary_equity_end_rmb_m": 164997,
+      "ordinary_shares_end_m": 21577,
+      "roe": 0.24166312712581478,
+      "cash_dividend_per_10_shares_rmb": 4.2,
+      "cash_dividend_total_rmb_m": 9062.34,
+      "payout_ratio": 0.25083284895790087,
+      "dividend_event": {
+        "fiscal_year": 2011,
+        "cash_dividend_per_10_shares_rmb": 4.2,
+        "record_date": "2012-06-06T00:00:00.000",
+        "ex_date": "2012-06-07T00:00:00.000",
+        "payment_date": "2012-06-13T00:00:00.000",
+        "implementation_announcement_date": null,
+        "description": "10派4.2元(含税)",
+        "shares_at_record_date_m": 21577,
+        "cash_dividend_total_m": 9062.34
+      }
+    },
+    {
+      "fiscal_year": 2012,
+      "net_profit_common_rmb_m": 45273,
+      "ordinary_equity_end_rmb_m": 200434,
+      "ordinary_shares_end_m": 21577,
+      "roe": 0.24777865041553673,
+      "cash_dividend_per_10_shares_rmb": 6.3,
+      "cash_dividend_total_rmb_m": 13593.51,
+      "payout_ratio": 0.30025644423828773,
+      "dividend_event": {
+        "fiscal_year": 2012,
+        "cash_dividend_per_10_shares_rmb": 6.3,
+        "record_date": "2013-06-07T00:00:00.000",
+        "ex_date": "2013-06-13T00:00:00.000",
+        "payment_date": "2013-06-19T00:00:00.000",
+        "implementation_announcement_date": null,
+        "description": "10派6.3元(含税)",
+        "shares_at_record_date_m": 21577,
+        "cash_dividend_total_m": 13593.51
+      }
+    },
+    {
+      "fiscal_year": 2013,
+      "net_profit_common_rmb_m": 51743,
+      "ordinary_equity_end_rmb_m": 265465,
+      "ordinary_shares_end_m": 25220,
+      "roe": 0.2221211035009734,
+      "cash_dividend_per_10_shares_rmb": 6.2,
+      "cash_dividend_total_rmb_m": 15636.4,
+      "payout_ratio": 0.3021935334248111,
+      "dividend_event": {
+        "fiscal_year": 2013,
+        "cash_dividend_per_10_shares_rmb": 6.2,
+        "record_date": "2014-07-10T00:00:00.000",
+        "ex_date": "2014-07-11T00:00:00.000",
+        "payment_date": "2014-07-11T00:00:00.000",
+        "implementation_announcement_date": null,
+        "description": "10派6.2元(含税)",
+        "shares_at_record_date_m": 25220,
+        "cash_dividend_total_m": 15636.4
+      }
+    },
+    {
+      "fiscal_year": 2014,
+      "net_profit_common_rmb_m": 55911,
+      "ordinary_equity_end_rmb_m": 314404,
+      "ordinary_shares_end_m": 25220,
+      "roe": 0.19284010698968215,
+      "cash_dividend_per_10_shares_rmb": 6.7,
+      "cash_dividend_total_rmb_m": 16897.4,
+      "payout_ratio": 0.30221959900556244,
+      "dividend_event": {
+        "fiscal_year": 2014,
+        "cash_dividend_per_10_shares_rmb": 6.7,
+        "record_date": "2015-07-02T00:00:00.000",
+        "ex_date": "2015-07-03T00:00:00.000",
+        "payment_date": "2015-07-03T00:00:00.000",
+        "implementation_announcement_date": null,
+        "description": "10派6.7元(含税)",
+        "shares_at_record_date_m": 25220,
+        "cash_dividend_total_m": 16897.4
+      }
+    },
+    {
+      "fiscal_year": 2015,
+      "net_profit_common_rmb_m": 57696,
+      "ordinary_equity_end_rmb_m": 360806,
+      "ordinary_shares_end_m": 25220,
+      "roe": 0.17089794286222065,
+      "cash_dividend_per_10_shares_rmb": 6.9,
+      "cash_dividend_total_rmb_m": 17401.800000000003,
+      "payout_ratio": 0.3016118968386024,
+      "dividend_event": {
+        "fiscal_year": 2015,
+        "cash_dividend_per_10_shares_rmb": 6.9,
+        "record_date": "2016-07-12T00:00:00.000",
+        "ex_date": "2016-07-13T00:00:00.000",
+        "payment_date": "2016-07-13T00:00:00.000",
+        "implementation_announcement_date": null,
+        "description": "10派6.9元(含税)",
+        "shares_at_record_date_m": 25220,
+        "cash_dividend_total_m": 17401.800000000003
+      }
+    }
+  ],
+  "ordinary_equity_adjustments": {
+    "FY2017_parent_equity_reported_rmb_m": 480210,
+    "FY2017_other_equity_instruments_preference_shares_rmb_m": 34065,
+    "FY2017_ordinary_equity_used_rmb_m": 446145,
+    "reason": "FY2017 annual report identifies other equity instruments of RMB34,065m; it also states that the 2017 non-cumulative preference shares paid no preference dividend. Ordinary equity is reduced by the instrument balance; common net profit is not reduced by a non-existent preference dividend."
+  },
+  "model_inputs": {
+    "beginning_book_value_per_share_rmb": 14.306344171292626,
+    "payout_ratio": 0.3016118968386024,
+    "initial_roe": 0.19284010698968215,
+    "year_five_roe": 0.2221211035009734,
+    "cost_of_equity": 0.14492056693580319,
+    "entry_price_rmb": 18.44,
+    "status": "complete",
+    "missing": []
+  },
+  "queue_status": "READY_CORE_INPUTS"
+}

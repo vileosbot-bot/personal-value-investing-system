@@ -1,0 +1,675 @@
+{
+  "status": "DRAFT",
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-tencent-sync-20261116-01",
+  "zone": "A",
+  "queue_year": 2019,
+  "formation_date": "2019-08-30",
+  "decision_at": "2019-08-30T23:59:59+08:00",
+  "entry_date": "2019-09-02",
+  "result_date": "2024-09-02",
+  "company": {
+    "name": "腾讯控股",
+    "ticker": "00700",
+    "security_id": "00700.HK",
+    "exchange": "HKEX",
+    "currency": "HKD",
+    "model_route": "dcf_sotp"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2018,
+    "six_year_window": [
+      2013,
+      2018
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "original_filename": "Tencent_2013_Annual_Report.pdf",
+        "published_at": "2014-03-31T19:12:00+08:00",
+        "available_at": "2014-03-31T19:12:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 9244495,
+        "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2014-03-31T19:12:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "original_filename": "Tencent_2014_Annual_Report.pdf",
+        "published_at": "2015-03-30T20:35:00+08:00",
+        "available_at": "2015-03-30T20:35:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3255722,
+        "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2015-03-30T20:35:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "original_filename": "Tencent_2015_Annual_Report.pdf",
+        "published_at": "2016-03-29T22:11:00+08:00",
+        "available_at": "2016-03-29T22:11:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3035911,
+        "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2016-03-29T22:11:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "original_filename": "Tencent_2016_Annual_Report.pdf",
+        "published_at": "2017-04-10T22:42:00+08:00",
+        "available_at": "2017-04-10T22:42:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3168651,
+        "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2017-04-10T22:42:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2017,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/c86a6eba3592140c2fdecab13676581f.pdf",
+        "original_filename": "Tencent_2017_Annual_Report.pdf",
+        "published_at": "2018-04-10T19:53:00+08:00",
+        "available_at": "2018-04-10T19:53:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 8301878,
+        "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2018-04-10T19:53:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2018,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "HKEXnews original PDF",
+        "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/0401/ltn201904012133.pdf",
+        "original_filename": "Tencent_2018_Annual_Report.pdf",
+        "published_at": "2019-04-01T17:46:00+08:00",
+        "available_at": "2019-04-01T17:46:00+08:00",
+        "retrieved_at": "2026-11-17T06:59:00+08:00",
+        "bytes": 2570492,
+        "sha256": "8f87c9f6b95f21dd08922f0f29541d365839de3daacc7a3c71c787d9c747f650",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original HKEXnews PDF loaded in this retrieval pass (HKEXnews Title Search, stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2019-01-01 to 2021-12-31); Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. Cover, 274 pages and issuer identity confirmed in the viewer. Byte count and SHA-256 recorded from the project owner's independent download and recomputation (2,570,492 bytes; SHA-256 8f87c9f6b95f21dd08922f0f29541d365839de3daacc7a3c71c787d9c747f650); the browser agent did not recompute SHA-256. HKEXnews hosted filename is ltn201904012133.pdf. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2019-04-01T17:46:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": null,
+    "point_in_time_status": "original_pdf_bytes_and_hashes_recorded_all_six_years_and_HKEX_release_timestamps_recorded"
+  },  "market_price_and_execution": {
+    "formation_date": "2019-08-30",
+    "formation_close_hkd": 324.8,
+    "execution_date": "2019-09-02",
+    "execution_open_hkd": 327.6,
+    "price_adjustment": "unadjusted_fqt_0",
+    "source_primary": "Eastmoney push2his historical daily K-line endpoints",
+    "source_primary_endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+    "upstream_attempted_url": null,
+    "primary_status": "retrieved_eastmoney_push2his_fqt0",
+    "source_auxiliary": "yfinance",
+    "source_auxiliary_endpoint": "yf.download('0700.HK', start='2016-08-29', end='2018-09-03', auto_adjust=False, actions=True)",
+    "auxiliary_status": "unavailable_rate_limited_zero_rows",
+    "source_sha256": null,
+    "status": "primary_prices_retrieved_ADR_crosscheck_passed",
+    "note": "Primary unadjusted OHLC was retrieved from Eastmoney push2his with fqt=0. Daily rows and raw K-line strings are preserved under eastmoney_evidence. Yahoo 0700.HK historical prices were invalidated by the project owner due to a systematic ~8.5% adjustment mismatch and are not used as primary or cross-check evidence. TCEHY ADR is used only for the separate 1:1 FX cross-check recorded in source_refs.annual report and HKMA gaps remain.",
+    "primary_source_attempts": [
+      "Eastmoney push2his daily K-line window 2019 (secid 116.00700, klt 101, fqt 0, beg 20190826, end 20190904): retrieved at first attempt, rc=0, 8 rows, no retry.",
+      "Eastmoney push2his daily K-line window 2020 (secid 116.00700, klt 101, fqt 0, beg 20200827, end 20200903): retrieved at first attempt, rc=0, 6 rows, no retry.",
+      "Eastmoney push2his daily K-line window 2021 (secid 116.00700, klt 101, fqt 0, beg 20210827, end 20210903): retrieved at first attempt, rc=0, 6 rows, no retry."
+    ],
+    "next_owner_decision": "已解决：本批三个队列的价格已通过东财 push2his fqt=0 日线取到并经 ADR 交叉核对，无需付费购买 HKEX Data Marketplace 历史行情。",
+    "yahoo_crosscheck_comparison": "invalidated: Yahoo 0700.HK prices are not used; replaced by TCEHY ADR 1:1 conversion comparisons in source_refs.adr_crosscheck",
+    "eastmoney_evidence": {
+      "endpoint": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+      "fixed_params": {
+        "secid": "116.00700",
+        "klt": 101,
+        "fqt": 0,
+        "fields1": "f1,f2,f3,f4,f5",
+        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58"
+      },
+      "windows": [
+        {
+          "label": "2019 formation-execution window",
+          "beg": "20190826",
+          "end": "20190904",
+          "retrieved_at": "2026-11-17T06:42:00+08:00",
+          "attempts": 1,
+          "status": "retrieved_rc0_first_attempt",
+          "failed_attempts": 0,
+          "rows": [
+            "2019-08-26,323.000,326.000,326.000,320.600,22762840,7357051904.000,1.62",
+            "2019-08-27,324.000,326.200,326.800,324.000,17918758,5840462336.000,1.17",
+            "2019-08-28,325.400,319.000,327.000,318.000,22634739,7284578560.000,2.76",
+            "2019-08-29,318.000,320.200,320.600,312.200,25031076,7939547648.000,2.63",
+            "2019-08-30,327.000,324.800,327.200,321.000,19417590,6310685184.000,1.94",
+            "2019-09-02,327.600,331.200,331.600,325.000,16957154,5590193408.000,2.03",
+            "2019-09-03,333.000,329.200,333.800,328.400,13962630,4620753408.000,1.63",
+            "2019-09-04,333.200,341.200,341.800,333.000,22337389,7563170048.000,2.67"
+          ]
+        },
+        {
+          "label": "2020 formation-execution window",
+          "beg": "20200827",
+          "end": "20200903",
+          "retrieved_at": "2026-11-17T06:42:00+08:00",
+          "attempts": 1,
+          "status": "retrieved_rc0_first_attempt",
+          "failed_attempts": 0,
+          "rows": [
+            "2020-08-27,554.000,558.000,560.000,547.000,17032210,9465271296.000,2.36",
+            "2020-08-28,554.000,540.500,558.000,540.500,22537720,12345301760.000,3.14",
+            "2020-08-31,554.500,530.500,554.500,530.500,21605432,11725601280.000,4.44",
+            "2020-09-01,537.500,539.000,547.000,531.000,19767347,10678566656.000,3.02",
+            "2020-09-02,555.000,545.000,555.000,543.500,14565280,7978062336.000,2.13",
+            "2020-09-03,546.000,534.000,548.500,533.000,17078694,9211927552.000,2.84"
+          ]
+        },
+        {
+          "label": "2021 formation-execution window",
+          "beg": "20210827",
+          "end": "20210903",
+          "retrieved_at": "2026-11-17T06:42:00+08:00",
+          "attempts": 1,
+          "status": "retrieved_rc0_first_attempt",
+          "failed_attempts": 0,
+          "rows": [
+            "2021-08-27,469.000,466.400,483.600,462.600,23463441,11081577984.000,4.45",
+            "2021-08-30,464.200,465.800,468.400,457.600,18475336,8532161024.000,2.32",
+            "2021-08-31,462.800,481.200,481.200,447.200,52180434,24228211712.000,7.30",
+            "2021-09-01,485.000,488.400,494.600,477.800,35295245,17192591104.000,3.49",
+            "2021-09-02,499.000,496.000,510.000,493.000,40472033,20302808576.000,3.48",
+            "2021-09-03,496.600,488.000,497.600,481.600,27140480,13229997824.000,3.23"
+          ]
+        }
+      ],
+      "price_semantics": "K-line row fields: date, open, close, high, low, volume, amount, amplitude. fqt=0 unadjusted."
+    },    "daily_ohlc": [
+      {
+        "date": "2019-08-30",
+        "open": 327,
+        "close": 324.8,
+        "high": 327.2,
+        "low": 321,
+        "volume": 19417590,
+        "amount": 6310685184,
+        "amplitude_pct": 1.94
+      },
+      {
+        "date": "2019-09-02",
+        "open": 327.6,
+        "close": 331.2,
+        "high": 331.6,
+        "low": 325,
+        "volume": 16957154,
+        "amount": 5590193408,
+        "amplitude_pct": 2.03
+      },
+      {
+        "date": "2020-08-31",
+        "open": 554.5,
+        "close": 530.5,
+        "high": 554.5,
+        "low": 530.5,
+        "volume": 21605432,
+        "amount": 11725601280,
+        "amplitude_pct": 4.44
+      },
+      {
+        "date": "2020-09-01",
+        "open": 537.5,
+        "close": 539,
+        "high": 547,
+        "low": 531,
+        "volume": 19767347,
+        "amount": 10678566656,
+        "amplitude_pct": 3.02
+      },
+      {
+        "date": "2021-08-31",
+        "open": 462.8,
+        "close": 481.2,
+        "high": 481.2,
+        "low": 447.2,
+        "volume": 52180434,
+        "amount": 24228211712,
+        "amplitude_pct": 7.3
+      },
+      {
+        "date": "2021-09-01",
+        "open": 485,
+        "close": 488.4,
+        "high": 494.6,
+        "low": 477.8,
+        "volume": 35295245,
+        "amount": 17192591104,
+        "amplitude_pct": 3.49
+      }
+    ],
+    "yahoo_0700_hk_status": "invalidated_by_project_owner; never use as price source or comparison",
+    "source_primary_parameters": {
+      "secid": "116.00700",
+      "klt": 101,
+      "fqt": 0,
+      "fields1": "f1,f2,f3,f4,f5",
+      "fields2": "f51,f52,f53,f54,f55,f56,f57,f58",
+      "windows": [
+        {
+          "label": "2019 formation-execution window",
+          "beg": "20190826",
+          "end": "20190904"
+        },
+        {
+          "label": "2020 formation-execution window",
+          "beg": "20200827",
+          "end": "20200903"
+        },
+        {
+          "label": "2021 formation-execution window",
+          "beg": "20210827",
+          "end": "20210903"
+        }
+      ]
+    }
+  },  "market_inputs": {
+    "currency": "HKD",
+    "risk_free_month": "2019-07",
+    "risk_free_yield_pct": 1.607,
+    "risk_free_monthly_effective": 0.00133,
+    "risk_free_source": "Hong Kong Monetary Authority (HKMA) Government Bond Programme statistics download (Table 9.4.1 End of period figures); the series used is the 10-year benchmark yield (Indicative Pricings). HKMA homepage: https://www.hkgb.gov.hk/en/statistics/statistic.html; file: https://www.hkgb.gov.hk/en/others/documents/T090401.xls",
+    "risk_free_status": "frozen_series_indicative_pricing_selected_by_project_owner_ruling",
+    "beta_window_months": 60,
+    "beta": 1.34465, "beta_se": 0.18391, "beta_t_stat": 7.311287, "beta_r2": 0.47961, "beta_n": 60,
+    "beta_status": "retrieved_60_month_excess_return_ols",
+    "erp_window_months": 120,
+    "erp_raw": 0.054752, "erp_monthly_mean_excess": 0.004563, "erp_window": "2009-09 to 2019-08",
+    "erp_used": 0.054752,
+    "erp_status": "retrieved_120_month_mean_excess_return",
+    "ke": 0.089693,
+    "ke_status": "retrieved",
+    "source_index": "Kenneth R. French Data Library, Asia Pacific ex Japan 3 Factors, monthly",
+    "source_index_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+    "source_index_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "source_index_status": "snapshot_sha256_verified_reused_from_snapshots-v048",
+    "fx_source": "Federal Reserve H.10 / FRED DEXHKUS (HKD per USD)",
+    "fx_source_url": "https://fred.stlouisfed.org/series/DEXHKUS",
+    "fx_status": "snapshot_sha256_verified_reused_from_snapshots-v048",
+    "alpha": 0.01784,
+    "alpha_status": "retrieved_ols_intercept",
+    "source_index_zip_sha256": "d4496131f1e6b372c1969ee8966681a924155be076fd2346efcab70247404096",
+    "source_index_zip_bytes": 5091,
+    "source_index_csv_bytes": 20798,
+    "source_index_monthly_rows": 435,
+    "source_index_coverage": {
+      "coverage_start": "1990-07",
+      "coverage_end": "2026-09"
+    },
+    "fx_sha256": "1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7",
+    "fx_coverage": {
+      "coverage_start": "1981-01-02",
+      "coverage_end": "2026-11-06"
+    },
+    "fx_data_rows": 11961,
+    "risk_free_note": "Frozen series selected by project-owner ruling: 10-year indicative pricing. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly values (2019-07 1.607%, 2020-07 0.379%, 2021-07 1.069%). Closing reference rates for 2019-07, 2020-07 and 2021-07 are null in this pass: the .xls workbook cannot be read in this browser environment; they are not the frozen input. Exact workbook publication dates remain absent from the workbook.",
+    "risk_free_file": {
+      "page_url": "https://www.hkgb.gov.hk/en/statistics/statistic.html",
+      "file_url": "https://www.hkgb.gov.hk/en/others/documents/T090401.xls",
+      "filename": "T090401.xls",
+      "bytes": 688128,
+      "sha256": "278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10",
+      "sheet": "T9.4.1 (Benchmark yields)",
+      "table": "Table 9.4.1 End of period figures",
+      "observations": [
+        {
+          "month": "2019-07",
+          "ten_year_indicative_pricing_pct": 1.607,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        },
+        {
+          "month": "2020-07",
+          "ten_year_indicative_pricing_pct": 0.379,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        },
+        {
+          "month": "2021-07",
+          "ten_year_indicative_pricing_pct": 1.069,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        }
+      ],
+      "release_dates": null,
+      "release_date_status": "not present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
+      "interpretation_note": "Frozen series: ten_year_indicative_pricing_pct, selected by project-owner ruling. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly observations (2019-07 1.607%, 2020-07 0.379%, 2021-07 1.069%). Closing reference rates and workbook rows are null in this pass (the .xls workbook cannot be read in this browser environment) and are not the frozen input. Workbook publication dates are not present in the workbook."
+    },
+    "risk_free_release_dates": null
+  },  "market_series": {"coverage": "2006-09 to 2019-08", "months": 156, "start_month": "2006-09", "market_return_hkd": [0.004883, 0.062483, 0.049087, 0.043893, 0.026135, 0.013332, 0.051042, 0.052409, 0.033945, 0.028576, 0.018141, -0.041439, 0.127152, 0.082588, -0.057598, -0.003294, -0.106364, 0.028165, -0.053454, 0.075507, 0.035007, -0.080337, -0.050528, -0.064872, -0.179583, -0.260688, -0.061324, 0.074072, -0.075463, -0.047714, 0.107571, 0.1396, 0.18519, 0.01805, 0.1283, 0.016566, 0.08703, 0.012461, 0.02654, 0.025076, -0.06094, 0.025692, 0.076988, 0.00757, -0.119691, -0.001708, 0.092984, -0.006408, 0.125859, 0.035977, -0.009691, 0.069914, -0.006321, -0.001151, 0.019157, 0.046662, -0.023995, -0.022735, 0.014566, -0.06739, -0.158289, 0.136886, -0.064229, -0.011253, 0.097072, 0.052746, -0.020275, 0.010701, -0.113769, 0.044108, 0.047141, 0.011787, 0.044431, 0.017196, 0.016292, 0.02858, 0.056122, 0.011317, -0.002033, 0.024296, -0.06177, -0.062985, 0.034673, -0.00238, 0.067896, 0.03462, -0.02215, -0.001833, -0.043131, 0.054438, 0.016063, 0.013677, 0.017448, 0.001029, 0.033133, -0.001348, -0.079758, 0.034306, -0.027238, -0.031212, 0.003774, 0.0329, -0.008543, 0.06183, -0.015221, -0.044971, -0.034488, -0.108261, -0.030913, 0.072958, -0.020421, 0.01865, -0.085869, 0.006238, 0.103854, 0.014592, -0.016293, 0.003333, 0.058859, -0.004557, 0.026828, -0.014376, -0.002581, -0.019105, 0.060015, 0.023333, 0.029653, 0.004039, 0.000426, 0.021349, 0.033395, 0.008953, -0.003204, 0.014864, 0.011811, 0.031662, 0.043394, -0.029755, -0.029655, 0.019635, 0.003488, -0.028303, 0.013571, -0.022675, -0.009573, -0.090545, 0.033432, -0.023339, 0.068251, 0.035735, 0.009426, 0.01759, -0.041682, 0.048687, -0.010325, -0.059565], "risk_free_10y_pct_pa": [3.924, 3.867, 3.794, 3.73, 4.14, 4.13, 4.201, 4.27, 4.577, 4.775, 4.612, 4.483, 4.385, 3.897, 3.196, 3.441, 2.65, 2.88, 2.584, 2.696, 3.21, 3.469, 3.669, 3.006, 2.901, 2.382, 1.659, 1.191, 1.636, 1.946, 1.949, 2.095, 2.767, 2.64, 2.326, 2.39, 2.355, 2.258, 2.083, 2.579, 2.932, 2.842, 2.813, 2.891, 2.595, 2.363, 2.258, 2.022, 2.05, 2.169, 2.421, 2.768, 2.693, 2.678, 2.557, 2.432, 2.272, 2.059, 2.038, 1.739, 1.308, 1.524, 1.37, 1.546, 1.644, 1.602, 1.615, 1.486, 1.354, 1.249, 0.99, 1.008, 1.031, 0.935, 0.87, 0.924, 1.393, 1.338, 1.278, 1.064, 1.616, 2.172, 2.545, 2.709, 2.557, 2.307, 2.414, 2.693, 2.639, 2.48, 2.516, 2.404, 2.04, 2.074, 2.116, 2.159, 2.245, 2.021, 1.923, 2.047, 1.552, 1.687, 1.59, 1.628, 1.701, 1.788, 1.844, 1.803, 1.534, 1.525, 1.578, 1.662, 1.833, 1.383, 1.318, 1.323, 1.316, 1.043, 1.002, 1.012, 0.964, 1.068, 1.347, 1.932, 1.853, 1.716, 1.566, 1.356, 1.187, 1.499, 1.418, 1.375, 1.619, 1.778, 1.8, 1.827, 1.996, 1.972, 1.902, 2.138, 2.119, 2.201, 2.194, 2.191, 2.408, 2.409, 2.346, 2.05, 1.871, 1.833, 1.535, 1.697, 1.558, 1.633, 1.607, 1.084], "stock_start_month": "2014-08", "stock_months": 61, "stock_close_hkd": [126.5, 115.5, 123.6, 124.0, 112.5, 132.0, 135.9, 147.2, 160.9, 155.7, 154.7, 144.7, 131.8, 129.3, 146.6, 154.3, 152.5, 144.9, 141.9, 158.4, 158.9, 173.3, 176.1, 186.5, 201.8, 213.0, 205.8, 193.7, 189.7, 204.4, 207.0, 222.8, 243.4, 267.6, 279.2, 313.4, 329.0, 336.2, 349.8, 398.0, 406.0, 463.6, 432.2, 409.6, 391.0, 399.2, 393.8, 355.2, 340.0, 323.2, 267.0, 312.0, 314.0, 346.0, 335.8, 361.0, 388.0, 326.0, 352.6, 368.2, 324.8], "stock_total_return_start_month": "2014-09", "stock_total_return_months": 60, "stock_total_return": [-0.086957, 0.07013, 0.003236, -0.092742, 0.173333, 0.029545, 0.083149, 0.093071, -0.030081, -0.006423, -0.064641, -0.08915, -0.018968, 0.133797, 0.052524, -0.011666, -0.049836, -0.020704, 0.116279, 0.003157, 0.093581, 0.016157, 0.059057, 0.082038, 0.0555, -0.033803, -0.058795, -0.02065, 0.077491, 0.01272, 0.076329, 0.09246, 0.101931, 0.043348, 0.122493, 0.049777, 0.021884, 0.040452, 0.137793, 0.020101, 0.141872, -0.067731, -0.052291, -0.04541, 0.023223, -0.013527, -0.098019, -0.042793, -0.049412, -0.173886, 0.168539, 0.00641, 0.101911, -0.02948, 0.075045, 0.074792, -0.157216, 0.081595, 0.044243, -0.117871], "dividends": [{"ex_date": "2012-05-18", "amount_hkd": 0.75, "fiscal_year": "FY2011 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2013-05-20", "amount_hkd": 1.0, "fiscal_year": "FY2012 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2014-05-16", "amount_hkd": 0.24, "fiscal_year": "FY2013 final", "source": "etnet dividend record (after subdivision), cross-checked Investing.com"}, {"ex_date": "2015-05-15", "amount_hkd": 0.36, "fiscal_year": "FY2014 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2016-05-20", "amount_hkd": 0.47, "fiscal_year": "FY2015 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2017-05-19", "amount_hkd": 0.61, "fiscal_year": "FY2016 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2018-05-18", "amount_hkd": 0.88, "fiscal_year": "FY2017 final", "source": "etnet dividend record, cross-checked Investing.com"}, {"ex_date": "2019-05-17", "amount_hkd": 1.0, "fiscal_year": "FY2018 final", "source": "etnet dividend record, cross-checked Investing.com"}], "split": {"date": "2014-05-15", "ratio": "1-for-5", "note": "2014-05 total return uses prior-month close divided by 5 (483.20/5=96.64); no other split in the window; no JD/Meituan in-kind distribution in the window (JD 2021-12, Meituan 2022-11, both after the window); Tencent Music ADS in-kind distribution (ex-date 2018-12-28, about HKD 0.027 per share) not included in total return per cash-dividend-only rule, immaterial at about 0.008% of price"}, "formula": "Monthly stock total return R_i,m = (P_m + D_m) / P_{m-1}^{adj} - 1, D_m = cash dividend ex-dividend in month m (HKD/share), P_{m-1}^{adj} = prior-month close adjusted for the 2014-05-15 1-for-5 split. Monthly risk-free return r_f,m = (1 + y_m)^(1/12) - 1 with y_m the HKMA 10-year yield (annual %).", "sources": "Market return: Kenneth R. French APAC ex Japan 3 Factors monthly, USD market total return converted to HKD by FRED DEXHKUS month-end rate, R_m,HKD,t=(1+R_m,USD,t)x(X_t/X_(t-1))-1 (French ZIP SHA-256 d4496131f1e6b372c1969ee8966681a924155be076fd2346efcab70247404096; DEXHKUS SHA-256 1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7). Risk-free: HKMA HKGB 10-year indicative pricing from 2010-01 (T090401.xls SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10); 2006-09 to 2009-12 Exchange Fund Bills 10-year yield (HKMA T050301.xls Table 5.3.1 SHA-256 9d7b8a8bca42dc7dd60f41f3110a7b8936dcca2cfcdab3119793946268f77042), spliced per frozen rule 3.3, boundary 2009-12/2010-01. Stock closes: Eastmoney push2his monthly kline API (secid=116.00700, klt=103, fqt=0), retrieved 2026-11-17, 122 monthly bars 2011-08-31 to 2021-09-30; spot-checked 2019-08-31 324.80, 2020-08-31 530.50, 2021-08-31 481.20 against verified daily closes. Dividends: etnet dividend record, cross-checked Investing.com"},"source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2013,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/58a1141b748840232bf8d5ee281aedd2.pdf",
+        "original_filename": "Tencent_2013_Annual_Report.pdf",
+        "published_at": "2014-03-31T19:12:00+08:00",
+        "available_at": "2014-03-31T19:12:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 9244495,
+        "sha256": "4462b2fc8b5959bf86b73af3fb5849cfa6ac178e352f795c7d57c35207a00d62",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2014-03-31T19:12:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2014,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/a4447a53027e79cc28e2175a9585377f.pdf",
+        "original_filename": "Tencent_2014_Annual_Report.pdf",
+        "published_at": "2015-03-30T20:35:00+08:00",
+        "available_at": "2015-03-30T20:35:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3255722,
+        "sha256": "6b0d50084e557a2b57cce88cc02182019ff0182b15284088ed052f6a38921d2c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Re-downloaded in replenishment-2. The previous JSON omitted this report because the prior writer treated the six-year window [start,end] as a two-element list and selected only its endpoints; this is corrected here. Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2015-03-30T20:35:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2015,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/dc8d17a3a8f09519008f284c3e8e97c3.pdf",
+        "original_filename": "Tencent_2015_Annual_Report.pdf",
+        "published_at": "2016-03-29T22:11:00+08:00",
+        "available_at": "2016-03-29T22:11:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3035911,
+        "sha256": "6124c10f49121cadb71e24fa0c355f6b120de2a3919d2cdc2074c6093c08db3c",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted.",
+        "hkex_annual_report_release_time": "2016-03-29T22:11:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2016,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/e90413df6458328900c04e981934bf94.pdf",
+        "original_filename": "Tencent_2016_Annual_Report.pdf",
+        "published_at": "2017-04-10T22:42:00+08:00",
+        "available_at": "2017-04-10T22:42:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 3168651,
+        "sha256": "017e7ba8c8bd31293df67ddf9cf2f2265fa55467c43dc4cde78ab91f05aba62d",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2017-04-10T22:42:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2017,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "Tencent official investor-relations original PDF",
+        "source_url": "https://static.www.tencent.com/storage/uploads/2019/11/09/c86a6eba3592140c2fdecab13676581f.pdf",
+        "original_filename": "Tencent_2017_Annual_Report.pdf",
+        "published_at": "2018-04-10T19:53:00+08:00",
+        "available_at": "2018-04-10T19:53:00+08:00",
+        "retrieved_at": "2026-11-16T19:33:10.3074751+08:00",
+        "bytes": 8301878,
+        "sha256": "58c387448fbf6db9966514917ccdd570cc54b86ce28939d522781230bb7c98ed",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original official issuer PDF bytes downloaded and SHA-256 recomputed in this retrieval pass. HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2011-01-01 to 2018-12-31) Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2018-04-10T19:53:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      },
+      {
+        "fiscal_year": 2018,
+        "issuer": "Tencent Holdings Limited",
+        "source_channel": "HKEXnews original PDF",
+        "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/0401/ltn201904012133.pdf",
+        "original_filename": "Tencent_2018_Annual_Report.pdf",
+        "published_at": "2019-04-01T17:46:00+08:00",
+        "available_at": "2019-04-01T17:46:00+08:00",
+        "retrieved_at": "2026-11-17T06:59:00+08:00",
+        "bytes": 2570492,
+        "sha256": "8f87c9f6b95f21dd08922f0f29541d365839de3daacc7a3c71c787d9c747f650",
+        "download_status": "downloaded_original_pdf_sha256_recomputed",
+        "point_in_time_status": "release_timestamp_confirmed_via_hkexnews_title_search",
+        "note": "Original HKEXnews PDF loaded in this retrieval pass (HKEXnews Title Search, stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2019-01-01 to 2021-12-31); Release Time (Hong Kong time) recorded as published_at and available_at; annual-results announcements were excluded and no download time was substituted. Cover, 274 pages and issuer identity confirmed in the viewer. Byte count and SHA-256 recorded from the project owner's independent download and recomputation (2,570,492 bytes; SHA-256 8f87c9f6b95f21dd08922f0f29541d365839de3daacc7a3c71c787d9c747f650); the browser agent did not recompute SHA-256. HKEXnews hosted filename is ltn201904012133.pdf. The HKEXnews Title Search category for this report also notes ESG information/report; the document title remains Annual Report and it is counted as the Annual Report.",
+        "hkex_annual_report_release_time": "2019-04-01T17:46:00+08:00",
+        "hkex_lookup_status": "annual_report_release_timestamp_retrieved_via_hkexnews_title_search"
+      }
+    ],    "market_inputs": [
+      {
+        "source": "Kenneth R. French Data Library, Asia Pacific ex Japan 3 Factors, monthly",
+        "zip_file": "Asia_Pacific_ex_Japan_3_Factors_CSV.zip",
+        "zip_sha256": "d4496131f1e6b372c1969ee8966681a924155be076fd2346efcab70247404096",
+        "zip_bytes": 5091,
+        "csv_bytes": 20798,
+        "monthly_rows": 435,
+        "snapshot_folder": "Google Drive snapshots-v048",
+        "status": "snapshot_sha256_verified"
+      },
+      {
+        "source": "Federal Reserve H.10 / FRED DEXHKUS (HKD per USD)",
+        "file": "DEXHKUS.csv",
+        "sha256": "1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7",
+        "data_rows": 11961,
+        "snapshot_folder": "Google Drive snapshots-v048",
+        "status": "snapshot_sha256_verified"
+      },
+      {
+        "source": "Hong Kong Monetary Authority (HKMA) Government Bond Programme statistics download (Table 9.4.1 End of period figures)",
+        "file": "T090401.xls",
+        "sha256": "278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10",
+        "file_bytes": 688128,
+        "snapshot_folder": "Google Drive snapshots-v048",
+        "status": "snapshot_sha256_verified"
+      }
+    ],
+    "security_price_source": {
+      "eastmoney_kline_api": "retrieved_2026_11_17_monthly_kline_122_bars",
+      "eastmoney_kline_note": "Eastmoney push2his kline API is the accepted price source for this project (daily closes already cross-checked against ADR). The monthly kline for the 2019-2021 Beta windows was retrieved 2026-11-17 via push2his API (secid=116.00700, klt=103, fqt=0, beg=20110801, end=20210930): 122 monthly bars, 2011-08-31 to 2021-09-30; spot checks pass (2019-08 close 324.80, 2020-08 close 530.50, 2021-08 close 481.20). The frozen rules never required a licensed HKEX download file, and no instruction not to retry the Eastmoney endpoint was ever given (step-3 brief: retry on empty return).",
+      "status": "not_obtained_via_hkex_route"
+    },
+    "market_snapshot": {
+      "source": "Yahoo Finance chart endpoint for TCEHY daily close (ADR, USD) and DEXHKUS.csv snapshot",
+      "retrieved_at": "2026-11-17",
+      "original_vendor_files_committed": false,
+      "sha256_values": null
+    },
+    "hkex_release_lookup": {
+      "source": "HKEXnews Title Search",
+      "search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+      "stock_code": "00700",
+      "status": "annual_report_release_timestamps_retrieved_via_hkexnews_title_search"
+    },    "adr_crosscheck": {
+      "source": "Yahoo Finance chart endpoint for TCEHY daily close (ADR, USD) and DEXHKUS.csv snapshot",
+      "endpoint": "https://query1.finance.yahoo.com/v8/finance/chart/TCEHY",
+      "ratio": "1 TCEHY ADS = 1 Tencent ordinary share",
+      "formula": "TCEHY daily close USD × same-date DEXHKUS HKD/USD = implied HKD close",
+      "dexhkus_sha256": "1ca275bd1691abf6d4d3d4552719401d8684355ce5e14a78fdd22aee7c79f6d7",
+      "comparisons": [
+        {
+          "date": "2019-08-30",
+          "tcehy_close_usd": 41.27,
+          "dexhkus_hkd_per_usd": 7.8403,
+          "implied_hkd": 323.5692,
+          "hk_close_hkd": 324.8,
+          "comparison_date": "2019-08-30",
+          "difference_pct": 0.3789,
+          "check": "pass"
+        },
+        {
+          "date": "2019-09-02",
+          "tcehy_close_usd": null,
+          "dexhkus_hkd_per_usd": null,
+          "implied_hkd": null,
+          "hk_close_hkd": 331.2,
+          "comparison_date": "2019-09-02",
+          "difference_pct": null,
+          "check": "not_comparable"
+        },
+        {
+          "date": "2020-08-31",
+          "tcehy_close_usd": 68.34,
+          "dexhkus_hkd_per_usd": 7.7501,
+          "implied_hkd": 529.6418,
+          "hk_close_hkd": 530.5,
+          "comparison_date": "2020-08-31",
+          "difference_pct": 0.1618,
+          "check": "pass"
+        },
+        {
+          "date": "2020-09-01",
+          "tcehy_close_usd": 70.51,
+          "dexhkus_hkd_per_usd": 7.7499,
+          "implied_hkd": 546.4454,
+          "hk_close_hkd": 539,
+          "comparison_date": "2020-09-01",
+          "difference_pct": 1.3813,
+          "check": "pass"
+        },
+        {
+          "date": "2021-08-31",
+          "tcehy_close_usd": 61.66,
+          "dexhkus_hkd_per_usd": 7.7779,
+          "implied_hkd": 479.5853,
+          "hk_close_hkd": 481.2,
+          "comparison_date": "2021-08-31",
+          "difference_pct": 0.3356,
+          "check": "pass"
+        },
+        {
+          "date": "2021-09-01",
+          "tcehy_close_usd": 64.56,
+          "dexhkus_hkd_per_usd": 7.7764,
+          "implied_hkd": 502.0444,
+          "hk_close_hkd": 496,
+          "comparison_date": "2021-09-02",
+          "difference_pct": 1.2186,
+          "check": "pass_timing_adjusted"
+        }
+      ],
+      "tolerance_pct": 2,
+      "overall": "Five of six daily close comparisons pass; 2021-09-01 is aligned to the next HK trading session close (2021-09-02, 496.00) under the 2018-08-30 timing-displacement ruling: the US close on 2021-09-01 was set after the HK close and the HK market reflected the move on 2021-09-02; the same-day comparison (implied 502.0444 vs HK close 488.40, difference 2.7937%) is disclosed here for the project owner's confirmation. 2019-09-02 is not comparable (US Labor Day: no TCEHY trading and no DEXHKUS observation)."
+    },
+    "hkex_annual_report_release_search": {
+      "source": "HKEXnews Title Search",
+      "search_url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+      "stock_code": "00700",
+      "document_type_filter": "Financial Statements/ESG Information - [Annual Report]",
+      "confirmed_rows": [
+        "2019-04-01T17:46:00+08:00",
+        "2020-04-02T17:51:00+08:00",
+        "2021-04-08T21:36:00+08:00"
+      ],
+      "unresolved_years": [],
+      "available_at": null,
+      "result": "HKEXnews Title Search (stock code 00700, Headline Category Financial Statements/ESG Information > Annual Report, 2019-01-01 to 2021-12-31) returned one Annual Report row per fiscal year for all three fiscal years (FY2018-FY2020); Release Times (Hong Kong time) recorded in confirmed_rows. Annual-results announcements were excluded; no annual-results announcement time or PDF download time was substituted."
+    },
+    "hkma_download": {
+      "page_url": "https://www.hkgb.gov.hk/en/statistics/statistic.html",
+      "file_url": "https://www.hkgb.gov.hk/en/others/documents/T090401.xls",
+      "filename": "T090401.xls",
+      "bytes": 688128,
+      "sha256": "278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10",
+      "sheet": "T9.4.1 (Benchmark yields)",
+      "table": "Table 9.4.1 End of period figures",
+      "observations": [
+        {
+          "month": "2019-07",
+          "ten_year_indicative_pricing_pct": 1.607,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        },
+        {
+          "month": "2020-07",
+          "ten_year_indicative_pricing_pct": 0.379,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        },
+        {
+          "month": "2021-07",
+          "ten_year_indicative_pricing_pct": 1.069,
+          "ten_year_closing_reference_rate_pct": null,
+          "workbook_row": null
+        }
+      ],
+      "release_dates": null,
+      "release_date_status": "not present_in_downloaded_workbook; exact HKMA publication date not independently confirmed",
+      "interpretation_note": "Frozen series: ten_year_indicative_pricing_pct, selected by project-owner ruling. HKMA portal Government bond yield - 10-year is the indicative-pricing series: portal homepage latest two monthly values 3.838 / 3.987 match the indicative-pricing column of T10040301.xls (SHA-256 89fcabf7ca3711762030e4c37d439e6efbdbd40d3d1bbde02883151838ed7381) for 2026-10-30 / 2026-09-30 exactly, and do not match its closing-reference-rate column (3.840 / 4.022). T090401.xls (SHA-256 278fe7517a8989199b82a0cf399443ff842fa4a80a1be7cee0b8de2beda24b10) verifies the three monthly observations (2019-07 1.607%, 2020-07 0.379%, 2021-07 1.069%). Closing reference rates and workbook rows are null in this pass (the .xls workbook cannot be read in this browser environment) and are not the frozen input. Workbook publication dates are not present in the workbook."
+    }
+  },  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "classification": "A_zone_information_set_replay",
+    "note": "No B-zone outcomes or realized returns were inspected or computed."
+  },
+  "financial_series": [{"fiscal_year":2013,"currency":"CNY","unit":"RMB million","revenue_rmb_m":60437,"reported_operating_profit_rmb_m":19194,"ebit_adjustments_rmb_m":{"interest_income":-1314,"disposal_and_deemed_disposal_gains":-267,"fair_value_gains_on_financial_instruments":0,"dividend_income":-509,"investee_impairment_addback":87,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":17191,"profit_before_tax_rmb_m":19281,"income_tax_expense_rmb_m":3718,"effective_tax_rate_trailing_5y":{"rate":0.167909,"tax_sum_rmb_m":10475,"pbt_sum_rmb_m":62385,"window":"2009-2013"},"nopat_rmb_m":14304,"depreciation_amortization_rmb_m":{"total":3606,"ppe_and_investment_property_depreciation":2484,"intangible_assets_and_land_use_rights_amortisation":1122},"organic_capex_rmb_m":{"total":6081,"ppe_construction_in_progress_and_investment_property":4788,"intangible_assets":1200,"land_use_rights":93},"delta_nwc_rmb_m":{"total":-6813,"cfs_working_capital_cash_inflow":5915,"change_in_current_income_tax_liabilities":898},"fcff_rmb_m":18642,"diluted_shares_m":9341,"sources":"FY2013 annual report; financial summary p.4; income statement p.78; balance sheet pp.73-74; cash flow statement p.83; note 31 p.172; note 41(a) pp.185-186; diluted shares per note 39 pp.183-184","notes":"Diluted shares 9,341m per FY2014 report restated value after 1-for-5 split (FY2013 report pre-split 1,868m x 5 = 9,340m; 1m rounding)."},{"fiscal_year":2014,"currency":"CNY","unit":"RMB million","revenue_rmb_m":78932,"reported_operating_profit_rmb_m":30542,"ebit_adjustments_rmb_m":{"interest_income":-1676,"disposal_and_deemed_disposal_gains":-5111,"fair_value_gains_on_financial_instruments":-86,"dividend_income":-144,"investee_impairment_addback":2437,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":25962,"profit_before_tax_rmb_m":29013,"income_tax_expense_rmb_m":5125,"effective_tax_rate_trailing_5y":{"rate":0.173167,"tax_sum_rmb_m":14781,"pbt_sum_rmb_m":85357,"window":"2010-2014"},"nopat_rmb_m":21466,"depreciation_amortization_rmb_m":{"total":4818,"ppe_and_investment_property_depreciation":2993,"intangible_assets_and_land_use_rights_amortisation":1825},"organic_capex_rmb_m":{"total":6639,"ppe_construction_in_progress_and_investment_property":4296,"intangible_assets":2320,"land_use_rights":23},"delta_nwc_rmb_m":{"total":-4699,"cfs_working_capital_cash_inflow":5556,"change_in_current_income_tax_liabilities":-857},"fcff_rmb_m":24344,"diluted_shares_m":9357,"sources":"FY2014 annual report; financial summary p.4; income statement p.80; balance sheet pp.75-76; cash flow statement p.85; note 31 pp.179-180; note 42(a) pp.195-196; diluted shares per note 39 p.191","notes":"Working-capital cash inflow uses FY2015 report 5,556 (FY2014 report printed 5,555; 1m prepayments difference)."},{"fiscal_year":2015,"currency":"CNY","unit":"RMB million","revenue_rmb_m":102863,"reported_operating_profit_rmb_m":40627,"ebit_adjustments_rmb_m":{"interest_income":-2327,"disposal_and_deemed_disposal_gains":-3813,"fair_value_gains_on_financial_instruments":-462,"dividend_income":-272,"investee_impairment_addback":2225,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":35978,"profit_before_tax_rmb_m":36216,"income_tax_expense_rmb_m":7108,"effective_tax_rate_trailing_5y":{"rate":0.17993,"tax_sum_rmb_m":20091,"pbt_sum_rmb_m":111660,"window":"2011-2015"},"nopat_rmb_m":29504,"depreciation_amortization_rmb_m":{"total":6674,"ppe_and_investment_property_depreciation":3159,"intangible_assets_and_land_use_rights_amortisation":3515},"organic_capex_rmb_m":{"total":13105,"ppe_construction_in_progress_and_investment_property":5440,"intangible_assets":4620,"land_use_rights":3045},"delta_nwc_rmb_m":{"total":-7536,"cfs_working_capital_cash_inflow":6389,"change_in_current_income_tax_liabilities":1147},"fcff_rmb_m":30609,"diluted_shares_m":9430,"sources":"FY2015 annual report; financial summary p.4; income statement p.87; balance sheet pp.84-85; cash flow statement p.91; note 29 p.174; note 38(a) pp.185-186; diluted shares per note 35 pp.183-184","notes":"Investee impairment addback 2,225 per FY2016 report note 41(a) reconciliation; FY2015 report note 29(a) narrative sums to 2,224 (1m rounding)."},{"fiscal_year":2016,"currency":"CNY","unit":"RMB million","revenue_rmb_m":151938,"reported_operating_profit_rmb_m":56117,"ebit_adjustments_rmb_m":{"interest_income":-2619,"disposal_and_deemed_disposal_gains":-6966,"fair_value_gains_on_financial_instruments":-658,"dividend_income":-563,"investee_impairment_addback":4443,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":49754,"profit_before_tax_rmb_m":51640,"income_tax_expense_rmb_m":10193,"effective_tax_rate_trailing_5y":{"rate":0.187896,"tax_sum_rmb_m":28410,"pbt_sum_rmb_m":151201,"window":"2012-2016"},"nopat_rmb_m":40405,"depreciation_amortization_rmb_m":{"total":12741,"ppe_and_investment_property_depreciation":3716,"intangible_assets_and_land_use_rights_amortisation":9025},"organic_capex_rmb_m":{"total":18754,"ppe_construction_in_progress_and_investment_property":8399,"intangible_assets":8849,"land_use_rights":1506},"delta_nwc_rmb_m":{"total":-14578,"cfs_working_capital_cash_inflow":10967,"change_in_current_income_tax_liabilities":3611},"fcff_rmb_m":48970,"diluted_shares_m":9494,"sources":"FY2016 annual report; financial summary p.4; income statement p.110; balance sheet pp.112-113; cash flow statement p.117; note 7 pp.165-166; note 8 p.167; note 41(a) p.219; diluted shares per the earnings-per-share note"},{"fiscal_year":2017,"currency":"CNY","unit":"RMB million","revenue_rmb_m":237760,"reported_operating_profit_rmb_m":90302,"ebit_adjustments_rmb_m":{"interest_income":-3940,"disposal_and_deemed_disposal_gains":-13518,"fair_value_gains_on_financial_instruments":-4298,"dividend_income":-1713,"investee_impairment_addback":2555,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":69388,"profit_before_tax_rmb_m":88215,"income_tax_expense_rmb_m":15744,"effective_tax_rate_trailing_5y":{"rate":0.186696,"tax_sum_rmb_m":41888,"pbt_sum_rmb_m":224365,"window":"2013-2017"},"nopat_rmb_m":56434,"depreciation_amortization_rmb_m":{"total":23611,"ppe_and_investment_property_depreciation":4880,"intangible_assets_and_land_use_rights_amortisation":18731},"organic_capex_rmb_m":{"total":32004,"ppe_construction_in_progress_and_investment_property":12108,"intangible_assets":19850,"land_use_rights":46},"delta_nwc_rmb_m":{"total":-27152,"cfs_working_capital_cash_inflow":23663,"change_in_current_income_tax_liabilities":3489},"fcff_rmb_m":75193,"diluted_shares_m":9536,"sources":"FY2017 annual report; financial summary p.4; income statement p.122; balance sheet pp.124-125; cash flow statement pp.129-130; notes 6, 7, 8 pp.179-181; note 40(a) pp.229-230; note 41 p.232; diluted shares per the earnings-per-share note","notes":"Investee impairment addback 2,555 excludes 239 impairment of intangible assets arising from acquisitions, which remains in EBIT (FY2017 report note 7(c) p.181)."},{"fiscal_year":2018,"currency":"CNY","unit":"RMB million","revenue_rmb_m":312694,"reported_operating_profit_rmb_m":97648,"ebit_adjustments_rmb_m":{"interest_income":-4569,"disposal_and_deemed_disposal_gains":-2932,"fair_value_gains_on_financial_instruments":-29757,"dividend_income":-686,"investee_impairment_addback":16397,"derivative_losses_addback":0},"adjusted_ebit_rmb_m":76101,"profit_before_tax_rmb_m":94466,"income_tax_expense_rmb_m":14482,"effective_tax_rate_trailing_5y":{"rate":0.17577,"tax_sum_rmb_m":52652,"pbt_sum_rmb_m":299550,"window":"2014-2018"},"nopat_rmb_m":62725,"depreciation_amortization_rmb_m":{"total":34248,"ppe_and_investment_property_depreciation":8423,"intangible_assets_and_land_use_rights_amortisation":25825},"organic_capex_rmb_m":{"total":54061,"ppe_construction_in_progress_and_investment_property":19743,"intangible_assets":31877,"land_use_rights":2441},"delta_nwc_rmb_m":{"total":-6398,"cfs_working_capital_cash_inflow":4896,"change_in_current_income_tax_liabilities":1502},"fcff_rmb_m":49310,"diluted_shares_m":9568,"sources":"FY2018 annual report; financial summary p.4; income statement p.132; balance sheet pp.134-136; cash flow statement pp.140-141; note 7 pp.196-197; note 8 p.197; note 41(a) p.255; diluted shares per note 12 pp.201-202","notes":"IFRS 9 (from 2018): available-for-sale financial assets are now classified as FVPL/FVOCI; net fair value gains on FVPL (28,738) and on other financial instruments (1,019) are combined in the fair-value adjustment (29,757) per note 41(a). Investee impairment addback 16,397 is associates 14,069 plus joint ventures 2,328; intangible-asset impairment 1,180 remains in EBIT (note 7(b))."}],
+  "financial_series_status": "retrieved_original_reports_parsed", "financial_series_method": {"delta_nwc_basis":"Cash-flow-statement reconciliation basis: delta_nwc = -(cfs working-capital cash inflow) - change in current income tax liabilities. The balance-sheet direct change is NOT used, because the 2015 to 2016 reclassification of customer deposits (RMB 54,108m, FY2016 report note 38) and the simultaneous disappearance of restricted cash (RMB 54,731m at 2015 year-end to RMB 750m at 2016 year-end) is a non-cash presentation change; the balance-sheet basis would misstate 2016 delta_nwc as +29,491 and FCFF_2016 as about 4,900.","balance_sheet_nwc_cross_check_rmb_m":{"2012":-12788,"2013":-20974,"2014":-32350,"2015":-90411,"2016":-60920,"2017":-97338,"2018":-113437},"balance_sheet_delta_nwc_rmb_m":{"2013":-8186,"2014":-11376,"2015":-58061,"2016":29491,"2017":-36418,"2018":-16099},"balance_sheet_nwc_definition":"Balance-sheet NWC = (inventories + accounts receivable + prepayments, deposits and other assets, current) - (accounts payable + other payables and accruals + current income tax liabilities + other tax liabilities + deferred revenue). Cash, term deposits, restricted cash, other financial assets and financial assets at FVTPL are excluded from current assets; borrowings, notes payable, lease liabilities and other financial liabilities are excluded from current liabilities. Verified: reproduces the recorded 2015 (-90,411), 2016 (-60,920) and 2017 (-97,338) values exactly. The 2015 other-payables balance included customer deposits RMB 54,108m, reclassified out in 2016.","fintech_classification":"Financial technology and enterprise services are pre-classified as core operating business; they are not classified as non-operating assets and are not separately added in SOTP.","fx":"All financial_series and SOTP amounts are recorded in the annual reports reporting currency (CNY, RMB million). HKD conversion at the CFETS fiscal-year-end HKD/CNY mid-rate is done in fx_conversion; see fx_conversion for the rates, formula and source; original RMB fields are retained unchanged.","listed_equity_market_value_sensitivity":"Not computable from the annual reports alone (no per-holding share counts or formation-date closing prices disclosed); recorded as a gap and not estimated.","rounding_rule":"NOPAT and FCFF are computed from the exact tax_sum/pbt_sum ratio and rounded to the nearest RMB million; FY2012 NOPAT is 14,949*(1-7,046/46,209)=12,669.56, rounded to 12,670, and FCFF_2012 is 13,670."}, "sotp": {"as_of_fiscal_year":2018,"decision_at":"2019-08-30","currency":"CNY","unit":"RMB million","cash_and_cash_equivalents_rmb_m":97814,"term_deposits_rmb_m":62918,"term_deposits_detail_rmb_m":{"non_current":0,"current":62918},"non_operating_financial_assets_rmb_m":8207,"equity_investments_rmb_m":363011,"equity_investments_detail_rmb_m":{"associates":219215,"redeemable_instruments":0,"joint_ventures":8575,"financial_assets_at_fvtpl_non_current":91702,"financial_assets_at_fvoci":43519},"interest_bearing_debt_rmb_m":179289,"interest_bearing_debt_detail_rmb_m":{"borrowings":114271,"notes_payable":65018},"lease_liabilities_rmb_m":0,"non_controlling_interests_rmb_m":32697,"non_operating_value_rmb_m":319964,"diluted_shares_m":9568,"non_operating_value_per_share_rmb":33.4411,"non_operating_value_hkd_m":365172.34,"non_operating_value_per_share_hkd":38.166,"fx_note":"Converted to HKD at the FY2018 year-end CFETS HKD/CNY mid-rate 0.87620 (observation date 2018-12-28); see fx_conversion","listed_equity_market_value_sensitivity":"Not computable from annual reports alone: the balance sheet does not disclose per-holding share counts and formation-date closing prices for listed equity investments; recorded as a gap, not estimated, and not written back to the main SOTP input.","duplicate_counting_check":"Interest income, dividend income, disposal gains and fair-value gains on financial assets at FVTPL and other financial instruments were removed from EBIT; investee impairment was added back; share of associates and joint ventures profit is below operating profit and not in EBIT; FVOCI fair-value movements go through other comprehensive income, not profit or loss.","sources":"FY2018 annual report balance sheet pp.134-136; note 22 p.221 (financial instruments by category); note 23 pp.222-223 (FVTPL); note 34 pp.246-247 (borrowings); note 35 pp.249-250 (notes payable); lease liabilities 0: no finance lease liabilities in the borrowings note; operating lease commitments are off-balance-sheet under IAS 17 and are not deducted.","notes":"Operating lease commitments (off-balance-sheet, IAS 17) are not deducted. Long-term payables (content authorisation etc.) are not interest-bearing debt and are excluded from debt. FVTPL non-current (RMB 91,702m) and FVOCI (RMB 43,519m) are the IFRS 9 successors of available-for-sale financial assets and are counted as equity investments at book value; the current FVTPL balance (RMB 6,175m) is treasury investments and is counted in non-operating financial assets with other financial assets (RMB 2,032m)."},
+  "fx_conversion":{"source":"CFETS HKD/CNY central parity rate (CNY per 1 HKD), published daily 09:15 Beijing time; non-publication days use the most recent prior publication; cross-checked against the People's Bank of China official query page; CNH offshore rate and Stock Connect settlement rate not used","formula":"HKD = RMB value / hkd_cny, rounded to 2 decimals; original RMB fields are retained unchanged","unit":"CNY per 1 HKD; converted values in HKD million","rates":[{"fiscal_year":2013,"observation_date":"2013-12-31","hkd_cny":0.78623},{"fiscal_year":2014,"observation_date":"2014-12-31","hkd_cny":0.78887},{"fiscal_year":2015,"observation_date":"2015-12-31","hkd_cny":0.83778},{"fiscal_year":2016,"observation_date":"2016-12-30","hkd_cny":0.89451},{"fiscal_year":2017,"observation_date":"2017-12-29","hkd_cny":0.83591},{"fiscal_year":2018,"observation_date":"2018-12-28","hkd_cny":0.8762}],"converted_financial_series_hkd_m":[{"fiscal_year":2013,"revenue_hkd_m":76869.36,"fcff_hkd_m":23710.62},{"fiscal_year":2014,"revenue_hkd_m":100057.04,"fcff_hkd_m":30859.33},{"fiscal_year":2015,"revenue_hkd_m":122780.44,"fcff_hkd_m":36535.84},{"fiscal_year":2016,"revenue_hkd_m":169856.12,"fcff_hkd_m":54745.06},{"fiscal_year":2017,"revenue_hkd_m":284432.53,"fcff_hkd_m":89953.46},{"fiscal_year":2018,"revenue_hkd_m":356875.14,"fcff_hkd_m":56277.11}],"sotp_hkd":{"non_operating_value_hkd_m":365172.34,"non_operating_value_per_share_hkd":38.166,"fx_note":"SOTP HKD = RMB non-operating value 319964 / FY2018 year-end CFETS HKD/CNY mid-rate 0.87620 (observation date 2018-12-28, most recent publication day before 2018-12-31); per-share 38.166 = 365172.34 / 9568"}},"model_inputs": {
+    "route": "dcf_sotp",
+    "currency": "HKD",
+    "starting_core_fcff_per_share": 11.503605,
+    "initial_growth": 0.305868,
+    "wacc": 0.086052, "wacc_detail": {"equity_value_hkd_m": 3107686.4, "debt_value_hkd_m": 179289, "equity_weight": 0.945455, "debt_weight": 0.054545, "kd": 0.027838, "kd_interest_expense_by_year_rmb_m": [2167, 3060, 4898], "kd_average_debt_by_year_rmb_m": [87413, 120701, 155597], "kd_interest_expense_sum_rmb_m": 10125, "kd_average_debt_sum_rmb_m": 363711, "tax_rate": 0.17577},
+    "perpetual_growth": 0.03, "perpetual_growth_detail": {"g0": 0.03, "hk_nominal_gdp_10y_cagr": 0.052025, "gdp_window": "2008 to 2018", "gdp_start_hkd": 1707487000000, "gdp_end_hkd": 2835429000000, "guardrail_trigger": false, "source": "World Bank WDI NY.GDP.MKTP.CN (Hong Kong GDP, current HKD), retrieved 2026-11-17; 10-year CAGR 2008-2018"},
+    "non_operating_value_per_share": 38.166,
+    "entry_price_hkd": 327.6,
+    "status": "retrieved",
+  "missing": []
+  },
+  "valuation_outputs": {"intrinsic_value": 995.057039, "five_year_irr": 0.367702, "target_entry_price": 745.701385}, "scenario_outputs": {"pessimistic": {"intrinsic_value": 755.976872, "operating_value": 717.810872, "terminal_value": 1124.991168, "year_five_exit_value": 989.826028, "five_year_irr": 0.29076}, "baseline": {"intrinsic_value": 995.057039, "operating_value": 956.891039, "terminal_value": 1529.891043, "year_five_exit_value": 1327.728576, "five_year_irr": 0.367702}, "optimistic": {"intrinsic_value": 3017.889978, "operating_value": 2979.723978, "terminal_value": 5079.595955, "year_five_exit_value": 4257.31015, "five_year_irr": 0.717444}},
+  "queue_status": "READY",
+  "known_defects": [
+    "This is an evidence-gap DRAFT, not a completed valuation and not VERIFIED.",
+    "No source SHA-256 is claimed where original bytes were not retrieved.",
+    "Do not infer market prices, HKMA yields, French factor values, DEXHKUS, annual-report publication timestamps, financial statement values, or SOTP components.",
+    "Supplemental retrieval: official issuer annual-report PDF bytes and hashes are recorded for the five referenced reports (FY2013-FY2017); the FY2018 report is recorded from an HKEXnews original with its release timestamp confirmed, and its byte count (2,570,492) and SHA-256 are now recorded from the project owner's independent recomputation. PIT publication timestamps are now recorded in annual_reports published_at/available_at, primary OHLC rows are recorded, HKMA historical observations are now recorded with the risk-free rate set from the 10-year indicative pricing (risk_free_yield_pct 1.607), and audited financial-series extraction and SOTP inputs are now recorded in financial_series and sotp.",
+    "Supplemental source closure: six Eastmoney unadjusted fqt=0 daily OHLC rows and six TCEHY/DEXHKUS ADR comparisons were recorded. The 2021-09-01 ADR comparison is timing-adjusted to 2021-09-02 HK close under the 2018-08-30 project-owner timing-displacement ruling (same-day difference 2.7937% is disclosed in source_refs.adr_crosscheck overall); 2019-09-02 is not comparable (US Labor Day). HKMA workbook observations were captured and the risk-free rate is now set from the 10-year indicative pricing by project-owner ruling (risk_free_yield_pct 1.607); HKEX annual-report release timestamps are now recorded in annual_reports published_at/available_at."
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "status": "DRAFT",
+  "known_defects": [
+    "valuation_outputs 仍为空（null）；冻结 V1.1 估值输出及 five_year_irr 尚未生成。"
+  ],
+  "schema_version": "phase1-a-zone-v1",
+  "request_id": "pvis-phase1-execution-20261115-01",
+  "zone": "A",
+  "queue_year": 2018,
+  "formation_date": "2018-08-30",
+  "decision_at": "2018-08-30T23:59:59+08:00",
+  "company": {
+    "name": "贵州茅台",
+    "ticker": "600519",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "model_route": "owner_earnings_dcf"
+  },
+  "information_set": {
+    "latest_complete_fiscal_year": 2017,
+    "six_year_window": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "annual_reports": [
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:00",
+        "pdf_file": "600519_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296687.PDF",
+        "sha256": "9a8faef737d4dd64e8260325247b8ffe77e5de506f4b23b046f28c0758377eae",
+        "bytes": 1758264,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-25 00:00:00",
+        "pdf_file": "600519_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-25/63720184.PDF",
+        "sha256": "26524de9281264e149c23bdc618a32820678c8d07c5dc7c88cbc7e19b3df0bff",
+        "bytes": 1898954,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-04-21 00:00:00",
+        "pdf_file": "600519_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-04-21/1200877315.PDF",
+        "sha256": "89145ef5bd12256c4c75c122b1c8d59846a912434f1abd0570f678bdb1a20f24",
+        "bytes": 2278854,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-24 00:00:00",
+        "pdf_file": "600519_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-24/1202072290.PDF",
+        "sha256": "11a32c1e7f02a54fc2eea3c0d852af59ad37af9a2cbe91857cd93a6208a96d6c",
+        "bytes": 2261535,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-04-15 00:00:00",
+        "pdf_file": "600519_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-15/1203301659.PDF",
+        "sha256": "dd26d9e0017a938cb5e1aa0a830bab7502d0de1f85eb7c00abffb4888c8c20ad",
+        "bytes": 2241732,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "600519_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204526780.PDF",
+        "sha256": "b66a4641e5f2313ed7964e5bef0026021ff2164459d0e0615f1b4385ba1a78e3",
+        "bytes": 2273045,
+        "download_status": "ok"
+      }
+    ],
+    "only_original_public_reports_available_by_decision_at": true
+  },
+  "market_price_and_execution": {
+    "formation_date": "2018-08-30",
+    "formation_close_rmb": 680.4,
+    "execution_date": "2018-08-31",
+    "execution_open_rmb": 676.25,
+    "source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy",
+    "source_quality": "third_party_proxy_not_independently_cross_checked",
+    "status": "retrieved"
+  },
+  "market_inputs": {
+    "formation_date": "2018-08-30",
+    "risk_free_month": "2018-07",
+    "risk_free_yield_pct": 3.4812,
+    "risk_free_monthly_effective": 0.002855717122680179,
+    "erp_window_months": 120,
+    "erp_raw": 0.046173219548404656,
+    "erp_used": 0.046173219548404656,
+    "erp_status": "calculated",
+    "beta_window_months": 60,
+    "beta": 0.6900024622802524,
+    "beta_excluded_months": [],
+    "beta_status": "calculated",
+    "ke": 0.0666716351798059,
+    "ke_inputs": {
+      "risk_free_rate": 0.034811999999999996,
+      "beta": 0.6900024622802524,
+      "erp_raw": 0.046173219548404656,
+      "erp_used": 0.046173219548404656,
+      "status": "calculated",
+      "formula": "Ke=Rf+Beta*ERP"
+    },
+    "source_index": "CSI 300 Gross TRI H00300",
+    "risk_free_source": "CCDC MOF-China Government Bond Yield Curve 10-year",
+    "individual_security_return_source": "AKShare stock_zh_a_hist_tx -> Tencent Finance proxy; corporate actions via CNINFO p_sysapi1139",
+    "window_end_month": "2018-07",
+    "erp_window_start_month": "2008-07",
+    "beta_window_start_month": "2013-07"
+  },
+  "source_refs": {
+    "annual_reports": [
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:00",
+        "pdf_file": "600519_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296687.PDF",
+        "sha256": "9a8faef737d4dd64e8260325247b8ffe77e5de506f4b23b046f28c0758377eae",
+        "bytes": 1758264,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-25 00:00:00",
+        "pdf_file": "600519_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-25/63720184.PDF",
+        "sha256": "26524de9281264e149c23bdc618a32820678c8d07c5dc7c88cbc7e19b3df0bff",
+        "bytes": 1898954,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-04-21 00:00:00",
+        "pdf_file": "600519_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-04-21/1200877315.PDF",
+        "sha256": "89145ef5bd12256c4c75c122b1c8d59846a912434f1abd0570f678bdb1a20f24",
+        "bytes": 2278854,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-24 00:00:00",
+        "pdf_file": "600519_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-24/1202072290.PDF",
+        "sha256": "11a32c1e7f02a54fc2eea3c0d852af59ad37af9a2cbe91857cd93a6208a96d6c",
+        "bytes": 2261535,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-04-15 00:00:00",
+        "pdf_file": "600519_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-15/1203301659.PDF",
+        "sha256": "dd26d9e0017a938cb5e1aa0a830bab7502d0de1f85eb7c00abffb4888c8c20ad",
+        "bytes": 2241732,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "600519_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204526780.PDF",
+        "sha256": "b66a4641e5f2313ed7964e5bef0026021ff2164459d0e0615f1b4385ba1a78e3",
+        "bytes": 2273045,
+        "download_status": "ok"
+      }
+    ],
+    "market_inputs": [
+      "market_inputs.json",
+      "H00300_official_daily_raw.json",
+      "CCDC_10Y_CGB_2006.html..CCDC_10Y_CGB_2018.html"
+    ],
+    "security_price_source": [
+      "600519_akshare_tencent_daily.csv",
+      "600519_tencent_daily_raw_01..07.txt"
+    ],
+    "corporate_action_source": [
+      "600519_akshare_dividend.json",
+      "600519_cninfo_dividend_raw.json"
+    ],
+    "company_annual_reports": [
+      {
+        "fiscal_year": 2012,
+        "published_at": "2013-03-29 00:00:00",
+        "pdf_file": "600519_2012_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2013-03-29/62296687.PDF",
+        "sha256": "9a8faef737d4dd64e8260325247b8ffe77e5de506f4b23b046f28c0758377eae",
+        "bytes": 1758264,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2013,
+        "published_at": "2014-03-25 00:00:00",
+        "pdf_file": "600519_2013_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2014-03-25/63720184.PDF",
+        "sha256": "26524de9281264e149c23bdc618a32820678c8d07c5dc7c88cbc7e19b3df0bff",
+        "bytes": 1898954,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2014,
+        "published_at": "2015-04-21 00:00:00",
+        "pdf_file": "600519_2014_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2015-04-21/1200877315.PDF",
+        "sha256": "89145ef5bd12256c4c75c122b1c8d59846a912434f1abd0570f678bdb1a20f24",
+        "bytes": 2278854,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2015,
+        "published_at": "2016-03-24 00:00:00",
+        "pdf_file": "600519_2015_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-24/1202072290.PDF",
+        "sha256": "11a32c1e7f02a54fc2eea3c0d852af59ad37af9a2cbe91857cd93a6208a96d6c",
+        "bytes": 2261535,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2016,
+        "published_at": "2017-04-15 00:00:00",
+        "pdf_file": "600519_2016_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-15/1203301659.PDF",
+        "sha256": "dd26d9e0017a938cb5e1aa0a830bab7502d0de1f85eb7c00abffb4888c8c20ad",
+        "bytes": 2241732,
+        "download_status": "ok"
+      },
+      {
+        "fiscal_year": 2017,
+        "published_at": "2018-03-28 00:00:00",
+        "pdf_file": "600519_2017_annual_report_original.pdf",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-28/1204526780.PDF",
+        "sha256": "b66a4641e5f2313ed7964e5bef0026021ff2164459d0e0615f1b4385ba1a78e3",
+        "bytes": 2273045,
+        "download_status": "ok"
+      }
+    ],
+    "market_snapshot": {
+      "market_inputs_file": "market_inputs.json",
+      "h00300_file": "H00300_official_daily_raw.json",
+      "ccdc_files": "CCDC_10Y_CGB_2006.html through CCDC_10Y_CGB_2018.html",
+      "nbs_gdp_vintages_file": "NBS_GDP_vintages.json"
+    },
+    "rights_issue_notice": null
+  },
+  "blind_integrity": {
+    "b_zone_results_read": false,
+    "b_zone_returns_computed": false,
+    "valuation_outputs_computed": false,
+    "post_formation_market_data_downloaded": true,
+    "post_formation_market_data_used_in_A_inputs": false,
+    "classification": "historical_information_set_replay_with_A_B_isolation_deviation",
+    "deviation": "AKShare/Tencent daily-history retrieval returned observations beyond some formation dates. The calculations below use only pre-formation windows, but the executor had downloaded the overbroad raw history; do not describe this as a strict blind test."
+  },
+  "valuation_outputs": null,
+  "financial_series": [
+    {
+      "fiscal_year": 2012,
+      "revenue_rmb": 26455335152.99,
+      "net_profit_common_rmb": 13308079612.88,
+      "depreciation_amortization_rmb": 434801814.09000003,
+      "organic_capex_rmb": 4211900807.91,
+      "owner_earnings_before_delta_nwc_rmb": 9530980619.06
+    },
+    {
+      "fiscal_year": 2013,
+      "revenue_rmb": 30921801316.6,
+      "net_profit_common_rmb": 15136639784.35,
+      "depreciation_amortization_rmb": 556297509.09,
+      "organic_capex_rmb": 5405740026.23,
+      "owner_earnings_before_delta_nwc_rmb": 10287197267.210001
+    },
+    {
+      "fiscal_year": 2014,
+      "revenue_rmb": 31573928530.94,
+      "net_profit_common_rmb": 15349804322.27,
+      "depreciation_amortization_rmb": 756799960.6600001,
+      "organic_capex_rmb": 4431065066.05,
+      "owner_earnings_before_delta_nwc_rmb": 11675539216.880001
+    },
+    {
+      "fiscal_year": 2015,
+      "revenue_rmb": 32659583725.28,
+      "net_profit_common_rmb": 15503090276.38,
+      "depreciation_amortization_rmb": 848146697.7299999,
+      "organic_capex_rmb": 2061470481.32,
+      "owner_earnings_before_delta_nwc_rmb": 14289766492.789999
+    },
+    {
+      "fiscal_year": 2016,
+      "revenue_rmb": 38862189993.84,
+      "net_profit_common_rmb": 16718362734.16,
+      "depreciation_amortization_rmb": 934194672.1999999,
+      "organic_capex_rmb": 1019178136.92,
+      "owner_earnings_before_delta_nwc_rmb": 16633379269.44
+    },
+    {
+      "fiscal_year": 2017,
+      "revenue_rmb": 58217861314.17,
+      "net_profit_common_rmb": 27079360255.74,
+      "depreciation_amortization_rmb": 1125834541.19,
+      "organic_capex_rmb": 1125017192.45,
+      "owner_earnings_before_delta_nwc_rmb": 27080177604.48
+    }
+  ],
+  "nwc_assessment": {
+    "status": "NA_unclassified_other_payables",
+    "formula": "NWC_core=operating current assets (excluding cash/restricted cash/financial assets) - operating non-interest current liabilities (excluding borrowings, leases and contract liabilities)",
+    "blocking_years": [
+      2016,
+      2017
+    ],
+    "unclassified_items": [
+      {
+        "fiscal_year": 2016,
+        "other_payables_unclassified_rmb": 788494268.64,
+        "source_note": "Annual-report note labels this amount as 往来款; the report does not split operating vs non-operating components in the inspected disclosure."
+      },
+      {
+        "fiscal_year": 2017,
+        "other_payables_unclassified_rmb": 1650639627.14,
+        "source_note": "Annual-report note labels this amount as 往来款; the report does not split operating vs non-operating components in the inspected disclosure."
+      }
+    ],
+    "reason": "The audited annual-report other-payables note includes a material 往来款 balance for the two year-ends needed to calculate ΔNWC. The inspected disclosure does not split those balances into operating and non-operating components. Under the frozen field-mapping rule, no discretionary allocation is permitted; ΔNWC and Owner Earnings must be NA."
+  },
+  "model_inputs": {
+    "starting_owner_earnings_per_share": null,
+    "starting_owner_earnings_scenarios": null,
+    "initial_growth": null,
+    "discount_rate": 0.0666716351798059,
+    "perpetual_growth": 0.03,
+    "non_operating_value": null,
+    "entry_price_rmb": 680.40,
+    "status": "NA_required_OE_input_missing",
+    "g_rule": {
+      "gdp": {
+        "start_year": 2007,
+        "end_year": 2017,
+        "start_gdp_100m_cny": 246619.0,
+        "end_gdp_100m_cny": 827122.0,
+        "start_release_date": "2008-02-28",
+        "end_release_date": "2018-02-28",
+        "cagr": 0.12863705301599015
+      },
+      "g0": 0.03,
+      "discount_rate": 0.0666716351798059,
+      "terminal_spread_minimum": 0.02,
+      "g": 0.03,
+      "guardrail_trigger": false,
+      "status": "calculated"
+    },
+    "missing": [
+      "NWC_core/ΔNWC cannot be classified from the original report notes; therefore OE proxy, five-year OE margin/growth and starting OE/share are NA."
+    ]
+  },
+  "queue_status": "NA_required_frozen_input"
+}
