@@ -41,7 +41,7 @@
 | 11 | 五粮液 | 000858.SZ；来源：[巨潮资讯上市公司资料页](https://www.cninfo.com.cn/new/snapshot/companyDetailCn?code=000858) | A 股／深交所 | Owner Earnings + DCF（候选，待拍板） | 可以 | 可参考消费品牌企业路线，但不得照搬茅台的字段映射、利润率或参数。 |
 | 12 | 伊利股份 | 600887.SH；来源：[上交所公司概况](https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=600887) | A 股／上交所 | 价值驱动 FCFF（候选，待拍板） | 可以 | 食品制造路线候选；需单独处理原奶成本、渠道、营运资本和资本开支。 |
 | 13 | 恒瑞医药 | 600276.SH；来源：[上交所公司概况](https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=600276) | A 股／上交所 | 高增长路线：收入→利润率→资本回报；价值驱动 FCFF 为候选框架（待拍板） | 可以 | 研发费用资本化与否、管线成功概率、商业化周期和研发回报口径须先冻结；不得用事后获批结果污染形成日输入。 |
-| 14 | 中国移动 | 00941.HK；来源：[港交所发行人披露文件](https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1113/2024111300761.pdf)列明港股代码 00941；[中国移动 2024 年年报](https://www.chinamobileltd.com/en/ir/reports/ar2024.pdf)记载 H 股于 1997-10-23 上市、A 股于 2022-01-05 上市；本池选 H 股 | H 股／港股 | 股利折现／股权自由现金流 DDM／FCFE（候选，待拍板） | 可以 | 为满足“13 家可进历史、仅宁德时代不能进历史”的池子结构，本草案选 1997 年上市的 H 股 00941.HK，而不是 2022 年上市的 A 股 600941.SH。H 股市场代理适用范围仍须拍板。 |
+| 14 | 中国移动 | 00941.HK；来源：[港交所发行人披露文件](https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1113/2024111300761.pdf)列明港股代码 00941；[中国移动官方报告](https://www.chinamobileltd.com/en/file/view.php?id=261672)记载 H 股于 1997-10-23 上市、A 股于 2022-01-05 上市；本池选 H 股 | H 股／港股 | 股利折现／股权自由现金流 DDM／FCFE（候选，待拍板） | 可以 | 为满足“13 家可进历史、仅宁德时代不能进历史”的池子结构，本草案选 1997 年上市的 H 股 00941.HK，而不是 2022 年上市的 A 股 600941.SH。H 股市场代理适用范围仍须拍板。 |
 
 ### 1.2 证券类别选择说明
 
